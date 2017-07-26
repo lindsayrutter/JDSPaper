@@ -30,11 +30,6 @@ rownames(ct2) <- ct@rowRanges@elementMetadata@listData$ID
 colnames(ct2) <- unlist(strsplit(colnames(ct2), "\\."))[seq(1, 17*3, 3)]
 leaves.all <- ct2
 bindataSel = as.data.frame(leaves.all[,c("ML08R","ML14R","ML22R","ML11R","ML27R","ML33R")])
-
-# setDT(bindataSel, keep.rownames = TRUE)[]
-# colnames(bindataSel)[1] <- "ID"
-# bindataSel$ID <- as.character(bindataSel$ID)
-# bindataSel <- as.data.frame(bindataSel)
 colnames(bindataSel) <- c("N.1","N.2","N.3","P.1","P.2","P.3")
 bindataSel <- as.data.frame(bindataSel)
 
