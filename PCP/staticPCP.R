@@ -24,7 +24,7 @@ group2 <- levels(coldata$treatment)[2]
 res <- results(dds, contrast=c("treatment",group1,group2))
 degIndex <- which(res@listData$padj<0.0001)
 # Or take top 5 most differentially expressed
-degIndex <- which(res@listData$padj %in% sort(res@listData$padj)[1:15])
+degIndex <- which(res@listData$padj %in% sort(res@listData$padj)[1:25])
 logBin <- as.data.frame(assay(rlog(dds)))
 
 setDT(logBin, keep.rownames = TRUE)[]
