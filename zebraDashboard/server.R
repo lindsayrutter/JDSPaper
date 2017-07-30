@@ -12,6 +12,7 @@ library(GGally)
 
 load("zebraData.Rda")
 dat <- zebraData
+dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(zebraData)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
@@ -43,16 +44,15 @@ shinyServer(function(input, output, session){
     maxVal = max(datSel()[,-1])
     minVal = min(datSel()[,-1])
     maxRange = c(minVal, maxVal)
-    xbins=10
-    buffer = maxRange[2]/xbins
+    xbins=input$binSize
+    buffer = maxRange[2]/(xbins)
     
     my_fn <- function(data, mapping, ...){
       xChar = as.character(mapping$x)
       yChar = as.character(mapping$y)
       x = data[,c(xChar)]
       y = data[,c(yChar)]
-      #h <- hexbin(x=x, y=y, xbins=input$binSize, shape=1, IDs=TRUE, xbnds=maxRange, ybnds=maxRange)
-      h <- hexbin(x=x, y=y, xbins=10, shape=1, IDs=TRUE, xbnds=maxRange, ybnds=maxRange)
+      h <- hexbin(x=x, y=y, xbins=input$binSize, shape=1, IDs=TRUE, xbnds=maxRange, ybnds=maxRange)
       hexdf <- data.frame (hcell2xy (h),  hexID = h@cell, counts = h@count)
       attr(hexdf, "cID") <- h@cID
       
@@ -67,15 +67,14 @@ shinyServer(function(input, output, session){
       clrs <- brewer.pal(length(my_breaks)+3, "Blues")
       clrs <- clrs[3:length(clrs)]
       
-      #p <- ggplot(hexdf, aes(x=x, y=y, fill = counts, hexID=hexID)) + geom_hex(stat="identity") + geom_abline(intercept = 0, color = "red", size = 0.25) + coord_cartesian(xlim = c(-1*buffer, maxRange[2]+buffer), ylim = c(-1*buffer, maxRange[2]+buffer)) + geom_point(data = degData, aes_string(x=xChar, y=yChar), inherit.aes = FALSE, color = "orange", size = 0.01, shape = ".")
-      p <- ggplot(hexdf, aes(x=x, y=y, hexID=hexID, counts=counts, fill=countColor2)) + geom_hex(stat="identity") + scale_fill_manual(labels = as.character(my_breaks), values = rev(clrs), name = "Cases count") + geom_abline(intercept = 0, color = "red", size = 0.25) + coord_cartesian(xlim = c(-1*buffer, maxRange[2]+buffer), ylim = c(-1*buffer, maxRange[2]+buffer)) + coord_fixed(ratio=1)
+      p <- ggplot(hexdf, aes(x=x, y=y, hexID=hexID, counts=counts, fill=countColor2)) + geom_hex(stat="identity") + scale_fill_manual(labels = as.character(my_breaks), values = rev(clrs), name = "Cases count") + geom_abline(intercept = 0, color = "red", size = 0.25) + coord_fixed(xlim = c(-1*buffer, maxRange[2]+buffer), ylim = c(-1*buffer, maxRange[2]+buffer))
       p
     }
     
     p <- reactive(ggpairs(datSel()[,2:ncol(datSel())], lower = list(continuous = my_fn)))
-      
+
 gP <- eventReactive(p(), {
-  gP <- ggplotly(p(), height = 400) #  height = 400
+  gP <- ggplotly(p(), height = 600, width = 600) #  height = 400
   for (i in 1:(length(gP$x$data)-1)){
     info <- gP$x$data[i][[1]]$text
     info2 <- strsplit(info,"[<br/>]")
@@ -87,7 +86,7 @@ gP
 })
     
     plotlyHex <- reactive(gP() %>% config(displayModeBar = F))
-    
+    plotlyHex()
   })
   
   
@@ -105,6 +104,6 @@ gP
     
     BP <- reactive(ggplot(boxDat(), aes(x = Sample, y = Count)) + geom_boxplot() + labs(y = "Read count"))
     ggBP <- reactive(ggplotly(BP(), width=600, height = 400) %>% config(displayModeBar = F, staticPlot = T))
-    
+    ggBP()
     })
 })

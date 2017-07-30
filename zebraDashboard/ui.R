@@ -11,6 +11,7 @@ library(Hmisc)
 
 load("zebraData.Rda")
 dat <- zebraData
+dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(zebraData)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
@@ -29,20 +30,19 @@ body <- dashboardBody(
   tabItems(
     tabItem(tabName = "hexPlot",
       fluidRow(
-        column(width = 4, 
+        column(width = 3, 
          box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
            selectizeInput("selPair1", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
-           numericInput("binSize", "Hexagon size:", value = 10, min = 1),
-           numericInput("pointSize", "Point size:", value = 6, min = 1))),
-        column(width = 8,
-           box(width = NULL, plotlyOutput("hexPlot"), collapsible = FALSE, background = "black", title = "Binned scatterplot", status = "primary", solidHeader = TRUE)))),
+           numericInput("binSize", "Hexagon size:", value = 10, min = 1))),
+        column(width = 9,
+           box(width = NULL, height = 675, plotlyOutput("hexPlot"), collapsible = FALSE, background = "black", title = "Binned scatterplot", status = "primary", solidHeader = TRUE)))),
     
     tabItem(tabName = "boxPlot",
       fluidRow(
-        column(width = 4, 
+        column(width = 3, 
          box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
            selectizeInput("selPair2", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)))),
-        column(width = 8,
+        column(width = 9,
          box(width = NULL, plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))))
   )
 )
