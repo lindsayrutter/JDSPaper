@@ -16,29 +16,28 @@ dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(zebraData)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
-values <- reactiveValues(x=0, selPair=NULL)
+values <- reactiveValues(x=0, selPair=NULL, goButton=NULL)
 
 shinyServer(function(input, output, session){
-  observeEvent(c(input$goButton1, input$goButton2), values$x <- values$x + 1)
-  observeEvent(c(input$selPair1, input$selPair2), values$x <- 0)
-  observeEvent(input$binSize, values$x <- 0)
-  
   observeEvent(input$selPair1, values$selPair <- input$selPair1)
   observeEvent(input$selPair2, values$selPair <- input$selPair2)
+  
+  observeEvent(input$goButton1, values$goButton <- input$goButton1)
+  observeEvent(input$goButton2, values$goButton <- input$goButton2)
   
   observe({x <- values$selPair
   updateSelectizeInput(session, "selPair1", "Treatment pairs:", choices = myPairs, options = list(maxItems = 2), selected = x)
   updateSelectizeInput(session, "selPair2", "Treatment pairs:", choices = myPairs, options = list(maxItems = 2), selected = x)})
   
   # Create data subset based on two letters user chooses
-  datSel <- eventReactive(values$selPair, {
+  datSel <- eventReactive(values$goButton, {
     validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select a pair of treatments."))
     sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(values$selPair[1], values$selPair[2])))
     dat[,c(1, sampleIndex())]
   }, ignoreNULL = FALSE)
+  
+observeEvent(values$goButton, { 
 
-  
-  
   output$hexPlot <- renderPlotly({
     
     maxVal = max(datSel()[,-1])
@@ -88,10 +87,7 @@ gP
     plotlyHex <- reactive(gP() %>% config(displayModeBar = F))
     plotlyHex()
   })
-  
-  
-  
-  
+
   output$boxPlot <- renderPlotly({
     nVar = reactive(ncol(datSel()))
     colNms <- reactive(colnames(datSel()[, c(2:nVar())]))
@@ -106,4 +102,5 @@ gP
     ggBP <- reactive(ggplotly(BP(), width=600, height = 400) %>% config(displayModeBar = F, staticPlot = T))
     ggBP()
     })
+})
 })
