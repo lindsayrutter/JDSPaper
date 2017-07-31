@@ -34,9 +34,11 @@ shinyServer(function(input, output, session){
     validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select at least one treatment."))
     sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(values$selPair[1], values$selPair[2])))
     dat[,c(1, sampleIndex())]
-  }, ignoreNULL = FALSE)
+  })#, ignoreNULL = FALSE)
  
   datSel <- eventReactive(values$goButton, {
+    req(input$selPair1)
+    req(input$selPair2)
     datSel2()
   })
   
