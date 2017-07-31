@@ -32,7 +32,7 @@ body <- dashboardBody(
       fluidRow(
         column(width = 3, 
          box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
-           selectizeInput("selPair1", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
+           selectizeInput("selPair1", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
            numericInput("binSize", "Hexagon size:", value = 10, min = 1),
            actionButton("goButton1", "Plot case!"))),
         column(width = 9,
@@ -42,7 +42,7 @@ body <- dashboardBody(
       fluidRow(
         column(width = 3, 
          box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
-           selectizeInput("selPair2", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
+           selectizeInput("selPair2", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
            actionButton("goButton2", "Plot case!"))),
         column(width = 9,
          box(width = NULL, plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))))

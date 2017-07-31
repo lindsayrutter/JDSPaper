@@ -26,24 +26,32 @@ shinyServer(function(input, output, session){
   observeEvent(input$goButton2, values$goButton <- input$goButton2)
   
   observe({x <- values$selPair
-  updateSelectizeInput(session, "selPair1", "Treatment pairs:", choices = myPairs, options = list(maxItems = 2), selected = x)
-  updateSelectizeInput(session, "selPair2", "Treatment pairs:", choices = myPairs, options = list(maxItems = 2), selected = x)})
+  updateSelectizeInput(session, "selPair1", "Treatment(s):", choices = myPairs, options = list(maxItems = 2), selected = x)
+  updateSelectizeInput(session, "selPair2", "Treatment(s):", choices = myPairs, options = list(maxItems = 2), selected = x)})
   
   # Create data subset based on two letters user chooses
-  datSel <- eventReactive(values$goButton, {
-    validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select a pair of treatments."))
+  datSel2 <- eventReactive(values$selPair, {
+    validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select at least one treatment."))
     sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(values$selPair[1], values$selPair[2])))
     dat[,c(1, sampleIndex())]
   }, ignoreNULL = FALSE)
+ 
+  datSel <- eventReactive(values$goButton, {
+    datSel2()
+  })
   
-observeEvent(values$goButton, { 
+  binSize <- eventReactive(values$goButton, {
+    input$binSize
+  })
+   
+#observeEvent(values$goButton, { 
 
   output$hexPlot <- renderPlotly({
     
     maxVal = max(datSel()[,-1])
     minVal = min(datSel()[,-1])
     maxRange = c(minVal, maxVal)
-    xbins=input$binSize
+    xbins=binSize()
     buffer = maxRange[2]/(xbins)
     
     my_fn <- function(data, mapping, ...){
@@ -51,7 +59,7 @@ observeEvent(values$goButton, {
       yChar = as.character(mapping$y)
       x = data[,c(xChar)]
       y = data[,c(yChar)]
-      h <- hexbin(x=x, y=y, xbins=input$binSize, shape=1, IDs=TRUE, xbnds=maxRange, ybnds=maxRange)
+      h <- hexbin(x=x, y=y, xbins=binSize(), shape=1, IDs=TRUE, xbnds=maxRange, ybnds=maxRange)
       hexdf <- data.frame (hcell2xy (h),  hexID = h@cell, counts = h@count)
       attr(hexdf, "cID") <- h@cID
       
@@ -102,5 +110,5 @@ gP
     ggBP <- reactive(ggplotly(BP(), width=600, height = 400) %>% config(displayModeBar = F, staticPlot = T))
     ggBP()
     })
-})
+#})
 })
