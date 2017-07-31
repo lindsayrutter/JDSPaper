@@ -19,8 +19,8 @@ myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 values <- reactiveValues(x=0, selPair=NULL, goButton=NULL)
 
 shinyServer(function(input, output, session){
-  observeEvent(input$selPair1, values$selPair <- input$selPair1)
-  observeEvent(input$selPair2, values$selPair <- input$selPair2)
+  observeEvent(input$selPair1, values$selPair <- input$selPair1, ignoreNULL = FALSE)
+  observeEvent(input$selPair2, values$selPair <- input$selPair2, ignoreNULL = FALSE)
   
   observeEvent(input$goButton1, values$goButton <- input$goButton1)
   observeEvent(input$goButton2, values$goButton <- input$goButton2)
