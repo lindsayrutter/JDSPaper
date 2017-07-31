@@ -9,8 +9,8 @@ library(data.table)
 library(RColorBrewer)
 library(Hmisc)
 
-load("zebraData.Rda")
-dat <- zebraData
+load("beeData.Rda")
+dat <- beeData
 dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(zebraData)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]

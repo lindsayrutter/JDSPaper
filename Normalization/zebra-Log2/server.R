@@ -32,7 +32,7 @@ shinyServer(function(input, output, session){
   
   # Create data subset based on two letters user chooses
   datSel <- eventReactive(values$selPair, {
-    validate(need(length(values$selPair) == 2, "Select a pair of treatments."))
+    validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select a pair of treatments."))
     sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(values$selPair[1], values$selPair[2])))
     dat[,c(1, sampleIndex())]
   }, ignoreNULL = FALSE)
