@@ -34,22 +34,36 @@ shinyServer(function(input, output, session){
     validate(need(length(values$selPair) == 1 || length(values$selPair) == 2, "Select at least one treatment."))
     sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(values$selPair[1], values$selPair[2])))
     dat[,c(1, sampleIndex())]
-  })#, ignoreNULL = FALSE)
- 
+  }, ignoreNULL = FALSE) #, ignoreNULL = FALSE)
+  
   datSel <- eventReactive(values$goButton, {
-    req(input$selPair1)
-    req(input$selPair2)
+    #req(input$selPair1)
+    #req(input$selPair2)
     datSel2()
   })
   
   binSize <- eventReactive(values$goButton, {
     input$binSize
   })
-   
-#observeEvent(values$goButton, { 
-
+  
+  #observeEvent(values$goButton, { 
+  
+  # output$text1 <- renderText({
+  #   if (input$num < 5) {
+  #     hide("text1")
+  #   } else {
+  #     show("text1")
+  #   }
+  #   paste0("The number is ", input$num)
+  # })
+  
   output$hexPlot <- renderPlotly({
-    
+
+
+withProgress(message = 'Creating plot', value = 0, {
+  # Number of times we'll go through the "creating plot" loop
+  n <- 2
+
     maxVal = max(datSel()[,-1])
     minVal = min(datSel()[,-1])
     maxRange = c(minVal, maxVal)
@@ -82,23 +96,35 @@ shinyServer(function(input, output, session){
     
     p <- reactive(ggpairs(datSel()[,2:ncol(datSel())], lower = list(continuous = my_fn)))
 
-gP <- eventReactive(p(), {
-  gP <- ggplotly(p(), height = 600, width = 600) #  height = 400
-  for (i in 1:(length(gP$x$data)-1)){
-    info <- gP$x$data[i][[1]]$text
-    info2 <- strsplit(info,"[<br/>]")
-    myIndex <- which(startsWith(info2[[1]], "counts:"))
-    gP$x$data[i][[1]]$text <- info2[[1]][myIndex]
-  }
-  gP$x$data[length(gP$x$data)][[1]]$text <- NULL
-gP
+    # Update progress bar
+    incProgress(1/n)    
+    
+    gP <- eventReactive(p(), {
+      gP <- ggplotly(p(), height = 600, width = 600) #  height = 400
+      for (i in 1:(length(gP$x$data)-1)){
+        info <- gP$x$data[i][[1]]$text
+        info2 <- strsplit(info,"[<br/>]")
+        myIndex <- which(startsWith(info2[[1]], "counts:"))
+        gP$x$data[i][[1]]$text <- info2[[1]][myIndex]
+      }
+      gP$x$data[length(gP$x$data)][[1]]$text <- NULL
+      gP
+    })
+    plotlyHex <- reactive(gP() %>% config(displayModeBar = F))
+    
+    # Update progress bar
+    incProgress(1/n)    
+    plotlyHex()
 })
     
-    plotlyHex <- reactive(gP() %>% config(displayModeBar = F))
-    plotlyHex()
   })
-
+  
   output$boxPlot <- renderPlotly({
+    
+    withProgress(message = 'Creating plot', value = 0, {
+      # Number of times we'll go through the "creating plot" loop
+      n <- 2
+    
     nVar = reactive(ncol(datSel()))
     colNms <- reactive(colnames(datSel()[, c(2:nVar())]))
     
@@ -109,8 +135,12 @@ gP
     })
     
     BP <- reactive(ggplot(boxDat(), aes(x = Sample, y = Count)) + geom_boxplot() + labs(y = "Read count"))
+    # Update progress bar
+    incProgress(1/n) 
     ggBP <- reactive(ggplotly(BP(), width=600, height = 400) %>% config(displayModeBar = F, staticPlot = T))
+    # Update progress bar
+    incProgress(1/n) 
     ggBP()
-    })
-#})
+  })
+  })
 })

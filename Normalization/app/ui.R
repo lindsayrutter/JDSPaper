@@ -31,21 +31,22 @@ body <- dashboardBody(
     tabItem(tabName = "hexPlot",
       fluidRow(
         column(width = 3, 
-         box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
-           selectizeInput("selPair1", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
-           numericInput("binSize", "Hexagon size:", value = 10, min = 1),
-           actionButton("goButton1", "Plot case!"))),
+           box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
+             selectizeInput("selPair1", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
+             numericInput("binSize", "Hexagon size:", value = 10, min = 1),
+             actionButton("goButton1", "Plot case!")),
+             textOutput("text1")),
         column(width = 9,
            box(width = NULL, height = 675, plotlyOutput("hexPlot"), collapsible = FALSE, background = "black", title = "Binned scatterplot", status = "primary", solidHeader = TRUE)))),
     
     tabItem(tabName = "boxPlot",
       fluidRow(
         column(width = 3, 
-         box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
-           selectizeInput("selPair2", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
-           actionButton("goButton2", "Plot case!"))),
+           box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
+             selectizeInput("selPair2", "Treatment(s):", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
+             actionButton("goButton2", "Plot case!"))),
         column(width = 9,
-         box(width = NULL, plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))))
+           box(width = NULL, plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))))
   )
 )
 
