@@ -115,6 +115,7 @@ withProgress(message = 'Creating plot', value = 0, {
     # Update progress bar
     incProgress(1/n)    
     plotlyHex()
+
 })
     
   })
