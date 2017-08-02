@@ -15,7 +15,7 @@ library(limma)
 library(edgeR)
 library(DESeq)
 
-inputFile <- " input.txt"
+inputFile <- "input.txt"
 rawData <- read.table(file.path(inputFile), header=TRUE, sep="\t")
 geneLength <- rawData[,c(2)]
 geneLengthE <- rawData[,c(3)]
@@ -36,6 +36,7 @@ DESeq <- rowSums(geneCount / ef)
 MQ <- limma::normalizeQuantiles(geneCount)
 Q <- rowSums(MQ)
 
+# Don't have gene Length
 lengthsInKb <- geneLength/1000
 millionMapped <- sum(RC)/1e+06
 rpm <- RC/millionMapped
