@@ -11,7 +11,7 @@ library(Hmisc)
 
 load("bindataL120.Rda")
 dat <- bindata
-dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
+#dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(bindata)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))

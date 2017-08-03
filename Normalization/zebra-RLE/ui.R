@@ -15,16 +15,16 @@ dat[,2:ncol(dat)] = log2(dat[,2:ncol(dat)]+1)
 rm(zebraData)
 
 # Add pseudocount, and do RLE (mean of means is not 0. It is -0.1452344; mean(rowMeans(dat[,2:ncol(dat)]))). Scatterplot looks odd. PCP is centered at 0, but lots of outliers.
-#dat[,2:ncol(dat)] <- dat[,2:ncol(dat)] + 0.1
-#dat[,2:ncol(dat)] <- log(dat[,2:ncol(dat)]/rowMedians(as.matrix(dat[,2:ncol(dat)])))
+dat[,2:ncol(dat)] <- dat[,2:ncol(dat)] + 0.1
+dat[,2:ncol(dat)] <- log(dat[,2:ncol(dat)]/rowMedians(as.matrix(dat[,2:ncol(dat)])))
 
 # Same problem
 #dat[,2:ncol(dat)] <- dat[,2:ncol(dat)] + 0.000001
 #dat[,2:ncol(dat)] <- log((dat[,2:ncol(dat)])/rowMedians(as.matrix(dat[,2:ncol(dat)])))
 
 # Remove any rows that have any columns with value of 0
-dat <- dat[which(apply(dat[,2:ncol(dat)]!=0,1,all)),]
-dat[,2:ncol(dat)] <- log(dat[,2:ncol(dat)]/rowMedians(as.matrix(dat[,2:ncol(dat)])))
+#dat <- dat[which(apply(dat[,2:ncol(dat)]!=0,1,all)),]
+#dat[,2:ncol(dat)] <- log(dat[,2:ncol(dat)]/rowMedians(as.matrix(dat[,2:ncol(dat)])))
 
 #dat[,2:ncol(dat)] <- log((dat[,2:ncol(dat)]+0.1)/rowMedians(as.matrix(dat[,2:ncol(dat)])))
 
