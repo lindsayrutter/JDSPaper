@@ -3,6 +3,7 @@ library(zebrafishRNASeq)
 library(data.table)
 
 data(zfGenes)
+
 filter <- apply(zfGenes, 1, function(x) length(x[x>5])>=2)
 filtered <- zfGenes[filter,]
 
