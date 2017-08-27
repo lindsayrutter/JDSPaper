@@ -69,6 +69,7 @@ dat <- rbind(dat0,dat1,dat2,dat3,dat4)
 pdf("01234Beta.pdf"); scatmat(dat) + xlim(0,13) + ylim(0,13); boxplot(dat); plotMDS(dat, col = c("blue","red")[factor(allGroups)]) + theme(aspect.ratio=1); dev.off()
 
 ############################################################
+
 dds0 <- makeExampleDESeqDataSet(n=1000,m=6,betaSD=0)
 dds1 <- makeExampleDESeqDataSet(n=500,m=6,betaSD=1)
 dds2 <- makeExampleDESeqDataSet(n=500,m=6,betaSD=1.5)
@@ -84,4 +85,11 @@ dat <- as.data.frame(dat)
 rownames(dat) <- paste0("gene",1:2000)
 logDat <- log(dat+1)
 pdf("0_Log_Beta.pdf"); scatmat(logDat) + xlim(0,13) + ylim(0,13); boxplot(logDat); plotMDS(logDat, col = c("blue","red")[factor(allGroups)]) + theme(aspect.ratio=1); dev.off()
+
+############################################################
+
+dds <- makeExampleDESeqDataSet(m=6,betaSD=2,interceptSD=0)
+rld <- rlog(dds)
+dat0io <- as.data.frame(assay(rld))
+pdf("0Beta_io.pdf"); scatmat(dat0io); boxplot(dat0io); plotMDS(dat0io, col = c("blue","red")[factor(allGroups)]) + theme(aspect.ratio=1); dev.off()
 
