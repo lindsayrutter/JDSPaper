@@ -1,4 +1,4 @@
-# This is the data from Section 4 of edgeR vignette (https://www.bioconductor.org/packages/3.3/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf)
+# This is the data from Section 4.1 of edgeR vignette (https://www.bioconductor.org/packages/3.3/bioc/vignettes/edgeR/inst/doc/edgeRUsersGuide.pdf)
 # https://mayoclinic.pure.elsevier.com/en/publications/tumor-transcriptome-sequencing-reveals-allelic-expression-imbalan
 
 library(readxl)
