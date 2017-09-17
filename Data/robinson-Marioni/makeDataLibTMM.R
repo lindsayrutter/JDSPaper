@@ -13,7 +13,7 @@ for (i in 2:ncol(data)){
 colnames(dataLib) = colnames(data)
 rownames(dataLib) = rownames(data)
 setDT(dataLib, keep.rownames = TRUE)[]
-colnames(dataLib) = c("ID","K.R1L1","L.R1L2","K.R1L3","L.R1L4","L.R1L6","K.R1L7","L.R1L8","K.R2L2","L.R2L3","K.R2L6")
+colnames(dataLib) = c("ID","K.R1L1","K.R1L3","K.R1L7","K.R2L2","K.R2L6","L.R1L2","L.R1L4","L.R1L6","L.R1L8","L.R2L3")
 dataLib = as.data.frame(dataLib)
 
 tmmSizes <- calcNormFactors(data, logratioTrim=.3)
@@ -24,7 +24,7 @@ for (i in 2:ncol(data)){
 colnames(dataTMM) = colnames(data)
 rownames(dataTMM) = rownames(data)
 setDT(dataTMM, keep.rownames = TRUE)[]
-colnames(dataTMM) = c("ID","K.R1L1","L.R1L2","K.R1L3","L.R1L4","L.R1L6","K.R1L7","L.R1L8","K.R2L2","L.R2L3","K.R2L6")
+colnames(dataTMM) = c("ID","K.R1L1","K.R1L3","K.R1L7","K.R2L2","K.R2L6","L.R1L2","L.R1L4","L.R1L6","L.R1L8","L.R2L3")
 dataTMM = as.data.frame(dataTMM)
 
 saveRDS(dataLib, "dataLib.rds")

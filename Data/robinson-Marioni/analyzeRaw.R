@@ -11,7 +11,7 @@ data = data[,c(1,2,4,7,9,11,3,5,6,8,10)]
 
 baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Marioni/raw"
 
-# Obtain R1 values for 2K 2L
+# Obtain R1 values
 outDir = paste0(baseOutDir, "/R1")
 dataSel <- data[,c(1:4,7:9)]
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
@@ -31,7 +31,7 @@ plotScatterStatic(dataSel, piLevel=0.99, outDir = outDir, option="prediction")
 plotScatterStatic(dataSel, piLevel=0.99999, outDir = outDir, option="prediction")
 plotScatterInteractive(dataSel, xbins=20)
 
-# Obtain R2 values for 2K 1L
+# Obtain R2 values
 outDir = paste0(baseOutDir, "/R2")
 dataSel <- data[,c(1,5:6,11)]
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
