@@ -1,4 +1,4 @@
-# This is the data from reference 12 of TMM Robinson paper.
+# This is the data from reference 18 of TMM Robinson paper.
 # It is the data that has been normalized by library size, created in makeDataLibTMM.R
 
 data = readRDS("dataLib.rds")

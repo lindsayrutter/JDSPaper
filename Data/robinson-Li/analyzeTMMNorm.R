@@ -1,13 +1,13 @@
-# This is the data from reference 12 of TMM Robinson paper.
+# This is the data from reference 18 of TMM Robinson paper.
 # It is the data that has been normalized by TMM, created in makeDataLibTMM.R
 
 data = readRDS("dataTMM.rds")
 
-baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Cloonan/tmmNorm"
+baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Li/tmmNorm"
 
-# Obtain ESEB values
-outDir = paste0(baseOutDir, "/ESEB")
-dataSel <- data
+# Obtain S values
+outDir = paste0(baseOutDir, "/S")
+dataSel = data
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
@@ -24,3 +24,5 @@ plotScatterStatic(dataSel, outDir = outDir, option="prediction")
 plotScatterStatic(dataSel, piLevel=0.99, outDir = outDir, option="prediction")
 plotScatterStatic(dataSel, piLevel=0.99999, outDir = outDir, option="prediction")
 plotScatterInteractive(dataSel, xbins=20)
+
+

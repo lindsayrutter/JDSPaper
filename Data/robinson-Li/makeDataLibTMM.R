@@ -22,6 +22,8 @@ data <- as.data.frame(cbind(s1$S.1, s2$S.2, s3$S.3, s4$S.4, s5$S.5, s6$S.6, s8$S
 data = as.data.frame(data)
 colnames(data) = c("S.1","S.2","S.3","S.4","S.5","S.6","S.8")
 
+saveRDS(data, "dataRaw.rds")
+
 # Make dataLib object
 libSizes <- colSums(data)
 dataLib = data.frame('a'=data[,1]/libSizes[1])

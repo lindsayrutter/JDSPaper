@@ -1,18 +1,20 @@
-# This is the data from reference 12 of TMM Robinson paper
+# This is the data from reference 18 of TMM Robinson paper
 
 library(data.table)
 library(readxl)
-data1 <- read_excel("~/JDSPaper/Data/robinson-Cloonan/Grimmond_lengths.xls")
-
-data = data1[,c(3,5,6)]
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+data = readRDS("dataRaw.rds")
+setDT(data, keep.rownames = TRUE)[]
 data = as.data.frame(data)
-colnames(data) = c("ID","ES","EB")
+colnames(data)[1] <- "ID"
 
-baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Cloonan/raw"
+baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Li/raw"
 
-# Obtain ES-EB values
-outDir = paste0(baseOutDir, "/ESEB")
-dataSel <- data
+# Obtain S values
+outDir = paste0(baseOutDir, "/S")
+dataSel = data
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
@@ -25,6 +27,7 @@ plotScatterStatic(dataSel, threshOrth = 1, outDir = outDir, option="orthogonal")
 plotScatterStatic(dataSel, threshOrth = 2, outDir = outDir, option="orthogonal")
 plotScatterStatic(dataSel, threshOrth = 3, outDir = outDir, option="orthogonal")
 plotScatterStatic(dataSel, threshOrth = 4, outDir = outDir, option="orthogonal")
+plotScatterStatic(dataSel, threshOrth = 5, outDir = outDir, option="orthogonal")
 plotScatterStatic(dataSel, outDir = outDir, option="prediction")
 plotScatterStatic(dataSel, piLevel=0.99, outDir = outDir, option="prediction")
 plotScatterStatic(dataSel, piLevel=0.99999, outDir = outDir, option="prediction")
