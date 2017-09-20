@@ -1,4 +1,4 @@
-# This is the data from Section 4.3 of edgeR vignette
+# This is the data from Section 4.5 of edgeR vignette
 # https://mayoclinic.pure.elsevier.com/en/publications/tumor-transcriptome-sequencing-reveals-allelic-expression-imbalan
 
 library(tweeDEseqCountData)
