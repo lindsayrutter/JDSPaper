@@ -10,3 +10,12 @@ sub <- intersect(rownames(geneLevelCounts), names(yeastGC))
 mat <- as.matrix(geneLevelCounts[sub, ])
 data <- newSeqExpressionSet(mat, phenoData=laneInfo, featureData=AnnotatedDataFrame(data.frame(gc=yeastGC[sub])))
 norm <- withinLaneNormalization(data, "gc", which="full", offset=FALSE)
+
+
+sub <- intersect(rownames(geneLevelData), names(yeastGC))
+
+mat <- as.matrix(geneLevelData[sub, ])
+
+data <- newSeqExpressionSet(mat, phenoData=AnnotatedDataFrame(data.frame(conditions=factor(c("mut", "mut", "wt", "wt")), row.names=colnames(geneLevelData))), featureData=AnnotatedDataFrame(data.frame(gc=yeastGC[sub])))
+
+norm <- withinLaneNormalization(data, "gc", which="full", offset=FALSE)

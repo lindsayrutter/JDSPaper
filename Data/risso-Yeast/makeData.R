@@ -1,7 +1,7 @@
 library(devtools)
 install_github("drisso/yeastRNASeqRisso2011")
 library(yeastRNASeqRisso2011)
-library(yeastRNASeq)
+#library(yeastRNASeq)
 library(EDASeq)
 
 ####################################################################
@@ -33,6 +33,10 @@ load("~/JDSPaper/Data/risso-Yeast/data/geneLevelCounts.rda")
 load("~/JDSPaper/Data/risso-Yeast/data/laneInfo.rda")
 load("~/JDSPaper/Data/risso-Yeast/data/geneInfo.rda")
 data(yeastGC)
+
+#Need to change column name otherwise get an error at future command (counts <- as(dataNorm,"CountDataSet"))
+colnames(laneInfo)[2] <- "conditions"
+
 means <- rowMeans(geneLevelCounts)
 filter <- means >= 10
 table(filter)
@@ -53,3 +57,10 @@ dataNorm <- betweenLaneNormalization(dataWithin, which="median")
 biasPlot(dataNorm[,1:8], "gc", log=TRUE, ylim=c(0, 8), col=1)
 boxplot(dataNorm, col=colors)
 meanVarPlot(dataNorm[, 1:8], log=TRUE)
+
+####################################################################
+# FYI: How to transform the EDASeq normalized data to be used in edgeR/DESeq for differential analysis
+library(DESeq)
+counts <- as(dataNorm,"CountDataSet")
+str(as.data.frame(counts@assayData$counts))
+y <- DGEList(counts=counts@assayData$counts)
