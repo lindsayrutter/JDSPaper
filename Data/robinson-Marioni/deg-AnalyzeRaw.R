@@ -50,4 +50,3 @@ length(which(lrt[[14]]$PValue<0.1/73320)) # 7040 had p-value <0.1/73320
 length(which(lrt[[14]]$PValue<0.05/73320)) # 6870 had p-value <0.05/73320
 length(which(lrt[[14]]$PValue<0.01/73320)) # 6491 had p-value <0.01/73320
 length(which(lrt[[14]]$PValue<1e-250)) # 358 had p-value <0.01/73320
-
