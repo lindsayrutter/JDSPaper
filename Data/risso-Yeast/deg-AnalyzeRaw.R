@@ -39,6 +39,8 @@ for (i in 1:(ncol(fit)-1)){
     metricList[[paste0(colnames(fit)[i], "_", colnames(fit)[j])]] <- lrt
   }
 }
+rawMetricList = metricList
+saveRDS(rawMetricList, "metricListRaw.rds")
 
 ############# Create DEG plots #############
 plotData <- data
