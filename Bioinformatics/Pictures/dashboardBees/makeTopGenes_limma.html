@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc" />
+
+    <meta name="author" content="Lindsay Rutter" />
+  
+  
+  <title>Limma Tutorial</title>
+
+    <script src="limmaTutorialBee_files/jquery-1.11.3/jquery.min.js"></script>
+  <link href="limmaTutorialBee_files/bootstrap-3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="limmaTutorialBee_files/bootstrap-3.3.2/js/bootstrap.min.js"></script>
+  <script src="limmaTutorialBee_files/bootstrap-3.3.2/shim/html5shiv.min.js"></script>
+  <script src="limmaTutorialBee_files/bootstrap-3.3.2/shim/respond.min.js"></script>
+  <link href="limmaTutorialBee_files/highlight-8.4/tomorrow.css" rel="stylesheet" />
+  <script src="limmaTutorialBee_files/highlight-8.4/highlight.pack.js"></script>
+  <link href="limmaTutorialBee_files/fontawesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+  <script src="limmaTutorialBee_files/stickykit-1.1.1/sticky-kit.min.js"></script>
+  <script src="limmaTutorialBee_files/jqueryeasing-1.3/jquery.easing.min.js"></script>
+  <link href="limmaTutorialBee_files/recliner-0.2.2/recliner.css" rel="stylesheet" />
+  <script src="limmaTutorialBee_files/recliner-0.2.2/recliner.min.js"></script>
+  <script src="limmaTutorialBee_files/recliner-0.2.2/onload.js"></script>
+  <link href="limmaTutorialBee_files/packagedocs-0.0.1/pd.css" rel="stylesheet" />
+  <script src="limmaTutorialBee_files/packagedocs-0.0.1/pd.js"></script>
+  <script src="limmaTutorialBee_files/packagedocs-0.0.1/pd-sticky-toc.js"></script>
+  
+  
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+
+  
+  <header class="navbar navbar-white navbar-fixed-top" role="banner" id="header">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                <a href="index.html" class="navbar-brand page-scroll">
+        Limma Tutorial
+        </a>
+      </div>
+          </div>
+  </header>
+
+  <!-- Begin Body -->
+  <div class="container">
+    <div class="row">
+            <div class="col-md-12">
+      
+<div id="content-top"></div>
+<p><meta http-equiv="content-type" content="text/html;charset=utf-8" /></p>
+<p>Try new paper (<a href="https://www.bioconductor.org/help/workflows/RNAseq123/" class="uri">https://www.bioconductor.org/help/workflows/RNAseq123/</a>)</p>
+<pre class="r"><code>library(limma)
+library(Glimma)
+library(GGally)
+library(ggplot2)
+
+thisPath &lt;- &quot;/Users/lindz/bigPint&quot;
+beeCounts &lt;- read.delim(file=paste0(thisPath, &quot;/AllLaneCount.txt&quot;), row.names=1, stringsAsFactors = FALSE)
+colnames(beeCounts) &lt;- c(&quot;NC.1&quot;, &quot;NC.2&quot;, &quot;NR.1&quot;, &quot;VR.1&quot;, &quot;NS.1&quot;, &quot;VP.1&quot;, &quot;NS.2&quot;, &quot;VR.2&quot;, &quot;NP.1&quot;, &quot;VP.2&quot;, &quot;VC.1&quot;, &quot;NP.2&quot;, &quot;VP.3&quot;, &quot;NP.3&quot;, &quot;VS.1&quot;, &quot;VS.2&quot;, &quot;VC.2&quot;, &quot;NC.3&quot;, &quot;VP.4&quot;, &quot;NC.4&quot;, &quot;NR.2&quot;, &quot;VC.3&quot;, &quot;VC.4&quot;, &quot;NP.4&quot;, &quot;VR.3&quot;, &quot;NC.5&quot;, &quot;VS.3&quot;, &quot;NP.5&quot;, &quot;VC.5&quot;, &quot;VS.4&quot;, &quot;NS.3&quot;, &quot;VS.5&quot;, &quot;VP.5&quot;, &quot;NR.3&quot;, &quot;NR.4&quot;, &quot;VC.6&quot;, &quot;NS.4&quot;, &quot;NC.6&quot;, &quot;NP.6&quot;, &quot;VR.4&quot;, &quot;NR.5&quot;, &quot;NR.6&quot;, &quot;NS.5&quot;, &quot;VP.6&quot;, &quot;NS.6&quot;, &quot;VR.5&quot;, &quot;VR.6&quot;, &quot;VS.6&quot;)
+beeCounts &lt;- beeCounts[ , order(names(beeCounts))]
+x &lt;- DGEList(counts=beeCounts)
+
+#samplenames &lt;- substring(colnames(x), 12, nchar(colnames(x)))
+#colnames(x) &lt;- samplenames
+group &lt;- as.factor(colnames(x))
+group &lt;- factor(c(rep(&quot;NC&quot;,6), rep(&quot;NP&quot;,6), rep(&quot;NR&quot;,6), rep(&quot;NS&quot;,6), rep(&quot;VC&quot;,6), rep(&quot;VP&quot;,6), rep(&quot;VR&quot;,6), rep(&quot;VS&quot;,6)))
+x$samples$group &lt;- group
+lane &lt;- as.factor(c(&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L12&quot;,&quot;L12&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;,&quot;L34&quot;))
+x$samples$lane &lt;- lane</code></pre>
+<p>Transform and remove low counts.</p>
+<pre class="r"><code>cpm &lt;- cpm(x)
+lcpm &lt;- cpm(x, log=TRUE)
+keep.exprs &lt;- rowSums(cpm&gt;1)&gt;=8 # tried filtering up to 24 and not much difference
+x &lt;- x[keep.exprs,, keep.lib.sizes=FALSE] # 15,314 to 10,626
+dim(x)</code></pre>
+<pre><code>[1] 10626    48</code></pre>
+<pre class="r"><code>x &lt;- calcNormFactors(x, method = &quot;TMM&quot;)</code></pre>
+<p>Make boxplots</p>
+<pre class="r"><code>ggparcoord(data.frame(x[[1]]), columns=1:48, alphaLines=0, boxplot=TRUE, scale=&quot;globalminmax&quot;) + coord_flip()</code></pre>
+<p><img src="limmaTutorialBee_files/figure-html/unnamed-chunk-3-1.png" width="960" /></p>
+<pre class="r"><code>ggparcoord(data.frame(log(x[[1]]/colMeans(x[[1]]))), columns=1:48, alphaLines=0, boxplot=TRUE, scale=&quot;globalminmax&quot;) + coord_flip()</code></pre>
+<pre><code>Warning: Removed 2179 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="limmaTutorialBee_files/figure-html/unnamed-chunk-3-2.png" width="960" /></p>
+<p>Create MDS plots</p>
+<pre class="r"><code>library(RColorBrewer)
+lcpm &lt;- cpm(x, log=TRUE)
+par(mfrow=c(1,2))
+col.group &lt;- group
+levels(col.group) &lt;-  brewer.pal(nlevels(col.group), &quot;Set1&quot;)
+col.group &lt;- as.character(col.group)
+col.lane &lt;- lane
+levels(col.lane) &lt;-  brewer.pal(nlevels(col.lane), &quot;Set2&quot;)</code></pre>
+<pre><code>Warning in brewer.pal(nlevels(col.lane), &quot;Set2&quot;): minimal value for n is 3, returning requested palette with 3 different levels</code></pre>
+<pre class="r"><code>col.lane &lt;- as.character(col.lane)</code></pre>
+<pre class="r"><code>plotMDS(lcpm, labels=colnames(lcpm), col=col.group)</code></pre>
+<p><img src="limmaTutorialBee_files/figure-html/unnamed-chunk-5-1.png" width="960" /></p>
+<pre class="r"><code>plotMDS(lcpm, labels=colnames(lcpm), col=col.lane, dim=c(3,4))</code></pre>
+<p><img src="limmaTutorialBee_files/figure-html/unnamed-chunk-6-1.png" width="960" /></p>
+<pre class="r"><code>glMDSPlot(lcpm, labels=paste(group, lane, colnames(lcpm), sep=&quot;_&quot;), groups=x$samples[,c(1,4)], launch=FALSE)</code></pre>
+<p>Create design matrix. There are many ways to setup a design matrix. Here, we removed the intercept from group (the first factor), but kept the intercept from lane. This allows us to do contrasts with group more easily.</p>
+<pre class="r"><code>design &lt;- model.matrix(~0+group+lane)
+colnames(design) &lt;- gsub(&quot;group&quot;, &quot;&quot;, colnames(design))
+
+contr.matrix &lt;- makeContrasts(
+   NCvsNP = NC-NP,
+   NCvsNR = NC-NR,
+   NCvsNS = NC-NS,
+   NCvsVC = NC-VC,
+   NCvsVP = NC-VP,
+   NCvsVR = NC-VR,
+   NCvsVS = NC-VS,
+   NPvsNR = NP-NR,
+   NPvsNS = NP-NS,
+   NPvsVC = NP-VC,
+   NPvsVP = NP-VP,
+   NPvsVR = NP-VR,
+   NPvsVS = NP-VS,
+   NRvsNS = NR-NS,
+   NRvsVC = NR-VC,
+   NRvsVP = NR-VP,
+   NRvsVR = NR-VR,
+   NRvsVS = NR-VS,
+   NSvsVC = NS-VC,
+   NSvsVP = NS-VP,
+   NSvsVR = NS-VR,
+   NSvsVS = NS-VS,
+   VCvsVP = VC-VP,
+   VCvsVR = VC-VR,
+   VCvsVS = VC-VS,
+   VPvsVR = VP-VR,
+   VPvsVS = VP-VS,
+   VRvsVS = VR-VS,
+   levels = colnames(design))</code></pre>
+<pre class="r"><code>par(mfrow=c(1,2))
+v &lt;- voom(x, design, plot=TRUE)
+vfit &lt;- lmFit(v, design)
+vfit &lt;- contrasts.fit(vfit, contrasts=contr.matrix)
+efit &lt;- eBayes(vfit)
+plotSA(efit, main=&quot;Final model: Mean−variance trend&quot;)</code></pre>
+<p><img src="limmaTutorialBee_files/figure-html/unnamed-chunk-9-1.png" width="960" /></p>
+<p>For a quick look at differential expression levels, the number of significantly up- and down-regulated genes can be summarised in a table. Significance is defined using an adjusted p-value cutoff that is set at 5% by default. For the comparison between expression levels in basal and LP, 4,127 genes are found to be down-regulated in basal relative to LP and 4,298 genes are up-regulated in basal relative to LP – a total of 8,425 DE genes.</p>
+<pre class="r"><code>summary(decideTests(efit))</code></pre>
+<pre><code>   NCvsNP NCvsNR NCvsNS NCvsVC NCvsVP NCvsVR NCvsVS NPvsNR NPvsNS NPvsVC
+-1      0    279      0      0      3     86      0      0    655      0
+0   10626  10026  10626  10626  10623  10437  10626  10626   8883  10626
+1       0    321      0      0      0    103      0      0   1088      0
+   NPvsVP NPvsVR NPvsVS NRvsNS NRvsVC NRvsVP NRvsVR NRvsVS NSvsVC NSvsVP
+-1      0      9    447   1237    303      8      0    872      0     98
+0   10626  10600   9281   8075  10064  10617  10626   8802  10626  10439
+1       0     17    898   1314    259      1      0    952      0     89
+   NSvsVR NSvsVS VCvsVP VCvsVR VCvsVS VPvsVR VPvsVS VRvsVS
+-1    670      0      1     16      0      0      0     25
+0    9422  10626  10625  10574  10626  10626  10626  10576
+1     534      0      0     36      0      0      0     25</code></pre>
+<p>Some studies require more than an adjusted p-value cut-off. For a stricter definition on significance, one may require log-fold-changes (log-FCs) to be above a minimum value. The treat method can be used to calculate p-values from empirical Bayes moderated t-statistics with a minimum log-FC requirement. The number of differentially expressed genes are reduced to a total of 3,135 DE genes for basal versus LP, 3,270 DE genes for basal versus ML, and 385 DE genes for LP versus ML when testing requires genes to have a log-FC that is significantly greater than 1 (equivalent to a 2-fold difference between cell types on the original scale).</p>
+<pre class="r"><code>tfit &lt;- treat(vfit, lfc=1)
+dt &lt;- decideTests(tfit)
+summary(dt)</code></pre>
+<pre><code>   NCvsNP NCvsNR NCvsNS NCvsVC NCvsVP NCvsVR NCvsVS NPvsNR NPvsNS NPvsVC
+-1      0      0      0      0      0      0      0      0      0      0
+0   10626  10626  10626  10626  10626  10626  10626  10626  10626  10626
+1       0      0      0      0      0      0      0      0      0      0
+   NPvsVP NPvsVR NPvsVS NRvsNS NRvsVC NRvsVP NRvsVR NRvsVS NSvsVC NSvsVP
+-1      0      0      0      0      0      0      0      0      0      0
+0   10626  10626  10626  10626  10626  10626  10626  10626  10626  10626
+1       0      0      0      0      0      0      0      0      0      0
+   NSvsVR NSvsVS VCvsVP VCvsVR VCvsVS VPvsVR VPvsVS VRvsVS
+-1      0      0      0      0      0      0      0      0
+0   10626  10626  10626  10626  10626  10626  10626  10626
+1       0      0      0      0      0      0      0      0</code></pre>
+<pre class="r"><code>pairNames &lt;- colnames(contr.matrix)
+topGenes &lt;- list()
+genePval &lt;- list()
+for (i in 1:length(pairNames)) {
+  temp &lt;- topTreat(efit, coef=i, n=Inf)
+  sigRows &lt;- which(temp$adj.P.Val&lt;0.05)
+  topGenes[[ pairNames[i] ]] &lt;- temp[sigRows,]
+  genePval[[ pairNames[i] ]] &lt;- temp
+}</code></pre>
+<p>Save the data</p>
+<pre class="r"><code>saveRDS(topGenes, file=&quot;topGenes_limma.Rds&quot;)
+saveRDS(genePval, file=&quot;genePval_limma.Rds&quot;)
+saveRDS(x, file=&quot;data_limma.Rds&quot;)</code></pre>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="col-md-6">
+              </div>
+      <div class="col-md-6">
+        <p class="pull-right">created with <a href="https://github.com/hafen/packagedocs">packagedocs</a>
+                  </p>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
