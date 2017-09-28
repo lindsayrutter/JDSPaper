@@ -17,15 +17,4 @@ x[, 6:15] <- x[, 6:15]+0.5
 rt2 <- rowttests(x, fac)
 qplot(rt2$p.value, fill = I("coral3")) #batchEffectImage2.png
 
-myData = as.data.frame(x)
-myData = myData[,c(4:9)]
-colnames(myData) = c("N.1","N.2","N.3","B.1","B.2","B.3")
-myData = abs(myData)
-setDT(myData, keep.rownames = TRUE)[]
-colnames(myData)[1] <- "ID"
-myData = as.data.frame(myData)
-plotScatterStatic(myData)
-
-myData[,-1] = log(myData[,-1]+1)
-plotScatterStatic(myData)
 

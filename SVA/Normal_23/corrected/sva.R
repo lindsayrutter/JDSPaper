@@ -46,3 +46,28 @@ combat_edata = ComBat(dat=edata, batch=batch, mod=modcombat, par.prior=TRUE, pri
 pValuesComBat = f.pvalue(combat_edata,mod,mod0)
 qValuesComBat = p.adjust(pValuesComBat,method="BH")
 
+# Make plots
+#################################################################
+
+myData = as.data.frame(combat_edata)
+myData = myData[,c(1:5,7)]
+colnames(myData) = c("THREE.1","TWO.1","TWO.2","THREE.2","THREE.3","TWO.3")
+myData = myData[,c(2,3,6,1,4,5)]
+setDT(myData, keep.rownames = TRUE)[]
+colnames(myData)[1] <- "ID"
+myData = as.data.frame(myData)
+plotScatterStatic(myData)
+
+boxSel = myData[,-1] %>% gather(Sample,Count)
+bPlot = ggplot(boxSel, aes(x=Sample, y=Count)) + geom_boxplot()
+png(filename=paste0(outDir = outDir,"/boxplot.jpg"))
+bPlot
+dev.off()
+plotScatterStatic(myData, threshOrth = 0.5, outDir = outDir, option="orthogonal")
+#plotScatterStatic(myData, threshOrth = 1, outDir = outDir, option="orthogonal")
+plotScatterStatic(myData, threshOrth = 2, outDir = outDir, option="orthogonal")
+#plotScatterStatic(myData, threshOrth = 3, outDir = outDir, option="orthogonal")
+#plotScatterStatic(myData, threshOrth = 4, outDir = outDir, option="orthogonal")
+plotScatterStatic(myData, outDir = outDir, option="prediction")
+#plotScatterStatic(myData, piLevel=0.99, outDir = outDir, option="prediction")
+plotScatterStatic(myData, piLevel=0.99999, outDir = outDir, option="prediction")
