@@ -9,7 +9,7 @@ library(data.table)
 library(RColorBrewer)
 library(Hmisc)
 
-data(soybean_cn)
+load("soybean_cn.rda")
 dat <- soybean_cn
 dat <- dat[,c(1:7)]
 # Switch and relabel
@@ -18,7 +18,7 @@ colnames(dat) <- c("ID","S1.1","S1.2","S1.3","S2.1","S2.2","S2.3")
 
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
-data(soybean_cn_metrics)
+load("soybean_cn_metrics.rda")
 metrics <- soybean_cn_metrics
 dat = dat[which(dat$ID %in% metrics[[1]]$ID),]
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]

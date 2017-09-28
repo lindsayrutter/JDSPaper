@@ -6,21 +6,14 @@ library(htmlwidgets)
 library(dplyr)
 library(tidyr)
 library(data.table)
-library(DESeq2)
+library(RColorBrewer)
+library(Hmisc)
 
 dat <- readRDS("RLogDat.Rds")
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
-
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 metrics <- readRDS("topGenes_limma.Rds")
-for (i in 1:(length(myPairs)-1)){
-  for (j in (i+1):length(myPairs)){
-    setDT(metrics[[paste0(myPairs[i],"vs",myPairs[j])]], keep.rownames = TRUE)[]
-    colnames(metrics[[paste0(myPairs[i],"vs",myPairs[j])]])[1] <- "ID"
-    metrics[[paste0(myPairs[i],"vs",myPairs[j])]]$ID <- as.factor(metrics[[paste0(myPairs[i],"vs",myPairs[j])]]$ID)
-    metrics[[paste0(myPairs[i],"vs",myPairs[j])]] <- as.data.frame(metrics[[paste0(myPairs[i],"vs",myPairs[j])]])
-  }
-}
+dat = dat[which(dat$ID %in% metrics[[1]]$ID),]
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
 values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 

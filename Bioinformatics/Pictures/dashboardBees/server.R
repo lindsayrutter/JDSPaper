@@ -6,21 +6,14 @@ library(htmlwidgets)
 library(dplyr)
 library(tidyr)
 library(data.table)
-library(DESeq2)
+library(RColorBrewer)
+library(Hmisc)
 
 dat <- readRDS("RLogDat.Rds")
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
-
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 metrics <- readRDS("topGenes_limma.Rds")
-for (i in 1:(length(myPairs)-1)){
-  for (j in (i+1):length(myPairs)){
-    setDT(metrics[[paste0(myPairs[i],"vs",myPairs[j])]], keep.rownames = TRUE)[]
-    colnames(metrics[[paste0(myPairs[i],"vs",myPairs[j])]])[1] <- "ID"
-    metrics[[paste0(myPairs[i],"vs",myPairs[j])]]$ID <- as.factor(metrics[[paste0(myPairs[i],"vs",myPairs[j])]]$ID)
-    metrics[[paste0(myPairs[i],"vs",myPairs[j])]] <- as.data.frame(metrics[[paste0(myPairs[i],"vs",myPairs[j])]])
-  }
-}
+dat = dat[which(dat$ID %in% metrics[[1]]$ID),]
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
 values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 
@@ -99,10 +92,50 @@ shinyServer(function(input, output, session){
     hexdf <- data.frame (hcell2xy (h),  hexID = h@cell, counts = h@count)
     attr(hexdf, "cID") <- h@cID
     
-    my_breaks <- c(2, 4, 6, 8, 20, 1000)    
-    p <- reactive(ggplot(hexdf, aes(x=x, y=y, fill = counts, hexID=hexID)) + geom_hex(stat="identity") + geom_abline(intercept = 0, color = "red", size = 0.25) + labs(x = values$selPair[1], y = values$selPair[2]) + coord_fixed(xlim = c(-0.5, (maxRange[2]+buffer)), ylim = c(-0.5, (maxRange[2]+buffer))) + theme(aspect.ratio=1) + scale_fill_gradient(name = "count", trans = "log", breaks = my_breaks, labels = my_breaks, guide="legend"))
+    # By default, groups into six equal-sized bins
+    hexdf$countColor <- cut2(hexdf$counts, g=6)
+    hexdf$countColor2 <- as.factor(unlist(lapply(as.character(hexdf$countColor), function(x) substring(strsplit(gsub(" ", "", x, fixed = TRUE), ",")[[1]][1], 2))))
     
-    plotlyHex <- reactive(ggplotly(p(), height = 400, width = 400) %>% config(displayModeBar = F))
+    hexdf$countColor2 <- factor(hexdf$countColor2, levels = as.character(sort(as.numeric(levels(hexdf$countColor2)))))
+    
+    for (i in 1:(length(levels(hexdf$countColor2))-1)){
+      levels(hexdf$countColor2)[i] <- paste0(levels(hexdf$countColor2)[i],"-",levels(hexdf$countColor2)[i+1])
+    }
+    levels(hexdf$countColor2)[length(levels(hexdf$countColor2))] <- paste0(levels(hexdf$countColor2)[length(levels(hexdf$countColor2))], "+")
+    
+    my_breaks = levels(hexdf$countColor2)
+    clrs <- brewer.pal(length(my_breaks)+3, "Blues")
+    clrs <- clrs[3:length(clrs)]
+    
+    print("my_breaks")
+    print(str(my_breaks))
+    print("clrs")
+    print(str(clrs))
+    print("hexdf$countColor2")
+    print(str(hexdf$countColor2))
+    print("hexdf")
+    print(str(hexdf))
+    print("HEAD")
+    print(head(hexdf))
+    
+    p <- reactive(ggplot(hexdf, aes(x=x, y=y, hexID=hexID, counts=counts, fill=countColor2)) + geom_hex(stat="identity") + scale_fill_manual(labels = as.character(my_breaks), values = rev(clrs), name = "Cases count") + geom_abline(intercept = 0, color = "red", size = 0.25) + labs(x = paste0("Read count ", "(", values$selPair[1], ")"), y = paste0("Read count ", "(", values$selPair[2], ")")) + coord_fixed(ratio=1))
+    
+    # coord_fixed(xlim = c(-0.5, (maxRange[2]+buffer)), ylim = c(-0.5, (maxRange[2]+buffer)))
+    # theme(aspect.ratio=1)
+    
+gP <- eventReactive(p(), {
+  gP <- ggplotly(p(), height = 400) #  height = 400
+  for (i in 1:(length(gP$x$data)-1)){
+    info <- gP$x$data[i][[1]]$text
+    info2 <- strsplit(info,"[<br/>]")
+    myIndex <- which(startsWith(info2[[1]], "counts:"))
+    gP$x$data[i][[1]]$text <- info2[[1]][myIndex]
+  }
+  gP$x$data[length(gP$x$data)][[1]]$text <- NULL
+gP
+})
+    
+    plotlyHex <- reactive(gP() %>% config(displayModeBar = F))
     
     # Use onRender() function to draw x and y values of selected row as orange point
     plotlyHex() %>% onRender("
@@ -121,7 +154,8 @@ shinyServer(function(input, output, session){
      color: 'orange',
      size: drawPoints.pointSize
      },
-     hoverinfo: 'none'
+     hoverinfo: 'none',
+     showlegend: false
      };
      Traces.push(trace);
      Plotly.addTraces(el.id, Traces);
@@ -158,7 +192,7 @@ shinyServer(function(input, output, session){
       boxDat
     })
     
-    BP <- reactive(ggplot(boxDat(), aes(x = Sample, y = Count)) + geom_boxplot())
+    BP <- reactive(ggplot(boxDat(), aes(x = Sample, y = Count)) + geom_boxplot() + labs(y = "Read count"))
     ggBP <- reactive(ggplotly(BP(), width=600, height = 400) %>% config(displayModeBar = F, staticPlot = T))
     
     observe({

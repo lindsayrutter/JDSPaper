@@ -9,11 +9,11 @@ library(data.table)
 library(RColorBrewer)
 library(Hmisc)
 
-data(soybean_cn)
+load("soybean_cn.rda")
 dat <- soybean_cn
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
-data(soybean_cn_metrics)
+load("soybean_cn_metrics.rda")
 metrics <- soybean_cn_metrics
 dat = dat[which(dat$ID %in% metrics[[1]]$ID),]
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
