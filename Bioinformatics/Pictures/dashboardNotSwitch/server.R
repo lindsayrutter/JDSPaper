@@ -11,6 +11,7 @@ library(Hmisc)
 
 load("soybean_cn.rda")
 dat <- soybean_cn
+dat <- dat[,1:7]
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 load("soybean_cn_metrics.rda")

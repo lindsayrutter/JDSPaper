@@ -5,6 +5,6 @@ account: lindsayrutter
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 220045
-bundleId: 1002257
+bundleId: 1004978
 url: https://lindsayrutter.shinyapps.io/dashboardswitch/
-when: 1506625871.25546
+when: 1506798063.19986

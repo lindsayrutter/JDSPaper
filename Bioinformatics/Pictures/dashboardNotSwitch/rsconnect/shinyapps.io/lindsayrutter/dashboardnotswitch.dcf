@@ -5,6 +5,6 @@ account: lindsayrutter
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 220047
-bundleId: 1002264
+bundleId: 1004986
 url: https://lindsayrutter.shinyapps.io/dashboardnotswitch/
-when: 1506626080.54519
+when: 1506798447.48739
