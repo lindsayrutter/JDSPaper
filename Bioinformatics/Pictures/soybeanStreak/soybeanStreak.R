@@ -3,6 +3,16 @@ soybean_ir <- soybean_ir
 soybean_ir[,-1] <- log(soybean_ir[,-1]+1)
 plotScatterStatic(soybean_ir)
 
+plotScatterStatic(soybean_ir, threshOrth = 0, option="orthogonal")
+plotScatterStatic(soybean_ir, threshOrth = 0.1, option="orthogonal")
+plotScatterStatic(soybean_ir, threshOrth = 0.3, option="orthogonal")
+plotScatterStatic(soybean_ir, threshOrth = 0.5, option="orthogonal")
+plotScatterStatic(soybean_ir, threshOrth = 1, option="orthogonal")
+plotScatterStatic(soybean_ir, threshOrth = 2, option="orthogonal")
+
+
+plotScatterInteractive(soybean_ir, threshOrth = 1, option="orthogonal")
+
 # Looks terrible because taking ceiling of non-integers
 # Also tried rlog on original data of integers, and not good
 # rownames(soybean_ir) <- soybean_ir[,1]
