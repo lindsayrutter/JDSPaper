@@ -5,7 +5,6 @@ library(cowplot) # Need for combining ggplot2 output into one plot aesthetically
 library(data.table)
 
 # This function creates a boxplot, MDS plot, and parallel coordinate plot for five replications
-set.seed(10)
 makePlots <- function(A.1, A.2, A.3, A.4, A.5, i){
   dat <- data.frame(ID = paste0("ID", 1:50), A.1, A.2, A.3, A.4, A.5)
   datM <- melt(dat, id.vars = "ID")
