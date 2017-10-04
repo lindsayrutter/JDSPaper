@@ -12,6 +12,7 @@ data = as.data.frame(data)
 outDir = "/Users/lindz/JDSPaper/Data/risso-Yeast/between"
 
 dataSel <- data
+plotMDS(dataSel[,c(2,3,8,9)])
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)

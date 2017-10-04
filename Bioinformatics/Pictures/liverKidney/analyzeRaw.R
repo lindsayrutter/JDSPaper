@@ -9,11 +9,12 @@ colnames(data) = c("ID","K.R1L1","L.R1L2","K.R1L3","L.R1L4","L.R1L6","K.R1L7","L
 data = as.data.frame(data)
 data = data[,c(1,2,4,7,9,11,3,5,6,8,10)]
 
-baseOutDir = "/Users/lindz/JDSPaper/Data/robinson-Marioni/raw"
+baseOutDir = getwd()
 
 # Obtain R1 values
 outDir = paste0(baseOutDir, "/R1")
 dataSel <- data[,c(1:4,7:9)]
+plotMDS(dataSel[,-1])
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
