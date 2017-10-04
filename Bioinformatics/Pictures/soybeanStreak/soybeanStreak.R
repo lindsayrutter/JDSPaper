@@ -1,6 +1,8 @@
 data(soybean_ir)
 soybean_ir <- soybean_ir
 soybean_ir[,-1] <- log(soybean_ir[,-1]+1)
+soybean_ir[,2] <- soybean_ir[,2] +2
+soybean_ir[,7] <- soybean_ir[,7] +2
 plotScatterStatic(soybean_ir)
 
 plotScatterStatic(soybean_ir, threshOrth = 0, option="orthogonal")
