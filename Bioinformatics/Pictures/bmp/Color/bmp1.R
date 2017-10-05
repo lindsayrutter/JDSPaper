@@ -21,7 +21,7 @@ makePlots <- function(A.1, A.2, A.3, A.4, A.5, i){
   dat_long <- melt(datt, id.vars ="rn" )
   colnames(dat_long) <- c("Sample", "ID", "Count")
 
-  pcpPlots[[i]] <<- ggplot(dat_long) + geom_line(aes(x = Sample, y = Count, group = ID, color = ID)) + theme(legend.position="none", text = element_text(size=12))
+  pcpPlots[[i]] <<- ggplot(dat_long) + geom_line(aes(x = Sample, y = Count, group = ID)) + theme(legend.position="none", text = element_text(size=12))
 
   tDat <- t(dat[,2:6])
   datD <- as.matrix(dist(tDat))
@@ -51,8 +51,9 @@ A.4=sort(rnorm(50,10))
 
 makePlots(A.1, A.2, A.3, A.4, A.5, 2)
 
+require(gridExtra)
 # View the first case
-plot_grid(boxPlots[[1]], mdsPlots[[1]], pcpPlots[[1]], labels=c("A", "B", "C"), ncol = 1, nrow = 3)
-
+plot1 <- plot_grid(boxPlots[[1]], mdsPlots[[1]], pcpPlots[[1]], labels=c("A", "B", "C"), ncol = 1, nrow = 3, label_size=12) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
 # View the second case
-plot_grid(boxPlots[[2]], mdsPlots[[2]], pcpPlots[[2]], labels=c("A", "B", "C"), ncol = 1, nrow = 3)
+plot2 <- plot_grid(boxPlots[[2]], mdsPlots[[2]], pcpPlots[[2]], labels=c("A", "B", "C"), ncol = 1, nrow = 3, label_size=12) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
+grid.arrange(plot1, plot2, ncol=2)
