@@ -1,0 +1,21 @@
+\begin{table}
+\caption{This is a simple table.}
+\label{t:one}
+\begin{center}
+\begin{tabular}{lrrr}
+\Hline
+Culture/Library prep. & \multicolumn{1}{c}{Library prep. protocol} &  \multicolumn{1}{c}{Growth condition} & \multicolumn{1}{c}{Flow-cell} \\ \hline
+Y1 & Protocol 1 & YPD & 428R1 \\
+Y1 & Protocol 1 & YPD & 4328B \\
+Y2 & Protocol 1 & YPD & 428R1 \\
+Y2 & Protocol 1 & YPD & 4328B \\
+Y7 & Protocol 1 & YPD & 428R1 \\
+Y7 & Protocol 1 & YPD & 4328B \\
+Y4 & Protocol 2 & YPD & 61MKN \\
+Y4 & Protocol 2 & YPD & 61MKN \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+\efloatseparator
+ 
