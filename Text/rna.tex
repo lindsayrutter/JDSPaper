@@ -219,7 +219,7 @@ Here, we use real RNA-seq data to demonstrate that our visualization tools can d
 \section{Parallel Coordinate Plots}
 \label{s:Parallel Coordinate Plots}
 
-Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row in the data table as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. An ideal dataset will have large variability between treatment groups but little variability between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatment groups.
+Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row (gene) in the data table as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. The ideal dataset will have large variability between treatment groups but little variability between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatment groups.
 
 There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are side-by-side boxplots and Multidimensional Scaling (MDS) plots (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization and that could be better detected with parallel coordinate plots.
 
@@ -234,6 +234,25 @@ Despite this, we immediately see from the parallel coordinate plots at the botto
 \caption{Caption.
 \label{2group}}
 \end{figure}
+
+\section{Scatterplot matrices}
+\label{s:Scatterplot matrices}
+
+Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) in the data table as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously. 
+
+The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, if the data has lower variability between replicates than between treatments, then we expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments.
+
+Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon leaves (S1 and S2). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates. After confirming this expected trend, we can also use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots are problematic genes, while outlier genes that deviate from the \textit{x=y} line in treatment scatterplots are potentially differentially expressed genes.
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_10hex.jpg}}}
+\end{center}
+\caption{Caption.
+\label{cotyIdeal}}
+\end{figure}
+
+
 
 
 \begin{table}
