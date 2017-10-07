@@ -207,9 +207,13 @@ RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the q
 
 Gene expression data is multivariate data, and its basic form is a matrix containing mapped read counts for \textit{n} rows of genes and \textit{p} columns of samples. These mapped read counts provide estimations of the gene expression levels across samples. Researchers typically conduct RNA-seq studies to identify differentially expressed genes (DEGs) between treatment groups. In most popular RNA-seq analysis packages, this objective is approached with models, such as the negative binomial model (Anders and Huber, 2010; Trapnell et al., 2013; Trapnell et al., 2012; Robinson et al., 2010) and linear regression models (Law et al., 2014).
 
-Initially, it was widely claimed that RNA-seq produced unbiased data that did not require sophisticated normalization (Wang et al., 2009; Morin et al., 2008; Marioni et al., 2008). However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of DEGs is not a negligible task. Biases that complicate the analysis of RNA-seq data include nucleotide-specific and read-position specific biases (Hansen et al., 2010), biases related to the gene lengths and sequencing depths (Oshlack, Robinson, and Young, 2010; Robinson and Oshlack, 2010), biases related to the number of replications (Schurch et al., 2016), biases introduced during library preparation (McIntyre et al., 2011), biases related to alternative gene isoforms and overlapping senseantisense transcripts (Trapnell et al., 2013), and confounding issues arising from the combination of technical and biological variability (Bullard et al., 2010).
+Initially, it was widely claimed that RNA-seq produced unbiased data that did not require sophisticated normalization (Wang et al., 2009; Morin et al., 2008; Marioni et al., 2008). However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of DEGs is not a negligible task. Problems that complicate the analysis of RNA-seq data include nucleotide-specific and read-position specific biases (Hansen et al., 2010), biases related to gene lengths and sequencing depths (Oshlack, Robinson, and Young, 2010; Robinson and Oshlack, 2010), biases introduced during library preparation (McIntyre et al., 2011), biases pertaining to the number of replications (Schurch et al., 2016), biases derived from overlapping senseantisense transcripts and gene isoforms (Trapnell et al., 2013), and the confounding combination of technical and biological variability (Bullard et al., 2010).
 
+In light of these complications, researchers should analyze RNA-seq data like they would any other biased multivariate data. Simply applying models to such data is problematic because models have assumptions that they alone cannot call into question. Fortunately, data visualization enables researchers to see patterns and problems they may not otherwise detect with traditional modeling. As a result, the most effective approach to analyze data is to iterate between models and visuals, and to enhance the appropriateness of applied models based on feedback from visuals (Unwin, 1992; Shneiderman, 2002).
 
+When visualizing RNA-seq data, we primarily want to compare the variability between replicates and between treatment groups. This is best achieved by viewing the mapped read count distributions across all genes and samples. Unfortunately, the few visual tools available in popular RNA-seq packages do not allow users to effectively view their data in this manner.
+
+Here, we use real RNA-seq data to demonstrate that effective multivariate visualization tools should be used in conjunction with models to fully explore and analyze the data. We demonstrate that our proposed visualization tools can detect normalization issues, DEG designation issues, and common errors during the analysis pipeline. We also demonstrate that they can elicit genes of interest that cannot be obtained with any models. We stress that reliable RNA-seq data analysis requires interactive graphics that allow users to quickly view subsets of individual genes that appear problematic or significant to the study. We also emphasize that, in line with modern multivariate data exploration, reliable RNA-seq analysis allows users to link between multiple types of multivariate visualizations. We conclude with a proposol that users do not completely change their approach their RNA-seq analysis, but simply modify it by incorporating the graphical tools we demonstrate, including scatterplot matrices, parallel coordinate plots, and replicate line plots.
 
 
 \section{Model}
@@ -348,6 +352,8 @@ sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
 \bibitem{ } Robinson, M.D., McCarthy, D.J., and Smyth, G.K. (2010). edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. \textit{Bioinformatics} \textbf{26,} 139–140.
 
+\bibitem{ } Shneiderman, B. (2002). Inventing Discovery Tools: Combining Information Visualization with Data Mining. \textit{Information Visualization} \textbf{1,} 5-12.
+
 \bibitem{ } Schurch, N.J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., et al. (2016). How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? \textit{RNA} \textbf{22,} 839–851.
 
 \bibitem{ } Trapnell, C., Hendrickson, D.G., Sauvageau, M., Goff, L., Rinn, J.L., and Pachter, L. (2013). Differential analysis of gene regulation at transcript resolution with RNA-seq.
@@ -355,10 +361,15 @@ sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
 \bibitem{ } Trapnell, C., Roberts, A., Goff, L., Pertea, G., Kim, D., and Kelley D.R. (2012). Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. \textit{Nature Protocols} \textbf{7,} 562–578.
 
-\bibitem{ } Wang, Z., Gerstein, M., and Snyder, M. (2009). RNA-Seq: a revolutionary tool for
-transcriptomics. \textit{Nature Reviews Genetics} \textbf{10,} 57–63.
+\bibitem{ } Unwin, A. (1992). How interactive graphics will revolutionize statistical practice. \textit{The Statistician} \textbf{41,} 365-369
+
+\bibitem{ } Wang, Z., Gerstein, M., and Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. \textit{Nature Reviews Genetics} \textbf{10,} 57–63.
 
 \bibitem{ } Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014). Comparison of RNA-Seq and Microarray in Transcriptome Profiling of Activated T Cells. \textit{PLoS ONE} \textbf{9,} e78644.
+
+
+
+
 
 
 % Examples
