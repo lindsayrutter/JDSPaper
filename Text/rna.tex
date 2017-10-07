@@ -240,20 +240,24 @@ Despite this, we immediately see from the parallel coordinate plots at the botto
 
 Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) in the data table as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously. 
 
-The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, if the data has lower variability between replicates than between treatments, then we expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments.
-
-Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon leaves (S1 and S2). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates. After confirming this expected trend, we can also use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots are problematic genes, while outlier genes that deviate from the \textit{x=y} line in treatment scatterplots are potentially differentially expressed genes.
+The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, if the data has lower variability between replicates than between treatments, then we expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates.
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_10hex.jpg}}}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}}
 \end{center}
 \caption{Caption.
 \label{cotyIdeal}}
 \end{figure}
 
+After confirming this expected trend, users can also use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots are problematic genes, whereas outlier genes that deviate from the \textit{x=y} line in treatment scatterplots are potential differentially expressed genes. In order to achieve this capability, users must be able to interact with the plot. Figure # shows a static screenshot of this capability, but the interactive version of this plot is available at #.
+
+Notice that our scatterplot matrix contains 15 scatterplots and that each gene is denoted as a point in all scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive can significantly slow down the interactive capabilities of the plot. To solve this, as shown in Figure #, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of objects to be plotted, which increases the interactivity speed.
+
+The interactive version of the plot demonstrates that the user can determine the number of genes in a particular hexagon bin by hovering over it. By clicking on a particular hexagon bin, the genes contained in that hexagon bin are superimposed as orange points across all scatterplots. 
 
 
+"Glyma06g11430.1" "Glyma13g02510.1" S1.2 high (S1 low, S2 high) (click on S1.1 and S1.2)
 
 \begin{table}
 \caption{This is a simple table.}
