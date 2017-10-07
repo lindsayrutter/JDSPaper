@@ -1,0 +1,10 @@
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+%width=8.5cm
+\end{center}
+\caption{Caption.
+\label{2group}}
+\end{figure}
+\efloatseparator
+ 

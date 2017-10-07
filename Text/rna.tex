@@ -16,6 +16,7 @@
 %  journal as a guide. 
 %  
 \documentclass[useAMS,referee]{biom}
+
 %documentclass[useAMS]{biom}
 %
 %  If your system does not have the AMS fonts version 2.0 installed, then
@@ -33,7 +34,6 @@
 % 
 %  -  If you use Patrick Daly's natbib  to cross-reference your 
 %     bibliography entries, use the usenatbib option
-%
 %  -  If you use \includegraphics (graphicx package) for importing graphics
 %     into your figures, use the usegraphicx option
 % 
@@ -131,8 +131,9 @@
 %$^{1}$Department of Statistics, University of Warwick, Coventry CV4 7AL, U.K \\
 %$^{2}$Department of Geology, University of Bedrock, Bedrock, Kansas, U.S.A.}
 
-
+\usepackage{graphicx}
 \begin{document}
+
 
 %  This will produce the submission and review information that appears
 %  right after the reference section.  Of course, it will be unknown when
@@ -201,7 +202,7 @@ Data visualization; Exploratory data analysis; Interactive graphics; RNA-sequenc
 %  For that matter, please do not attempt to redefine anything!
 
 \section{Introduction}
-\label{s:intro}
+\label{s:Introduction}
 
 RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly (Grabherr et al., 2011; Robertson et al., 2010) and detection of alternative splicing processes (Anders, Reyes, and Huber, 2012; Pan et al., 2008). Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes (Wang, Gerstein, and Snyder, 2009; Zhao et al., 2014).
 
@@ -213,35 +214,56 @@ In light of these complications, researchers should analyze RNA-seq data like th
 
 When visualizing RNA-seq data, we primarily want to compare the variability between replicates and between treatment groups. This is best achieved by viewing the mapped read count distributions across all genes and samples. Unfortunately, the few visual tools available in popular RNA-seq packages do not allow users to effectively view their data in this manner.
 
-Here, we use real RNA-seq data to demonstrate that our proposed visualization tools can detect normalization issues, DEG designation issues, and common errors in the analysis pipeline. We also should that our tools can elicit genes of interest that cannot otherwise be obtained with any models. In line with modern multivariate data exploration, we emphasize that interactive graphics should be an indisposable component of RNA-seq analysis. Users should be able to quickly view subsets of genes that appear promising or problematic, and link between different plots to quickly obtain various perspectives of their data. In this paper, we are not proposing that users completely change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by incorporating meaningful multivariate graphical tools, including scatterplot matrices, parallel coordinate plots, and replicate line plots.
+Here, we use real RNA-seq data to demonstrate that our visualization tools can detect normalization problems, DEG designation problems, and common errors in the analysis pipeline. We also show that our tools can identify genes of interest that cannot otherwise be obtained by any models. In line with modern multivariate data exploration, we emphasize that interactive graphics should be an indisposable component of RNA-seq analysis. Researchers should be able to quickly flip through plots of genes that appear promising or problematic, and link between different types of plots to quickly obtain various perspectives of their data. In this paper, we are not proposing that users completely change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate graphical tools, namely parallel coordinate plots, scatterplot matrices, and replicate line plots.
 
-\section{Model}
-\label{s:model}
+\section{Parallel Coordinate Plots}
+\label{s:Parallel Coordinate Plots}
 
-\subsection{First Model Subsection}
+There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are the side-by-side boxplot and Multidimensional scaling (MDS) plot (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization, and that could be better detected with parallel coordinate plots.
 
-The Cox model (Cox, 1972) is one of the most widely used statistical
-models.  Hastie, Tibshirani, and Friedman (2001) is an example of a
-citation to a work with three authors.  The first time you reference
-one of these in the text, use all the authors names. However, in all
-subsequent references, just use Hastie et al. (2001).  Works with four
-or more authors are always referenced in the text using ``et al.''
-All authors names should appear in the bibliography for all entries.
+The image above exemplifies this problem for a dataset containing five replicate samples, each with 50 random values drawn from a normal distribution centered at a value of 10. The 50 values from each replicate were sorted from smallest to largest. However, for the images in the left half of the plot, the second and fourth replicate values were sorted from largest to smallest. We cannot see this alteration in the data when we compare the left and right boxplots. This is because the boxplots do not show sample connections between each of the 50 observations. We can see that there may have been an alteration in the data when we compare the left and right MDS plots. Namely, the left MDS plot contains a clustering structure that suggests the second and fourth replicates are similar compared to the first, third, and fifth replicates. However, we still cannot ascertain why these replicates are different.
 
-\subsection{Second Model Subsection}
+We can see the most information about the alteration in the data when we compare the left and right parallel coordinate plots - because we can now judge how consistent the replicate values are for each of the 50 observations. We notice that certain observations (the pinks and oranges) are inconsistent (crossing) between replicates in the left plot, while all observations are consistent (level) between replicates in the right plot. Analysts should ensure (rather than assume) that replicate values are as consistent as intended, and they can verify this most clearly with the parallel coordinate plots.
 
-Please use a recent issue of \textit{Biometrics} as a guide to the style
-for citations and bibliography entries, and follow that style exactly!!
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+%width=8.5cm
+\end{center}
+\caption{Caption.
+\label{2group}}
+\end{figure}
 
 
-\section{Inference}
-\label{s:inf}
+%\begin{figure}
+%\begin{center}
+%\centerline{\includegraphics[angle=270,width=8.5cm]{tteken185.eps}}
+%\end{center}
+%\caption{Graphical representation of two different situations, when
+%developing one-sided tests for the variance $\tau^2$ of the random
+%intercepts $b_i$ in model (\protect\ref{rimodel}).
+%\label{figureone}}
+%\end{figure}
 
-Please see the file \texttt{biomsample.tex} for fancy examples of making
-tables.  Here is a very simple one.  Use \texttt{table} for tables
-that are narrow enough to fit in one column of the typeset journl; use
-\texttt{table*} for tables that need to span two columns.  For
-figures, use of \texttt{figure} and \texttt{figure*} is analogous. 
+
+%\begin{center}
+%\end{center}
+
+
+You can experiment with fancier figures than Figure~\ref{2group}.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{table}
 \caption{This is a simple table.}
@@ -296,9 +318,6 @@ the presentation of the paper.\vspace*{-8pt}
 
 \section*{Supplementary Materials}
 
-Web Appendix A, referenced in Section~\ref{s:model}, is available with
-this paper at the Biometrics website on Wiley Online
-Library.\vspace*{-8pt}
 
 %  Here, we create the bibliographic entries manually, following the
 %  journal style.  If you use this method or use natbib, PLEASE PAY
@@ -330,9 +349,15 @@ Library.\vspace*{-8pt}
 
 \bibitem{ } Hansen, K.D., Brenner, S.E., and Dudoit, S. (2010). Biases in Illumina transcriptome sequencing caused by random hexamer priming. \textit{Nucleic Acids Research} \textbf{38,} e131.
 
+\bibitem{ } Huber, W., Carey, V.J., Gentleman, R,, Anders, S,, Carlson, M., and Carvalho, B.S. (2015). Orchestrating high-throughput genomic analysis with Bioconductor. \textit{Nature Methods} \textbf{12,} 115-121.
+
 \bibitem{ } Law, C.W., Chen, Y., Shi, W., and Smyth, G.K. (2014). voom: precision weights unlock linear model analysis tools for RNA-seq read counts. \textit{Genome Biology} \textbf{15,} R29.
 
-\bibitem{ } Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., Gilad, Y. (2008). RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays. \textit{Genome Research} \textbf{18,} 1509–1517.
+\bibitem{ } Love, M.I., Huber, W., and Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. \textit{Genome Biology} \textbf{15,} 550.
+
+\bibitem{ } Marini, F. (2017). pcaExplorer: Interactive Visualization of RNA-seq Data Using a Principal Components Approach. GitHub, Inc. https://github.com/federicomarini/pcaExplorer (accessed October 7, 2017).
+
+\bibitem{ } Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008). RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays. \textit{Genome Research} \textbf{18,} 1509–1517.
 
 \bibitem{ } McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011). RNAseq: technical variability and sampling. \textit{BMC Genomics} \textbf{12,} 293.
 
@@ -340,10 +365,11 @@ Library.\vspace*{-8pt}
 
 \bibitem{ } Oshlack, A., Robinson, M.D., and Young, M.D. (2010). From RNA-seq reads to differential expression results. \textit{Genome Biology} \textbf{11,} 220.
 
-\bibitem{ } Pan, Q., Shai, O., Lee, L. J., Frey, B. J., and Blencowe, B. J. (2008). Deep surveying of alternative splicing complexity in the human transcriptome by high-throughput
-sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
+\bibitem{ } Pan, Q., Shai, O., Lee, L. J., Frey, B. J., and Blencowe, B. J. (2008). Deep surveying of alternative splicing complexity in the human transcriptome by high-throughput sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
 \bibitem{ } Risso, D., Schwartz, K., Sherlock, G., Dudoit, S. (2011). GC-Content Normalization for RNA-Seq Data. \textit{BMC Bioinformatics} \textbf{12,} 480.
+
+\bibitem{ } Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). limma powers differential expression analyses for RNA-sequencing and microarray studies. \textit{Nucleic Acids Research} \textbf{43,} e47.
 
 \bibitem{ } Robertson, G., Schein, J., Chiu, R., Corbett, R., Field, M., Jackman, S. D., et al. (2010). De novo assembly and analysis of RNA-seq data. \textit{Nature Methods} \textbf{7,} 909–912.
 
@@ -355,8 +381,9 @@ sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
 \bibitem{ } Schurch, N.J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., et al. (2016). How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? \textit{RNA} \textbf{22,} 839–851.
 
-\bibitem{ } Trapnell, C., Hendrickson, D.G., Sauvageau, M., Goff, L., Rinn, J.L., and Pachter, L. (2013). Differential analysis of gene regulation at transcript resolution with RNA-seq.
-\textit{Nature Biotechnology} \textbf{31,} 46–53.
+\bibitem{ } Shu, S., Ritchie, M.E., Law, C., and Lee, S. (2016). Glimma: Interactive HTML graphics. GitHub, Inc. https://github.com/Shians/Glimma/ (accessed October 7, 2017).
+
+\bibitem{ } Trapnell, C., Hendrickson, D.G., Sauvageau, M., Goff, L., Rinn, J.L., and Pachter, L. (2013). Differential analysis of gene regulation at transcript resolution with RNA-seq. \textit{Nature Biotechnology} \textbf{31,} 46–53.
 
 \bibitem{ } Trapnell, C., Roberts, A., Goff, L., Pertea, G., Kim, D., and Kelley D.R. (2012). Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. \textit{Nature Protocols} \textbf{7,} 562–578.
 
@@ -369,12 +396,6 @@ sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
 
 
-
-
-% Examples
-%\bibitem{ }  Hastie, T., Tibshirani, R., and Friedman, J. (2001). \textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}. New York: Springer.
-
-%\bibitem{ } Cox, D. R. (1972). Regression models and life tables (with discussion).  \textit{Journal of the Royal Statistical Society, Series B} \textbf{34,} 187--200.
 
 \end{thebibliography}
 
