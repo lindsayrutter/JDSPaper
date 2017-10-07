@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 OCT 2017 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 OCT 2017 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,23 +333,19 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [2]
-\openout3 = `rna.fff'.
-
- (rna.fff)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 3
  []
 
 [3]
+\openout3 = `rna.fff'.
+
+ (rna.fff)
 \openout4 = `rna.ttt'.
 
  (rna.ttt)
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
 
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 4
@@ -380,11 +376,6 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -400,6 +391,17 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [6]
+Missing character: There is no Å in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -437,7 +439,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2226 strings out of 492995
  30187 string characters out of 6132704
- 91893 words of memory out of 5000000
+ 92893 words of memory out of 5000000
  5734 multiletter control sequences out of 15000+600000
  18572 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -453,7 +455,7 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on rna.pdf (10 pages, 206528 bytes).
+Output written on rna.pdf (10 pages, 206999 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

@@ -219,50 +219,21 @@ Here, we use real RNA-seq data to demonstrate that our visualization tools can d
 \section{Parallel Coordinate Plots}
 \label{s:Parallel Coordinate Plots}
 
-There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are the side-by-side boxplot and Multidimensional scaling (MDS) plot (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization, and that could be better detected with parallel coordinate plots.
+Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row in the data table as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. An ideal dataset will have large variability between treatment groups but little variability between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatment groups.
 
-The image above exemplifies this problem for a dataset containing five replicate samples, each with 50 random values drawn from a normal distribution centered at a value of 10. The 50 values from each replicate were sorted from smallest to largest. However, for the images in the left half of the plot, the second and fourth replicate values were sorted from largest to smallest. We cannot see this alteration in the data when we compare the left and right boxplots. This is because the boxplots do not show sample connections between each of the 50 observations. We can see that there may have been an alteration in the data when we compare the left and right MDS plots. Namely, the left MDS plot contains a clustering structure that suggests the second and fourth replicates are similar compared to the first, third, and fifth replicates. However, we still cannot ascertain why these replicates are different.
+There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are side-by-side boxplots and Multidimensional Scaling (MDS) plots (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization and that could be better detected with parallel coordinate plots.
 
-We can see the most information about the alteration in the data when we compare the left and right parallel coordinate plots - because we can now judge how consistent the replicate values are for each of the 50 observations. We notice that certain observations (the pinks and oranges) are inconsistent (crossing) between replicates in the left plot, while all observations are consistent (level) between replicates in the right plot. Analysts should ensure (rather than assume) that replicate values are as consistent as intended, and they can verify this most clearly with the parallel coordinate plots.
+Figure~\ref{2group} exemplifies this problem for two simulated datasets, one displayed on the left half of the figure and the other displayed on the right half of the figure. Each dataset contains two treatment groups (A and B) with three replicate samples. We cannot detect any notable differences between the left and right datasets from the side-by-side boxlots at the top of the figure as they both show fairly consistent five number summaries across their six samples. Likewise, we cannot detect any notable differences between the datasets from the MDS plots in the middle of the figure as they both suggest that the datasets are clustered by the two treatment groups, although the first replicate from treatment group A appears as an outlier in the right MDS plot.
+
+Despite this, we immediately see from the parallel coordinate plots at the bottom of the figure that the left and right datasests have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction from the side-by-side boxplots and MDS plots because they simply provide summaries about the data on the sample level, while the parallel coordinate plot shows the sample connections for each of the 50 genes.
 
 \begin{figure}
 \begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
-%width=8.5cm
 \end{center}
 \caption{Caption.
 \label{2group}}
 \end{figure}
-
-
-%\begin{figure}
-%\begin{center}
-%\centerline{\includegraphics[angle=270,width=8.5cm]{tteken185.eps}}
-%\end{center}
-%\caption{Graphical representation of two different situations, when
-%developing one-sided tests for the variance $\tau^2$ of the random
-%intercepts $b_i$ in model (\protect\ref{rimodel}).
-%\label{figureone}}
-%\end{figure}
-
-
-%\begin{center}
-%\end{center}
-
-
-You can experiment with fancier figures than Figure~\ref{2group}.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \begin{table}
