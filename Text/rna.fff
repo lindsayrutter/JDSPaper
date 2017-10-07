@@ -9,7 +9,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_10hex.jpg}}}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}}
 \end{center}
 \caption{Caption.
 \label{cotyIdeal}}
