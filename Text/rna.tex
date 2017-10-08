@@ -219,6 +219,10 @@ Here, we use real RNA-seq data to demonstrate that our visualization tools can d
 \section{Parallel Coordinate Plots}
 \label{s:Parallel Coordinate Plots}
 
+% developed to visually verify the relationships between variables in m.data
+% here to examine within-gene dependency, which cannot be obtained from the sbs boxplot
+% the closest analogy is the classical interaction plot (2 factors and 1 of them is on the x-axis and the other is in color and connect with means) (indiviaul gene plots were historically used in most agricultral work and are prevlant in 70s and 80s literature) (PCP is really an extension of that, but it allows us to work with more than 2 factors) (In PCP, the factors are the treatment groups)
+
 Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row (gene) in the data table as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. The ideal dataset will have large variability between treatment groups but little variability between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatment groups.
 
 There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are side-by-side boxplots and Multidimensional Scaling (MDS) plots (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization and that could be better detected with parallel coordinate plots.
@@ -252,7 +256,7 @@ The ideal dataset will have larger variability between treatment groups than bet
 
 After confirming this expected trend, users can also use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots are problematic genes, whereas outlier genes that deviate from the \textit{x=y} line in treatment scatterplots are potential differentially expressed genes. In order to achieve this capability, users must be able to interact with the plot. Figure x shows a static screenshot of this capability, but the interactive version of this plot is available at x.
 
-Notice that our scatterplot matrix contains 15 scatterplots and that each gene is denoted as a point in all scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive can significantly slow down the interactive capabilities of the plot. To solve this, as shown in Figure x, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of objects to be plotted, which increases the interactivity speed.
+Notice that each gene in our data is plotted in all 15 scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive can significantly slow down the interactive capabilities of the plot. To solve this, as shown in Figure x, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of objects to be plotted, which increases the interactivity speed.
 
 The interactive version of the plot demonstrates that the user can determine the number of genes in a particular hexagon bin by hovering over it. By clicking on a particular hexagon bin, the genes contained in that hexagon bin are superimposed as orange points across all scatterplots. 
 
