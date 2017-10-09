@@ -291,7 +291,7 @@ The scatterplot matrix can also be used after differential expression analysis t
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_deg_pcp_0.05}.jpg}
+\centerline{\fbox{\includegraphics[width=15cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_deg_pcp_0.05}.jpg}}}
 \end{center}
 \caption{Caption.
 \label{pcpDEG}}
@@ -300,7 +300,39 @@ The scatterplot matrix can also be used after differential expression analysis t
 \subsection{Assessing normalization with scatterplot matrices}
 \label{s:Assessing normalization with scatterplot matrices}
 
+Our within-lane normalization procedures, followed by between-lane normalization, reduce GC-content bias and lead to more accurate estimates of expression fold-changes and tests of differential expression. Such results are crucial for the biological interpretation of RNA-Seq experiments
 
+Indeed, by virtue of the assay, one expects the read count for a given gene to be roughly proportional to both the gene’s length and its transcript abundance. The read count will also vary between replicate lanes as a result of differences in sequencing depth, i.e., total number of reads produced in a given lane.
+
+Herein, we distinguish between two main types of effects on read counts: (1) within-lane gene-specific (and possibly lane-specific) effects, e.g., related to gene length or GC-content, and (2) effects related to between-lane distributional differences, e.g., sequencing depth. Accord- ingly, within-lane and between-lane normalization adjust for the first and second types of effects, respectively.
+
+that the effect of GC-content is sample-specific and unimodal, i.e., both GC-rich and GC-poor fragments are under-represented. (B&S showed this)
+
+
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{rawYeast}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{withinYeast}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{betweenYeast}}
+\end{figure}
 
 
 

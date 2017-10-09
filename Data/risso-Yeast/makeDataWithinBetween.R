@@ -22,7 +22,10 @@ data <- newSeqExpressionSet(mat, phenoData=laneInfo, featureData=AnnotatedDataFr
 
 dataWithin <- withinLaneNormalization(data, "gc", which="full", offset=FALSE)
 dataNorm <- betweenLaneNormalization(dataWithin, which="median")
+dataBetweenOnly <- betweenLaneNormalization(data, which="median")
 
+counts <- as(dataBetweenOnly,"CountDataSet")
+dataBetweenOnly <- as.data.frame(counts@assayData$counts)
 counts <- as(dataNorm,"CountDataSet")
 dataBetween <- as.data.frame(counts@assayData$counts)
 counts2 <- as(dataWithin,"CountDataSet")
@@ -32,3 +35,4 @@ dataRaw <- as.data.frame(mat)
 saveRDS(dataRaw, "dataRaw.rds")
 saveRDS(dataBetween, "dataBetween.rds")
 saveRDS(dataWithin, "dataWithin.rds")
+saveRDS(dataBetweenOnly, "dataBetweenOnly.rds")

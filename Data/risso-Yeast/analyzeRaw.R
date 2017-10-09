@@ -15,6 +15,7 @@ dataSel <- data
 plotMDS(dataSel[,c(2,3,8,9)])
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
 plotScatterStatic(dataSel, outDir = outDir)
+plotScatterStatic(dataSel, outDir = outDir, option="point")
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
 bPlot = ggplot(boxSel, aes(x=Sample, y=Count)) + geom_boxplot()
 png(filename=paste0(outDir = outDir,"/boxplot.jpg"))

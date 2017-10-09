@@ -13,6 +13,7 @@ outDir = "/Users/lindz/JDSPaper/Data/risso-Yeast/within"
 
 dataSel <- data
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
+plotScatterStatic(dataSel, outDir = outDir, option="point")
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
 bPlot = ggplot(boxSel, aes(x=Sample, y=Count)) + geom_boxplot()
