@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 OCT 2017 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 OCT 2017 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,21 +346,17 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [4]
-\openout4 = `rna.ttt'.
+Underfull \vbox (badness 3118) has occurred while \output is active []
 
- (rna.ttt)
+
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 5
  []
 
 [5]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
+\openout4 = `rna.ttt'.
 
+ (rna.ttt)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 6
  []
@@ -372,12 +368,6 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 7
@@ -387,11 +377,6 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no „ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -412,13 +397,36 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 8
  []
 
-[8] AED endfloat: Processing end Figures and Tables
+[8]
+Missing character: There is no Å in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+ AED endfloat: Processing end Figures and Tables
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 9
  []
 
-[9] (./rna.fff
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=44, 608
+[9]
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 10
+ []
+
+[10] (./rna.fff
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=47, 608
 .2725pt x 482.80376pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
 c file (type png)
@@ -429,12 +437,12 @@ r/2group.png used on input line 3.
 (pdftex.def)             Requested size: 426.79134pt x 338.76332pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/9 10
+\OT1/cmr/m/n/9 11
  []
 
-[10 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
+[11 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_points_size1.jpg, id=50, 602.25pt x 602.25pt>
+S1_S2_points_size1.jpg, id=53, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/S1_S2_points_size1.jpg Graphic file (type jpg)
 
@@ -445,28 +453,71 @@ mple/Switch12/NotSwitch/S1_S2_points_size1.jpg used on input line 12.
 (pdftex.def)             Requested size: 426.79134pt x 426.81018pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/9 11
- []
-
-[11 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
-tch/S1_S2_points_size1.jpg>]) (./rna.ttt
-Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 12
  []
 
-[12]) (./rna.aux)
+[12 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_points_size1.jpg>]
+</Users/lindz/Desktop/scatMat1.png, id=58, 681.54625pt x 612.2875pt>
+File: /Users/lindz/Desktop/scatMat1.png Graphic file (type png)
+
+<use /Users/lindz/Desktop/scatMat1.png>
+Package pdftex.def Info: /Users/lindz/Desktop/scatMat1.png used on input line 2
+1.
+(pdftex.def)             Requested size: 426.79134pt x 383.42616pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 13
+ []
+
+[13 </Users/lindz/Desktop/scatMat1.png>]
+</Users/lindz/Desktop/scatMat2.png, id=63, 713.66624pt x 490.83376pt>
+File: /Users/lindz/Desktop/scatMat2.png Graphic file (type png)
+
+<use /Users/lindz/Desktop/scatMat2.png>
+Package pdftex.def Info: /Users/lindz/Desktop/scatMat2.png used on input line 3
+0.
+(pdftex.def)             Requested size: 426.79134pt x 293.52888pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 14
+ []
+
+[14 </Users/lindz/Desktop/scatMat2.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_deg_sm_0.05.jpg, id=68, 1204.5pt x 1204.5pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_deg_sm_0.05.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_deg_sm_0.05.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_deg_sm_0.05.jpg used on input line 39.
+(pdftex.def)             Requested size: 426.79134pt x 426.801pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 15
+ []
+
+[15 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_deg_sm_0.05.jpg>]) (./rna.ttt
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 16
+ []
+
+[16]) (./rna.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2235 strings out of 492995
- 30745 string characters out of 6132704
- 91912 words of memory out of 5000000
- 5740 multiletter control sequences out of 15000+600000
+ 2255 strings out of 492995
+ 31593 string characters out of 6132704
+ 91950 words of memory out of 5000000
+ 5756 multiletter control sequences out of 15000+600000
  18572 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,25p,1041b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,25p,1237b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
@@ -478,10 +529,10 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on rna.pdf (13 pages, 327474 bytes).
+Output written on rna.pdf (17 pages, 763717 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
