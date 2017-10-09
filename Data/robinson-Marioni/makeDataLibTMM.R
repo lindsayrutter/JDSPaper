@@ -31,19 +31,6 @@ colnames(dataTMM) = c("ID","K.R1L1","K.R1L3","K.R1L7","K.R2L2","K.R2L6","L.R1L2"
 dataTMM = as.data.frame(dataTMM)
 saveRDS(dataTMM, "dataTMM.rds")
 
-# Make dataTMM object
-tmmSizes <- calcNormFactors(data, logratioTrim=.3)
-dataTMM = data.frame('a'=data[,1]/tmmSizes[1])
-for (i in 2:ncol(data)){
-  dataTMM[,i] = data[,i]/tmmSizes[i]
-}
-colnames(dataTMM) = colnames(data)
-rownames(dataTMM) = rownames(data)
-setDT(dataTMM, keep.rownames = TRUE)[]
-colnames(dataTMM) = c("ID","K.R1L1","K.R1L3","K.R1L7","K.R2L2","K.R2L6","L.R1L2","L.R1L4","L.R1L6","L.R1L8","L.R2L3")
-dataTMM = as.data.frame(dataTMM)
-saveRDS(dataTMM, "dataTMM.rds")
-
 # Make dataTMM2 object (see if get same TMM normalization factors)
 y <- DGEList(counts=data, group= c(rep(1,5),rep(2,5)))
 y <- calcNormFactors(y, method="TMM")

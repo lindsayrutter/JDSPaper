@@ -31,8 +31,9 @@ lrt <- glmLRT(fit,coef=2)
 ret = data.frame(ID=rownames(dataSel), lrt[[14]])
 ret$ID = as.character(ret$ID)
 ret = as.data.frame(ret)
-metricList = list()
-metricList[["K_L"]] = ret
+metricListTMM = list()
+metricListTMM[["K_L"]] = ret
+saveRDS(metricListTMM, "metricListTMM.rds")
 
 ############# Create DEG plots #############
 plotData <- data

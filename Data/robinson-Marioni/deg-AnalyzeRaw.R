@@ -14,7 +14,8 @@ outDir = "/Users/lindz/JDSPaper/Data/robinson-Marioni/DEG-raw"
 # Obtain R1 values
 data <- data[,c(1:4,7:9)]
 #dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
-
+dataRaw = data
+saveRDS(dataRaw, "dataRaw.rds")
 
 ############# Get DEGs ############# 
 rowNames = data[,1]
@@ -30,8 +31,9 @@ lrt <- glmLRT(fit,coef=2)
 ret = data.frame(ID=rownames(dataSel), lrt[[14]])
 ret$ID = as.character(ret$ID)
 ret = as.data.frame(ret)
-metricList = list()
-metricList[["K_L"]] = ret
+metricListRaw = list()
+metricListRaw[["K_L"]] = ret
+saveRDS(metricListRaw, "metricListRaw.rds")
 
 ############# Create DEG plots #############
 plotData <- data
