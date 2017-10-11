@@ -70,3 +70,21 @@
 \end{figure}
 \efloatseparator
  
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{switchedScatMat}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{structure}}
+\end{figure}
+\efloatseparator
+ 

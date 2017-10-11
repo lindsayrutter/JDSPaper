@@ -245,7 +245,7 @@ Despite this, we immediately see from the parallel coordinate plots at the botto
 \subsection{Overview of scatterplot matrices}
 \label{s:Overview of scatterplot matrices}
 
-Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) in the data table as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously. 
+Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) in the data table as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously in a different manner than most common practices. 
 
 The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, if the data has lower variability between replicates than between treatments, then we expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates.
 
@@ -300,7 +300,7 @@ The scatterplot matrix can also be used after differential expression analysis t
 \subsection{Assessing normalization with scatterplot matrices}
 \label{s:Assessing normalization with scatterplot matrices}
 
-The scatterplot matrix can also be used to assess various normalization approaches. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD). As shown in Table~\ref{tableYeast}, the data contained four cultures from independent libraries that were sequenced using two different library preparation protocols and either one or two lanes in a total of three flow-cells. This experimental design allowed for researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
+There is still substantial discussion about the normalization of RNA-seq data, and the scatterplot matrix can be used to understand and assess various algorithms. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD). As shown in Table~\ref{tableYeast}, the data contained four cultures from independent libraries that were sequenced using two different library preparation protocols and either one or two lanes in a total of three flow-cells. This experimental design allowed for researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
 
 The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for which differential expression was not expected. Hence, the authors could establish a false positive rate in relation to the number of DEGs called between these groups. They then demonstrated that within-lane regression alone was insufficient in effectively removing biases. Instead, aggressive corrections for both within-lane (GC-content and gene length) and between-lane (count distribution and sequencing depth) biases were needed to effectively reduce the false-positive rate of differential expression calls.
 
@@ -349,8 +349,41 @@ Y4 & Protocol 2 & YPD & 61MKN \\
 
 Irreproducibility is prevalent in high-throughput biological studies. A study in Nature Genetics surveyed eighteen published microarray expression analyses and reported that only two were exactly reproducible (Ioannidis et al., 2009). The extent of the problem has spawned a field called ``forensic bioinformatics" whereby researchers attempt to reverse-engineer reported results back into the raw datasets simply to derive the methodologies used in published studies (Baggerly and Coombes, 2009).
 
-Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. In regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients (Baggerly and Coombes, 2009). Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder the ability to detect errors (Baggerly and Coombes, 2009). They have also discovered that the most common errors are simple errors, such as mixing up group labels (Baggerly and Coombes, 2009).
+Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. In regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients (Baggerly and Coombes, 2009). Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors (Baggerly and Coombes, 2009). They also discovered that the most common errors are simple errors, such as mixing up sample labels (Baggerly and Coombes, 2009). Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
 
+Fortunately, scatterplot matrices are a quick and easy tool to check for common errors like sample mislabeling. Figure~\ref{switchedScatMat} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. We know there are nine between-treatment and six between-replicate combinations between all pairwise combinations of the six samples. Hence, Figure~\ref{switchedScatMat} contains the correct number of scatterplots showing thick and thin distributions around the \textit{x=y} line, only some scatterplots appear to be out of order. Rearranging the two samples that appear suspicious in the scatterplot matrix would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{cotyIdeal}.
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{switchedScatMat}}
+\end{figure}
+
+Unfortunately, this common type of error cannot be as readily detected in the plotting tools available in popular RNA-seq packages. For instance, Figure x shows the MDS plot and boxplot of the dataset before and after the sample switch. (!!!!! ADD MORE HERE !!!!!)
+
+\subsection{Finding unexpected patterns in scatterplot matrices}
+\label{s:Finding unexpected patterns in scatterplot matrices}
+
+Most popular RNA-seq plotting tools display summaries about the read counts, such as fold change summaries, principal component summaries, five number summaries, and dispersion summaries. In contrast to this trend, scatterplot matrices display the unsummarized read counts for all genes. This trait allows for geometric shapes and patterns relevant to the read count distribution to be readily visible in the scatterplot matrix.
+
+An example of how geometric shapes in the scatterplot matrix can provide applicable information to researchers is shown in Figure~\ref{structure}. The dataset comes from an RNA-seq study conducted to identify gene expression responses in soybean leaves after exposure to iron-sufficient and iron-deficient soil conditions. A more detailed explanation can be found in (Moran Lauter et al., 2014). After normalizing the data, we see the expected pattern of a scatterplot matrix in Figure~\ref{structure}, with more variation around the \textit{x=y} line between treatments than between replicates. 
+
+However, one streak structure in the botton right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections.
+
+Discussion with the authors revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have observed this interesting structure or derived this post-hoc hypothesis from any models.
+
+\begin{figure}
+\begin{center}
+\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}}
+\end{center}
+\caption{Caption.
+\label{structure}}
+\end{figure}
+
+
+How include replicate line plot? (Just show images from cotyledon data) (or try SVA data with artificially high number of false positives)
 
 
 
@@ -429,6 +462,8 @@ the presentation of the paper.\vspace*{-8pt}
 \bibitem{ } Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008). RNA-seq: An assessment of technical reproducibility and comparison with gene expression arrays. \textit{Genome Research} \textbf{18,} 1509–1517.
 
 \bibitem{ } McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011). RNAseq: Technical variability and sampling. \textit{BMC Genomics} \textbf{12,} 293.
+
+\bibitem{ } Moran Lauter, A.N., Peiffer, G.A., Yin, T., Whitham, S.A., Cook, D., and Shoemaker, R.C. (2014). Identification of candidate genes involved in early iron deficiency chlorosis signaling in soybean (glycine max) roots and leaves. \textit{BMC Genomics} \textbf{15,} 1–25.
 
 \bibitem{ } Morin, R., Bainbridge, M., Fejes, A., Hirst, M., Krzywinski, M., Pugh, T., et al. (2008). Profiling the HeLa S3 transcriptome using randomly primed cDNA and massively parallel short-read sequencing. \textit{Biotechniques} \textbf{45,} 81–94.
 

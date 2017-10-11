@@ -18,6 +18,7 @@ baseOutDir = "/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch1
 # Obtain Group values
 outDir = paste0(baseOutDir, "/Switched")
 dataSel <- data
+plotScatterStatic(dataSel, outDir = outDir, option ="point")
 plotScatterStatic(dataSel, outDir = outDir)
 boxSel = dataSel[,-1] %>% gather(Sample,Count)
 bPlot = ggplot(boxSel, aes(x=Sample, y=Count)) + geom_boxplot()
