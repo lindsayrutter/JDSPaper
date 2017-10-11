@@ -54,15 +54,6 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg}}}
-\end{center}
-\caption{Caption.
-\label{rawYeast}}
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-\begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
 \end{center}
 \caption{Caption.

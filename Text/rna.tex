@@ -306,7 +306,7 @@ The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for
 
 Figure~\ref{withinYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after within-lane normalization. It is immediately clear that the data has not been sufficiently normalized due to the deviation from the \textit{x=y} lines between the treatment groups. In contrast, Figure~\ref{betweenYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after both within-lane and between-lane normalization, as was recommended by the authors for its reduced false-positive rate. Indeed, the scatterplot matrix now follows the expected structure with most genes falling along the \textit{x=y} line and thicker deviations from it between treatment groups than between replicate groups.
 
-Moreover, we can also confirm that the read counts between the Y4 replicates fall closer to the \textit{x=y} than those between the Y1 replicates. This should be expected as the Y1 replicates should have additional technical variability from the use of two different flow cells (Table~\ref{tableYeast}). As such, the scatterplot matrix is also useful to quickly confirm for expected patterns of variability in the dataset.
+Moreover, we can also confirm that the read counts fall closer to the \textit{x=y} line between the Y4 replicates than between the Y1 replicates. This is expected because the Y1 replicates had additional technical variability from the use of two different flow cells (Table~\ref{tableYeast}). As such, the scatterplot matrix can also be used to quickly confirm expected patterns of variability in the dataset.
 
 \begin{figure}
 \begin{center}
@@ -323,9 +323,6 @@ Moreover, we can also confirm that the read counts between the Y4 replicates fal
 \caption{Caption.
 \label{betweenYeast}}
 \end{figure}
-
-
-
 
 \begin{table}
 \caption{This is a simple table.}
@@ -347,9 +344,15 @@ Y4 & Protocol 2 & YPD & 61MKN \\
 \end{center}
 \end{table}
 
-You can experiment with fancier tables than Table~\ref{t:one}.
+\subsection{Checking for common errors with scatterplot matrices}
+\label{s:Checking for common errors with scatterplot matrices}
 
-We can get bold symbols using \verb+\bmath+, for example, $\bmath{\alpha}_i$.
+Irreproducibility is prevalent in high-throughput biological studies. A study in Nature Genetics surveyed eighteen published microarray expression analyses and reported that only two were exactly reproducible (Ioannidis et al., 2009). The extent of the problem has spawned a field called ``forensic bioinformatics" whereby researchers attempt to reverse-engineer reported results back into the raw datasets simply to derive the methodologies used in published studies (Baggerly and Coombes, 2009).
+
+Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. In regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients (Baggerly and Coombes, 2009). Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder the ability to detect errors (Baggerly and Coombes, 2009). They have also discovered that the most common errors are simple errors, such as mixing up group labels (Baggerly and Coombes, 2009).
+
+
+
 
 \section{Discussion}
 \label{s:discuss}
@@ -405,6 +408,8 @@ the presentation of the paper.\vspace*{-8pt}
 
 \bibitem{ } Anders, S., Reyes, A., and Huber, W. (2012). Detecting differential usage of exons from RNA-seq data. \textit{Genome Research} \textbf{22,} 2008–2017.
 
+\bibitem{ } Baggerly, K.A. and Coombes, K.R. (2009). Deriving chemosenstivity from cell lines: Forensic bioinformatics and reproducible research in high-throughput biology. \textit{The Annals of Applied Statistics} \textbf{3,} 1309–1334.
+
 \bibitem{ } Bullard, J. H., Purdom, E., Hansen, K. D., and Dudoit, S. (2010). Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. \textit{BMC Bioinformatics} \textbf{11,} 94.
 
 \bibitem{ } Grabherr, M. G., Haas, B. J., Yassour, M., Levin, J. Z., Thompson, D. A., Amit, I., et al. (2011). Full-length transcriptome assembly from RNA-Seq data without a reference genome. \textit{Nature Biotechnology} \textbf{29,} 644–652.
@@ -413,15 +418,17 @@ the presentation of the paper.\vspace*{-8pt}
 
 \bibitem{ } Huber, W., Carey, V.J., Gentleman, R,, Anders, S,, Carlson, M., and Carvalho, B.S. (2015). Orchestrating high-throughput genomic analysis with Bioconductor. \textit{Nature Methods} \textbf{12,} 115-121.
 
-\bibitem{ } Law, C.W., Chen, Y., Shi, W., and Smyth, G.K. (2014). voom: precision weights unlock linear model analysis tools for RNA-seq read counts. \textit{Genome Biology} \textbf{15,} R29.
+\bibitem{ } Ioannidis, J.P., Allison, D.B., Ball, C.A., Coulibaly, I., Cui, X., Culhane, A.C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G.P., Petretto, E. and van Noort, V. (2009). Repeatability of published microarray gene expression analyses. \textit{Nature Genetics} \textbf{41,} 149–155.
+
+\bibitem{ } Law, C.W., Chen, Y., Shi, W., and Smyth, G.K. (2014). voom: Precision weights unlock linear model analysis tools for RNA-seq read counts. \textit{Genome Biology} \textbf{15,} R29.
 
 \bibitem{ } Love, M.I., Huber, W., and Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. \textit{Genome Biology} \textbf{15,} 550.
 
-\bibitem{ } Marini, F. (2017). pcaExplorer: Interactive Visualization of RNA-seq Data Using a Principal Components Approach. GitHub, Inc. https://github.com/federicomarini/pcaExplorer (accessed October 7, 2017).
+\bibitem{ } Marini, F. (2017). pcaExplorer: Interactive visualization of RNA-seq data using a principal components approach. GitHub, Inc. https://github.com/federicomarini/pcaExplorer (accessed October 7, 2017).
 
-\bibitem{ } Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008). RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays. \textit{Genome Research} \textbf{18,} 1509–1517.
+\bibitem{ } Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008). RNA-seq: An assessment of technical reproducibility and comparison with gene expression arrays. \textit{Genome Research} \textbf{18,} 1509–1517.
 
-\bibitem{ } McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011). RNAseq: technical variability and sampling. \textit{BMC Genomics} \textbf{12,} 293.
+\bibitem{ } McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011). RNAseq: Technical variability and sampling. \textit{BMC Genomics} \textbf{12,} 293.
 
 \bibitem{ } Morin, R., Bainbridge, M., Fejes, A., Hirst, M., Krzywinski, M., Pugh, T., et al. (2008). Profiling the HeLa S3 transcriptome using randomly primed cDNA and massively parallel short-read sequencing. \textit{Biotechniques} \textbf{45,} 81–94.
 
@@ -429,17 +436,17 @@ the presentation of the paper.\vspace*{-8pt}
 
 \bibitem{ } Pan, Q., Shai, O., Lee, L. J., Frey, B. J., and Blencowe, B. J. (2008). Deep surveying of alternative splicing complexity in the human transcriptome by high-throughput sequencing. \textit{Nature Genetics} \textbf{40,} 1413–1415.
 
-\bibitem{ } Risso, D., Schwartz, K., Sherlock, G., Dudoit, S. (2011). GC-Content Normalization for RNA-Seq Data. \textit{BMC Bioinformatics} \textbf{12,} 480.
+\bibitem{ } Risso, D., Schwartz, K., Sherlock, G., Dudoit, S. (2011). GC-Content normalization for RNA-Seq data. \textit{BMC Bioinformatics} \textbf{12,} 480.
 
-\bibitem{ } Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). limma powers differential expression analyses for RNA-sequencing and microarray studies. \textit{Nucleic Acids Research} \textbf{43,} e47.
+\bibitem{ } Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015). Limma powers differential expression analyses for RNA-sequencing and microarray studies. \textit{Nucleic Acids Research} \textbf{43,} e47.
 
 \bibitem{ } Robertson, G., Schein, J., Chiu, R., Corbett, R., Field, M., Jackman, S. D., et al. (2010). De novo assembly and analysis of RNA-seq data. \textit{Nature Methods} \textbf{7,} 909–912.
 
 \bibitem{ } Robinson, M.D. and Oshlack, A. (2010). A scaling normalization method for differential expression analysis of RNA-seq data. \textit{Genome Biology} \textbf{11,} R25.
 
-\bibitem{ } Robinson, M.D., McCarthy, D.J., and Smyth, G.K. (2010). edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. \textit{Bioinformatics} \textbf{26,} 139–140.
+\bibitem{ } Robinson, M.D., McCarthy, D.J., and Smyth, G.K. (2010). edgeR: A Bioconductor package for differential expression analysis of digital gene expression data. \textit{Bioinformatics} \textbf{26,} 139–140.
 
-\bibitem{ } Shneiderman, B. (2002). Inventing Discovery Tools: Combining Information Visualization with Data Mining. \textit{Information Visualization} \textbf{1,} 5-12.
+\bibitem{ } Shneiderman, B. (2002). Inventing discovery tools: Combining information visualization with data mining. \textit{Information Visualization} \textbf{1,} 5-12.
 
 \bibitem{ } Schurch, N.J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., et al. (2016). How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? \textit{RNA} \textbf{22,} 839–851.
 
@@ -451,11 +458,11 @@ the presentation of the paper.\vspace*{-8pt}
 
 \bibitem{ } Unwin, A. (1992). How interactive graphics will revolutionize statistical practice. \textit{The Statistician} \textbf{41,} 365-369
 
-\bibitem{ } Wang, Z., Gerstein, M., and Snyder, M. (2009). RNA-Seq: a revolutionary tool for transcriptomics. \textit{Nature Reviews Genetics} \textbf{10,} 57–63.
+\bibitem{ } Wang, Z., Gerstein, M., and Snyder, M. (2009). RNA-Seq: A revolutionary tool for transcriptomics. \textit{Nature Reviews Genetics} \textbf{10,} 57–63.
 
-\bibitem{ } Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014). Comparison of RNA-Seq and Microarray in Transcriptome Profiling of Activated T Cells. \textit{PLoS ONE} \textbf{9,} e78644.
+\bibitem{ } Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014). Comparison of RNA-Seq and microarray in transcriptome profiling of activated T cells. \textit{PLoS ONE} \textbf{9,} e78644.
 
-
+\bibitem{ } Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014). Comparison of RNA-Seq and microarray in transcriptome profiling of activated T cells. \textit{PLoS ONE} \textbf{9,} e78644.
 
 
 
