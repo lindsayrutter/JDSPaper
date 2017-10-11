@@ -1,4 +1,4 @@
-#Y1_Y4 raw has 173 DEGs
+#Y1_Y4 raw has 173 DEGs - which(dataMetrics$Y1_Y4$FDR < 0.05)
 data = readRDS("dataRaw.rds")
 data = data[,c(1,2,7,8)]
 data = setDT(data, keep.rownames = TRUE)[]
@@ -8,7 +8,7 @@ data[,-1] <- log(data[,-1]+1)
 dataMetrics = readRDS("metricListRaw.rds")
 plotRepLine(data, dataMetrics)
 
-#Y1_Y4 between has 412 DEGs
+#Y1_Y4 between has 412 DEGs - which(dataMetrics$Y1_Y4$FDR < 0.05)
 data = readRDS("dataBetween.rds")
 data = data[,c(1,2,7,8)]
 data = setDT(data, keep.rownames = TRUE)[]

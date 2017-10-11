@@ -300,23 +300,13 @@ The scatterplot matrix can also be used after differential expression analysis t
 \subsection{Assessing normalization with scatterplot matrices}
 \label{s:Assessing normalization with scatterplot matrices}
 
-Our within-lane normalization procedures, followed by between-lane normalization, reduce GC-content bias and lead to more accurate estimates of expression fold-changes and tests of differential expression. Such results are crucial for the biological interpretation of RNA-Seq experiments
+The scatterplot matrix can also be used to assess various normalization approaches. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD). As shown in Table~\ref{tableYeast}, the data contained four cultures from independent libraries that were sequenced using two different library preparation protocols and either one or two lanes in a total of three flow-cells. This experimental design allowed for researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
 
-Indeed, by virtue of the assay, one expects the read count for a given gene to be roughly proportional to both the gene’s length and its transcript abundance. The read count will also vary between replicate lanes as a result of differences in sequencing depth, i.e., total number of reads produced in a given lane.
+The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for which differential expression was not expected. Hence, the authors could establish a false positive rate in relation to the number of DEGs called between these groups. They then demonstrated that within-lane regression alone was insufficient in effectively removing biases. Instead, aggressive corrections for both within-lane (GC-content and gene length) and between-lane (count distribution and sequencing depth) biases were needed to effectively reduce the false-positive rate of differential expression calls.
 
-Herein, we distinguish between two main types of effects on read counts: (1) within-lane gene-specific (and possibly lane-specific) effects, e.g., related to gene length or GC-content, and (2) effects related to between-lane distributional differences, e.g., sequencing depth. Accord- ingly, within-lane and between-lane normalization adjust for the first and second types of effects, respectively.
+Figure~\ref{withinYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after within-lane normalization. It is immediately clear that the data has not been sufficiently normalized due to the deviation from the \textit{x=y} lines between the treatment groups. In contrast, Figure~\ref{betweenYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after both within-lane and between-lane normalization, as was recommended by the authors for its reduced false-positive rate. Indeed, the scatterplot matrix now follows the expected structure with most genes falling along the \textit{x=y} line and thicker deviations from it between treatment groups than between replicate groups.
 
-that the effect of GC-content is sample-specific and unimodal, i.e., both GC-rich and GC-poor fragments are under-represented. (B&S showed this)
-
-
-
-\begin{figure}
-\begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg}}}
-\end{center}
-\caption{Caption.
-\label{rawYeast}}
-\end{figure}
+Moreover, we can also confirm that the read counts between the Y4 replicates fall closer to the \textit{x=y} than those between the Y1 replicates. This should be expected as the Y1 replicates should have additional technical variability from the use of two different flow cells (Table~\ref{tableYeast}). As such, the scatterplot matrix is also useful to quickly confirm for expected patterns of variability in the dataset.
 
 \begin{figure}
 \begin{center}
@@ -339,7 +329,7 @@ that the effect of GC-content is sample-specific and unimodal, i.e., both GC-ric
 
 \begin{table}
 \caption{This is a simple table.}
-\label{t:one}
+\label{tableYeast}
 \begin{center}
 \begin{tabular}{lrrr}
 \Hline

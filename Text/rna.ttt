@@ -1,6 +1,6 @@
 \begin{table}
 \caption{This is a simple table.}
-\label{t:one}
+\label{tableYeast}
 \begin{center}
 \begin{tabular}{lrrr}
 \Hline

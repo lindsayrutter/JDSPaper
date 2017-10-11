@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 OCT 2017 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  10 OCT 2017 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -362,9 +362,9 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \openout4 = `rna.ttt'.
 
  (rna.ttt)
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
+
+LaTeX Warning: Reference `t:one' on page 7 undefined on input line 356.
+
 
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 7
@@ -398,11 +398,6 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -415,6 +410,14 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [9]
+Missing character: There is no Å in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -570,14 +573,17 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [20]) (./rna.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2281 strings out of 492995
- 33085 string characters out of 6132704
+ 2282 strings out of 492995
+ 33097 string characters out of 6132704
  91996 words of memory out of 5000000
- 5777 multiletter control sequences out of 15000+600000
+ 5778 multiletter control sequences out of 15000+600000
  18572 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,1237b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -592,7 +598,7 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on rna.pdf (21 pages, 1129300 bytes).
+Output written on rna.pdf (21 pages, 1130619 bytes).
 PDF statistics:
  129 PDF objects out of 1000 (max. 8388607)
  82 compressed objects within 1 object stream
