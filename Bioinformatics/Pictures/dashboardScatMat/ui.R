@@ -12,9 +12,6 @@ library(dplyr)
 library(data.table)
 library(GGally)
 
-set.seed(3)
-data = data.frame(ID = paste0("ID", 1:1999), A = abs(rnorm(1999)), B = abs(rnorm(1999)), C=abs(rnorm(1999)))
-data$ID = as.character(data$ID)
 xbins = 15
 
 sidebar <- shinydashboard::dashboardSidebar(
