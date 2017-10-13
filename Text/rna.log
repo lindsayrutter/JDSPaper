@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  11 OCT 2017 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 OCT 2017 01:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,11 +320,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 184.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 184.
-
-Overfull \vbox (10.83334pt too high) has occurred while \output is active []
-
-
-[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -345,14 +341,14 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [2]
+\openout3 = `rna.fff'.
+
+ (rna.fff)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 3
  []
 
 [3]
-\openout3 = `rna.fff'.
-
- (rna.fff)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 4
  []
@@ -413,6 +409,9 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 11
  []
@@ -456,6 +455,9 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -464,17 +466,13 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 13
  []
 
-[13]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
- AED endfloat: Processing end Figures and Tables
+[13] AED endfloat: Processing end Figures and Tables
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 14
  []
 
 [14] (./rna.fff
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=58, 608
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=56, 608
 .2725pt x 482.80376pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
 c file (type png)
@@ -482,7 +480,7 @@ c file (type png)
 <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Colo
 r/2group.png used on input line 3.
-(pdftex.def)             Requested size: 426.79134pt x 338.76332pt.
+(pdftex.def)             Requested size: 284.52756pt x 225.84221pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 15
@@ -490,7 +488,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [15 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_points_size1.jpg, id=64, 602.25pt x 602.25pt>
+S1_S2_points_size1.jpg, id=62, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/S1_S2_points_size1.jpg Graphic file (type jpg)
 
@@ -506,7 +504,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [16 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
 tch/S1_S2_points_size1.jpg>]
-</Users/lindz/Desktop/scatMat1.png, id=68, 681.54625pt x 612.2875pt>
+</Users/lindz/Desktop/scatMat1.png, id=66, 681.54625pt x 612.2875pt>
 File: /Users/lindz/Desktop/scatMat1.png Graphic file (type png)
 
 <use /Users/lindz/Desktop/scatMat1.png>
@@ -519,7 +517,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
  []
 
 [17 </Users/lindz/Desktop/scatMat1.png>]
-</Users/lindz/Desktop/scatMat2.png, id=73, 713.66624pt x 490.83376pt>
+</Users/lindz/Desktop/scatMat2.png, id=71, 713.66624pt x 490.83376pt>
 File: /Users/lindz/Desktop/scatMat2.png Graphic file (type png)
 
 <use /Users/lindz/Desktop/scatMat2.png>
@@ -533,7 +531,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [18 </Users/lindz/Desktop/scatMat2.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_deg_sm_0.05.jpg, id=79, 1204.5pt x 1204.5pt>
+S1_S2_deg_sm_0.05.jpg, id=77, 1204.5pt x 1204.5pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/S1_S2_deg_sm_0.05.jpg Graphic file (type jpg)
 
@@ -550,7 +548,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 [19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
 tch/S1_S2_deg_sm_0.05.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_deg_pcp_0.05.jpg, id=83, 702.625pt x 702.625pt>
+S1_S2_deg_pcp_0.05.jpg, id=81, 702.625pt x 702.625pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/S1_S2_deg_pcp_0.05.jpg Graphic file (type jpg)
 
@@ -566,30 +564,30 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [20 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
 tch/S1_S2_deg_pcp_0.05.jpg>]
-</Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg, id=87, 602.25p
-t x 602.25pt>
+</Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg, id=85, 411.537
+5pt x 451.6875pt>
 File: /Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg Graphic fi
 le (type jpg)
 
 <use /Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_po
 ints.jpg used on input line 57.
-(pdftex.def)             Requested size: 426.79134pt x 426.81018pt.
+(pdftex.def)             Requested size: 284.52756pt x 312.285pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 21
  []
 
 [21 </Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg>]
-</Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg, id=91, 602.25
-pt x 602.25pt>
+</Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg, id=89, 411.53
+75pt x 451.6875pt>
 File: /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg Graphic f
 ile (type jpg)
 
 <use /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_p
 oints.jpg used on input line 66.
-(pdftex.def)             Requested size: 426.79134pt x 426.81018pt.
+(pdftex.def)             Requested size: 284.52756pt x 312.285pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 22
@@ -597,7 +595,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [22 </Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
-1_S2_points.jpg, id=95, 602.25pt x 602.25pt>
+1_S2_points.jpg, id=93, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
 hed/S1_S2_points.jpg Graphic file (type jpg)
 
@@ -614,7 +612,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 [23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
 ed/S1_S2_points.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
-=99, 602.25pt x 602.25pt>
+=97, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
 g Graphic file (type jpg)
 
@@ -640,26 +638,24 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2274 strings out of 492995
- 33608 string characters out of 6132704
- 93027 words of memory out of 5000000
- 5773 multiletter control sequences out of 15000+600000
- 15276 words of font info for 55 fonts, out of 8000000 for 9000
+ 2272 strings out of 492995
+ 33587 string characters out of 6132704
+ 93039 words of memory out of 5000000
+ 5772 multiletter control sequences out of 15000+600000
+ 15107 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,25p,1237b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,25p,1237b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on rna.pdf (26 pages, 1266608 bytes).
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on rna.pdf (26 pages, 1190829 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

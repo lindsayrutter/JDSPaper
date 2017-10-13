@@ -229,15 +229,15 @@ There are several packages within the BioConductor software that provide graphic
 
 Figure~\ref{2group} exemplifies this problem for two simulated datasets, one displayed on the left half of the figure and the other displayed on the right half of the figure. Each dataset contains two treatment groups (A and B) with three replicate samples. We cannot detect any notable differences between the left and right datasets from the side-by-side boxlots at the top of the figure as they both show fairly consistent five number summaries across their six samples. Likewise, we cannot detect any notable differences between the datasets from the MDS plots in the middle of the figure as they both suggest that the datasets are clustered by the two treatment groups, although the first replicate from treatment group A appears as an outlier in the right MDS plot.
 
-Despite this, we immediately see from the parallel coordinate plots at the bottom of the figure that the left and right datasests have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction from the side-by-side boxplots and MDS plots because they simply provide summaries about the data on the sample level, while the parallel coordinate plot shows the sample connections for each of the 50 genes.
-
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
 \caption{Caption.
 \label{2group}}
 \end{figure}
+
+Despite this, we immediately see from the parallel coordinate plots at the bottom of the figure that the left and right datasests have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction from the side-by-side boxplots and MDS plots because they simply provide summaries about the data on the sample level, while the parallel coordinate plot shows the sample connections for each of the 50 genes.
 
 \section{Scatterplot matrices}
 \label{s:Scatterplot matrices}
@@ -310,7 +310,7 @@ Moreover, we can also confirm that the read counts fall closer to the \textit{x=
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
 \end{center}
 \caption{Caption.
 \label{withinYeast}}
@@ -318,7 +318,7 @@ Moreover, we can also confirm that the read counts fall closer to the \textit{x=
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
 \end{center}
 \caption{Caption.
 \label{betweenYeast}}
@@ -402,19 +402,6 @@ Put your final comments here.
 
 %  This section is optional.  Here is where you will want to cite
 %  grants, people who helped with the paper, etc.  But keep it short!
-
-\section*{Acknowledgements}
-
-The authors thank Professor A. Sen for some helpful suggestions,
-Dr C. R. Rangarajan for a critical reading of the original version of the
-paper, and an anonymous referee for very useful comments that improved
-the presentation of the paper.\vspace*{-8pt}
-
-%  If your paper refers to supplementary web material, then you MUST
-%  include this section!!  See Instructions for Authors at the journal
-%  website http://www.biometrics.tibs.org
-
-\section*{Supplementary Materials}
 
 
 %  Here, we create the bibliographic entries manually, following the
@@ -503,17 +490,6 @@ the presentation of the paper.\vspace*{-8pt}
 
 \end{thebibliography}
 
-\appendix
-
-%  To get the journal style of heading for an appendix, mimic the following.
-
-\section{}
-\subsection{Title of appendix}
-
-Put your short appendix here.  Remember, longer appendices are
-possible when presented as Supplementary Web Material.  Please 
-review and follow the journal policy for this material, available
-under Instructions for Authors at \texttt{http://www.biometrics.tibs.org}.
 
 \label{lastpage}
 

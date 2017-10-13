@@ -1,6 +1,6 @@
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
 \caption{Caption.
 \label{2group}}
@@ -54,7 +54,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
 \end{center}
 \caption{Caption.
 \label{withinYeast}}
@@ -63,7 +63,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
 \end{center}
 \caption{Caption.
 \label{betweenYeast}}
