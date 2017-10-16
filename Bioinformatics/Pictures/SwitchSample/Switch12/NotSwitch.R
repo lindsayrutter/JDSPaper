@@ -36,6 +36,7 @@ metricList[["S1_S2"]] = metrics[["S1_S2"]]
 
 ############# Create DEG plots #############
 plotDEG(data, metricList, outDir=outDir, threshVar="FDR", threshVal=0.05)
+plotDEG(data, metricList, option="scatterPoints", outDir=outDir, threshVar="FDR", threshVal=0.05, pointSize=0.5)
 plotDEG(data, metricList, outDir=outDir, option="volcano", threshVar="FDR", threshVal=0.05)
 plotDEG(data, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="FDR", threshVal=0.05)
 plotDEG(data, metricList, outDir=outDir, option="scatterPrediction", threshVar="FDR", threshVal=0.05)

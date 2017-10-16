@@ -166,13 +166,17 @@
 %  put the summary for your paper here
 
 \begin{abstract}
-This is the summary for this paper.
+
+It was initially claimed that RNA-seq produced unbiased data that did not require sophisticated normalization. However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of differentially expressed genes is not a trivial task. In light of these complications, researchers should analyze RNA-seq data like they would any other biased multivariate data. The most effective approach to modern data analysis is to iterate between models and visuals, and to enhance the appropriateness of applied models based on feedback from visuals. Unfortunately, researchers do not commonly use models and visuals in a complimentary fashion when analyzing RNA-seq data. Here, we use real RNA-seq data to demonstrate that our visualization tools can detect normalization problems, DEG designation problems, and common errors in the RNA-seq analysis pipeline. We also show that our tools can identify genes of interest that cannot otherwise be obtained by any models. We emphasize that interactive graphics should be an indisposable component of RNA-seq analysis. In this paper, we do not propose that users radically change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate graphical tools, namely parallel coordinate plots, scatterplot matrices, and replicate point plots.
+
 \end{abstract}
 
 %  Please place your key words in alphabetical order, separated
 %  by semicolons, with the first letter of the first word capitalized,
 %  and a period at the end of the list.
 %
+
+\vspace{5mm}
 
 \begin{keywords}
 Data visualization; Exploratory data analysis; Interactive graphics; RNA-sequencing; Statistical graphics
@@ -204,17 +208,17 @@ Data visualization; Exploratory data analysis; Interactive graphics; RNA-sequenc
 \section{Introduction}
 \label{s:Introduction}
 
-RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly (Grabherr et al., 2011; Robertson et al., 2010) and detection of alternative splicing processes (Anders, Reyes, and Huber, 2012; Pan et al., 2008). Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes (Wang, Gerstein, and Snyder, 2009; Zhao et al., 2014).
+RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly (Robertson et al., 2010) and detection of alternative splicing processes (Anders, Reyes, and Huber, 2012; Pan et al., 2008). Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes (Wang, Gerstein, and Snyder, 2009; Zhao et al., 2014).
 
 Gene expression data is multivariate data, and its basic form is a matrix containing mapped read counts for \textit{n} rows of genes and \textit{p} columns of samples. These mapped read counts provide estimations of the gene expression levels across samples. Researchers typically conduct RNA-seq studies to identify differentially expressed genes (DEGs) between treatment groups. In most popular RNA-seq analysis packages, this objective is approached with models, such as the negative binomial model (Anders and Huber, 2010; Trapnell et al., 2013; Trapnell et al., 2012; Robinson et al., 2010) and linear regression models (Law et al., 2014).
 
-Initially, it was widely claimed that RNA-seq produced unbiased data that did not require sophisticated normalization (Wang et al., 2009; Morin et al., 2008; Marioni et al., 2008). However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of DEGs is not a negligible task. Problems that complicate the analysis of RNA-seq data include nucleotide-specific and read-position specific biases (Hansen et al., 2010), biases related to gene lengths and sequencing depths (Oshlack, Robinson, and Young, 2010; Robinson and Oshlack, 2010), biases introduced during library preparation (McIntyre et al., 2011), biases pertaining to the number of replications (Schurch et al., 2016), biases derived from overlapping senseantisense transcripts and gene isoforms (Trapnell et al., 2013), and the confounding combination of technical and biological variability (Bullard et al., 2010).
+Initially, it was widely claimed that RNA-seq produced unbiased data that did not require sophisticated normalization (Wang et al., 2009; Morin et al., 2008; Marioni et al., 2008). However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of DEGs is not a negligible task. Problems that complicate the analysis of RNA-seq data include nucleotide and read-position biases (Hansen et al., 2010), biases related to gene lengths and sequencing depths (Oshlack, Robinson, and Young, 2010; Robinson and Oshlack, 2010), biases introduced during library preparation (McIntyre et al., 2011), biases pertaining to the number of replications (Schurch et al., 2016), biases derived from overlapping senseantisense transcripts and gene isoforms (Trapnell et al., 2013), and the confounding combination of technical and biological variability (Bullard et al., 2010).
 
-In light of these complications, researchers should analyze RNA-seq data like they would any other biased multivariate data. Simply applying models to such data is problematic because models have assumptions that they alone cannot call into question. Fortunately, data visualization enables researchers to see patterns and problems they may not otherwise detect with traditional modeling. As a result, the most effective approach to analyze data is to iterate between models and visuals, and to enhance the appropriateness of applied models based on feedback from visuals (Unwin, 1992; Shneiderman, 2002).
+In light of these complications, researchers should analyze RNA-seq data like they would any other biased multivariate data. Simply applying models to such data is problematic because models have assumptions that they alone cannot call into question. Fortunately, data visualization enables researchers to see patterns and problems they may not otherwise detect with traditional modeling. As a result, the most effective approach to analyze data is to iterate between models and visuals, and to enhance the appropriateness of applied models based on feedback from visuals (Shneiderman, 2002).
 
 When visualizing RNA-seq data, we primarily want to compare the variability between replicates and between treatment groups. This is best achieved by viewing the mapped read count distributions across all genes and samples. Unfortunately, the few visual tools available in popular RNA-seq packages do not allow users to effectively view their data in this manner.
 
-Here, we use real RNA-seq data to demonstrate that our visualization tools can detect normalization problems, DEG designation problems, and common errors in the analysis pipeline. We also show that our tools can identify genes of interest that cannot otherwise be obtained by any models. In line with modern multivariate data exploration, we emphasize that interactive graphics should be an indisposable component of RNA-seq analysis. Researchers should be able to quickly flip through plots of genes that appear promising or problematic, and link between different types of plots to quickly obtain various perspectives of their data. In this paper, we are not proposing that users completely change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate graphical tools, namely parallel coordinate plots, scatterplot matrices, and replicate line plots.
+Here, we use real RNA-seq data to demonstrate that our visualization tools can detect normalization problems, DEG designation problems, and common errors in the analysis pipeline. We also show that our tools can identify genes of interest that cannot otherwise be obtained by any models. In line with modern multivariate data exploration, we emphasize that interactive graphics should be an indisposable component of RNA-seq analysis. Researchers should be able to quickly flip through plots of genes that appear promising or problematic, and link between different types of plots to quickly obtain various perspectives of their data. In this paper, we are not proposing that users completely change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate graphical tools, namely parallel coordinate plots, scatterplot matrices, and replicate point plots.
 
 \section{Parallel Coordinate Plots}
 \label{s:Parallel Coordinate Plots}
@@ -223,17 +227,17 @@ Here, we use real RNA-seq data to demonstrate that our visualization tools can d
 % here to examine within-gene dependency, which cannot be obtained from the sbs boxplot
 % the closest analogy is the classical interaction plot (2 factors and 1 of them is on the x-axis and the other is in color and connect with means) (indiviaul gene plots were historically used in most agricultral work and are prevlant in 70s and 80s literature) (PCP is really an extension of that, but it allows us to work with more than 2 factors) (In PCP, the factors are the treatment groups)
 
-Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row (gene) in the data table as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. The ideal dataset will have large variability between treatment groups but little variability between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatment groups.
+Parallel coordinate plots are essential to visually verify the relationships between variables in multivariate data. A parallel coordinate plot draws each row (gene) as a line. Connections between samples with positive correlations will be flat, and connections between samples with negative correlations will be crossed. The ideal dataset will have more variability between treatments than between replicates. Researchers can quickly confirm this with a parallel coordinate plot: There should be flat connections between replicates but crossed connections between treatments.
 
 There are several packages within the BioConductor software that provide graphics for RNA-seq data analysis (Huber et al., 2015). Two of the most common graphic techniques are side-by-side boxplots and Multidimensional Scaling (MDS) plots (Love, Huber, and Anders, 2014; Risso et al., 2011; Robinson et al., 2010; Su et al., 2016; Ritchie et al., 2015; Marini, 2017). Unfortunately, these plots can hide problems that still exist in the data even after normalization and that could be better detected with parallel coordinate plots.
 
-Figure~\ref{2group} exemplifies this problem for two simulated datasets, one displayed on the left half of the figure and the other displayed on the right half of the figure. Each dataset contains two treatment groups (A and B) with three replicate samples. We cannot detect any notable differences between the left and right datasets from the side-by-side boxlots at the top of the figure as they both show fairly consistent five number summaries across their six samples. Likewise, we cannot detect any notable differences between the datasets from the MDS plots in the middle of the figure as they both suggest that the datasets are clustered by the two treatment groups, although the first replicate from treatment group A appears as an outlier in the right MDS plot.
+Figure~\ref{2group} exemplifies this problem for two simulated datasets, one displayed on the left half and the other displayed on the right half of the figure. Each dataset contains two treatment groups (A and B) with three replicate samples. We cannot detect any notable differences between the left and right datasets from the side-by-side boxlots at the top of the figure as they both show fairly consistent five number summaries across their six samples. Likewise, we cannot detect notable differences between the datasets from the MDS plots in the middle of the figure as they both suggest that the datasets are clustered by the two treatment groups, although the first replicate from treatment A appears as an outlier in the right MDS plot.
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+\centerline{\fbox{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
-\caption{Caption.
+\caption{
 \label{2group}}
 \end{figure}
 
@@ -245,104 +249,52 @@ Despite this, we immediately see from the parallel coordinate plots at the botto
 \subsection{Overview of scatterplot matrices}
 \label{s:Overview of scatterplot matrices}
 
-Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) in the data table as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously in a different manner than most common practices. 
+Pairwise scatterplot matrices are another effective multivariate visualization tool that plot the mapped read count distributions across all genes and samples. A scatterplot matrix draws each row (gene) as a point in each scatterplot. With these plots, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables simultaneously in a unique manner than most common practices. 
 
-The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, if the data has lower variability between replicates than between treatments, then we expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates.
+The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of genes to show differential expression between samples. However, a fraction of the genes should have lower variability between replicates than between treatments, and so we should expect the spread of the scatterplot observations to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2) (Brown and Kudson, 2015). We can immediately verify that the nine scatterplots between treatments (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicates.
 
 \begin{figure}
 \begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}}
 \end{center}
-\caption{Caption.
+\caption{
 \label{cotyIdeal}}
 \end{figure}
 
-After confirming this expected trend, users can also use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots are problematic genes, whereas outlier genes that deviate from the \textit{x=y} line in treatment scatterplots are potential differentially expressed genes. In order to achieve this capability, users must be able to interact with the plot. Figure x shows a static screenshot of this capability, but the interactive version of this plot is available at x.
+After confirming this expected trend, users can use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots might be problematic, whereas outlier genes that deviate from the \textit{x=y} line in treatment scatterplots might be DEGs. In order to achieve this functionality, the plots must be rendered interactive.
 
-Notice that each gene in our data is plotted once in each of the 15 scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive would significantly slow down the interactive capabilities of the plot. To solve this, as shown in Figure x, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of geometric objects to be plotted, and increases the interactivity speed.
+Notice that each gene in our data is plotted once in each of the 15 scatterplots. With 73,320 genes in our data, more than one million points must be plotted. Rendering all points interactive would slow down the interactive capabilities of the plot. To solve this, we can tailor the geometric object of the scatterplots to be hexagon bins rather than points. This dramatically reduces the number of geometric objects to be plotted, and increases the interactivity speed.
 
-In the interactive version of the plot, the user can hover over a hexagon bin to see how many genes it contains. When the user clicks on a hexagon bin, the names of the genes are listed and superimposed as orange points across all scatterplots. The genes are also linked to a second plot that superimposes them as parallel coordinate lines on a side-by-side boxplot of gene counts from all samples. This interactivity and linking allows users to quickly examine genes of interest from multiple perspectives superimposed on the summary of the genes from the whole dataset. Readers can interact with this graphic at x. We show a static screen shot of the interative graphic being used in which a user has clicked on a hexagon in the scatterplot between the groups S1.1 and S1.2 that deviated from the \textit{x=y} line. This hexagon contained two genes, which are superimposed in orange across all scatterplots. Upon viewing the parallel coordinate plot, we see that these two genes are indeed problematic for having inconsistently high read counts for the second replicate of the S1 treatment group. We can also immediately obtain the identification of these two genes as "Glyma06g11430.1" and "Glyma13g02510.1".
+The reader can visit https://rnaseqvisualization.shinyapps.io/scatmat to access the interactive version of Figure~\ref{cotyIdeal}. Readers can read the ``About" Tab to fully understand how to use the interactive graphic. Essentially, the user can hover over a hexagon bin to see how many genes it contains. When the user clicks on a hexagon bin, the names of the genes are listed and superimposed as orange points across all scatterplots. The genes are also linked to a second plot that superimposes them as parallel coordinate lines on a side-by-side boxplot of all gene counts. This interactivity and linking allows users to quickly examine genes of interest from multiple perspectives superimposed onto the summary of all genes in the dataset. 
 
-\begin{figure}
-\begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/Desktop/scatMat1.png}}}
-\end{center}
-\caption{Caption.
-\label{scatMat1}}
-\end{figure}
+The scatterplot matrix can also be used after DEG calls to quickly examine DEGs obtained from a given model. As shown in Figure~\ref{scatPCP}, the DEGs can be superimposed as orange points onto the scatterplot matrix. We expect for DEGs to fall along the \textit{x=y} line for replicates and deviate from the \textit{x=y} line between treatment groups, as is confirmed in Figure~\ref{scatPCP}. As a side note, we can also link these DEGs as parallel coordinate lines on a side-by-side boxplot like in Figure~\ref{scatPCP} to confirm the expected pattern of differential expression from a second viewpoint. If we do not observe what should be expected of DEGs, then the DEG calls from the model need to be scrutinized further.
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/Desktop/scatMat2.png}}}
+\centerline{\includegraphics[width=15cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP}.png}}
 \end{center}
-\caption{Caption.
-\label{scatMat2}}
-\end{figure}
-
-The scatterplot matrix can also be used after differential expression analysis to quickly examine DEGs obtained from a given model. As shown in Figure~\ref{scatDEG}, the DEGs can be superimposed as orange points onto the scatterplot matrix. We would expect for DEGs to fall along the \textit{x=y} line for replicates and deviate from the \textit{x=y} line between treatment groups, as is confirmed in Figure~\ref{scatDEG}. As a side note, we can also link these DEGs as parallel coordinate lines on a side-by-side boxplot like in Figure~\ref{pcpDEG} to confirm with another viewpoint that we see the expected pattern for differential expression. If we do not observe what should be expected of DEGs, then the DEG calls from the model need to be scrutinized further.
-
-\begin{figure}
-\begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_deg_sm_0.05}.jpg}}}
-\end{center}
-\caption{Caption.
-\label{scatDEG}}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_deg_pcp_0.05}.jpg}}}
-\end{center}
-\caption{Caption.
-\label{pcpDEG}}
+\caption{
+\label{scatPCP}}
 \end{figure}
 
 \subsection{Assessing normalization with scatterplot matrices}
 \label{s:Assessing normalization with scatterplot matrices}
 
-There is still substantial discussion about the normalization of RNA-seq data, and the scatterplot matrix can be used to understand and assess various algorithms. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD). As shown in Table~\ref{tableYeast}, the data contained four cultures from independent libraries that were sequenced using two different library preparation protocols and either one or two lanes in a total of three flow-cells. This experimental design allowed for researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
+There is still substantial discussion about the normalization of RNA-seq data, and the scatterplot matrix can be used to understand and assess various algorithms. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD). The data contained four cultures from independent libraries that were sequenced using two different library preparation protocols and either one or two lanes in a total of three flow-cells. This experimental design allowed for researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
 
 The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for which differential expression was not expected. Hence, the authors could establish a false positive rate in relation to the number of DEGs called between these groups. They then demonstrated that within-lane regression alone was insufficient in effectively removing biases. Instead, aggressive corrections for both within-lane (GC-content and gene length) and between-lane (count distribution and sequencing depth) biases were needed to effectively reduce the false-positive rate of differential expression calls.
 
-Figure~\ref{withinYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after within-lane normalization. It is immediately clear that the data has not been sufficiently normalized due to the deviation from the \textit{x=y} lines between the treatment groups. In contrast, Figure~\ref{betweenYeast} shows the scatterplot matrix of the Y1 and Y4 replicate read counts after both within-lane and between-lane normalization, as was recommended by the authors for its reduced false-positive rate. Indeed, the scatterplot matrix now follows the expected structure with most genes falling along the \textit{x=y} line and thicker deviations from it between treatment groups than between replicate groups.
+Figure~\ref{withinbtwn}A shows the scatterplot matrix of the read counts from the Y1 and Y4 treatments after within-lane normalization. As we stated earlier, we expect most genes to show similar expression between samples, except for the handful that are differentially expressed. However, it is immediately clear that the data still was not sufficiently normalized as the distribution of genes is not centered around the \textit{x=y} lines. In contrast, Figure~\ref{withinbtwn}B shows the scatterplot matrix of the read counts from the Y1 and Y4 treatments after \textit{both} within-lane and between-lane normalization, as was recommended by the authors due to its reduced false-positive rate. Indeed, the scatterplot matrix now follows the expected structure with most genes falling along the \textit{x=y} line with thicker deviations from it between treatment groups than between replicate groups.
 
-Moreover, we can also confirm that the read counts fall closer to the \textit{x=y} line between the Y4 replicates than between the Y1 replicates. This is expected because the Y1 replicates had additional technical variability from the use of two different flow cells (Table~\ref{tableYeast}). As such, the scatterplot matrix can also be used to quickly confirm expected patterns of variability in the dataset.
-
-\begin{figure}
-\begin{center}
-\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/within/Y1_Y4_points.jpg}}}
-\end{center}
-\caption{Caption.
-\label{withinYeast}}
-\end{figure}
+Additionally, we can also confirm from Figure~\ref{withinbtwn}B that the read counts fall closer to the \textit{x=y} line between the Y4 replicates (bottom-right scatterplot) than between the Y1 replicates (top-left scatterplot). This is expected because the Y1 replicates had additional technical variability because they used two different flow cells, whereas the Y1 replicates were from the same flow cell. As such, the scatterplot matrix can also be used to quickly confirm expected patterns of biological and technical variability in the dataset.
 
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg}}}
+\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png}}
 \end{center}
-\caption{Caption.
-\label{betweenYeast}}
+\caption{
+\label{withinbtwn}}
 \end{figure}
-
-\begin{table}
-\caption{This is a simple table.}
-\label{tableYeast}
-\begin{center}
-\begin{tabular}{lrrr}
-\Hline
-Culture/Library prep. & \multicolumn{1}{c}{Library prep. protocol} &  \multicolumn{1}{c}{Growth condition} & \multicolumn{1}{c}{Flow-cell} \\ \hline
-Y1 & Protocol 1 & YPD & 428R1 \\
-Y1 & Protocol 1 & YPD & 4328B \\
-Y2 & Protocol 1 & YPD & 428R1 \\
-Y2 & Protocol 1 & YPD & 4328B \\
-Y7 & Protocol 1 & YPD & 428R1 \\
-Y7 & Protocol 1 & YPD & 4328B \\
-Y4 & Protocol 2 & YPD & 61MKN \\
-Y4 & Protocol 2 & YPD & 61MKN \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
 
 \subsection{Checking for common errors with scatterplot matrices}
 \label{s:Checking for common errors with scatterplot matrices}
@@ -351,17 +303,15 @@ Irreproducibility is prevalent in high-throughput biological studies. A study in
 
 Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. In regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients (Baggerly and Coombes, 2009). Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors (Baggerly and Coombes, 2009). They also discovered that the most common errors are simple errors, such as mixing up sample labels (Baggerly and Coombes, 2009). Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
 
-Fortunately, scatterplot matrices are a quick and easy tool to check for common errors like sample mislabeling. Figure~\ref{switchedScatMat} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. We know there are nine between-treatment and six between-replicate combinations between all pairwise combinations of the six samples. Hence, Figure~\ref{switchedScatMat} contains the correct number of scatterplots showing thick and thin distributions around the \textit{x=y} line, only some scatterplots appear to be out of order. Rearranging the two samples that appear suspicious in the scatterplot matrix would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{cotyIdeal}.
+Fortunately, scatterplot matrices are a quick and easy tool to check for common errors like sample mislabeling. Figure~\ref{switchedScatMat} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. We know there are nine between-treatment and six between-replicate combinations between all pairwise combinations of the six samples. Hence, Figure~\ref{switchedScatMat} contains the correct number of scatterplots showing thick and thin distributions around the \textit{x=y} line, only some scatterplots appear to be out of order. We could not see this information with boxplots and MDS plots (plots available upon request). Rearranging the columns of the two samples that appear suspicious in the scatterplot matrix would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{cotyIdeal}.
 
 \begin{figure}
 \begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
 \end{center}
-\caption{Caption.
+\caption{
 \label{switchedScatMat}}
 \end{figure}
-
-Unfortunately, this common type of error cannot be as readily detected in the plotting tools available in popular RNA-seq packages. For instance, Figure x shows the MDS plot and boxplot of the dataset before and after the sample switch. (!!!!! ADD MORE HERE !!!!!)
 
 \subsection{Finding unexpected patterns in scatterplot matrices}
 \label{s:Finding unexpected patterns in scatterplot matrices}
@@ -378,19 +328,54 @@ Discussion with the authors revealed that a lab biologist documented accidentall
 \begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}}
 \end{center}
-\caption{Caption.
+\caption{
 \label{structure}}
 \end{figure}
 
+\section{Replicate point plots}
+\label{s:repPoint}
 
-How include replicate line plot? (Just show images from cotyledon data) (or try SVA data with artificially high number of false positives)
+We demonstrated how to view differentially expressed genes onto the Cartesian coordinates of the scatterplot matrix in Figure~\ref{scatPCP}. Unfortunately, this figure becomes limited when we investigate treatment groups that contain a large number of replicates because we then have too many small scatterplots to effectively visualize. In addition, researchers can benefit from tools that allow them to quickly visually verify individual differentially expressed genes returned from a model. As a result, we are developing a plot that allows users to visualize a differentially expressed gene of interest onto the Cartesian coordinates of \textit{one} scatterplot matrix.
 
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=15.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png}}
+\end{center}
+\caption{
+\label{repDot}}
+\end{figure}
 
+A similar plot called a ``replicate line plot" was developed by a group of researchers who demonstrated its ability to detect model scaling problems in microarray data (Cook et al., 2007). Unfortunately, the ``replicate line plot" is only applicable on datasets where treatment groups contain exactly two replicates. The plot we are introducing is an extention of the replicate line plot that can now be applied to datasets with two or more replicates. We call this new plot a ``replicate point plot".
+
+The top row of Figure~\ref{repDot} shows a static version of the replicate line plot for the aforementoined cotyledon dataset. An interactive version subplots A and B are available for readers at https://rnaseqvisualization.shinyapps.io/repPoint, and an interactive version of subplots C and D are available at https://rnaseqvisualization.shinyapps.io/repPointSwitch. In the replicate point plot, each gene is plotted once for each combinations of sample pairs that are between treatment groups. For example, there are six ways to pair a replicate from one treatment group with a replicate from the other treatement group in the cotyledon datasaet (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, and S1.3 and S2.2). Hence, each gene for this dataset is plotted as six points in the replicate point plot. With 73,320 genes in this dataset, we would have 439,920 points. In interactive versions of the plot, this would reduce the speed of the funcionality as well as cause overplotting problems. As a result, we again use hexagon bins to summarize this information.
+
+After that, the user can superimpose the six points of one gene (colored orange in Figure~\ref{repDot}) over the hexagon bin background. As the reader can verify in the interactive version of the plot, the application provides several input fields that tailor the plot functionality. For instance, the user may wish to quickly scroll through differentially expressed genes one by one in the order of lowest to highest FDR values. They can achieve this by setting the ``Metric" field to ``FDR" and the ``Metric order" to ``Increasing". 
+
+Figure~\ref{repDot}A and Figure~\ref{repDot}B show the static results of applying such settings to the cotyledon data. Each of these plots shows an example gene from among the top ten most differentially expressed genes. For the case of Figure~\ref{repDot}A, the six points of the gene are superimposed in a manner we would expect from a differently expressed gene: They are located far from the \textit{x=y} line ( difference between treatments) and are close together (similarity between replicates). The points for the gene represented in Figure~\ref{repDot}B are also far from the \textit{x=y} line (difference between treatments) and are so close in proximity that they overlay each other (precise similarity between replicates).
+
+In contrast, Figure~\ref{repDot}C and Figure~\ref{repDot}D show the static results of applying such settings to the cotyledon data after switching the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1). Each of these plots shows an example gene from among the top ten most differentially expressed genes. We would expect this swap to cause the publicly-available data from a highly-controlled experiment to now produce unreliable results. Indeed, we can see this problem in Figure~\ref{repDot}C and Figure~\ref{repDot}D, as they both contain points that are not far from the \textit{x=y} line and as the distance between the points can be large.
+
+This finding would predictably indicate to us that the genes with the lowest FDR values should not be deemed differentially expressed. In this example, the results of the model match those from our visual exploratory data analysis: As you can see in the interactive graphic, none of the FDR values reached significance for the cotyledon data that had been swapped.
+
+Interestingly, we can reach this same conclusion using parallel coordinate plots. In Figure~\ref{clusters}A, we took the 100 genes with the lowest FDR values from the cotyledon data and ran them through a hierarchical clustering algorithm with six clusters. Rather than plotting all 100 parallel coordinates onto a common background boxplot, we can reduce overplotting issues and see patterns more easily by separating with clustering. Nonetheless, we see that the six clusters all represent one of two expected patterns for differentially expressed genes: Each cluster either shows consistent high read counts for treatment S1 and consistent low read counts for treatment S2, or vice verse.
+
+In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes with the lowest FDR values from the cotyledon data and running them through a hierarhcical clustering algorithm with six clusters. Here, we see that the expression patterns do not fall into the two previously-mentioned expected patterns of differentially expressed genes. Instead, the difference between the treatment groups is suspiciously small and the difference between the replicates is suspiciously large. This finding again confirms the results of the model that even the genes with lowest FDR values are not significant.
+
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/clusters.png}}
+\end{center}
+\caption{
+\label{clusters}}
+\end{figure}
 
 \section{Discussion}
 \label{s:discuss}
 
-Put your final comments here. 
+We have used real data to demonstrate that scatterplot matrices, parallel coordinate plots, and replicate point plots can help users check for normalization problems, catch common errors in the analysis pipeline, and confirm that the variation between replicates and treatments is as expected. We also show that these visual tools are useful for researchers to quickly investigate the list of differentially expressed genes that come out of a model and ensure which ones make sense. Simiarly, in the case that no differentially expressed genes were returned, users can quickly investigate the list of genes with the lowest FDR values to ensure that the models negative diagnosis seems accurate. In addition, we demonstrated that our simple visualization tools can allow researchers to discover genes of interest that could never be obtained with models.
+
+At this point, we aim to continue speeding up the interactive graphics, creating better color legends, extending the customisability of the graphics, and combining them into an easy-to-use package for users. We plan to develop a clear and intuitive vignette for users to ensure them that we are not suggesting that they radically change their approach to RNA-seq analysis, we simply suggest that they incorporate these visual tools during their usual analysis pipeline to quickly check that the results of the model and its assumptions are reasonable. Finally, we will gather more examples using real RNA-seq data to show that they graphics can discover issues with models. In particular, we aim to use an example dataset with an estimated high false-positive rate to demonstrate that the replicate point plot can show unexpected patterns in the ``differentially expressed genes" returned from the model.
+
 
 %  The \backmatter command formats the subsequent headings so that they
 %  are in the journal style.  Please keep this command in your document
@@ -430,9 +415,11 @@ Put your final comments here.
 
 \bibitem{ } Baggerly, K.A. and Coombes, K.R. (2009). Deriving chemosenstivity from cell lines: Forensic bioinformatics and reproducible research in high-throughput biology. \textit{The Annals of Applied Statistics} \textbf{3,} 1309–1334.
 
+\bibitem{ } Brown, A.V. and Hudson, K.A. (2015). Developmental profiling of gene expression in soybean trifoliate leaves and cotyledons. \textit{BMC Plant Biology} \textbf{15,} 169.
+
 \bibitem{ } Bullard, J. H., Purdom, E., Hansen, K. D., and Dudoit, S. (2010). Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. \textit{BMC Bioinformatics} \textbf{11,} 94.
 
-\bibitem{ } Grabherr, M. G., Haas, B. J., Yassour, M., Levin, J. Z., Thompson, D. A., Amit, I., et al. (2011). Full-length transcriptome assembly from RNA-Seq data without a reference genome. \textit{Nature Biotechnology} \textbf{29,} 644–652.
+\bibitem{ } Cook, D., Hofmann, H., Lee, E.-K., Yang, H., Nikolau, B., and Wurtele, E. (2007). Exploring gene expression data, using plots. \textit{Journal of Data Science} \textbf{5,} 151-182.
 
 \bibitem{ } Hansen, K.D., Brenner, S.E., and Dudoit, S. (2010). Biases in Illumina transcriptome sequencing caused by random hexamer priming. \textit{Nucleic Acids Research} \textbf{38,} e131.
 
@@ -477,8 +464,6 @@ Put your final comments here.
 \bibitem{ } Trapnell, C., Hendrickson, D.G., Sauvageau, M., Goff, L., Rinn, J.L., and Pachter, L. (2013). Differential analysis of gene regulation at transcript resolution with RNA-seq. \textit{Nature Biotechnology} \textbf{31,} 46–53.
 
 \bibitem{ } Trapnell, C., Roberts, A., Goff, L., Pertea, G., Kim, D., and Kelley D.R. (2012). Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. \textit{Nature Protocols} \textbf{7,} 562–578.
-
-\bibitem{ } Unwin, A. (1992). How interactive graphics will revolutionize statistical practice. \textit{The Statistician} \textbf{41,} 365-369
 
 \bibitem{ } Wang, Z., Gerstein, M., and Snyder, M. (2009). RNA-Seq: A revolutionary tool for transcriptomics. \textit{Nature Reviews Genetics} \textbf{10,} 57–63.
 

@@ -1,5 +1,4 @@
 \begin{table}
-\caption{This is a simple table.}
 \label{tableYeast}
 \begin{center}
 \begin{tabular}{lrrr}
