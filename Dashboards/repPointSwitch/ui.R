@@ -28,8 +28,8 @@ sidebar <- dashboardSidebar(
   width = 180,
   hr(),
   sidebarMenu(id="tabs",
-    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE) #, #hexPlot
-    #shinydashboard::menuItem("About", tabName = "about")
+    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE), #, #hexPlot
+    shinydashboard::menuItem("About", tabName = "about")
   )
 )
 
@@ -54,7 +54,30 @@ body <- dashboardBody(
       
       fluidRow(
         column(width = 12,
-               box(width = NULL, verbatimTextOutput("info1"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE))))))
+               box(width = NULL, verbatimTextOutput("info1"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
+    
+    shinydashboard::tabItem(tabName = "about",
+      shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a replicate point plot. In the replicate point plot, each gene can be plotted once for each combination of sample pairs between treatment groups. For example, the data we use below contains two treatments (S1 and S2), each with three replicates. Hence, there are six ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, and S1.2 and S2.3).", style='padding:10px;'),
+      br(),
+      shiny::fluidRow("Each gene for this dataset could be plotted as six points to construct the replicate point plot. However, with 73,320 genes in this dataset, we would have 439,920 points. In interactive versions of the plot, this would reduce the speed of the funcionality as well as cause overplotting problems. As a result, we use hexagon bins to construct the background of the replicate point plot as is shown in the right side of Figure 1.", style='padding:10px;'),
+      br(),
+      shiny::fluidRow("This application comes with several input fields as shown on the left side of Figure 1. The user must choose exactly two treatment groups in the 'Treatment Pairs' tab. They must choose an order (increasing or decreasing) in which to scroll through genes by a metric of choice. We see in Figure 1 that the user chose to superimpose the genes by increasing order of FDR values between S1 and S2.", style='padding:10px;'),
+      br(),
+      shiny::fluidRow("Upon making these decisions, the user can then select the 'Plot gene!' button to superimpose each gene one by one onto the replicate point plot. In Figure 1, we see this as six orange points that show high values for S2 and low values for S1. This gene is also superimposed as an orange parallel coordinate line on top of a box plot as shown in Figure 2. Moreover, the gene ID and its metric values are output as shown in Figure 3. We can determine that the gene we are viewing ranks third by our metric and order parameters. This  means the user has hit the 'Plot gene!' button three times now for this set of parameters and that this gene has the third lowest FDR value between S1 and S2 for this dataset.", style='padding:10px;'),
+      
+      br(),
+      br(),
+      div(p('Figure 1'), style="text-align: center;"),
+      div(img(src='Figure1.png', style="width: 75%; height: 75%"), style="text-align: center;"),
+      br(),
+      br(),
+      div(p('Figure 2'), style="text-align: center;"),
+      div(img(src='Figure2.png', style="width: 75%; height: 75%"), style="text-align: center;"),
+      br(),
+      br(),
+      div(p('Figure 3'), style="text-align: center;"),
+      div(img(src='Figure3.png', style="width: 75%; height: 75%"), style="text-align: center;")
+    )))
 
 dashboardPage(
   dashboardHeader(title = "Overlaying genes", titleWidth = 180),
