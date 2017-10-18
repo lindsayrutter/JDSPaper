@@ -24,8 +24,8 @@ sidebar <- dashboardSidebar(
   width = 180,
   hr(),
   sidebarMenu(id="tabs",
-    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE) #, #hexPlot
-    #shinydashboard::menuItem("About", tabName = "about")
+    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE),
+    shinydashboard::menuItem("About", tabName = "about")
   )
 )
 
@@ -50,7 +50,32 @@ body <- dashboardBody(
       
       fluidRow(
         column(width = 12,
-               box(width = NULL, verbatimTextOutput("info1"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE))))))
+               box(width = NULL, verbatimTextOutput("info1"), verbatimTextOutput("info2"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
+  
+  shinydashboard::tabItem(tabName = "about",
+    shiny::fluidRow("This application allows you to examine the relationship between all variables in your dataset with an interactive scatterplot matrix. Plotting points can obscure the number of genes in a given area due to overplotting. As a result, we use hexagon bins in the scatterplot matrix. If you hover over a given hexagon bin of interest, you can determine the number of genes in its area (Figure 1).", style='padding:10px;'),
+    br(),
+    shiny::fluidRow("You can also click on a given hexagon bin of interest to overlay the genes it contains across all scatterplots as orange points (Figure 2). Doing so will automatically overlay these same genes as orange parallel coordinate lines across a side-by-side boxplot of your data immediately below (Figure 3). Moreover, beneath that, you will see an output of the IDs of theses selection genes (Figure 4).", style='padding:10px;'),
+    br(),
+    shiny::fluidRow("The four figures below were created in simulated data drawn from the normal distribution for didactic purposes. We hope to improve upon this application by allowing users more customizing options, such as selecting hexagon bin size, changing color mappings, and providing a clear color legend.", style='padding:10px;'),
+      br(),
+      br(),
+      div(p('Figure 1'), style="text-align: center;"),
+      div(img(src='Figure1.png', style="width: 75%; height: 75%"), style="text-align: center;"),
+      br(),
+      br(),
+      div(p('Figure 2'), style="text-align: center;"),
+      div(img(src='Figure2.png', style="width: 75%; height: 75%"), style="text-align: center;"),
+      br(),
+      br(),
+      div(p('Figure 3'), style="text-align: center;"),
+      div(img(src='Figure3.png', style="width: 75%; height: 75%"), style="text-align: center;"),
+      br(),
+      br(),
+      div(p('Figure 4'), style="text-align: center;"),
+      div(img(src='Figure4.png', style="width: 75%; height: 75%"), style="text-align: center;")
+  )))
+  
 
 dashboardPage(
   dashboardHeader(title = "Overlaying genes", titleWidth = 180),

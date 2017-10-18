@@ -59,8 +59,10 @@ server <- function(input, output, session) {
     metricDF()[values$x, ]})
   currID <- eventReactive(currMetric(), {as.character(currMetric()$ID)})
   currGene <- eventReactive(currID(), {unname(unlist(datSel()[which(datSel()$ID == currID()), -1]))})
-  output$info1 <- renderPrint({ currMetric() })
-  output$info2 <- renderPrint({ currMetric() })
+  
+  
+  output$info1 <- renderPrint({ print(currMetric(), row.names = FALSE) })
+  output$info2 <- renderPrint({ cat("Gene rank:", values$x) })
   
   output$hexPlot <- renderPlotly({
     
