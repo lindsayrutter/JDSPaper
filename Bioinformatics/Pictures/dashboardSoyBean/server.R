@@ -8,13 +8,17 @@ library(tidyr)
 library(data.table)
 library(RColorBrewer)
 library(Hmisc)
+library(bigPint)
 
-load("bindataL120.Rda")
-dat <- bindata
-rm(bindata)
+data("soybean_cn")
+dat <- soybean_cn
+dat[,-1] <- log(dat[,-1]+1)
+dat <- dat[,c(1:7)]
+data("soybean_cn_metrics")
+metrics <- soybean_cn_metrics
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
-load("metrics.Rda")
+rm(soybean_cn, soybean_cn_metrics)
 metrics[[1]] <- metrics[[1]][which(metrics[[1]]$PValue<0.01),]
 metrics[[1]] <- metrics[[1]][which(metrics[[1]]$ID %in% dat$ID),]
 dat = dat[which(dat$ID %in% metrics[[1]]$ID),]

@@ -1,0 +1,10 @@
+name: scatmat
+title:
+username:
+account: rnaseqvisualization
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 226280
+bundleId: 1031658
+url: https://rnaseqvisualization.shinyapps.io/scatmat/
+when: 1508279189.51435

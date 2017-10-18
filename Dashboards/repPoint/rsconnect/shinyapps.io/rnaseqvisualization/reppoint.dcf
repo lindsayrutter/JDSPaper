@@ -1,0 +1,10 @@
+name: reppoint
+title:
+username:
+account: rnaseqvisualization
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 226296
+bundleId: 1031906
+url: https://rnaseqvisualization.shinyapps.io/reppoint/
+when: 1508291781.14919
