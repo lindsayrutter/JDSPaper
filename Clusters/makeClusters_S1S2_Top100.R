@@ -1,18 +1,8 @@
-library(rtracklayer)
-library(Rsamtools)
-library(grid)
-library(GenomicAlignments)
-library(ggplot2)
-library(GGally)
-library(edgeR)
-library(stringr)
-library(EDASeq)
+
 library(dplyr)
-library(matrixStats)
+library(tidyr)
+library(ggplot2)
 library(gridExtra)
-library(reshape2)
-library(scales)
-library(bigPint)
 
 # Read in data
 data(soybean_cn)
@@ -24,9 +14,6 @@ metrics <- soybean_cn_metrics
 data <- data[,c(1:7)]
 colnames(data) <- c("ID","S1.1","S1.2","S1.3","S2.1","S2.2","S2.3")
 metrics <- metrics["S1_S2"]
-
-boxDat <- data %>% gather(key, val, c(-ID))
-colnames(boxDat) <- c("ID", "Sample", "Count")
 
 baseOutDir = "Clustering_S1_S2_Top100"
 
@@ -50,9 +37,11 @@ jpeg(file = paste(outDir, "/", plotName, ".jpg", sep=""))
 plot(hc,main=plotName, xlab=NA, sub=NA)
 invisible(dev.off())
 
-getPCP <- function(nC){
+getPCP <- function(nC, hc, data, outDir){
   
-  set.seed(1)
+  boxDat <- data %>% gather(key, val, c(-ID))
+  colnames(boxDat) <- c("ID", "Sample", "Count")
+  
   colList = c("red","magenta", "darkorange","darkgreen","blue","purple")
   k = cutree(hc, k=nC)
   ###########################
@@ -83,5 +72,5 @@ getPCP <- function(nC){
 }
 
 for (i in c(2,3,4,5,6)){
-  getPCP(i)
+  getPCP(nC=i, hc=hc, data=data, outDir=outDir)
 }

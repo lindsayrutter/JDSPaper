@@ -4,15 +4,16 @@ library(grid)
 library(GenomicAlignments)
 library(ggplot2)
 library(GGally)
-library(edgeR)
 library(stringr)
-library(EDASeq)
-library(dplyr)
 library(matrixStats)
 library(gridExtra)
 library(reshape2)
 library(scales)
+
 library(bigPint)
+library(edgeR)
+library(EDASeq)
+library(dplyr)
 
 # Read in data
 data(soybean_cn)
@@ -79,7 +80,7 @@ jpeg(file = paste(outDir, "/", plotName, ".jpg", sep=""))
 plot(hc,main=plotName, xlab=NA, sub=NA)
 invisible(dev.off())
 
-getPCP <- function(nC){
+getPCP <- function(nC, d, hc){
   
   set.seed(1)
   colList = scales::hue_pal()(nC+1)

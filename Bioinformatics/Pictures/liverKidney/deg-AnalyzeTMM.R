@@ -9,12 +9,10 @@ colnames(data) = c("ID","K.R1L1","L.R1L2","K.R1L3","L.R1L4","L.R1L6","K.R1L7","L
 data = as.data.frame(data)
 data = data[,c(1,2,4,7,9,11,3,5,6,8,10)]
 
-outDir = "/Users/lindz/JDSPaper/Data/robinson-Marioni/DEG-tmm"
+outDir = "DEG-tmm"
 
 # Obtain R1 values
 data <- data[,c(1:4,7:9)]
-#dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)
-
 
 ############# Get DEGs ############# 
 rowNames = data[,1]
@@ -35,16 +33,20 @@ metricList = list()
 metricList[["K_L"]] = ret
 
 ############# Create DEG plots #############
-plotData <- data
-plotData[,2:ncol(plotData)] <- log(data[,2:ncol(plotData)]+1)
+logData <- data
+logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
 
-plotDEG(plotData, metricList, outDir=outDir, threshVar="PValue", threshVal=1e-250)
-plotDEG(plotData, metricList, outDir=outDir, option="volcano", threshVar="PValue", threshVal=1e-250)
-plotDEG(plotData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250)
-plotDEG(plotData, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
-plotDEG(plotData, metricList, outDir=outDir, option="parallelCoord", threshVar="PValue", threshVal=1e-250)
+plotDEG(logData, metricList, outDir=outDir, threshVar="PValue", threshVal=1e-250)
+plotDEG(logData, metricList, outDir=outDir, option="volcano", threshVar="PValue", threshVal=1e-250)
+plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250)
+plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=2)
+plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=1)
+plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=0.5)
+plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
+plotDEG(logData, metricList, outDir=outDir, option="parallelCoord", threshVar="PValue", threshVal=1e-250)
 
-plotRepLine(plotData, metricList)
+#NEW
+for (nC in c(1:6)){plotClusters(data=logData, dataMetrics = metricList, nC=nC , threshVar = "PValue", threshVal = 1e-250, outDir=outDir)}
 
 # Statistics
 length(which(lrt[[14]]$PValue<0.1/73320)) # 5704 had p-value <0.1/73320

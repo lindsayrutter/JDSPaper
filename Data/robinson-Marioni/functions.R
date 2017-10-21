@@ -1,4 +1,3 @@
-
 plotReverseCumDist <- function(x, xlab="Tag count X", ylab="# tags >= X", add=FALSE, ...) {
   v <- ecdf(x)
   matplot( knots(v), (1-v(knots(v)))*sum(D[,1]), log="xy", xlab=xlab, ylab=ylab, add=add, ... )
