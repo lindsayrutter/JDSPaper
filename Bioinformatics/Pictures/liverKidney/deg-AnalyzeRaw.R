@@ -48,6 +48,11 @@ plotDEG(logData, metricList, outDir=outDir, option="parallelCoord", threshVar="P
 #NEW
 for (nC in c(1:6)){plotClusters(data=logData, dataMetrics = metricList, nC=nC , threshVar = "PValue", threshVal = 1e-250, outDir=outDir)}
 
+#Permutations
+plotPermutations(data, nPerm = 10, topThresh = 100, outDir = outDir)
+outDir = "DEG-raw/log"
+plotPermutations(logData, nPerm = 10, topThresh = 100, outDir = outDir)
+
 # Statistics
 length(which(lrt[[14]]$PValue<0.1/73320)) # 7040 had p-value <0.1/73320
 length(which(lrt[[14]]$PValue<0.05/73320)) # 6870 had p-value <0.05/73320

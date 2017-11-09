@@ -66,6 +66,7 @@ cData <- logData[which(logData$ID %in% top100ID),]
 plotName <- "K_L"
 d = dist(as.matrix(cData[,-1])) # Euclidean distance between rows of matrix
 hC = hclust(d, method="ward.D") # Hierarchical clustering using ward.D linkage
+
 for (nC in c(1:6)){plotClusters(fData=logData, cData = cData, nC=nC, hC=hC, outDir=outDir)}
 
 plotRepLine(logData, metricList)
