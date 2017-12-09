@@ -32,8 +32,8 @@ sidebar <- shinydashboard::dashboardSidebar(
   width = 180,
   shiny::hr(),
   shinydashboard::sidebarMenu(id="tabs",
-    shinydashboard::menuItem("Application", tabName="scatMatPlot", selected=TRUE), #hexPlot
-    shinydashboard::menuItem("About", tabName = "about") #boxPlot
+    shinydashboard::menuItem("Application", tabName="scatMatPlot"), #hexPlot
+    shinydashboard::menuItem("About", tabName = "about", selected=TRUE) #boxPlot
   )
 )
 
@@ -56,6 +56,8 @@ shinydashboard::tabItem(tabName = "about",
       shiny::fluidRow("You can also click on a given hexagon bin of interest to overlay the genes it contains across all scatterplots as orange points (Figure 2). Doing so will automatically overlay these same genes as orange parallel coordinate lines across a side-by-side boxplot of your data immediately below (Figure 3). Moreover, beneath that, you will see an output of the IDs of theses selection genes (Figure 4).", style='padding:10px;'),
       br(),
       shiny::fluidRow("The four figures below were created in simulated data drawn from the normal distribution for didactic purposes. We hope to improve upon this application by allowing users more customizing options, such as selecting hexagon bin size, changing color mappings, and providing a clear color legend.", style='padding:10px;'),
+      br(),
+      shiny::fluidRow("Please use the 'Application' tab to interact with published RNA-seq data of soybean developmental stages (Brown and Kudson, 2015).", strong("When you hover over a hexagon bin, if it appears to contain thousands of genes, please avoid clicking on it."), "Plotting such a large number of genes could crash the program. In any case, hexagon bins that contain that many genes are unlikely to be of interest anyway because they usually occur close to the", em("x=y"), "line. Instead, we are typically interested in hexagon bins that deviate from the" ,em("x=y"), "line, and these bins tend to only contain a handful of genes in the first place.", style='padding:10px;'),
       br(),
       br(),
       div(p('Figure 1'), style="text-align: center;"),

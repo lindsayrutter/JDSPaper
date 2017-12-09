@@ -31,7 +31,7 @@ values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 server <- function(input, output, session) {
 
 output$scatMatPlot <- renderPlotly({
-withProgress(message = 'Making plot', detail = 'This could take about 30 seconds even after this message disappears', value = 0, {
+withProgress(message = 'Making plot', detail = 'This will take about 45 seconds to draw. The plot will appear shortly after this message disappears', value = 0, {
 
   ################################ Prepare scatterplot matrix
   ###########################################################
