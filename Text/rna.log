@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 DEC 2017 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 DEC 2017 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -498,31 +498,26 @@ itch/scatPCP.png Graphic file (type png)
 tch/scatPCP.png>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
 mple/Switch12/NotSwitch/scatPCP.png used on input line 21.
-(pdftex.def)             Requested size: 426.79134pt x 592.36995pt.
-
-
-LaTeX Warning: Text page 19 contains only floats.
-
+(pdftex.def)             Requested size: 398.33858pt x 552.8799pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 19
  []
 
-[19
-
-
-
-
- </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch
-/scatPCP.png>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=75, 504.4446pt x
- 1006.4802pt>
+[19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/scatPCP.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=75, 507.3354pt x
+ 1009.8528pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
 ype png)
  <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.
 png used on input line 30.
-(pdftex.def)             Requested size: 284.52756pt x 567.69484pt.
+(pdftex.def)             Requested size: 284.52756pt x 566.37663pt.
+
+
+LaTeX Warning: Float too large for page by 19.87663pt on input line 34.
+
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 20
@@ -616,7 +611,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2188 strings out of 492995
  32041 string characters out of 6132704
- 92063 words of memory out of 5000000
+ 93063 words of memory out of 5000000
  5723 multiletter control sequences out of 15000+600000
  6587 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -627,7 +622,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on rna.pdf (25 pages, 3983134 bytes).
+Output written on rna.pdf (25 pages, 3988392 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream
