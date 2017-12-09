@@ -1,8 +1,8 @@
-\begin{figure}
+\begin{figure}[t!]
 \begin{center}
 \centerline{\fbox{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
-\caption{
+\caption{Test this figure
 \label{2group}}
 \end{figure}
 \efloatseparator
@@ -45,7 +45,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
+\centerline{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
 \end{center}
 \caption{
 \label{mdsSwitch}}
