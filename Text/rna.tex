@@ -64,7 +64,7 @@
 %  the examples below in creating your author and affiliation information.
 %  Also consult a recent issue of the journal for examples of formatting.
 
-\title[Visualization methods for RNA-sequencing data]{Visualization methods for RNA-sequencing data}
+\title[Visualization methods for RNA-sequencing data analysis]{Visualization methods for RNA-sequencing data analysis}
 
 %  Here are examples of different configurations of author/affiliation
 %  displays.  According to the Biometrics style, in some instances,
@@ -290,7 +290,7 @@ Additionally, we can also confirm from Figure~\ref{withinbtwn}B that the read co
 
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png}}
+\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png}}
 \end{center}
 \caption{
 \label{withinbtwn}}
@@ -303,7 +303,7 @@ Irreproducibility is prevalent in high-throughput biological studies. A study in
 
 Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. In regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients (Baggerly and Coombes, 2009). Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors (Baggerly and Coombes, 2009). They also discovered that the most common errors are simple errors, such as mixing up sample labels (Baggerly and Coombes, 2009). Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
 
-Fortunately, scatterplot matrices are a quick and easy tool to check for common errors like sample mislabeling. Figure~\ref{switchedScatMat} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. We know there are nine between-treatment and six between-replicate combinations between all pairwise combinations of the six samples. Hence, Figure~\ref{switchedScatMat} contains the correct number of scatterplots showing thick and thin distributions around the \textit{x=y} line, only some scatterplots appear to be out of order. We could not see this information with boxplots and MDS plots (plots available upon request). Rearranging the columns of the two samples that appear suspicious in the scatterplot matrix would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{cotyIdeal}.
+Fortunately, scatterplot matrices are a quick and easy tool to check for common errors like sample mislabeling. Figure~\ref{switchedScatMat} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. We know there are nine between-treatment and six between-replicate combinations between all pairwise combinations of the six samples. Hence, Figure~\ref{switchedScatMat} contains the correct number of scatterplots showing thick and thin distributions around the \textit{x=y} line, only some scatterplots appear to be out of order. We could not see this information with boxplots and MDS plots (Figure~\ref{mdsSwitch}). Rearranging the columns of the two samples that appear suspicious in the scatterplot matrix would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{cotyIdeal}.
 
 \begin{figure}
 \begin{center}
@@ -311,6 +311,14 @@ Fortunately, scatterplot matrices are a quick and easy tool to check for common 
 \end{center}
 \caption{
 \label{switchedScatMat}}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
+\end{center}
+\caption{
+\label{mdsSwitch}}
 \end{figure}
 
 \subsection{Finding unexpected patterns in scatterplot matrices}

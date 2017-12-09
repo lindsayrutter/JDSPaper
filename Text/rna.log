@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 OCT 2017 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 DEC 2017 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -538,20 +538,20 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
  </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch
 /scatPCP.png>]
-</Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png, id=78, 333.8874pt x 665
-.3658pt>
-File: /Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png Graphic file (type 
-png)
- <use /Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png 
-used on input line 30.
-(pdftex.def)             Requested size: 284.52756pt x 567.01543pt.
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=78, 504.4446pt x
+ 1006.4802pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
+ype png)
+ <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.
+png used on input line 30.
+(pdftex.def)             Requested size: 284.52756pt x 567.69484pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 20
  []
 
-[20 </Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png>]
+[20 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
 1_S2_points.jpg, id=83, 501.875pt x 501.875pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
@@ -569,63 +569,78 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [21 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
 ed/S1_S2_points.jpg>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=87, 627.7854pt
+ x 608.5134pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png Graphic file 
+(type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitc
+h.png used on input line 48.
+(pdftex.def)             Requested size: 284.52756pt x 275.78766pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 22
+ []
+
+[22 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
-=87, 602.25pt x 602.25pt>
+=92, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
 g Graphic file (type jpg)
 
 <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
 >
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanS
-treak/N_P_points.jpg used on input line 48.
+treak/N_P_points.jpg used on input line 57.
 (pdftex.def)             Requested size: 426.79134pt x 426.81018pt.
-
-Overfull \hbox (9.24994pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/9 22
- []
-
-[22 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
->]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=91, 448.5558pt x 
-412.4208pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
-pe png)
- <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.p
-ng used on input line 57.
-(pdftex.def)             Requested size: 441.01772pt x 405.51004pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 23
  []
 
-[23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
-</Users/lindz/JDSPaper/clusters.png, id=96, 525.6438pt x 785.334pt>
-File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
-
-<use /Users/lindz/JDSPaper/clusters.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/clusters.png used on input line 
-66.
-(pdftex.def)             Requested size: 426.79134pt x 637.6629pt.
-
-
-LaTeX Warning: Float too large for page by 20.99622pt on input line 70.
-
+[23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
+>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=96, 448.5558pt x 
+412.4208pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
+pe png)
+ <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.p
+ng used on input line 66.
+(pdftex.def)             Requested size: 441.01772pt x 405.51004pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 24
  []
 
-[24 </Users/lindz/JDSPaper/clusters.png>]) (./rna.aux)
+[24 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
+</Users/lindz/JDSPaper/clusters.png, id=102, 525.6438pt x 785.334pt>
+File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/clusters.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/clusters.png used on input line 
+75.
+(pdftex.def)             Requested size: 426.79134pt x 637.6629pt.
+
+
+LaTeX Warning: Float too large for page by 20.99622pt on input line 79.
+
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 25
+ []
+
+[25 </Users/lindz/JDSPaper/clusters.png>]) (./rna.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2255 strings out of 492995
- 32800 string characters out of 6132704
- 93020 words of memory out of 5000000
- 5760 multiletter control sequences out of 15000+600000
+ 2260 strings out of 492995
+ 33053 string characters out of 6132704
+ 93045 words of memory out of 5000000
+ 5765 multiletter control sequences out of 15000+600000
  14799 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,7n,25p,1450b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -635,10 +650,10 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on rna.pdf (25 pages, 3422019 bytes).
+Output written on rna.pdf (26 pages, 3998343 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

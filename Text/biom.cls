@@ -1435,7 +1435,7 @@ Key words:\hskip1em}\ignorespaces}
 \else
   \def\@printed{}
 \fi
-\gdef\@journal{\vbox{\fontsize{10}{10}\selectfont\vbox{\hsize\textwidth{\sc ENAR Student Paper Submission}}\par}}
+\gdef\@journal{\vbox{\fontsize{10}{10}\selectfont\vbox{\hsize\textwidth{\sc ASA SLDS Student Paper Submission}}\par}}
 % (\number\year) \@microfiche\@printed}
 %
 % \ps@empty and \ps@plain defined in LATEX.TEX
@@ -1449,7 +1449,7 @@ Key words:\hskip1em}\ignorespaces}
    \rm\@ddell\hbox to 0pt{\small\thepage}}
  \def\@oddfoot{}%\small\copyright\ \@pubyear\ RAS, MNRAS {\bf \@volume}, \@pagerange\hfil}
  \def\@evenhead{\Large\@ddell\hbox to
- 0pt{\small\thepage}\hspace{1.5em}\hfill\small{\it ENAR Student Paper Submission}\hfill}
+ 0pt{\small\thepage}\hspace{1.5em}\hfill\small{\it ASA SLDS Student Paper Submission}\hfill}
  \def\@evenfoot{}%\hfil\small\copyright\ \@pubyear\ RAS, MNRAS {\bf \@volume}, \@pagerange}
  \def\sectionmark##1{\markboth{##1}{}}
  \def\subsectionmark##1{\markright{##1}}}
@@ -1467,7 +1467,7 @@ Key words:\hskip1em}\ignorespaces}
 to 7.75pt{\tiny C}}}
 \def\ps@titlepage{\let\@mkboth\@gobbletwo
  \def\@oddhead{\footnotesize\@journal\hfill}
- \def\@oddfoot{\hfill{\reset@font\ This paper is being submitted for consideration as an ENAR Student Paper}\hfill}
+ \def\@oddfoot{\hfill{\reset@font\ This paper is being submitted for consideration as an ASA SLDS Student Paper}\hfill}
 %\hfill{\reset@font\thepage}\hfill}
  \def\@evenhead{\footnotesize\@journal\hfill}
  %\def\@evenfoot{\hfil\small\copyright\ \@pubyear\ The Society for the Study

@@ -27,7 +27,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Data/risso-Yeast/withinbtwn.png}}
+\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png}}
 \end{center}
 \caption{
 \label{withinbtwn}}
@@ -40,6 +40,15 @@
 \end{center}
 \caption{
 \label{switchedScatMat}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\begin{center}
+\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
+\end{center}
+\caption{
+\label{mdsSwitch}}
 \end{figure}
 \efloatseparator
  
