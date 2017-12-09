@@ -2,7 +2,7 @@
 \begin{center}
 \centerline{\fbox{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
-\caption{Test this figure
+\caption{One simulated dataset is shown on the left half and another simulated dataset is shown on the right half of the figure. We do not see crucial distinctions between the left and right datasets when we compare their boxplots (subplots A) and MDS plots (subplots B). However, their parallel coordinate plots (subplots C) show a critical difference between their structures. Namely, the left dataset is composed of genes with small replicate variation and large treatment group variation (suggesting DEGs), while the right dataset is composed of genes with similar variation between replicates and treatment groups (not suggesting DEGs).
 \label{2group}}
 \end{figure}
 \efloatseparator
