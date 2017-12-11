@@ -29,7 +29,7 @@
 \begin{center}
 \centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png}}
 \end{center}
-\caption{The collective deviation of genes from the \textit{x=y} line instantly shows that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
+\caption{The collective deviation of genes from the \textit{x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
 \label{withinbtwn}}
 \end{figure}
 \efloatseparator
@@ -38,7 +38,7 @@
 \begin{center}
 \centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
 \end{center}
-\caption{
+\caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{cotyIdeal}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
 \label{switchedScatMat}}
 \end{figure}
 \efloatseparator
@@ -47,7 +47,7 @@
 \begin{center}
 \centerline{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
 \end{center}
-\caption{
+\caption{Traditional plots showing the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot detect from the boxplots that samples S1.3 and S2.1 may have been swapped (subplots A). This is because all six samples have similar five number summaries. The MDS plot on the left does show a cleaner separation between the two treatment groups in the first dimension than it does on the right (subplots B). However, the second dimension creates three clusterings of the samples, with sample S1.1 appearing as an outlier. As a result, collectivly, it is difficult to suspect that these two samples may have been swapped by examining the MDS plots (subplots B). This is because we cannot obtain information about the variation at the gene-level through the MDS plots like we can through the scatterplot matrix.
 \label{mdsSwitch}}
 \end{figure}
 \efloatseparator
