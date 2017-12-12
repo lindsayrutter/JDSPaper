@@ -15,7 +15,8 @@
 %  as are almost all equations in the journal.  Use a recent version of the
 %  journal as a guide. 
 %  
-\documentclass[useAMS,referee]{biom}
+
+\documentclass[referee]{biom}
 
 %documentclass[useAMS]{biom}
 %
@@ -133,7 +134,6 @@
 
 \usepackage{graphicx}
 \begin{document}
-
 
 %  This will produce the submission and review information that appears
 %  right after the reference section.  Of course, it will be unknown when
@@ -341,13 +341,13 @@ In contrast, Figure~\ref{repDot}C and D show the static results of applying such
 
 Interestingly, we reach this same conclusion using parallel coordinate plots. In Figure~\ref{clusters}A, we took the 100 genes with the lowest FDR values from the cotyledon data and ran them through a hierarchical clustering algorithm with six clusters. Rather than plotting all 100 parallel coordinates onto a common background boxplot, we can reduce overplotting issues and see patterns more easily by separating with clustering. Nonetheless, we see that the six clusters all represent one of two expected patterns for differentially expressed genes: Each cluster either shows consistent high read counts for treatment S1 and consistent low read counts for treatment S2, or vice verse.
 
-In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes with the lowest FDR values from the swapped cotyledon data and running them through a hierarhcical clustering algorithm with six clusters. Here, we see that the expression patterns do not fall into the two previously-mentioned expected patterns of differentially expressed genes. Instead, the difference between the treatment groups is suspiciously small and the difference between the replicates is suspiciously large. In addition, we may suspect that samples S1.3 and S2.1 were swapped: For example, the cluster with the largest number of genes (n=43) shows a pattern that would look more like differential gene expression if these two samples were reversed.
+In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes with the lowest FDR values from the swapped cotyledon data and running them through a hierarchical clustering algorithm with six clusters. Here, we see that the expression patterns do not fall into the two previously-mentioned expected patterns of differentially expressed genes. Instead, the difference between the treatment groups is suspiciously small and the difference between the replicates is suspiciously large. In addition, we may suspect that samples S1.3 and S2.1 were swapped: For example, the cluster with the largest number of genes (n=43) shows a pattern that would look more like differential gene expression if these two samples were reversed.
 
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/clusters.png}}
+\centerline{\includegraphics[width=14cm]{/Users/lindz/JDSPaper/clusters.png}}
 \end{center}
-\caption{
+\caption{Hierarchical clustering of the 100 genes with the lowest FDR values from the cotyledon dataset before (subplot A) and after (subplot B) swapping samples S1.3 and S2.1. The parallel coordinates show the expected structure of differentially expressed genes before sample swapping (subplot A), but not after sample swapping (subplot B).
 \label{clusters}}
 \end{figure}
 

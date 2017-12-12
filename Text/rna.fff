@@ -72,9 +72,9 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/clusters.png}}
+\centerline{\includegraphics[width=14cm]{/Users/lindz/JDSPaper/clusters.png}}
 \end{center}
-\caption{
+\caption{Hierarchical clustering of the 100 genes with the lowest FDR values from the cotyledon dataset before (subplot A) and after (subplot B) swapping samples S1.3 and S2.1. The parallel coordinates show the expected structure of differentially expressed genes before sample swapping (subplot A), but not after sample swapping (subplot B).
 \label{clusters}}
 \end{figure}
 \efloatseparator

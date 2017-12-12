@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 DEC 2017 00:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 DEC 2017 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -12,10 +12,6 @@ Document Style `Biom' v1.0, released 2006 December 12
 \math@groups=\toks14
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/cmsy/b/n on input line 236.
-\symUPM=\mathgroup4
-LaTeX Font Info:    Overwriting symbol font `UPM' in version `bold'
-(Font)                  U/eur/m/n --> U/eur/b/n on input line 273.
-\symAMSa=\mathgroup5
 \SFB@measure=\dimen102
 \realparindent=\skip41
 \c@part=\count79
@@ -222,18 +218,18 @@ LaTeX Warning: Label ` ' multiply defined.
 )
 \openout1 = `rna.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
  (./endrotfloat.sty
 Package: endrotfloat 2007/01/23 v1.0 LaTeX2e package puts sideways figures and 
 tables at end
@@ -593,10 +589,10 @@ File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
 <use /Users/lindz/JDSPaper/clusters.png>
 Package pdftex.def Info: /Users/lindz/JDSPaper/clusters.png used on input line 
 75.
-(pdftex.def)             Requested size: 426.79134pt x 637.6629pt.
+(pdftex.def)             Requested size: 398.33858pt x 595.14645pt.
 
 
-LaTeX Warning: Float too large for page by 20.99622pt on input line 79.
+LaTeX Warning: Float too large for page by 22.64645pt on input line 79.
 
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
@@ -609,10 +605,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2188 strings out of 492995
- 32041 string characters out of 6132704
- 93063 words of memory out of 5000000
- 5723 multiletter control sequences out of 15000+600000
+ 2177 strings out of 492995
+ 31963 string characters out of 6132704
+ 93107 words of memory out of 5000000
+ 5712 multiletter control sequences out of 15000+600000
  6587 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,25p,1465b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -622,7 +618,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on rna.pdf (25 pages, 3992201 bytes).
+Output written on rna.pdf (25 pages, 3992516 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream
