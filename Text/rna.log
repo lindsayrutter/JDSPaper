@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 DEC 2017 10:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 DEC 2017 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -96,6 +96,32 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \efloat@postttt=\write4
 \@ef@tttopen=\count123
 ))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count124
+\Gm@cntv=\count125
+\c@Gm@tempcnt=\count126
+\Gm@bindingoffset=\dimen108
+\Gm@wd@mp=\dimen109
+\Gm@odd@mp=\dimen110
+\Gm@even@mp=\dimen111
+\Gm@layoutwidth=\dimen112
+\Gm@layoutheight=\dimen113
+\Gm@layouthoffset=\dimen114
+\Gm@layoutvoffset=\dimen115
+\Gm@dimlist=\toks18
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -119,10 +145,10 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count124
+\Gread@gobject=\count127
 ))
-\Gin@req@height=\dimen108
-\Gin@req@width=\dimen109
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
 )
 (./rna.aux
 
@@ -218,35 +244,69 @@ LaTeX Warning: Label ` ' multiply defined.
 )
 \openout1 = `rna.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
  (./endrotfloat.sty
 Package: endrotfloat 2007/01/23 v1.0 LaTeX2e package puts sideways figures and 
 tables at end
 )
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=0.0pt
+* \headheight=0.0pt
+* \headsep=0.0pt
+* \topskip=9.0pt
+* \footskip=22.0pt
+* \marginparwidth=48.0pt
+* \marginparsep=6.0pt
+* \columnsep=12.0pt
+* \skip\footins=19.5pt plus 12.0pt minus 1.0pt
+* \hoffset=12.0pt
+* \voffset=36.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen110
+\scratchcounter=\count128
+\scratchdimen=\dimen118
 \scratchbox=\box29
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen111
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
-\everyMPtoPDFconversion=\toks19
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen119
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -254,9 +314,6 @@ Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -296,6 +353,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Overfull \hbox (0.17474pt too wide) in paragraph at lines 188--189
+\OT1/cmr/m/n/12 RNA-sequencing (RNA-seq) uses next-generation se-quenc-ing (NGS
+) to es-ti-mate the quan-
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -303,7 +366,10 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 1
  []
 
-[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -313,67 +379,95 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 2
  []
 
-[2]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [2]
 \openout3 = `rna.fff'.
 
- (rna.fff)
-Underfull \vbox (badness 1852) has occurred while \output is active []
 
-
+(rna.fff)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 3
  []
 
-[3]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [3]
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 4
  []
 
-[4]
-Underfull \vbox (badness 3118) has occurred while \output is active []
 
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
 
+ [4]
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 5
  []
 
-[5]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [5]
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 6
  []
 
-[6]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [6]
+Overfull \hbox (12.22728pt too wide) in paragraph at lines 275--276
+\OT1/cmr/m/n/12 Foren-sic bioin-for-mati-cians who have ac-tively in-ves-ti-gat
+ed com-mon er-rors in high-throughput
+ []
+
+
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 7
  []
 
-[7]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [7]
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 8
  []
 
-[8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [8]
+Underfull \vbox (badness 4108) has occurred while \output is active []
 
 
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 9
  []
 
-[9]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [9]
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 10
  []
 
-[10]
-Underfull \vbox (badness 3118) has occurred while \output is active []
 
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
 
+ [10]
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 11
  []
 
-[11]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -381,19 +475,43 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 12
  []
 
-[12]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [12]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+
+Underfull \vbox (badness 3724) has occurred while \output is active []
+
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 13
  []
 
-[13]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [13]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+[]\OT1/cmr/m/n/12 Marini, F. (2017). pca-Ex-plorer: In-ter-ac-tive vi-su-al-iza
+-tion of RNA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+\OT1/cmr/m/n/12 seq data us-ing a prin-ci-pal com-po-nents ap-proach. GitHub, I
+nc.
+ []
+
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -405,7 +523,10 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 14
  []
 
-[14]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [14]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
@@ -429,10 +550,10 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 15
  []
 
-[15]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [15]
 Missing character: There is no Å in font cmr12!
 Missing character: There is no „ in font cmr12!
 Missing character: There is no â in font cmr12!
@@ -447,12 +568,17 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- AED endfloat: Processing end Figures and Tables
+
+AED endfloat: Processing end Figures and Tables
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 16
  []
 
-[16] (./rna.fff
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [16]
+(./rna.fff
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=59, 608
 .2725pt x 482.80376pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
@@ -467,7 +593,10 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 17
  []
 
-[17 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [17 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
 S1_S2_points_size1.jpg, id=65, 501.875pt x 501.875pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
@@ -483,8 +612,11 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 18
  []
 
-[18 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
-tch/S1_S2_points_size1.jpg>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [18 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_points_size1.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
 scatPCP.png, id=69, 453.3738pt x 629.2308pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
@@ -500,8 +632,11 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 19
  []
 
-[19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
-tch/scatPCP.png>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/scatPCP.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=75, 507.3354pt x
  1009.8528pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
@@ -512,14 +647,26 @@ png used on input line 30.
 (pdftex.def)             Requested size: 284.52756pt x 566.37663pt.
 
 
-LaTeX Warning: Float too large for page by 19.87663pt on input line 34.
+LaTeX Warning: Text page 20 contains only floats.
+
+
+Overfull \vbox (0.36977pt too high) has occurred while \output is active []
 
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 20
  []
 
-[20 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [20
+
+
+
+
+
+ </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
 1_S2_points.jpg, id=80, 501.875pt x 501.875pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
@@ -535,8 +682,11 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 21
  []
 
-[21 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
-ed/S1_S2_points.jpg>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [21 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_points.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=84, 627.7854pt
  x 608.5134pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png Graphic file 
@@ -551,7 +701,10 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 22
  []
 
-[22 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [22 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
 =89, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
@@ -567,8 +720,11 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 23
  []
 
-[23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
->]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
+g>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=93, 448.5558pt x 
 412.4208pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
@@ -582,7 +738,10 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 24
  []
 
-[24 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [24 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
 </Users/lindz/JDSPaper/clusters.png, id=98, 525.6438pt x 785.334pt>
 File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
 
@@ -592,33 +751,45 @@ Package pdftex.def Info: /Users/lindz/JDSPaper/clusters.png used on input line
 (pdftex.def)             Requested size: 398.33858pt x 595.14645pt.
 
 
-LaTeX Warning: Float too large for page by 22.64645pt on input line 79.
+LaTeX Warning: Text page 25 contains only floats.
+
+
+Overfull \vbox (3.13959pt too high) has occurred while \output is active []
 
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 25
  []
 
-[25 </Users/lindz/JDSPaper/clusters.png>]) (./rna.aux)
+
+Overfull \vbox (6.25pt too high) has occurred while \output is active []
+
+ [25
+
+
+
+
+
+ </Users/lindz/JDSPaper/clusters.png>]) (./rna.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2177 strings out of 492995
- 31963 string characters out of 6132704
- 93107 words of memory out of 5000000
- 5712 multiletter control sequences out of 15000+600000
+ 2656 strings out of 492995
+ 39031 string characters out of 6132704
+ 107034 words of memory out of 5000000
+ 6180 multiletter control sequences out of 15000+600000
  6587 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,25p,1465b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,7n,25p,1465b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on rna.pdf (25 pages, 3992516 bytes).
+Output written on rna.pdf (25 pages, 3992743 bytes).
 PDF statistics:
  125 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream
