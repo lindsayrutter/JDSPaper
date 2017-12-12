@@ -24,8 +24,8 @@ sidebar <- dashboardSidebar(
   width = 180,
   hr(),
   sidebarMenu(id="tabs",
-    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE),
-    shinydashboard::menuItem("About", tabName = "about")
+    shinydashboard::menuItem("Application", tabName="hexPlot"),
+    shinydashboard::menuItem("About", tabName = "about", selected=TRUE)
   )
 )
 
@@ -60,7 +60,8 @@ body <- dashboardBody(
     shiny::fluidRow("This application comes with several input fields as shown on the left side of Figure 1. The user must choose exactly two treatment groups in the 'Treatment Pairs' tab. They must choose an order (increasing or decreasing) in which to scroll through genes by a metric of choice. We see in Figure 1 that the user chose to superimpose the genes by increasing order of FDR values between S1 and S2.", style='padding:10px;'),
     br(),
     shiny::fluidRow("Upon making these decisions, the user can then select the 'Plot gene!' button to superimpose each gene one by one onto the replicate point plot. In Figure 1, we see this as six orange points that show high values for S2 and low values for S1. This gene is also superimposed as an orange parallel coordinate line on top of a box plot as shown in Figure 2. Moreover, the gene ID and its metric values are output as shown in Figure 3. We can determine that the gene we are viewing ranks third by our metric and order parameters. This  means the user has hit the 'Plot gene!' button three times now for this set of parameters and that this gene has the third lowest FDR value between S1 and S2 for this dataset.", style='padding:10px;'),
-    
+    br(),
+    shiny::fluidRow("Please use the 'Application' tab to interact with published RNA-seq data of soybean developmental stages S1 and S2 (Brown and Kudson, 2015).", style='padding:10px;'),
     br(),
     br(),
     div(p('Figure 1'), style="text-align: center;"),
