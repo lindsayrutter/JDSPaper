@@ -33,7 +33,16 @@ metricList[["K_L"]] = ret
 
 ############# Create DEG plots #############
 logData <- data
-logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
+rlogData <- rlog(as.matrix(logData[,2:7]))
+rlogData <- as.data.frame(rlogData)
+rlogData2 <- cbind(ID = data$ID, rlogData)
+rlogData2$ID <- as.character(rlogData2$ID)
+plotDEG(rlogData2, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
+
+
+
+# used for all except PI plots
+#logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
 
 #358 DEGs here
 plotDEG(logData, metricList, outDir=outDir, threshVar="PValue", threshVal=1e-250)
