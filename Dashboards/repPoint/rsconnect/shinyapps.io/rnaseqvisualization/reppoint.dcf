@@ -5,6 +5,6 @@ account: rnaseqvisualization
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 226296
-bundleId: 1130786
+bundleId: 1132708
 url: https://rnaseqvisualization.shinyapps.io/reppoint/
-when: 1513108482.68044
+when: 1513180029.79064
