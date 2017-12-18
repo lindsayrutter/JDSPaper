@@ -38,9 +38,12 @@ rlogData <- as.data.frame(rlogData)
 rlogData2 <- cbind(ID = data$ID, rlogData)
 rlogData2$ID <- as.character(rlogData2$ID)
 
-# There are 40 points that intersect all blue points from all 15 subplots
-bluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+# There are 40 points that intersect all blue points and union all red points from all 15 subplots
+redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Red")])
+plotDEG(rlogData2, lineList = redBluePoints, lineSize=0.5, lineColor = "red", outDir=outDir, option ="parallelCoord")
 
-plotDEG(rlogData2, lineList = bluePoints, lineSize=0.5, outDir=outDir, option ="parallelCoord")
-
+redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Blue")])
+plotDEG(rlogData2, lineList = redBluePoints, lineSize=0.5, lineColor = "blue", outDir=outDir, option ="parallelCoord")
 
