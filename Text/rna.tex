@@ -15,8 +15,7 @@
 %  as are almost all equations in the journal.  Use a recent version of the
 %  journal as a guide. 
 %  
-
-\documentclass[referee]{biom}
+\documentclass[useAMS,referee]{biom}
 
 %documentclass[useAMS]{biom}
 %
@@ -57,6 +56,7 @@
 %  then you need the following command.
 
 %\usepackage[figuresright]{rotating}
+\usepackage[labelfont=bf]{caption}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -116,13 +116,10 @@
 %  Three or more authors, with at least two different institutions,
 %  more than one email displayed 
 
-%\author{John Author$^{1,*}$\email{author@address.edu}, 
-%Kathy Author$^{2,**}$\email{anotherauthor@address.edu}, and 
-%Wilma Flinstone$^{3,***}$\email{wilma@bedrock.edu} \\
-%$^{1}$Department of Statistics, University of Warwick, Coventry CV4 7AL, U.K \\
-%$^{2}$Department of Biostatistics, University of North Carolina at 
-%Chapel Hill, Chapel Hill, North Carolina, U.S.A. \\
-%$^{3}$Department of Geology, University of Bedrock, Bedrock, Kansas, U.S.A.}
+\author{Lindsay Rutter$^{1,*}$\email{lrutter@iastate.edu} and 
+Dianne Cook$^{2,**}$\email{dicook@monash.edu} \\
+$^{1}$Bioinformatics and Computational Biology Program, Iowa State University, Ames, Iowa, U.S.A \\
+$^{2}$Department of Department of Econometrics and Business Statistics, Monash University, Clayton, Australia}
 
 %  Three or more authors with at least two different institutions and only
 %  one email displayed
@@ -134,6 +131,7 @@
 
 \usepackage{graphicx}
 \begin{document}
+
 
 %  This will produce the submission and review information that appears
 %  right after the reference section.  Of course, it will be unknown when
@@ -163,6 +161,33 @@
 
 \label{firstpage}
 
+%  put the summary for your paper here
+
+\begin{abstract}
+
+It was initially claimed that RNA-seq produced unbiased data that did not require sophisticated normalization. However, studies have since revealed that RNA-seq data is biased and that accurate detection of differentially expressed genes is not a trivial task. In light of these findings, researchers should analyze RNA-seq data like they would any other biased multivariate data. The most effective approach to modern data analysis is to iterate between models and visuals, and to enhance the appropriateness of models based on feedback from visuals. Unfortunately, researchers do not often use models and visuals in a complimentary fashion when analyzing RNA-seq data. Here, we use real RNA-seq data to show that our visualization tools can detect normalization problems, DEG designation problems, and common errors in RNA-seq analysis. We also show that our tools can identify genes of interest that cannot be obtained by models. In this paper, we do not propose that users radically change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate statistical graphics.
+
+\end{abstract}
+
+%  Please place your key words in alphabetical order, separated
+%  by semicolons, with the first letter of the first word capitalized,
+%  and a period at the end of the list.
+%
+
+\begin{keywords}
+
+Data visualization; Exploratory data analysis; Interactive graphics; RNA-sequencing; Statistical graphics
+
+\end{keywords}
+
+%Data visualization; Exploratory data analysis; Interactive graphics; RNA-sequencing
+
+
+%  As usual, the \maketitle command creates the title and author/affiliations
+%  display 
+
+\maketitle
+
 %  If you are using the referee option, a new page, numbered page 1, will
 %  start after the summary and keywords.  The page numbers thus count the
 %  number of pages of your manuscript in the preferred submission style.
@@ -180,6 +205,7 @@
 %
 %  Please DO NOT attempt to reformat the style of equation numbering!
 %  For that matter, please do not attempt to redefine anything!
+
 
 \section{Introduction}
 \label{s:Introduction}
@@ -250,7 +276,26 @@ The scatterplot matrix can also be used after DEG calls to quickly examine DEGs 
 \subsection{Assessing normalization with scatterplot matrices}
 \label{s:Assessing normalization with scatterplot matrices}
 
-There is still substantial discussion about the normalization of RNA-seq data, and the scatterplot matrix can be used to understand and assess various algorithms. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD) (Risso, 2011). The data contained four cultures from independent libraries that were sequenced using two library preparation protocols and either one or two lanes in a total of three flow-cells (see Table 1 of Risso, 2011). This experimental design allowed researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
+There is still substantial discussion about the normalization of RNA-seq data, and the scatterplot matrix can be used to understand and assess various algorithms. To exemplify this point, we will use a publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) grown in YP-Glucose (YPD) (Risso, 2011). The data contained four cultures from independent libraries that were sequenced using two library preparation protocols and either one or two lanes in a total of three flow-cells (see Table~\ref{table:tableYeast} which is from Risso, 2011). This experimental design allowed researchers to examine various levels and combinations of technical effects (library preparation and protocol and flow cell) and biological effects (culture).
+
+\begin{table}
+\begin{tabular}{lrrr}
+\Hline
+Culture/Library prep. & \multicolumn{1}{c}{Library prep. protocol} &  \multicolumn{1}{c}{Growth condition} & \multicolumn{1}{c}{Flow-cell} \\ \hline
+Y1 & Protocol 1 & YPD & 428R1 \\
+Y1 & Protocol 1 & YPD & 4328B \\
+Y2 & Protocol 1 & YPD & 428R1 \\
+Y2 & Protocol 1 & YPD & 4328B \\
+Y7 & Protocol 1 & YPD & 428R1 \\
+Y7 & Protocol 1 & YPD & 4328B \\
+Y4 & Protocol 2 & YPD & 61MKN \\
+Y4 & Protocol 2 & YPD & 61MKN \\
+\hline
+\end{tabular}
+\vspace{8mm}
+\caption{We used this publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) growth because its design allows us to examine both technical effects (library preparation, flow cell, and lane) and biological effects (growth condition and culture). The authors used three growth conditions and ten cultures from independent colonies sequenced using two different library preparation protocols and either one or two lanes in a total of five flow-cells (Risso, 2011).}
+\label{table:tableYeast}
+\end{table}
 
 The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for which differential expression was not expected. Hence, the authors could establish a false positive rate in relation to the number of DEGs called between these groups. They then demonstrated that within-lane regression alone was insufficient in effectively removing biases. Instead, aggressive corrections for both within-lane (GC-content and gene length) and between-lane (count distribution and sequencing depth) biases were needed to effectively reduce the false-positive rate of differential expression calls.
 
@@ -287,7 +332,7 @@ Fortunately, scatterplot matrices are a simple tool to check for common errors l
 \begin{center}
 \centerline{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
 \end{center}
-\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). This is because we are not informed about variation at the gene level with the MDS plots like we were with the scatterplot matrix.
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). This is because we are not informed about variation at the gene level with the MDS plots like we were with the scatterplot matrix (Figure~\ref{switchedScatMat}).
 \label{mdsSwitch}}
 \end{figure}
 
@@ -319,8 +364,6 @@ The ``replicate line plot" was developed by a group of researchers who demonstra
 
 In the replicate point plot, each gene is plotted once for each possible combination of sample pairs between treatment groups. For example, there are nine ways to pair a sample from one treatment group with a sample from the other treatment group in the cotyledon dataset (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, S1.2 and S2.3, and S1.3 and S2.1, S1.3 and S2.2, and S1.3 and S2.3). Hence, a given gene from this dataset is plotted as nine points in the replicate point plot. With 73,320 genes in this dataset, we would need to plot 659,880 points. This would reduce the speed of interactive functionality as well as cause overplotting problems. As a result, we again use hexagon bins to summarize this massive information (Figure~\ref{repDot} shows four example replicate point plots).
 
-\newpage
-
 Once the background of hexagons has been drawn to give us a sense of the distribution of all treatment pair combinations for all genes, the user can superimpose the nine points of one gene of interest (colored orange in Figure~\ref{repDot}). Subplots A and B of Figure~\ref{repDot} show the replicate point plots for two example genes from the aforementioned cotyledon dataset, and subplots C and D of Figure~\ref{repDot} show the replicate point plots for two example genes from the cotyledon dataset after samples S1.3 and S2.1 have been swapped. Note that, in the examples in Figure~\ref{repDot}, the read counts of treatment pair combinations sometimes overlap, resulting in the appearance of less than nine orange points in a given replicate point plot.
 
 \begin{figure}
@@ -339,7 +382,7 @@ In contrast, Figure~\ref{repDot}C and D show the static results of applying such
 
 Interestingly, we reach this same conclusion using parallel coordinate plots. In Figure~\ref{clusters}A, we took the 100 genes with the lowest FDR values from the cotyledon data and ran them through a hierarchical clustering algorithm with six clusters. Rather than plotting all 100 parallel coordinates onto a common background boxplot, we can reduce overplotting issues and see patterns more easily by separating with clustering. Nonetheless, we see that the six clusters all represent one of two expected patterns for differentially expressed genes: Each cluster either shows consistent high read counts for treatment S1 and consistent low read counts for treatment S2, or vice versa.
 
-In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes with the lowest FDR values from the swapped cotyledon data and running them through a hierarchical clustering algorithm with six clusters. Here, we see that the expression patterns do not fall into the two previously-mentioned expected patterns of differentially expressed genes. Instead, the difference between the treatment groups is suspiciously small and the difference between the replicates is suspiciously large. In addition, we may suspect that samples S1.3 and S2.1 were swapped: For example, the cluster with the largest number of genes (n=43) shows a pattern that would look more like differential gene expression if these two samples were reversed.
+In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes with the lowest FDR values from the \textit{swapped} cotyledon data and running them through a hierarchical clustering algorithm with six clusters. Here, we see that the expression patterns do not fall into the two previously-mentioned expected patterns of differentially expressed genes. Instead, the difference between the treatment groups is suspiciously small and the difference between the replicates is suspiciously large. In addition, we may suspect that samples S1.3 and S2.1 were swapped: For example, the cluster with the largest number of genes (n=43) shows a pattern that would look more like differential gene expression if these two samples were reversed.
 
 \begin{figure}
 \begin{center}
@@ -354,7 +397,7 @@ In contrast, Figure~\ref{clusters}B shows the result of taking the 100 genes wit
 
 We have used real data to demonstrate that scatterplot matrices, parallel coordinate plots, and replicate point plots can help users check for normalization problems, catch common errors in the analysis pipeline, and confirm that the variation between replicates and treatments is as expected. We also show that these visual tools are useful for researchers to quickly investigate the list of differentially expressed genes that come out of a model and ensure which ones make sense. Similarly, in the case that no differentially expressed genes were returned, users can quickly investigate the list of genes with the lowest FDR values to ensure that the negative diagnosis of the model seems accurate. In addition, we demonstrated that our simple visualization tools can allow researchers to discover genes of interest that could not be obtained with models.
 
-At this point, we aim to continue speeding up the interactive graphics, creating better color legends, extending the customisability of the graphics, and combining them into an easy-to-use package for users. We plan to develop a clear and intuitive vignette for users to ensure them that rather than suggesting that they radically change their approach to RNA-seq analysis, we simply suggest that they incorporate these visual tools during their usual analysis pipeline to quickly check that the model assumptions and results are reasonable. Finally, we will gather more examples using real RNA-seq data to show that these graphics can discover problems with or confirm proper use of popular RNA-seq analysis models.
+At this point, we aim to continue speeding up the interactive graphics, creating better color legends, extending the customisability of the graphics, and combining them into an easy-to-use \textsf{R} package for users. We plan to develop a clear and intuitive vignette for users to ensure them that rather than suggesting that they radically change their approach to RNA-seq analysis, we simply suggest that they incorporate these visual tools during their usual analysis pipeline to quickly check that the model assumptions and results are reasonable. We plan to include several real RNA-seq datasets in our \textsf{R} package and then demonstrate the syntax and value of our methods on these datasets in the vignette. Before publishing our \textsf{R} package, we will gather more examples using real RNA-seq data to show that these graphics can discover problems with or confirm proper use of popular RNA-seq analysis models.
 
 
 %  The \backmatter command formats the subsequent headings so that they

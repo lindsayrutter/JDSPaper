@@ -166,8 +166,6 @@
 \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
 \DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
-%\DeclareRobustCommand\cal{\@fontswitch{\relax}{\mathcal}}
-%\DeclareRobustCommand\mit{\@fontswitch{\relax}{\mathchoice}}
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \newcommand{\mit}{\protect\pmit}
 \newcommand{\pmit}{\@fontswitch{\relax}{\mathnormal}}
@@ -1242,7 +1240,7 @@
  %{\centering\@email\par}
  \vskip 25pt
  \unvbox\absbox
- \vskip 6pt
+ \vskip 20pt
  \unvbox\keywdbox
  \vskip 14pt
  \par\noindent
@@ -1290,7 +1288,7 @@
 
 \newbox\absbox
 \def\abstract{\global\setbox\absbox\vbox\bgroup\hsize\textwidth\small\leftskip0pc\rightskip\leftskip\noindent{\sc
-Summary:\hskip1em}\ignorespaces}
+Abstract:\hskip1em}\ignorespaces}
 \def\endabstract{\egroup}
 
 \newbox\keywdbox
@@ -1435,7 +1433,7 @@ Key words:\hskip1em}\ignorespaces}
 \else
   \def\@printed{}
 \fi
-\gdef\@journal{\vbox{\fontsize{10}{10}\selectfont\vbox{\hsize\textwidth{\sc ASA SLDS Student Paper Submission}}\par}}
+\gdef\@journal{\vbox{\fontsize{10}{10}\selectfont\vbox{\hsize\textwidth{\sc ASA SGG Student Paper Submission}}\par}}
 % (\number\year) \@microfiche\@printed}
 %
 % \ps@empty and \ps@plain defined in LATEX.TEX
@@ -1449,7 +1447,7 @@ Key words:\hskip1em}\ignorespaces}
    \rm\@ddell\hbox to 0pt{\small\thepage}}
  \def\@oddfoot{}%\small\copyright\ \@pubyear\ RAS, MNRAS {\bf \@volume}, \@pagerange\hfil}
  \def\@evenhead{\Large\@ddell\hbox to
- 0pt{\small\thepage}\hspace{1.5em}\hfill\small{\it ASA SLDS Student Paper Submission}\hfill}
+ 0pt{\small\thepage}\hspace{1.5em}\hfill\small{\it ASA SGG Student Paper Submission}\hfill}
  \def\@evenfoot{}%\hfil\small\copyright\ \@pubyear\ RAS, MNRAS {\bf \@volume}, \@pagerange}
  \def\sectionmark##1{\markboth{##1}{}}
  \def\subsectionmark##1{\markright{##1}}}
@@ -1467,7 +1465,7 @@ Key words:\hskip1em}\ignorespaces}
 to 7.75pt{\tiny C}}}
 \def\ps@titlepage{\let\@mkboth\@gobbletwo
  \def\@oddhead{\footnotesize\@journal\hfill}
- \def\@oddfoot{\hfill{\reset@font\ This paper is being submitted for consideration as an ASA SLDS Student Paper}\hfill}
+ \def\@oddfoot{\hfill{\reset@font\ This paper is being submitted for consideration as an ASA SGG Student Paper}\hfill}
 %\hfill{\reset@font\thepage}\hfill}
  \def\@evenhead{\footnotesize\@journal\hfill}
  %\def\@evenfoot{\hfil\small\copyright\ \@pubyear\ The Society for the Study

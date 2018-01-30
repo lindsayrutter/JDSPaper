@@ -1,6 +1,4 @@
 \begin{table}
-\label{tableYeast}
-\begin{center}
 \begin{tabular}{lrrr}
 \Hline
 Culture/Library prep. & \multicolumn{1}{c}{Library prep. protocol} &  \multicolumn{1}{c}{Growth condition} & \multicolumn{1}{c}{Flow-cell} \\ \hline
@@ -14,7 +12,9 @@ Y4 & Protocol 2 & YPD & 61MKN \\
 Y4 & Protocol 2 & YPD & 61MKN \\
 \hline
 \end{tabular}
-\end{center}
+\vspace{8mm}
+\caption{We used this publicly-available RNA-seq dataset on Saccharomyces cerevisiae (yeast) growth because its design allows us to examine both technical effects (library preparation, flow cell, and lane) and biological effects (growth condition and culture). The authors used three growth conditions and ten cultures from independent colonies sequenced using two different library preparation protocols and either one or two lanes in a total of five flow-cells (Risso, 2011).}
+\label{table:tableYeast}
 \end{table}
 \efloatseparator
  
