@@ -9,7 +9,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}}
+\centerline{\fbox{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}}
 \end{center}
 \caption{Example of the expected structure of an RNA-seq dataset. Within a given scatterplot, most genes (points) should fall along the \textit{x=y} line. We should see genes deviate more strongly from the \textit{x=y} line in treatment scatterplots than in replicate scatterplots.
 \label{cotyIdeal}}

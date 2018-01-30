@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JAN 2018 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JAN 2018 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,10 +11,10 @@ Document Class: biom 2006/12/12 v2.2 LaTeX2e Biom document class
 Document Style `Biom' v1.0, released 2006 December 12
 \math@groups=\toks14
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/cmsy/b/n on input line 233.
+(Font)                  OMS/cmsy/b/n --> OMS/cmsy/b/n on input line 234.
 \symUPM=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `UPM' in version `bold'
-(Font)                  U/eur/m/n --> U/eur/b/n on input line 270.
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 271.
 \symAMSa=\mathgroup5
 \SFB@measure=\dimen102
 \realparindent=\skip41
@@ -248,18 +248,18 @@ LaTeX Warning: Label ` ' multiply defined.
 )
 \openout1 = `rna.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
  (./endrotfloat.sty
 Package: endrotfloat 2007/01/23 v1.0 LaTeX2e package puts sideways figures and 
 tables at end
@@ -339,52 +339,36 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 37.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 37.
-LaTeX Font Info:    Try loading font information for U+eur on input line 37.
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+LaTeX Font Info:    Try loading font information for U+eur on input line 21.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 37.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 37.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 37.
- [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 1
  []
 
-[1
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-\openout3 = `rna.fff'.
-
- (rna.fff)
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
-
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 2
  []
 
 [2]
-Underfull \vbox (badness 1215) has occurred while \output is active []
+\openout3 = `rna.fff'.
 
-
+ (rna.fff)
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 3
  []
@@ -408,24 +392,11 @@ Overfull \hbox (4.62497pt too wide) has occurred while \output is active
  []
 
 [6]
-Underfull \vbox (badness 5802) has occurred while \output is active []
-
-
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 7
  []
 
 [7]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 8
  []
@@ -449,14 +420,6 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-Missing character: There is no Å in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 Overfull \hbox (4.62497pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 9
@@ -472,13 +435,27 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
  AED endfloat: Processing end Figures and Tables
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 10
  []
 
 [10] (./rna.fff
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=51, 608
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=42, 608
 .2725pt x 482.80376pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
 c file (type png)
@@ -494,7 +471,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [11 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_points_size1.jpg, id=57, 501.875pt x 501.875pt>
+S1_S2_points_size1.jpg, id=48, 501.875pt x 501.875pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/S1_S2_points_size1.jpg Graphic file (type jpg)
 
@@ -502,7 +479,7 @@ itch/S1_S2_points_size1.jpg Graphic file (type jpg)
 tch/S1_S2_points_size1.jpg>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
 mple/Switch12/NotSwitch/S1_S2_points_size1.jpg used on input line 12.
-(pdftex.def)             Requested size: 426.79134pt x 426.81018pt.
+(pdftex.def)             Requested size: 213.39566pt x 213.39743pt.
 
 Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/9 12
@@ -511,7 +488,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 [12 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
 tch/S1_S2_points_size1.jpg>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-scatPCP.png, id=62, 453.3738pt x 629.2308pt>
+scatPCP.png, id=52, 453.3738pt x 629.2308pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
 itch/scatPCP.png Graphic file (type png)
 
@@ -527,7 +504,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [13 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
 tch/scatPCP.png>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=67, 507.3354pt x
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=58, 507.3354pt x
  1009.8528pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
 ype png)
@@ -546,7 +523,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [14 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
-1_S2_points.jpg, id=72, 501.875pt x 501.875pt>
+1_S2_points.jpg, id=63, 501.875pt x 501.875pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
 hed/S1_S2_points.jpg Graphic file (type jpg)
 
@@ -562,7 +539,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [15 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
 ed/S1_S2_points.jpg>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=76, 627.7854pt
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=67, 627.7854pt
  x 608.5134pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png Graphic file 
 (type png)
@@ -578,7 +555,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [16 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>]
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
-=81, 602.25pt x 602.25pt>
+=72, 602.25pt x 602.25pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
 g Graphic file (type jpg)
 
@@ -594,7 +571,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
 
 [17 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
 >]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=85, 448.5558pt x 
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=76, 448.5558pt x 
 412.4208pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
 pe png)
@@ -608,7 +585,7 @@ Overfull \hbox (9.24994pt too wide) has occurred while \output is active
  []
 
 [18 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
-</Users/lindz/JDSPaper/clusters.png, id=91, 525.6438pt x 785.334pt>
+</Users/lindz/JDSPaper/clusters.png, id=81, 525.6438pt x 785.334pt>
 File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
 
 <use /Users/lindz/JDSPaper/clusters.png>
@@ -635,31 +612,25 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3348 strings out of 492995
- 52631 string characters out of 6132704
- 114264 words of memory out of 5000000
- 6841 multiletter control sequences out of 15000+600000
- 16301 words of font info for 58 fonts, out of 8000000 for 9000
+ 3309 strings out of 492995
+ 52239 string characters out of 6132704
+ 114132 words of memory out of 5000000
+ 6817 multiletter control sequences out of 15000+600000
+ 10799 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,39p,1473b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib
-7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on rna.pdf (21 pages, 4066349 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on rna.pdf (20 pages, 4005060 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

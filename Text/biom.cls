@@ -1178,7 +1178,7 @@
   \if@twocolumn
    \twocolumn[\vspace*{17pt}\@maketitle]
   \else
-   \newpage
+   %\newpage
    \global\@topnum\z@
    \@maketitle
   \fi
@@ -1287,12 +1287,12 @@
 %  12/28/2010 -- change to make margins of summary same as those of manuscript
 
 \newbox\absbox
-\def\abstract{\global\setbox\absbox\vbox\bgroup\hsize\textwidth\small\leftskip0pc\rightskip\leftskip\noindent{\sc
+\def\abstract{\global\setbox\absbox\vbox\bgroup\hsize\textwidth\normalsize\leftskip0pc\rightskip\leftskip\noindent{\sc
 Abstract:\hskip1em}\ignorespaces}
 \def\endabstract{\egroup}
 
 \newbox\keywdbox
-\def\keywords{\global\setbox\keywdbox\vbox\bgroup\hsize\textwidth\small\leftskip0pc\rightskip\leftskip\noindent{\sc
+\def\keywords{\global\setbox\keywdbox\vbox\bgroup\hsize\textwidth\normalsize\leftskip0pc\rightskip\leftskip\noindent{\sc
 Key words:\hskip1em}\ignorespaces}
 \def\endkeywords{\egroup}
 
@@ -1330,7 +1330,7 @@ Key words:\hskip1em}\ignorespaces}
   \@xtabularcr[-7pt]\reset@font\small\it
   \let\\=\author@tabcrtwo\ignorespaces}
 %
-\def\author@tabcrtwo{{\ifnum0=`}\fi\@xtabularcr[-7pt]\reset@font\small\it
+\def\author@tabcrtwo{{\ifnum0=`}\fi\@xtabularcr[-7pt]\reset@font\normalsize\it
  \let\\=\author@tabcrtwo\ignorespaces}
 %
 \def\@authortable{\leavevmode \hbox \bgroup $\let\@acol\@tabacol
