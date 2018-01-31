@@ -1,6 +1,6 @@
 \begin{figure}[t!]
 \begin{center}
-\centerline{\fbox{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
+\centerline{\fbox{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png}}}
 \end{center}
 \caption{One simulated dataset is shown on the left half and another simulated dataset is shown on the right half of the figure. We do not see crucial distinctions between the left and right datasets when we compare their boxplots (A subplots) and MDS plots (B subplots). However, their parallel coordinate plots (C subplots) show a critical difference between their structures. Namely, the left dataset is composed of genes with small replicate variation and large treatment group variation (suggesting DEGs), while the right dataset is composed of genes with similar variation between replicates and treatment groups (not suggesting DEGs).
 \label{2group}}
@@ -18,7 +18,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=14cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP}.png}}
+\centerline{\includegraphics[width=7.5cm]{{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP}.png}}
 \end{center}
 \caption{Example of the expected structure of DEG calls (in orange) from an RNA-seq dataset. In the scatterplot matrix, DEGs should fall along the \textit{x=y} line for replicates and deviate from it for treatments. In the parallel coordinate plot, DEGs should show levelness between replicates and crosses between treatments. These two plotting types can be linked to quickly provide users multiple perspectives of their DEG calls.
 \label{scatPCP}}
@@ -27,7 +27,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=10cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png}}
+\centerline{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png}}
 \end{center}
 \caption{The collective deviation of genes from the \textit{x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
 \label{withinbtwn}}
@@ -36,7 +36,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}}
 \end{center}
 \caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{cotyIdeal}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
 \label{switchedScatMat}}
@@ -45,7 +45,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=12cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
+\centerline{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png}}
 \end{center}
 \caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). This is because we are not informed about variation at the gene level with the MDS plots like we were with the scatterplot matrix (Figure~\ref{switchedScatMat}).
 \label{mdsSwitch}}
@@ -54,7 +54,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\fbox{\includegraphics[width=15cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}}
+\centerline{\fbox{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}}
 \end{center}
 \caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
 \label{structure}}
@@ -63,7 +63,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=15.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png}}
+\centerline{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png}}
 \end{center}
 \caption{Subplots A and B each show a replicate point plot for a gene drawn from the ten genes with the lowest FDR values from the cotyledon data. In each case, the gene is overlaid as nine orange points (some of them overlap) showing the read count values for all nine combinations of treatment pairs. These two example genes show the pattern we expect from differentially expressed genes, having a large difference between treatments (distant from the \textit{x=y} line) and small difference between replicates (orange points close to each other). In contrast, subplots C and D each show a replicate point plot for a gene drawn from the ten genes with the lowest FDR values from the cotyledon data after samples S1.3 and S2.1 have been switched. These two example genes do not show the pattern we expect from differentially expressed genes, having a small difference between treatments (close to the \textit{x=y} line) and large difference between replicates (orange points far from each other). The interactive version of these plots confirms that the FDR values only reach significance for the cotyledon data before sample swapping, meaning the model and the visualizations are consistent. Hence, replicate point plots can be used to quickly sift through genes of interest and determine if the statistical outputs from the model sensibly match the visual findings.
 \label{repDot}}
@@ -72,7 +72,7 @@
  
 \begin{figure}
 \begin{center}
-\centerline{\includegraphics[width=14cm]{/Users/lindz/JDSPaper/clusters.png}}
+\centerline{\includegraphics[width=7.5cm]{/Users/lindz/JDSPaper/clusters.png}}
 \end{center}
 \caption{Hierarchical clustering of the 100 genes with the lowest FDR values from the cotyledon dataset before (subplot A) and after (subplot B) swapping samples S1.3 and S2.1. The parallel coordinates show the expected structure of differentially expressed genes before sample swapping (subplot A), but not after sample swapping (subplot B).
 \label{clusters}}

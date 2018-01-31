@@ -1,3 +1,6 @@
+library(edgeR)
+library(DESeq2)
+library(bigPint)
 # This is the data from reference 6 of TMM Robinson paper
 
 library(data.table)
@@ -39,9 +42,12 @@ rlogData <- as.data.frame(rlogData)
 rlogData2 <- cbind(ID = data$ID, rlogData)
 rlogData2$ID <- as.character(rlogData2$ID)
 
-# There are 40 points that intersect all blue points from all 15 subplots
-bluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+# There are 337 points that intersect all blue points and union all red points from all 15 subplots
+redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Red")])
+plotDEG(rlogData2, lineList = redBluePoints, lineSize=0.5, lineColor = "red", outDir=outDir, option ="parallelCoord") # Change name to K_L_deg_pcp_0.05_RED.jpg
 
-plotDEG(rlogData2, lineList = bluePoints, lineSize=0.5, outDir=outDir, option ="parallelCoord")
-
-
+# There were 28
+redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Blue")])
+plotDEG(rlogData2, lineList = redBluePoints, lineSize=0.5, lineColor = "blue", outDir=outDir, option ="parallelCoord") # Change name to K_L_deg_pcp_0.05_BLUE.jpg
