@@ -16,6 +16,8 @@ sbLog[,2:ncol(sbLog)] <- log(sbLog[,2:ncol(sbLog)]+1)
 soybean_ir_metrics[["N_P"]]$ID <- as.character(soybean_ir_metrics[["N_P"]]$ID)
 # Plot DEGs on scatMat
 plotDEG(sbLog, soybean_ir_metrics, option="scatterPoints", threshVar = "PValue")
+plotDEG(sbLog, soybean_ir_metrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(sbLog))
+plotDEG(sbLog, soybean_ir_metrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.01/nrow(sbLog))
 
 #### Determine the five streak genes (all have PValues between 0.58 and 0.90)
 # Glyma.18G057100.Wm82.a2.v1
