@@ -1,11 +1,23 @@
 library(bigPint)
 library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(gridExtra)
 
 data(soybean_ir)
 data(soybean_ir_metrics)
 metrics <- soybean_ir_metrics
 metrics <- metrics[["N_P"]]
 metrics <- metrics[with(metrics, order(PValue)), ]
+
+#### Determine the five streak genes (all have PValues between 0.58 and 0.90)
+# Glyma.18G057100.Wm82.a2.v1
+# Glyma.18G092200.Wm82.a2.v1
+# Glyma.09G164000.Wm82.a2.v1
+# Glyma.08G269900.Wm82.a2.v1
+# Glyma.07G079300.Wm82.a2.v1
+streakIDs = which(metrics$ID %in% c("Glyma.18G057100.Wm82.a2.v1", "Glyma.18G092200.Wm82.a2.v1", "Glyma.09G164000.Wm82.a2.v1", "Glyma.08G269900.Wm82.a2.v1", "Glyma.07G079300.Wm82.a2.v1"))
+metrics[streakIDs,]
 
 L120 = soybean_ir
 RowSD = function(x) {
@@ -21,14 +33,14 @@ data = data[,c(7,1,2,3,4,5,6)]
 colnames(data) = c("ID","N.1","N.2","N.3","P.1","P.2","P.3")
 
 baseOutDir = "Clustering_N_P_Top100"
-id100 = metrics$ID[1:1000]
+id100 = metrics$ID[1:100]
 id100df = which(data$ID %in% id100)
 data = data[id100df,]
 
 plotName = "N_P"
 outDir= paste0(getwd(),"/",baseOutDir)
 
-dendo = abs(data[,-1])
+dendo = data[,-1]
 rownames(data[,-1]) = NULL
 # Euclidean distance between rows of matrix
 d = dist(as.matrix(dendo))
@@ -72,6 +84,8 @@ getPCP <- function(nC, hc, data, outDir){
   p = do.call("grid.arrange", c(plot_clusters, ncol=3)) #change from 4 to 3 ceiling(nC/3)
   invisible(dev.off())
 }
+
+data[,2:7] = log(data[,2:7]+1)
 
 for (i in c(2,3,4,5,6)){
   getPCP(nC=i, hc=hc, data=data, outDir=outDir)
