@@ -5,24 +5,23 @@ library(gridExtra)
 library(bigPint)
 
 # Read in data
-data(soybean_cn)
-data <- soybean_cn
-data(soybean_cn_metrics)
-metrics <- soybean_cn_metrics
+data(soybean_ir)
+data <- soybean_ir
+data(soybean_ir_metrics)
+metrics <- soybean_ir_metrics
 
-# Only focus on S1_S2
-data <- data[,c(1:7)]
-colnames(data) <- c("ID","S1.1","S1.2","S1.3","S2.1","S2.2","S2.3")
-metrics <- metrics["S1_S2"]
+# Only focus on N_P
+metrics <- metrics["N_P"]
 
-baseOutDir = "Clustering_S1_S2_Top100_TEST"
+baseOutDir = "Clustering_N_P_Top100"
 
-id100 = metrics[["S1_S2"]]$ID[1:100]
+id100 = metrics[["N_P"]]$ID[1:1000]
 id100df = which(data$ID %in% id100)
 data = data[id100df,]
 #data = data[,-1]
 
-plotName = "S1_S2"
+plotName = "N_P"
+outDir = "Clustering_N_P"
 outDir= paste0(getwd(),"/",baseOutDir)
 
 dendo = data[,-1]
@@ -31,7 +30,7 @@ rownames(data[,-1]) = NULL
 d = dist(as.matrix(dendo))
 # Hierarchical clustering using ward.D linkage
 hc = hclust(d, method="ward.D")
-plotName = "S1_S2_Dendogram"
+plotName = "N_P_Dendogram"
 jpeg(file = paste(outDir, "/", plotName, ".jpg", sep=""))
 plot(hc,main=plotName, xlab=NA, sub=NA)
 invisible(dev.off())
@@ -45,7 +44,7 @@ getPCP <- function(nC, hc, data, outDir){
   k = cutree(hc, k=nC)
   ###########################
   plot_clusters = lapply(1:nC, function(i){
-    plotName = "S1_S2"
+    plotName = "N_P"
     x = as.data.frame(data[which(k==i),])
     nGenes = nrow(x)
     x$cluster = "color"
@@ -64,11 +63,13 @@ getPCP <- function(nC, hc, data, outDir){
     p    
   })
   ###########################
-  jpeg(file = paste(outDir, "/S1_S2_", nC, ".jpg", sep=""), height = 200 * ceiling((nC+1)/3), width = min(200 * (nC+1), 800))
+  jpeg(file = paste(outDir, "/N_P_", nC, ".jpg", sep=""), height = 200 * ceiling((nC+1)/3), width = min(200 * (nC+1), 800))
   # We allow up to 4 (now 3) plots in each column
   p = do.call("grid.arrange", c(plot_clusters, ncol=3)) #change from 4 to 3 ceiling(nC/3)
   invisible(dev.off())
 }
+
+data[,2:ncol(data)] <- log(data[,2:ncol(data)])
 
 for (i in c(2,3,4,5,6)){
   getPCP(nC=i, hc=hc, data=data, outDir=outDir)

@@ -1,37 +1,40 @@
-library(dplyr)
-library(tidyr)
-library(ggplot2)
-library(gridExtra)
 library(bigPint)
+library(dplyr)
 
-# Read in data
-data(soybean_cn)
-data <- soybean_cn
-data(soybean_cn_metrics)
-metrics <- soybean_cn_metrics
+data(soybean_ir)
+data(soybean_ir_metrics)
+metrics <- soybean_ir_metrics
+metrics <- metrics[["N_P"]]
+metrics <- metrics[with(metrics, order(PValue)), ]
 
-# Only focus on S1_S2
-data <- data[,c(1:7)]
-colnames(data) <- c("ID","S1.1","S1.2","S1.3","S2.1","S2.2","S2.3")
-metrics <- metrics["S1_S2"]
+L120 = soybean_ir
+RowSD = function(x) {
+  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
+}
+L120 = mutate(L120, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+L120q1 = L120[,2:7]
+L120q1s = t(apply(as.matrix(L120q1), 1, scale))
+data = L120q1s
+data = as.data.frame(data)
+data$ID = L120$ID
+data = data[,c(7,1,2,3,4,5,6)]
+colnames(data) = c("ID","N.1","N.2","N.3","P.1","P.2","P.3")
 
-baseOutDir = "Clustering_S1_S2_Top100_TEST"
-
-id100 = metrics[["S1_S2"]]$ID[1:100]
+baseOutDir = "Clustering_N_P_Top100"
+id100 = metrics$ID[1:1000]
 id100df = which(data$ID %in% id100)
 data = data[id100df,]
-#data = data[,-1]
 
-plotName = "S1_S2"
+plotName = "N_P"
 outDir= paste0(getwd(),"/",baseOutDir)
 
-dendo = data[,-1]
+dendo = abs(data[,-1])
 rownames(data[,-1]) = NULL
 # Euclidean distance between rows of matrix
 d = dist(as.matrix(dendo))
 # Hierarchical clustering using ward.D linkage
 hc = hclust(d, method="ward.D")
-plotName = "S1_S2_Dendogram"
+plotName = "N_P_Dendogram"
 jpeg(file = paste(outDir, "/", plotName, ".jpg", sep=""))
 plot(hc,main=plotName, xlab=NA, sub=NA)
 invisible(dev.off())
@@ -45,7 +48,7 @@ getPCP <- function(nC, hc, data, outDir){
   k = cutree(hc, k=nC)
   ###########################
   plot_clusters = lapply(1:nC, function(i){
-    plotName = "S1_S2"
+    plotName = "N_P"
     x = as.data.frame(data[which(k==i),])
     nGenes = nrow(x)
     x$cluster = "color"
@@ -64,7 +67,7 @@ getPCP <- function(nC, hc, data, outDir){
     p    
   })
   ###########################
-  jpeg(file = paste(outDir, "/S1_S2_", nC, ".jpg", sep=""), height = 200 * ceiling((nC+1)/3), width = min(200 * (nC+1), 800))
+  jpeg(file = paste(outDir, "/N_P_", nC, ".jpg", sep=""), height = 200 * ceiling((nC+1)/3), width = min(200 * (nC+1), 800))
   # We allow up to 4 (now 3) plots in each column
   p = do.call("grid.arrange", c(plot_clusters, ncol=3)) #change from 4 to 3 ceiling(nC/3)
   invisible(dev.off())
@@ -73,3 +76,4 @@ getPCP <- function(nC, hc, data, outDir){
 for (i in c(2,3,4,5,6)){
   getPCP(nC=i, hc=hc, data=data, outDir=outDir)
 }
+
