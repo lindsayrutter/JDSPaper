@@ -97,13 +97,23 @@ We first perform pre-processing on the high-quality leaf samples from 120 minute
 # Now values are positive and negative
 
 data("soybean_ir")
+data("soybean_ir_metrics")
 L120 <- soybean_ir
-L120 = L120[,-1]
+metrics <- soybean_ir_metrics[["N_P"]]
 
 # Make sure each gene has at least one count in at least half of the six samples
 # 42020 rows
-L120 <- L120[rowSums(L120)>ncol(L120)/2,]
+filterLow = which(rowSums(L120[,-1])<=ncol(L120[,-1])/2)
+filt1 <- L120[filterLow,]
+L120 <- L120[-filterLow,]
+
+rownames(filt1) <- filt1$ID
+filt1 <- filt1[,-1]
+filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+
 L120_Rownames <- L120$ID
+L120 = L120[,-1]
+rownames(L120) <- L120_Rownames
 
 cpm.L120.new <- cpm(L120, TRUE, TRUE)
 # Between-lane normalization for sequencing depth and possibly other distributional differences between lanes.
@@ -119,7 +129,7 @@ L120 = as.data.frame(L120)
 L120 = mutate(L120, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
 rownames(L120)=L120_Rownames
 
-#L120 has 39,120
+#L120 has 42020
 # The first quartile threshold of mean counts across the 5 samples
 q1T = as.numeric(summary(L120$mean)["1st Qu."])
 L120q1 = subset(L120,mean>q1T)
@@ -128,6 +138,7 @@ L120q1 = subset(L120q1,stdev>q1Ts)
 #L120q1 has 23636
 #filt has 18384
 filt = subset(L120,mean<=q1T|stdev<=q1Ts)
+filt = rbind(filt, filt1)
 @
 
 <<echo=FALSE>>=
@@ -175,11 +186,7 @@ plot(hc,main="L120 Dendogram", xlab=NA, sub=NA)
 We first look at how the data separates into the two main clusters indicated in the dendogram of Figure \ref{dendL120}. We perform a k-means analysis on the data, and then construct a parallel coordinate plot of the resulting two clusters, along with the previously-filtered data, see Figure \ref{pcp2L120}.
 
 <<echo=FALSE,eval=TRUE>>=
-# set.seed(1)
-# colList = scales::hue_pal()(3)
-# data=L120q1s
-# nC = 2
-# k = kmeans(data,nC)
+getPCP <- function(nC){
 
 plotName = "L120"
 outDir = "Clustering_L120"
@@ -188,14 +195,17 @@ set.seed(1)
 colList = scales::hue_pal()(nC+1)
 #colList = scales::hue_pal()(nClusters)
 k = cutree(hc, k=nC)
-
+###########################
 plot_clusters = lapply(1:nC, function(i){
   x = as.data.frame(L120q1s[which(k==i),])
   nGenes = nrow(x)
   x$cluster = "color"
   x$cluster2 = factor(x$cluster)
   xNames = rownames(x)
-  write.table(xNames, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)  
+  xPValues = metrics[which(xNames %in% metrics$ID),]$PValue
+  xFDR = xPValues/nrow(soybean_ir)
+  retDF = data.frame(ID = xNames, PValue = xPValues, FDR = xFDR)
+  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)  
   p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1]))
   
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
@@ -217,6 +227,9 @@ plot_clusters = lapply(1:nC, function(i){
   invisible(dev.off())
 }
 
+for (i in 2:5){
+  getPCP(i)
+}
 
 # plot_i = vector("list", length=nC+1)
 # rep = ncol(data)/2
