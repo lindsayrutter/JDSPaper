@@ -1,0 +1,374 @@
+\documentclass{article}
+\usepackage{float, hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\author{Lindsay Rutter}
+\title{Cluster Analysis of RNA-Sequencing Read Counts from Iron-Sufficient and Iron-Deficient Soybeans}
+
+\maketitle
+
+<<options, echo=FALSE>>=
+library(knitr)
+  opts_chunk$set(cache=TRUE)
+@
+
+\section*{Introduction}
+
+The goal of this project is to determine the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments.
+
+\section*{Exploratory Data Analysis}
+
+EDA was performed to better understand the data, to serve as a quality check, and to prepare for pre-processing analysis. It consisted of three main approaches:
+
+\begin{itemize}
+
+\item Normalization: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
+
+\item Remove Genes with Low-Counts and Low-Variability: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
+
+\item Quality and Label Checking: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
+
+\end{itemize}
+
+\section*{Pre-processing}
+
+After exploring the data, the data was pre-processed for clustering analysis. It was determined that upperquartile normalization was the best approach to standardize sample counts across both leaves and roots. For details, see Figure \ref{boxplotL20n2} in the Appendix.
+
+Additionally, data quality was checked with both scatterplot matrices and multi-dimensional scaling (see Figure \ref{mdsL20} and Figure \ref{scatMatL20} in the Appendix.) Some replicates were dropped because they appeared to have been mislabeled or of sub-par quality.
+
+Some additional pre-processing was done. Junk text was removed, the DGEList() function added the number of reads in each sample, and the cpm() function converts the units to counts per million and places these on a log-scale. We also assuredoxp that there is at least one read in at least half of the samples. For more details see the Appendix. We end up with the variable y, which contains the differentially expressed genes for all samples.
+
+<<echo=FALSE>>==
+library(rtracklayer)
+library(Rsamtools)
+library(grid)
+library(GenomicAlignments)
+library(ggplot2)
+library(GGally)
+library(edgeR)
+library(stringr)
+library(EDASeq)
+library(dplyr)
+library(matrixStats)
+library(gridExtra)
+library(reshape2)
+library(scales)
+library(bigPint)
+@
+
+
+<<echo=FALSE>>=
+# rm(list=ls())
+# load("All_leaves040615.rda")
+# ct <- countTable
+# ct2 <- assays(ct)[[1]]
+# rownames(ct2) <- ct@rowData@elementMetadata@listData$ID
+# colnames(ct2) <- unlist(strsplit(colnames(ct2), "\\."))[seq(1, 17*3, 3)]
+# leaves.all <- ct2
+# load("All_roots.rda")
+# ct.roots <- countTable
+# ct2 <- assays(ct.roots)[[1]]
+# rownames(ct2) <- ct@rowData@elementMetadata@listData$ID
+# colnames(ct2) <- unlist(strsplit(colnames(ct2), "\\."))[seq(1, 18*3, 3)]
+# roots.all <- ct2
+# all <- cbind(leaves.all, roots.all[,c(1:15,17:18)])
+# y <- DGEList(counts=all)
+@
+
+We first perform pre-processing on the high-quality leaf samples from 120 minutes. We calculate the mean and standard deviation read count for the six samples. We also remove the genes with the lowest quartile of mean read count, as well as the genes with the lowest quartile of standard deviation across the six samples.
+
+<<echo=FALSE>>=
+# Now try to threshold count number and normalize on the six samples
+#L120 = y[,c("ML08R","ML14R","ML22R","ML11R","ML27R","ML33R")]
+#colnames(L120)=c("s8","s14","s22","s11","s27","s33")
+
+# View(L120$counts)
+# Make sure each gene has at least one count in at least half of the six samples
+#L120 <- L120[rowSums(L120$counts>1)>=ncol(L120)/2,]
+#L120 <- calcNormFactors(L120, method="none") # Doesn't seem to do anything as per identical() function
+# CPM values are useful descriptive measures for the expression level of a gene or transcript.
+# By default, the normalized library sizes are used in the computation for DGEList objects but simple column sums for matrices.
+# Now values are positive and negative
+
+data("soybean_ir")
+L120 <- soybean_ir
+L120 = L120[,-1]
+
+# Make sure each gene has at least one count in at least half of the six samples
+# 42020 rows
+L120 <- L120[rowSums(L120)>ncol(L120)/2,]
+L120_Rownames <- L120$ID
+
+cpm.L120.new <- cpm(L120, TRUE, TRUE)
+# Between-lane normalization for sequencing depth and possibly other distributional differences between lanes.
+cpm.L120.norm <- betweenLaneNormalization(cpm.L120.new, which="full", round=FALSE)
+L120 = cpm.L120.norm
+
+RowSD = function(x) {
+  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
+}
+
+L120 = as.data.frame(L120)
+# Mutate is to add columns to a data frame
+L120 = mutate(L120, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+rownames(L120)=L120_Rownames
+
+#L120 has 39,120
+# The first quartile threshold of mean counts across the 5 samples
+q1T = as.numeric(summary(L120$mean)["1st Qu."])
+L120q1 = subset(L120,mean>q1T)
+q1Ts = as.numeric(summary(L120q1$stdev)["1st Qu."])
+L120q1 = subset(L120q1,stdev>q1Ts)
+#L120q1 has 23636
+#filt has 18384
+filt = subset(L120,mean<=q1T|stdev<=q1Ts)
+@
+
+<<echo=FALSE>>=
+model = loess(mean ~ stdev, data=L120q1)
+#L120q1 has 10626
+L120q1 = L120q1[which(sign(model$residuals) == 1),]
+L120q1 = L120q1[,1:6]
+# Scale each row, so now negative and positive values
+L120q1s = t(apply(as.matrix(L120q1), 1, scale))
+# colnames(L120q1s)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+# colnames(L120q1)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+# colnames(filt)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+filt = filt[,1:6]
+# filt is 31394
+filt = rbind(filt,L120q1[which(sign(model$residuals) == -1),])
+filts = t(apply(as.matrix(filt), 1, scale))
+# colnames(filts)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+# colnames(filt)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+@
+
+It should be noted that a similar pre-processing pipeline was applied to other samples we select below, but the code will not be explicitly showed. See the Appendix for more details and code.
+
+\section*{Cluster Analysis of Leafs at 120 minutes}
+
+Now that the data of the leaf samples has been properly pre-processed, we begin the clustering analysis by producing a dendogram. We use Euclidean distance (which is acceptable as we have standardized the data) and Wards linkage, and we plot is as shown in Figure \ref{dendL120}:
+
+<<>>=
+dendo = L120q1s
+rownames(dendo) = NULL
+d = dist(as.matrix(dendo))
+hc = hclust(d, method="ward.D")
+@
+
+\begin{figure}[H]
+\centering
+<<fig=TRUE, echo=TRUE>>=
+plot(hc,main="L120 Dendogram", xlab=NA, sub=NA)
+@
+\caption{The dendogram of the 6 leaf samples at 120 minutes. We see that there may be two main clusters, and possibly a third smaller cluster.}
+\label{dendL120}
+\end{figure}
+
+\subsection*{Cluster Analysis of Leafs at 120 minutes: Two Clusters}
+
+We first look at how the data separates into the two main clusters indicated in the dendogram of Figure \ref{dendL120}. We perform a k-means analysis on the data, and then construct a parallel coordinate plot of the resulting two clusters, along with the previously-filtered data, see Figure \ref{pcp2L120}.
+
+<<echo=FALSE,eval=TRUE>>=
+# set.seed(1)
+# colList = scales::hue_pal()(3)
+# data=L120q1s
+# nC = 2
+# k = kmeans(data,nC)
+
+plotName = "L120"
+outDir = "Clustering_L120"
+
+set.seed(1)
+colList = scales::hue_pal()(nC+1)
+#colList = scales::hue_pal()(nClusters)
+k = cutree(hc, k=nC)
+
+plot_clusters = lapply(1:nC, function(i){
+  x = as.data.frame(L120q1s[which(k==i),])
+  nGenes = nrow(x)
+  x$cluster = "color"
+  x$cluster2 = factor(x$cluster)
+  xNames = rownames(x)
+  write.table(xNames, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)  
+  p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1]))
+  
+  fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
+  jpeg(fileName)
+  plot(p)
+  invisible(dev.off())
+  p
+})
+###########################
+  filts = as.data.frame(filts)
+  filts$cluster = "color"
+  filts$cluster2 = factor(filts$cluster)
+  nGenes = nrow(filts)
+  plot_filtered = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + xlab(paste("Filtered (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=12), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1]))
+###########################
+  jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, ".jpg", sep=""), width=1000, height=700)
+  # We allow up to 4 plots in each column
+  p = do.call("grid.arrange", c(append(plot_clusters, list(plot_filtered)), ncol=ceiling(nC/2)))
+  invisible(dev.off())
+}
+
+
+# plot_i = vector("list", length=nC+1)
+# rep = ncol(data)/2
+# ###
+# x = as.data.frame(data[which(k$cluster==1),])
+# c1N = nrow(x)
+# x$cluster = "color"
+# x$cluster2 = factor(x$cluster)
+# plot_i[[1]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[1])) + xlab(paste("Cluster 1 (n=", c1N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+# ###
+# x = as.data.frame(data[which(k$cluster==2),])
+# c2N = nrow(x)
+# x$cluster = "color"
+# x$cluster2 = factor(x$cluster)
+# plot_i[[2]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[2])) + xlab(paste("Cluster 2 (n=", c2N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+# ###
+# filts = as.data.frame(filts)
+# filts$cluster = "color"
+# filts$cluster2 = factor(filts$cluster)
+# fN = nrow(filts)
+# plot_i[[3]] = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[3])) + xlab(paste("Filtered (n=", fN,")")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+@
+
+\begin{figure}[H]
+\centering
+<<fig=TRUE, echo=FALSE>>=
+#p = do.call("grid.arrange", c(plot_i, ncol=1, main="L120: 2 Clusters"))
+@
+\caption{Parallel coordinate plot of the two clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{dendL120} suggested 2 clusters for the 6 samples, we applied a k-means clustering algorithm with a cluster size of 2, resulting in the pink cluster and green cluster above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect.}
+\label{pcp2L120}
+\end{figure}
+
+We can examine what these two clusters look like in a simple scatterplot, as shown in Figure \ref{scatterL120}.
+
+<<echo=FALSE,eval=TRUE>>=
+cNum=2
+colList = scales::hue_pal()(3)
+data=L120q1
+set.seed(1)
+k = kmeans(L120q1s,cNum)
+data$cluster = k$cluster
+filt$cluster = rep(cNum+1,each=nrow(filt))
+filt$cluster2 = NULL
+data = rbind(data, filt)
+dat = data.frame(x=c(data[,1],data[,2],data[,3]),y=c(data[,4],data[,5],data[,6]),cluster=data[,7])
+@
+
+\begin{figure}[H]
+\centering
+<<fig=TRUE, echo=FALSE>>=
+#ggplot(dat,aes(x,y))+geom_point(aes(colour = factor(cluster), alpha=0.5)) +scale_colour_discrete(labels = c(paste("Cluster 1 (n=", c1N,")"), paste("Cluster 2 (n=", c2N,")"), paste("Filtered (n=", fN,")"))) + xlab("Fe- Read Count")+ylab("Fe+ Read Count")+theme(legend.position=c("bottom"), legend.text=element_text(size=12)) + ggtitle("All L120 Replicates Fe+/-") + labs(colour = "") + guides(alpha = FALSE)+theme(legend.title=element_blank()) + geom_abline(slope=1, intercept=0)
+@
+\caption{A scatterplot, where each dot represents the raw read counts from a gene in iron-deficient (x-axis) and iron-sufficient (y-axis) conditions from the leaf samples at 120 minutes. The pink and green colors represent the two clusters created when a k-means algorithm of cluster size 2 was applied, and the blue color represents the data filtered out as described at the beginning of the paper. The image is consistent with Figure \ref{pcp2L120}, and the pink cluster appears to have lower Fe+ read counts, while the green cluster appears to have lower Fe- read counts. The blue cluster is, as expected, more closely along the x-y axis.}
+\label{scatterL120}
+\end{figure}
+
+\subsection*{Cluster Analysis of Leafs at 120 minutes: Three Clusters}
+
+We next look at how the data separates into the three main clusters indicated in the dendogram of Figure \ref{dendL120}. We perform a kmeans() analysis on the data, and then construct a parallel coordinate plot of the resulting three clusters, along with the previously-filtered data, see Figure \ref{pcp3L120}.
+
+<<echo=FALSE,eval=TRUE>>=
+# set.seed(1)
+# colList = c(scales::hue_pal()(3),"#520090")
+# data=L120q1s
+# nC = 3
+# k = kmeans(data,nC)
+# plot_i = vector("list", length=nC+1)
+# rep = ncol(data)/2
+# ###
+# x = as.data.frame(data[which(k$cluster==1),])
+# c1N = nrow(x)
+# x$cluster = "color"
+# x$cluster2 = factor(x$cluster)
+# plot_i[[1]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[1])) + xlab(paste("Cluster 1 (n=", c1N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+# ###
+# x = as.data.frame(data[which(k$cluster==3),])
+# c2N = nrow(x)
+# x$cluster = "color"
+# x$cluster2 = factor(x$cluster)
+# plot_i[[2]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[2])) + xlab(paste("Cluster 2 (n=", c2N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+# ###
+# filts = as.data.frame(filts)
+# filts$cluster = "color"
+# filts$cluster2 = factor(filts$cluster)
+# fN = nrow(filts)
+# plot_i[[4]] = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[3])) + xlab(paste("Filtered (n=", fN,")")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+# ###
+# x = as.data.frame(data[which(k$cluster==2),])
+# c3N = nrow(x)
+# x$cluster = "color"
+# x$cluster2 = factor(x$cluster)
+# plot_i[[3]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[4])) + xlab(paste("Cluster 3 (n=", c3N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
+@
+
+\begin{figure}[H]
+\centering
+<<fig=TRUE, echo=TRUE>>=
+#p = do.call("grid.arrange", c(plot_i, ncol=1, main="L120: 3 Clusters"))
+@
+\caption{Parallel coordinate plot of the three clusters and filtered data, where each line represents the standardized read count for a given gene across the 6 leaf samples from 120 minutes. As the dendogram in Figure \ref{dendL120} suggested 3 clusters for the 6 samples, we applied a k-means clustering algorithm with a cluster size of 3, resulting in the pink cluster, green, and purple clusters above. We see that the pink cluster contains genes higher in the Fe- samples, whereas the green cluster contains genes higher in the Fe+ samples. Both clusters look relatively clean (their repetitions are horizontal). In blue, we see the genes that were filtered, in the process previously described. This is relatively flat across all six samples, as we would expect. All of this is similar to what we saw in Figure \ref{pcp3L120}, where a k-means analysis was done for 2 clusters. What is new is the purple cluster, which appears similar to the pink cluster (in that it is lower in the Fe+ read counts), except for the third repetition, which seems inconsisent. This purple cluster may represent low-quality genes.}
+\label{pcp3L120}
+\end{figure}
+
+We can also view this data in a scatterplot matrix format, see Figure \ref{3scatterL120}.
+
+<<echo=FALSE, eval=TRUE>>=
+cNum=3
+data=L120q1s
+set.seed(1)
+k = kmeans(L120q1s,cNum)
+colList = c("#bababa","#bababa", "#520090")
+data$cluster = k$cluster
+dat1 = data[which(data$cluster ==1),]
+dat2 = data[which(data$cluster ==2),]
+dat3 = data[which(data$cluster ==3),]
+data = rbind(dat2, dat1, dat3)
+data$cluster = factor(data$cluster)
+levels(data$cluster) = c(colList)
+@
+
+\begin{figure}[H]
+\centering
+<<fig=TRUE, echo=TRUE>>=
+scatmat(data, columns=1:6, color="cluster") + scale_color_manual(values = levels(data$cluster), labels = c("Clusters 1-2","Cluster 3")) + theme(legend.position=c("bottom"), legend.text=element_text(size=12)) + ggtitle("L120 Replicates Fe+/-") +theme(legend.title=element_blank())
+@
+\caption{Scatterplot matrix of the three clusters from the leaves in 120 minutes, where the purple cluster that looked problematic in the parallel coordinate plot in Figure \ref{3scatterL120} is also colored purple here, and all other data is colored grey. We see that our suspicions from the parallel coordinate plot that the purple cluster was poor-quality have been corroborated here; the third repetition from the Fe+ sample appears to be the cause of the streaks seen most prominently in the bottom-right scatterplot.)}
+\label{3scatterL120}
+\end{figure}
+
+We can also examine individual genes from this purple cluster, one example shown in Figure \ref{indGene}:
+
+<<echo=FALSE,eval=TRUE>>=
+cNum=3
+data = L120q1
+set.seed(1)
+k = kmeans(L120q1s,cNum)
+# We look at the bad cluster
+d = as.data.frame(data[which(k$cluster==2),])
+
+for (i in 1:12){
+  gene = d[i,]
+  rep = ncol(data)/2
+  dat = data.frame(x=rep(1:2, each=rep),y=t(gene),z=rep(1:3, times = 2))
+  colnames(dat)=c("x","y","rep")
+  dat$x=as.factor(dat$x)
+  levels(dat$x)=c("Fe-","Fe+")
+  ggplot(dat, aes(x, y)) + geom_point(aes(colour = factor(rep)), shape = 20, size=5) + scale_shape(solid = FALSE) + ylab("Read Count") + ggtitle(paste("Gene:", unlist(strsplit(rownames(gene), "[.]"))[2])) + scale_y_continuous(limits=c(0, max(dat$y))) + theme(axis.title.x = element_blank(), legend.position="bottom", axis.text=element_text(size=12), axis.title=element_text(size=12), legend.title=element_text(size=12), legend.text=element_text(size=12)) + labs(colour = "Repetition", size=12) + geom_segment(aes(x = 1, y = mean(dat$y[1:3]), xend = 2, yend = mean(dat$y[4:6])))  
+}
+
+@
+\caption{Read counts from the six leaf samples at 120 minutes for a random gene from the suspected low-quality purple cluster from the three clusters made from k-means algorithm. The horizontal axis is divided into the 3 Fe- and 3 Fe+ samples, and the black line represents the mean read count for these two samples. We see that even though the Fe- samples had a low mean count, the third repetition of the Fe- was separated from and higher than the first two repetitions. This does appear to be a data quality issue. We can save all 1,076 genes from this problematic purple cluster into a viewing browser to better understand how often this trend persisted among all genes in this cluster.}
+\label{indGene}
+\end{figure}
+
+\end{document}
