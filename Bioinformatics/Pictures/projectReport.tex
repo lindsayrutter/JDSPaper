@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{float, hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\usepackage{Sweave}
+\begin{document}
+\input{projectReport-concordance}
+
+\author{Lindsay Rutter}
+\title{Cluster Analysis of RNA-Sequencing Read Counts from Iron-Sufficient and Iron-Deficient Soybeans}
+
+\maketitle
+
+
+\section*{Introduction}
+
+The goal of this project is to determine the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments.
+
+\section*{Exploratory Data Analysis}
+
+EDA was performed to better understand the data, to serve as a quality check, and to prepare for pre-processing analysis. It consisted of three main approaches:
+
+\begin{itemize}
+
+\item Normalization: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
+
+\item Remove Genes with Low-Counts and Low-Variability: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
+
+\item Quality and Label Checking: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
+
+\end{itemize}
+
+\section*{Pre-processing}
+
+After exploring the data, the data was pre-processed for clustering analysis. It was determined that upperquartile normalization was the best approach to standardize sample counts across both leaves and roots. For details, see Figure \ref{boxplotL20n2} in the Appendix.
+
+Additionally, data quality was checked with both scatterplot matrices and multi-dimensional scaling (see Figure \ref{mdsL20} and Figure \ref{scatMatL20} in the Appendix.) Some replicates were dropped because they appeared to have been mislabeled or of sub-par quality.
+
+Some additional pre-processing was done. Junk text was removed, the DGEList() function added the number of reads in each sample, and the cpm() function converts the units to counts per million and places these on a log-scale. We also assuredoxp that there is at least one read in at least half of the samples. For more details see the Appendix. We end up with the variable y, which contains the differentially expressed genes for all samples.
+

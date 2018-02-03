@@ -107,6 +107,10 @@ filterLow = which(rowSums(L120[,-1])<=ncol(L120[,-1])/2)
 filt1 <- L120[filterLow,]
 L120 <- L120[-filterLow,]
 
+RowSD = function(x) {
+  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
+}
+
 rownames(filt1) <- filt1$ID
 filt1 <- filt1[,-1]
 filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
@@ -119,10 +123,6 @@ cpm.L120.new <- cpm(L120, TRUE, TRUE)
 # Between-lane normalization for sequencing depth and possibly other distributional differences between lanes.
 cpm.L120.norm <- betweenLaneNormalization(cpm.L120.new, which="full", round=FALSE)
 L120 = cpm.L120.norm
-
-RowSD = function(x) {
-  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
-}
 
 L120 = as.data.frame(L120)
 # Mutate is to add columns to a data frame
@@ -148,7 +148,7 @@ L120q1 = L120q1[which(sign(model$residuals) == 1),]
 L120q1 = L120q1[,1:6]
 # Scale each row, so now negative and positive values
 L120q1s = t(apply(as.matrix(L120q1), 1, scale))
-# colnames(L120q1s)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
+colnames(L120q1s)=colnames(L120q1)
 # colnames(L120q1)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
 # colnames(filt)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
 filt = filt[,1:6]
@@ -205,7 +205,8 @@ plot_clusters = lapply(1:nC, function(i){
   xPValues = metrics[which(xNames %in% metrics$ID),]$PValue
   xFDR = xPValues/nrow(soybean_ir)
   retDF = data.frame(ID = xNames, PValue = xPValues, FDR = xFDR)
-  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)  
+  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)
+  b = 
   p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1]))
   
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
