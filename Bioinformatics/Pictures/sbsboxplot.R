@@ -23,4 +23,7 @@ ggplot(df, aes(x=cut, y=price)) +
 ggplot(df, aes(x=cut, y=price)) +
   stat_boxplot(geom ='errorbar') + 
   geom_boxplot(outlier.shape=NA, aes(fill=cut), alpha = 0.3) +
-  geom_point(aes(fill=cut), shape=21, position=position_jitter(width=0.3), alpha=0.5)
+  geom_point(aes(fill=cut), shape=21, position=position_jitter(width=0.3), alpha=0.5) +
+  scale_fill_manual(values=colList)
+
+

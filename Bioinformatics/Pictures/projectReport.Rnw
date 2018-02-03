@@ -62,40 +62,9 @@ library(scales)
 library(bigPint)
 @
 
-
-<<echo=FALSE>>=
-# rm(list=ls())
-# load("All_leaves040615.rda")
-# ct <- countTable
-# ct2 <- assays(ct)[[1]]
-# rownames(ct2) <- ct@rowData@elementMetadata@listData$ID
-# colnames(ct2) <- unlist(strsplit(colnames(ct2), "\\."))[seq(1, 17*3, 3)]
-# leaves.all <- ct2
-# load("All_roots.rda")
-# ct.roots <- countTable
-# ct2 <- assays(ct.roots)[[1]]
-# rownames(ct2) <- ct@rowData@elementMetadata@listData$ID
-# colnames(ct2) <- unlist(strsplit(colnames(ct2), "\\."))[seq(1, 18*3, 3)]
-# roots.all <- ct2
-# all <- cbind(leaves.all, roots.all[,c(1:15,17:18)])
-# y <- DGEList(counts=all)
-@
-
 We first perform pre-processing on the high-quality leaf samples from 120 minutes. We calculate the mean and standard deviation read count for the six samples. We also remove the genes with the lowest quartile of mean read count, as well as the genes with the lowest quartile of standard deviation across the six samples.
 
 <<echo=FALSE>>=
-# Now try to threshold count number and normalize on the six samples
-#L120 = y[,c("ML08R","ML14R","ML22R","ML11R","ML27R","ML33R")]
-#colnames(L120)=c("s8","s14","s22","s11","s27","s33")
-
-# View(L120$counts)
-# Make sure each gene has at least one count in at least half of the six samples
-#L120 <- L120[rowSums(L120$counts>1)>=ncol(L120)/2,]
-#L120 <- calcNormFactors(L120, method="none") # Doesn't seem to do anything as per identical() function
-# CPM values are useful descriptive measures for the expression level of a gene or transcript.
-# By default, the normalized library sizes are used in the computation for DGEList objects but simple column sums for matrices.
-# Now values are positive and negative
-
 data("soybean_ir")
 data("soybean_ir_metrics")
 L120 <- soybean_ir
@@ -149,14 +118,10 @@ L120q1 = L120q1[,1:6]
 # Scale each row, so now negative and positive values
 L120q1s = t(apply(as.matrix(L120q1), 1, scale))
 colnames(L120q1s)=colnames(L120q1)
-# colnames(L120q1)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
-# colnames(filt)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
 filt = filt[,1:6]
 # filt is 31394
 filt = rbind(filt,L120q1[which(sign(model$residuals) == -1),])
 filts = t(apply(as.matrix(filt), 1, scale))
-# colnames(filts)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
-# colnames(filt)=c("[1]Fe-","[2]Fe-","[3]Fe-","[1]Fe+","[2]Fe+","[3]Fe+")
 @
 
 It should be noted that a similar pre-processing pipeline was applied to other samples we select below, but the code will not be explicitly showed. See the Appendix for more details and code.
@@ -193,9 +158,22 @@ outDir = "Clustering_L120"
 
 set.seed(1)
 colList = scales::hue_pal()(nC+1)
-#colList = scales::hue_pal()(nClusters)
 k = cutree(hc, k=nC)
+
+yMin = min(L120q1s[,1:6])
+yMax = max(L120q1s[,1:6])
+
 ###########################
+
+sbsDF <- data.frame()
+for (i in 1:nC){
+  x = as.data.frame(L120q1s[which(k==i),])
+  xNames = rownames(x)
+  xPValues = metrics[which(xNames %in% metrics$ID),]$PValue
+  xFDR = xPValues*nrow(soybean_ir)
+  sbsDF = rbind(sbsDF, data.frame(Cluster = paste("Cluster", i), PValue = xPValues))
+}
+
 plot_clusters = lapply(1:nC, function(i){
   x = as.data.frame(L120q1s[which(k==i),])
   nGenes = nrow(x)
@@ -205,10 +183,9 @@ plot_clusters = lapply(1:nC, function(i){
   xPValues = metrics[which(xNames %in% metrics$ID),]$PValue
   xFDR = xPValues/nrow(soybean_ir)
   retDF = data.frame(ID = xNames, PValue = xPValues, FDR = xFDR)
-  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)
-  b = 
-  p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1]))
   
+  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)
+  p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
   jpeg(fileName)
   plot(p)
@@ -220,38 +197,76 @@ plot_clusters = lapply(1:nC, function(i){
   filts$cluster = "color"
   filts$cluster2 = factor(filts$cluster)
   nGenes = nrow(filts)
-  plot_filtered = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + xlab(paste("Filtered (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=12), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1]))
-###########################
+  
+  xNames = rownames(filts)
+  xPValues = metrics[which(xNames %in% metrics$ID),]$PValue
+  xFDR = xPValues*nrow(soybean_ir)
+  sbsDF = rbind(sbsDF, data.frame(Cluster = paste("Filtered"), PValue = xPValues))
+  
+  ggBP = ggplot(sbsDF, aes(x=Cluster, y=PValue)) +
+  stat_boxplot(geom ='errorbar') + 
+  geom_boxplot(outlier.shape=NA, aes(fill=Cluster), alpha = 0.3) +
+  geom_point(aes(fill=Cluster), shape=21, position=position_jitter(width=0.3), alpha=0.1) +
+  scale_fill_manual(values=colList)
+  jpeg(file = paste(getwd(), "/", outDir, "/boxplot_", nC, ".jpg", sep=""), width=1000, height=700)
+  ggBP
+  invisible(dev.off())
+  
+  plot_filtered = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + xlab(paste("Filtered (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=12), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1])) + ylim(yMin, yMax)
+
   jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, ".jpg", sep=""), width=1000, height=700)
   # We allow up to 4 plots in each column
   p = do.call("grid.arrange", c(append(plot_clusters, list(plot_filtered)), ncol=ceiling(nC/2)))
+  invisible(dev.off())
+  
+plot_clustersSig = lapply(1:nC, function(i){ 
+  x = as.data.frame(L120q1s[which(k==i),])
+  x$cluster = "color"
+  x$cluster2 = factor(x$cluster)
+  xNames = rownames(x)
+  metricPValue = metrics[which(as.character(metrics$ID) %in% xNames),]
+  sigID = metricPValue[metricPValue$PValue<0.05/nrow(soybean_ir),]$ID
+  xSig = x[which(rownames(x) %in% sigID),]
+  
+  if (nrow(xSig)>0){
+    pSig = ggparcoord(xSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 1) + xlab(paste("Cluster ", i, " (n=", format(nrow(xSig), big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
+  }
+  else{
+    xSig = x[1,]
+      pSig = ggparcoord(xSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0) + xlab(paste("Cluster ", i, " (n=", format(nrow(xSig)-1, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
+  }
+  fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", nC, "_", i, ".jpg", sep="")
+  jpeg(fileName)
+  plot(pSig)
+  invisible(dev.off())
+  pSig
+})
+  
+  filts = as.data.frame(filts)
+  filts$cluster = "color"
+  filts$cluster2 = factor(filts$cluster)
+  xNames = rownames(filts)
+  metricPValue = metrics[which(as.character(metrics$ID) %in% xNames),]
+  sigID = metricPValue[metricPValue$PValue<0.05/nrow(soybean_ir),]$ID
+  filtsSig = filts[which(rownames(filts) %in% sigID),]
+  
+  if (nrow(filtsSig)>0){
+    plot_filteredSig = ggparcoord(filtsSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 1) + xlab(paste("Filtered(n=", format(nrow(filtsSig), big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1])) + ylim(yMin, yMax)
+  }
+  else{
+    pSig = x[1,]
+    plot_filteredSig = ggparcoord(filtsSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0) + xlab(paste("Filtered (n=", format(nrow(filtsSig), big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1])) + ylim(yMin, yMax)
+  }
+
+  jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", nC, ".jpg", sep=""), width=1000, height=700)
+  # We allow up to 4 plots in each column
+  p = do.call("grid.arrange", c(append(plot_clustersSig, list(plot_filteredSig)), ncol=ceiling(nC/2)))
   invisible(dev.off())
 }
 
 for (i in 2:5){
   getPCP(i)
 }
-
-# plot_i = vector("list", length=nC+1)
-# rep = ncol(data)/2
-# ###
-# x = as.data.frame(data[which(k$cluster==1),])
-# c1N = nrow(x)
-# x$cluster = "color"
-# x$cluster2 = factor(x$cluster)
-# plot_i[[1]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[1])) + xlab(paste("Cluster 1 (n=", c1N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
-# ###
-# x = as.data.frame(data[which(k$cluster==2),])
-# c2N = nrow(x)
-# x$cluster = "color"
-# x$cluster2 = factor(x$cluster)
-# plot_i[[2]] = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[2])) + xlab(paste("Cluster 2 (n=", c2N,")")) + ylab("Count")+ theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
-# ###
-# filts = as.data.frame(filts)
-# filts$cluster = "color"
-# filts$cluster2 = factor(filts$cluster)
-# fN = nrow(filts)
-# plot_i[[3]] = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + scale_colour_manual(values = c("color" = colList[3])) + xlab(paste("Filtered (n=", fN,")")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=12), axis.text=element_text(size=12))
 @
 
 \begin{figure}[H]
