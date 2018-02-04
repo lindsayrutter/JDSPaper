@@ -117,7 +117,8 @@ plot_clusters = lapply(1:nC, function(i){
   logSoy = soybean_ir
   logSoy[,-1] <- log(soybean_ir[,-1]+1)
   
-  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy))
+  fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_", i, ".jpg", sep="")
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[i+1], fileName=fileName)
 
   p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
