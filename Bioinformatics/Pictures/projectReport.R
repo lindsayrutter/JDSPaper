@@ -19,6 +19,9 @@ data("soybean_ir_metrics")
 data <- soybean_ir
 metrics <- soybean_ir_metrics[["N_P"]]
 
+logSoy = soybean_ir
+logSoy[,-1] <- log(soybean_ir[,-1]+1)
+
 # Make sure each gene has at least one count in at least half of the six samples
 filterLow = which(rowSums(data[,-1])<=ncol(data[,-1])/2)
 filt1 <- data[filterLow,]
@@ -114,9 +117,6 @@ plot_clusters = lapply(1:nC, function(i){
   scatMatMetrics[["N_P"]]$PValue = 10e-10
   scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
   
-  logSoy = soybean_ir
-  logSoy[,-1] <- log(soybean_ir[,-1]+1)
-  
   fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_", i, ".jpg", sep="")
   plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[i+1], fileName=fileName)
 
@@ -146,6 +146,14 @@ plot_clusters = lapply(1:nC, function(i){
   ggBP
   invisible(dev.off())
   
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xNames),]
+  scatMatMetrics[["N_P"]]$PValue = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+  fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_filtered.jpg", sep="")
+  
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[1], fileName=fileName)
+  
   plot_filtered = ggparcoord(filts, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.01) + xlab(paste("Filtered (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=12), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1])) + ylim(yMin, yMax)
 
   jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, ".jpg", sep=""), width=1000, height=700)
@@ -161,13 +169,26 @@ plot_clustersSig = lapply(1:nC, function(i){
   metricPValue = metrics[which(as.character(metrics$ID) %in% xNames),]
   sigID = metricPValue[metricPValue$PValue<0.05/nrow(soybean_ir),]$ID
   xSig = x[which(rownames(x) %in% sigID),]
-  
+  xSigNames = rownames(xSig)
+  saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
+
   if (nrow(xSig)>0){
+    scatMatMetrics = list()
+    scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
+    scatMatMetrics[["N_P"]]$PValue = 10e-10
+    scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+    fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
+    plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[i+1], fileName=fileName)
     pSig = ggparcoord(xSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 1) + xlab(paste("Cluster ", i, " (n=", format(nrow(xSig), big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
-  }
-  else{
+  }else{
+    scatMatMetrics = list()
+    scatMatMetrics[["N_P"]] = metrics[1,]
+    scatMatMetrics[["N_P"]]$PValue = 1
+    scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+    fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
+    plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[i+1], fileName=fileName)
     xSig = x[1,]
-      pSig = ggparcoord(xSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0) + xlab(paste("Cluster ", i, " (n=", format(nrow(xSig)-1, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
+    pSig = ggparcoord(xSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0) + xlab(paste("Cluster ", i, " (n=", format(nrow(xSig)-1, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
   }
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", nC, "_", i, ".jpg", sep="")
   jpeg(fileName)
@@ -180,6 +201,15 @@ plot_clustersSig = lapply(1:nC, function(i){
   metricPValue = metrics[which(as.character(metrics$ID) %in% xNames),]
   sigID = metricPValue[metricPValue$PValue<0.05/nrow(soybean_ir),]$ID
   filtsSig = filts[which(rownames(filts) %in% sigID),]
+  filtsSigNames = rownames(filtsSig)
+  saveRDS(filtsSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_Filtered.Rds"))
+  
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% filtsSigNames),]
+  scatMatMetrics[["N_P"]]$PValue = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+  fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_filtered.jpg", sep="")
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy), degPointColor = colList[1], fileName=fileName)
   
   if (nrow(filtsSig)>0){
     plot_filteredSig = ggparcoord(filtsSig, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 1) + xlab(paste("Filtered(n=", format(nrow(filtsSig), big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[1])) + ylim(yMin, yMax)
