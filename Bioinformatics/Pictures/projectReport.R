@@ -1,50 +1,3 @@
-\documentclass{article}
-\usepackage{float, hyperref}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{caption}
-
-\begin{document}
-\SweaveOpts{concordance=TRUE}
-
-\author{Lindsay Rutter}
-\title{Cluster Analysis of RNA-Sequencing Read Counts from Iron-Sufficient and Iron-Deficient Soybeans}
-
-\maketitle
-
-<<options, echo=FALSE>>=
-library(knitr)
-  opts_chunk$set(cache=TRUE)
-@
-
-\section*{Introduction}
-
-The goal of this project is to determine the genes that are differentially expressed based on RNA-sequencing counts in samples from the leaves and roots of soybean plants in three time-points after induction of iron-rich or iron-poor conditions. The leaves (Allleaves040615.rda) and roots (Allroots.rda) data each contain a count table for 18 samples measured across 56,044 genes. These 18 samples consist of triplet replicates measured 30, 60, and 120 minutes after the induction (or lack of induction) of soil that was deficient in bioavailable iron. Genes will be clustered into groups that showed similar changes in read counts across iron condition, time point, and/or biological derivative (roots or leaves). The resulting clusters could help us identify what genes are responsible for how, when, and where soybeans respond to iron-deficient environments.
-
-\section*{Exploratory Data Analysis}
-
-EDA was performed to better understand the data, to serve as a quality check, and to prepare for pre-processing analysis. It consisted of three main approaches:
-
-\begin{itemize}
-
-\item Normalization: Only a small fraction of the 56,044 genes should demonstrate read count changes of interest. We had to first determine what type of normalization to perform in order to standardize the gene read count distribution across the samples, so that the vast majority of genes do not artificially appear important.
-
-\item Remove Genes with Low-Counts and Low-Variability: We removed the bottom quartile of genes with low mean read counts, and we also removed the bottom quartile of genes with low standard deviaton in read counts.
-
-\item Quality and Label Checking: We check the quality of our data by analyzing pairwise scatterplot matrices of intra- versus inter- replicates and MDS plots. With these visual tools, we would high-quality genes to show replicates with consistency (low variability) in counts.
-
-\end{itemize}
-
-\section*{Pre-processing}
-
-After exploring the data, the data was pre-processed for clustering analysis. It was determined that upperquartile normalization was the best approach to standardize sample counts across both leaves and roots. For details, see Figure \ref{boxplotL20n2} in the Appendix.
-
-Additionally, data quality was checked with both scatterplot matrices and multi-dimensional scaling (see Figure \ref{mdsL20} and Figure \ref{scatMatL20} in the Appendix.) Some replicates were dropped because they appeared to have been mislabeled or of sub-par quality.
-
-Some additional pre-processing was done. Junk text was removed, the DGEList() function added the number of reads in each sample, and the cpm() function converts the units to counts per million and places these on a log-scale. We also assuredoxp that there is at least one read in at least half of the samples. For more details see the Appendix. We end up with the variable y, which contains the differentially expressed genes for all samples.
-
-<<echo=FALSE>>==
 library(rtracklayer)
 library(Rsamtools)
 library(grid)
@@ -60,19 +13,16 @@ library(gridExtra)
 library(reshape2)
 library(scales)
 library(bigPint)
-@
 
-<<echo=FALSE>>=
 data("soybean_ir")
 data("soybean_ir_metrics")
-L120 <- soybean_ir
+data <- soybean_ir
 metrics <- soybean_ir_metrics[["N_P"]]
 
 # Make sure each gene has at least one count in at least half of the six samples
-# 42020 rows
-filterLow = which(rowSums(L120[,-1])<=ncol(L120[,-1])/2)
-filt1 <- L120[filterLow,]
-L120 <- L120[-filterLow,]
+filterLow = which(rowSums(data[,-1])<=ncol(data[,-1])/2)
+filt1 <- data[filterLow,]
+data <- data[-filterLow,]
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -83,105 +33,92 @@ filt1 <- filt1[,-1]
 filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
 rownames(filt1) <- rownames_filt1
 
-L120_Rownames <- L120$ID
-L120 = L120[,-1]
-rownames(L120) <- L120_Rownames
+data_Rownames <- data$ID
+data = data[,-1]
+rownames(data) <- data_Rownames
 
-cpm.L120.new <- cpm(L120, TRUE, TRUE)
+cpm.data.new <- cpm(data, TRUE, TRUE)
 # Between-lane normalization for sequencing depth and possibly other distributional differences between lanes.
-cpm.L120.norm <- betweenLaneNormalization(cpm.L120.new, which="full", round=FALSE)
-L120 = cpm.L120.norm
+cpm.data.norm <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
+data = cpm.data.norm
 
-L120 = as.data.frame(L120)
+data = as.data.frame(data)
 # Mutate is to add columns to a data frame
-L120 = mutate(L120, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
-rownames(L120)=L120_Rownames
+data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+rownames(data)=data_Rownames
 
-#L120 has 42020
 # The first quartile threshold of mean counts across the 5 samples
-q1T = as.numeric(summary(L120$mean)["1st Qu."])
-L120q1 = subset(L120,mean>q1T)
-q1Ts = as.numeric(summary(L120q1$stdev)["1st Qu."])
-L120q1 = subset(L120q1,stdev>q1Ts)
-#L120q1 has 23636
-#filt has 18384
-filt = subset(L120,mean<=q1T|stdev<=q1Ts)
+q1T = as.numeric(summary(data$mean)["1st Qu."])
+dataq1 = subset(data,mean>q1T)
+q1Ts = as.numeric(summary(dataq1$stdev)["1st Qu."])
+dataq1 = subset(dataq1,stdev>q1Ts)
+filt = subset(data,mean<=q1T|stdev<=q1Ts)
 filt = rbind(filt, filt1)
-@
 
-<<echo=FALSE>>=
-model = loess(mean ~ stdev, data=L120q1)
-#L120q1 has 10626
-L120q1p = L120q1[which(sign(model$residuals) == 1),]
-L120q1n = L120q1[which(sign(model$residuals) == -1),]
-L120q1p = L120q1p[,1:6]
+model = loess(mean ~ stdev, data=dataq1)
+dataq1p = dataq1[which(sign(model$residuals) == 1),]
+dataq1n = dataq1[which(sign(model$residuals) == -1),]
+dataq1p = dataq1p[,1:6]
 # Scale each row, so now negative and positive values
-L120q1s = t(apply(as.matrix(L120q1p), 1, scale))
-colnames(L120q1s)=colnames(L120q1p)
+dataq1s = t(apply(as.matrix(dataq1p), 1, scale))
+colnames(dataq1s)=colnames(dataq1p)
 filt = filt[,1:6]
-L120q1n = L120q1n[,1:6]
+dataq1n = dataq1n[,1:6]
 # filt is 31394
-filt = rbind(filt,L120q1n)
+filt = rbind(filt,dataq1n)
 filts = t(apply(as.matrix(filt), 1, scale))
-@
 
-It should be noted that a similar pre-processing pipeline was applied to other samples we select below, but the code will not be explicitly showed. See the Appendix for more details and code.
-
-\section*{Cluster Analysis of Leafs at 120 minutes}
-
-Now that the data of the leaf samples has been properly pre-processed, we begin the clustering analysis by producing a dendogram. We use Euclidean distance (which is acceptable as we have standardized the data) and Wards linkage, and we plot is as shown in Figure \ref{dendL120}:
-
-<<>>=
-dendo = L120q1s
+dendo = dataq1s
 rownames(dendo) = NULL
 d = dist(as.matrix(dendo))
 hc = hclust(d, method="ward.D")
-@
 
-\begin{figure}[H]
-\centering
-<<fig=TRUE, echo=TRUE>>=
-plot(hc,main="L120 Dendogram", xlab=NA, sub=NA)
-@
-\caption{The dendogram of the 6 leaf samples at 120 minutes. We see that there may be two main clusters, and possibly a third smaller cluster.}
-\label{dendL120}
-\end{figure}
+plotName = "N_P"
+outDir = "Clustering_data"
 
-<<echo=FALSE,eval=TRUE>>=
+fileName = paste(getwd(), "/", outDir, "/dendodgram.jpg", sep="")
+jpeg(fileName)
+plot(hc,main="data Dendogram", xlab=NA, sub=NA)
+invisible(dev.off())
+
+#####################################################
+
 getPCP <- function(nC){
-
-plotName = "L120"
-outDir = "Clustering_L120"
 
 set.seed(1)
 colList = scales::hue_pal()(nC+1)
 k = cutree(hc, k=nC)
 
-yMin = min(L120q1s[,1:6])
-yMax = max(L120q1s[,1:6])
+yMin = min(dataq1s[,1:6])
+yMax = max(dataq1s[,1:6])
 
 ###########################
 
 sbsDF <- data.frame()
 for (i in 1:nC){
-  x = as.data.frame(L120q1s[which(k==i),])
+  x = as.data.frame(dataq1s[which(k==i),])
   xNames = rownames(x)
   xPValues = metrics[which(metrics$ID %in% xNames),]$PValue
-  xFDR = xPValues*nrow(soybean_ir)
   sbsDF = rbind(sbsDF, data.frame(Cluster = paste("Cluster", i), PValue = xPValues))
 }
 
 plot_clusters = lapply(1:nC, function(i){
-  x = as.data.frame(L120q1s[which(k==i),])
+  x = as.data.frame(dataq1s[which(k==i),])
   nGenes = nrow(x)
   x$cluster = "color"
   x$cluster2 = factor(x$cluster)
   xNames = rownames(x)
   xPValues = metrics[which(metrics$ID %in% xNames),]$PValue
-  xFDR = xPValues/nrow(soybean_ir)
-  retDF = data.frame(ID = xNames, PValue = xPValues, FDR = xFDR)
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xNames),]
+  scatMatMetrics[["N_P"]]$PValue = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
   
-  write.table(retDF, file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".txt", sep=""), sep=",", row.names=FALSE, col.names=FALSE, quote=FALSE)
+  logSoy = soybean_ir
+  logSoy[,-1] <- log(soybean_ir[,-1]+1)
+  
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "PValue", threshVal = 0.05/nrow(logSoy))
+
   p = ggparcoord(x, columns=1:6, groupColumn=8, scale="globalminmax", alphaLines = 0.1) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count") + theme(legend.position = "none", axis.title=element_text(size=11), axis.text=element_text(size=11), axis.text.x = element_text(angle = 90, hjust = 1)) + scale_colour_manual(values = c("color" = colList[i+1])) + ylim(yMin, yMax)
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
   jpeg(fileName)
@@ -197,7 +134,6 @@ plot_clusters = lapply(1:nC, function(i){
   
   xNames = rownames(filts)
   xPValues = metrics[which(metrics$ID %in% xNames),]$PValue
-  xFDR = xPValues*nrow(soybean_ir)
   sbsDF = rbind(sbsDF, data.frame(Cluster = paste("Filtered"), PValue = xPValues))
   
   ggBP = ggplot(sbsDF, aes(x=Cluster, y=PValue)) +
@@ -217,7 +153,7 @@ plot_clusters = lapply(1:nC, function(i){
   invisible(dev.off())
   
 plot_clustersSig = lapply(1:nC, function(i){ 
-  x = as.data.frame(L120q1s[which(k==i),])
+  x = as.data.frame(dataq1s[which(k==i),])
   x$cluster = "color"
   x$cluster2 = factor(x$cluster)
   xNames = rownames(x)
@@ -260,6 +196,3 @@ plot_clustersSig = lapply(1:nC, function(i){
 for (i in 2:5){
   getPCP(i)
 }
-@
-
-\end{document}
