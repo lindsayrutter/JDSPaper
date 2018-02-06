@@ -1,0 +1,673 @@
+\documentclass{bioinfo}
+\copyrightyear{2015} \pubyear{2015}
+
+\access{Advance Access Publication Date: Day Month Year}
+\appnotes{Manuscript Category}
+
+\begin{document}
+\firstpage{1}
+
+\subtitle{Subject Section}
+
+\title[RNA-sequencing visualization]{Visualization methods for RNA-sequencing data analysis}
+\author[Sample \textit{et~al}.]{Lindsay Rutter\,$^{\text{\sfb 1,}*}$, Michelle Graham\,$^{\text{\sfb 2}}$ and Dianne Cook\,$^{\text{\sfb 3,}*}$}
+\address{$^{\text{\sf 1}}$Bioinformatics and Computational Biology Program, Iowa State University, Ames, IA 50011, USA, \\
+$^{\text{\sf 2}}$Department of Agronomy, Iowa State University, Ames, IA 50011, USA and \\
+$^{\text{\sf 3}}$Econometrics and Business Statistics, Monash University, Clayton VIC 3800, Australia.}
+
+\corresp{$^\ast$To whom correspondence should be addressed.}
+
+\history{Received on XXXXX; revised on XXXXX; accepted on XXXXX}
+
+\editor{Associate Editor: XXXXXXX}
+
+\abstract{\textbf{Motivation:} It was initially claimed that RNA-seq produced unbiased data that did not require sophisticated normalization. However, studies have since revealed that RNA-seq data is biased and that accurate detection of differentially expressed genes is not a trivial task. In light of these findings, researchers should analyze RNA-seq data like they would any other biased multivariate data. The most effective approach to modern data analysis is to iterate between models and visuals, and to enhance the appropriateness of models based on feedback from visuals. Unfortunately, researchers do not often use models and visuals in a complimentary fashion when analyzing RNA-seq data. \\
+\textbf{Results:} We use real RNA-seq data to show that our visualization tools can detect normalization problems, DEG designation problems, and common errors in RNA-seq analysis. We also show that our tools can identify genes of interest that cannot be obtained by models. In this paper, we do not propose that users radically change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate statistical graphics. \\
+\textbf{Availability:} Text  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text\\
+\textbf{Contact:} \href{lrutter@iastate.edu}{lrutter@iastate.edu}\\
+\textbf{Supplementary information:} Supplementary data are available at \textit{Bioinformatics} online.}
+
+\maketitle
+
+\section{Introduction}
+
+% Figure~\ref{fig:01}
+% \citep{Bag01}
+% (citealtp{ref1}; citealtp{ref2}; citealtp{ref3}) 
+
+RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly \citep{Robertson} and detection of alternative splicing processes \citep{Anders2012, Pan}. Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes \citep{Wang, Zhao}.
+
+RNA-seq data is multivariate data, and its basic form is a matrix containing mapped read counts for \textit{n} rows of genes and \textit{p} columns of samples. These mapped read counts provide estimations of the gene expression levels across samples. Researchers typically conduct RNA-seq studies to identify differentially expressed genes (DEGs) between treatment groups. In most popular RNA-seq analysis packages, this objective is approached with models, such as the negative binomial model \citep{Anders2010, Trapnell2012, Trapnell2013, Robinson} and linear regression models \citep{Law}.
+
+Initially, it was widely claimed that RNA-seq produced unbiased data that did not require sophisticated normalization \citep{Wang, Morin, Marioni}. However, numerous studies have since revealed that RNA-seq data is replete with biases and that accurate detection of DEGs is not a negligible task. Problems that complicate the analysis of RNA-seq data include nucleotide and read-position biases \citep{Hansen}, biases related to gene lengths and sequencing depths \citep{Oshlack, RobinsonOshlack}, biases introduced during library preparation \citep{McIntyre}, biases pertaining to the number of replications \citep{Schurch}, biases derived from overlapping sense-antisense transcripts and gene isoforms \citep{Trapnell2013}, and the confounding combination of technical and biological variability \citep{Bullard}.
+
+In light of these complications, researchers should analyze RNA-seq data like they would any other biased multivariate data. Simply applying models to such data is problematic because models hold assumptions that they alone cannot call into question. Fortunately, data visualization enables researchers to see patterns and problems they may not otherwise detect with traditional modeling. As a result, the most effective approach to data analysis is to iterate between models and visuals, and enhance the appropriateness of applied models based on feedback from visuals \citep{Shneiderman}. With RNA-seq data, we primarily want to compare the variability between replicates and between treatment groups. This is visually best achieved by drawing the mapped read count distributions across all genes and samples. Unfortunately, the few plotting tools offered in popular RNA-seq packages do not allow users to effectively view their data in this manner.
+
+In this paper, we strive to remedy this problem by publishing new and effective RNA-seq plotting tools. We use real RNA-seq data to show that our tools can detect normalization problems, DEG designation problems, and common errors in the analysis pipeline. We also show that our tools can identify genes of interest that cannot otherwise be obtained by models. We emphasize that interactive graphics should be an indisposable component of modern RNA-seq analysis: Researchers should be able to quickly flip through plots of genes that appear promising or problematic, and link between plots to swiftly obtain various perspectives of their data. Here, we do not propose that users drastically change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate graphical tools, namely with parallel coordinate plots, scatterplot matrices, and replicate point plots.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%\enlargethispage{12pt}
+
+\section{Approach}
+
+Equation~(\ref{eq:01}) Text Text Text Text Text Text  Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+.....
+
+
+\begin{methods}
+\section{Methods}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text
+text\vspace*{1pt}
+
+\begin{itemize}
+\item for bulleted list, use itemize
+\item for bulleted list, use itemize
+\item for bulleted list, use itemize\vspace*{1pt}
+\end{itemize}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method Text
+Text Text Text Text Text Text Text Text Text Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text\vadjust{\newpage}.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method Text
+Text Text Text Text Text Text Text Text Text Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+
+\subsection{This is subheading}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text
+text. Text Text Text Text Text Text  Text Text Text Text Text Text
+Text Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+
+
+\subsubsection{This is subsubheading}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text\break
+text text
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text
+textText Text Text Text Text Text  Text Text Text Text Text Text
+Text Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+
+\enlargethispage{6pt}
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+\begin{table}[!t]
+\processtable{This is table caption\label{Tab:01}} {\begin{tabular}{@{}llll@{}}\toprule head1 &
+head2 & head3 & head4\\\midrule
+row1 & row1 & row1 & row1\\
+row2 & row2 & row2 & row2\\
+row3 & row3 & row3 & row3\\
+row4 & row4 & row4 & row4\\\botrule
+\end{tabular}}{This is a footnote}
+\end{table}
+
+\end{methods}
+
+\begin{figure}[!tpb]%figure1
+\fboxsep=0pt\colorbox{gray}{\begin{minipage}[t]{235pt} \vbox to 100pt{\vfill\hbox to
+235pt{\hfill\fontsize{24pt}{24pt}\selectfont FPO\hfill}\vfill}
+\end{minipage}}
+%\centerline{\includegraphics{fig01.eps}}
+\caption{Caption, caption.}\label{fig:01}
+\end{figure}
+
+%\begin{figure}[!tpb]%figure2
+%%\centerline{\includegraphics{fig02.eps}}
+%\caption{Caption, caption.}\label{fig:02}
+%\end{figure}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+\subsection{Test1}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+
+
+
+
+\section{Discussion}
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text.
+
+
+
+
+Table~\ref{Tab:01} shows that Text Text Text Text Text  Text Text
+Text Text Text Text. Figure~2\vphantom{\ref{fig:02}} shows that
+the above method Text Text. Text Text Text  Text Text Text Text
+Text Text. Figure~2\vphantom{\ref{fig:02}} shows that the above
+method Text Text. Text Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method Text
+Text.
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     please remove the " % " symbol from \centerline{\includegraphics{fig01.eps}}
+%     as it may ignore the figures.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\section{Conclusion}
+
+(Table~\ref{Tab:01}) Text Text Text Text Text Text  Text Text Text
+Text Text Text Text Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text  Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about  text text text text
+
+\begin{enumerate}
+\item this is item, use enumerate
+\item this is item, use enumerate
+\item this is item, use enumerate
+\end{enumerate}
+
+Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows\vadjust{\pagebreak} that the
+above method  Text Text Text Text Text Text Text Text Text Text
+Text Text.  \citealp{Boffelli03} might want to know about text
+text text text Text Text Text Text Text Text  Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text Text Text Text Text Text Text  Text Text.
+\citealp{Boffelli03} might want to know about text text text text
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text\break Text.
+
+
+Text Text Text Text Text Text  Text Text Text Text Text Text Text
+Text Text  Text Text Text Text Text Text.
+Figure~2\vphantom{\ref{fig:02}} shows that the above method  Text
+Text Text Text\vspace*{-10pt}
+
+
+\section*{Acknowledgements}
+
+Text Text Text Text Text Text  Text Text.  \citealp{Boffelli03} might want to know about  text
+text text text\vspace*{-12pt}
+
+\section*{Funding}
+
+This work has been supported by the... Text Text  Text Text.\vspace*{-12pt}
+
+%\bibliographystyle{natbib}
+%\bibliographystyle{achemnat}
+%\bibliographystyle{plainnat}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{bioinformatics}
+%
+%\bibliographystyle{plain}
+%
+%\bibliography{Document}
+
+
+\begin{thebibliography}{}
+
+% Shu reference --> Glimma
+% Marini reference --> pcaExplorer
+
+\bibitem[Anders and Huber, 2010]{Anders2010}
+Anders, S. and Huber, W. (2010) Differential expression analysis for sequence count data, {\it Genome Biology}, {\bf 11}, R106.
+
+\bibitem[Anders {\it et~al}., 2012]{Anders2012}
+Anders, S., Reyes, A., and Huber, W. (2012) Detecting differential usage of exons from RNA-seq data. {\it Genome Research}, {\bf 22}, 2008--2017.
+
+\bibitem[Baggerly and Coombes, 2009]{Baggerly}
+Baggerly, K.A. and Coombes, K.R. (2009) Deriving chemosensitivity from cell lines: Forensic bioinformatics and reproducible research in high-throughput biology. {\it The Annals of Applied Statistics}, {\bf 3}, 1309--1334.
+
+\bibitem[Brown and Hudson, 2015]{Brown}
+Brown, A.V. and Hudson, K.A. (2015) Developmental profiling of gene expression in soybean trifoliate leaves and cotyledons. {\it BMC Plant Biology}, {\bf 15}, 169.
+
+\bibitem[Bullard {\it et~al}., 2010]{Bullard}
+Bullard, J. H., Purdom, E., Hansen, K. D., and Dudoit, S. (2010) Evaluation of statistical methods for normalization and differential expression in mRNA-Seq experiments. {\it BMC Bioinformatics}, {\bf 11}, 94.
+
+\bibitem[Cook {\it et~al}., 2007]{Cook}
+Cook, D., Hofmann, H., Lee, E.-K., Yang, H., Nikolau, B., and Wurtele, E. (2007) Exploring gene expression data, using plots. {\it Journal of Data Science}, {\bf 5}, 151--182.
+
+\bibitem[Hansen {\it et~al}., 2010]{Hansen}
+Hansen, K.D., Brenner, S.E., and Dudoit, S. (2010) Biases in Illumina transcriptome sequencing caused by random hexamer priming. {\it Nucleic Acids Research}, {\bf 38}, e131.
+
+\bibitem[Huber {\it et~al}., 2015]{Huber}
+Huber, W., Carey, V.J., Gentleman, R,, Anders, S,, Carlson, M., and Carvalho, B.S. (2015) Orchestrating high-throughput genomic analysis with Bioconductor. {\it Nature Methods}, {\bf 12}, 115--121.
+
+\bibitem[Ioannidis {\it et~al}., 2009]{Ioannidis}
+Ioannidis, J.P., Allison, D.B., Ball, C.A., Coulibaly, I., Cui, X., Culhane, A.C., Falchi, M., Furlanello, C., Game, L., Jurman, G., Mangion, J., Mehta, T., Nitzberg, M., Page, G.P., Petretto, E. and van Noort, V. (2009) Repeatability of published microarray gene expression analyses. {\it Nature Genetics}, {\bf 41}, 149--155.
+
+\bibitem[Law {\it et~al}., 2014]{Law}
+Law, C.W., Chen, Y., Shi, W., and Smyth, G.K. (2014) voom: Precision weights unlock linear model analysis tools for RNA-seq read counts. {\it Genome Biology}, {\bf 15}, R29.
+
+\bibitem[Love {\it et~al}., 2014]{Love}
+Love, M.I., Huber, W., and Anders, S. (2014) Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. {\it Genome Biology}, {\bf 15}, 550.
+
+\bibitem[Marioni {\it et~al}., 2008]{Marioni}
+Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008) RNA-seq: An assessment of technical reproducibility and comparison with gene expression arrays. {\it Genome Research}, {\bf 18}, 1509--1517.
+
+\bibitem[McIntyre {\it et~al}., 2011]{McIntyre}
+McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011) RNAseq: Technical variability and sampling. {\it BMC Genomics}, {\bf 12}, 293.
+
+\bibitem[Lauter {\it et~al}., 2014]{Lauter}
+Moran Lauter, A.N., Peiffer, G.A., Yin, T., Whitham, S.A., Cook, D., and Shoemaker, R.C. (2014) Identification of candidate genes involved in early iron deficiency chlorosis signaling in soybean (glycine max) roots and leaves. {\it BMC Genomics}, {\bf 15}, 1--25.
+
+\bibitem[Morin {\it et~al}., 2008]{Morin}
+Morin, R., Bainbridge, M., Fejes, A., Hirst, M., Krzywinski, M., Pugh, T., et al. (2008) Profiling the HeLa S3 transcriptome using randomly primed cDNA and massively parallel short-read sequencing. {\it Biotechniques}, {\bf 45}, 81--94.
+
+\bibitem[Oshlack {\it et~al}., 2010]{Oshlack}
+Oshlack, A., Robinson, M.D., and Young, M.D. (2010) From RNA-seq reads to differential expression results.
+{\it Genome Biology}, {\bf 11}, 220.
+
+\bibitem[Pan {\it et~al}., 2008]{Pan}
+Pan, Q., Shai, O., Lee, L. J., Frey, B. J., and Blencowe, B. J. (2008) Deep surveying of alternative splicing complexity in the human transcriptome by high-throughput sequencing. {\it Nature Genetics}, {\bf 40}, 1413--1415.
+
+\bibitem[Risso {\it et~al}., 2011]{Risso}
+Risso, D., Schwartz, K., Sherlock, G., Dudoit, S. (2011) GC-Content normalization for RNA-Seq data. {\it BMC Bioinformatics}, {\bf 12}, 480.
+
+\bibitem[Ritchie {\it et~al}., 2015]{Ritchie}
+Ritchie, M.E., Phipson, B., Wu, D., Hu, Y., Law, C.W., Shi, W., and Smyth, G.K. (2015) Limma powers differential expression analyses for RNA-sequencing and microarray studies. {\it Nucleic Acids Research}, {\bf 43}, e47.
+
+\bibitem[Robertson {\it et~al}., 2010]{Robertson}
+Robertson, G., Schein, J., Chiu, R., Corbett, R., Field, M., Jackman, S. D., et al. (2010) De novo assembly and analysis of RNA-seq data. {\it Nature Methods}, {\bf 7}, 909--912.
+
+\bibitem[Robinson and Oshlack, 2010]{RobinsonOshlack}
+Robinson, M.D. and Oshlack, A. (2010) A scaling normalization method for differential expression analysis of RNA-seq data. {\it Genome Biology}, {\bf 11}, R25.
+
+\bibitem[Robinson {\it et~al}., 2010]{Robinson}
+Robinson, M.D., McCarthy, D.J., and Smyth, G.K. (2010) edgeR: A Bioconductor package for differential expression analysis of digital gene expression data. {\it Bioinformatics}, {\bf 26}, 139--140.
+
+\bibitem[Shneiderman, 2002]{Shneiderman}
+Shneiderman, B. (2002) Inventing discovery tools: Combining information visualization with data mining. {\it Information Visualization}, {\bf 1}, 5--12.
+
+\bibitem[Schurch {\it et~al}., 2016]{Schurch}
+Schurch, N.J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., et al. (2016) How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? {\it RNA}, {\bf 22}, 839--851.
+
+\bibitem[Trapnell {\it et~al}., 2013]{Trapnell2013}
+Trapnell, C., Hendrickson, D.G., Sauvageau, M., Goff, L., Rinn, J.L., and Pachter, L. (2013) Differential analysis of gene regulation at transcript resolution with RNA-seq. {\it Nature Biotechnology}, {\bf 31}, 46--53.
+
+\bibitem[Trapnell {\it et~al}., 2012]{Trapnell2012}
+Trapnell, C., Roberts, A., Goff, L., Pertea, G., Kim, D., and Kelley D.R. (2012) Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. {\it Nature Protocols}, {\bf 7}, 562--578.
+
+\bibitem[Wang {\it et~al}., 2009]{Wang}
+Wang, Z., Gerstein, M., and Snyder, M. (2009) RNA-Seq: A revolutionary tool for transcriptomics. {\it Nature Reviews Genetics}, {\bf 10}, 57--63.
+
+\bibitem[Zhao {\it et~al}., 2014]{Zhao}
+Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014) Comparison of RNA-Seq and microarray in transcriptome profiling of activated T cells. {\it PLoS ONE}, {\bf 9}, e78644.
+
+\end{thebibliography}
+\end{document}
