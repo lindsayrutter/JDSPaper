@@ -31,7 +31,6 @@ values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 server <- function(input, output, session) {
 
 output$scatMatPlot <- renderPlotly({
-withProgress(message = 'Making plot', detail = 'This will take about 45 seconds to draw. The plot will appear shortly after this message disappears', value = 0, {
 
   ################################ Prepare scatterplot matrix
   ###########################################################
@@ -52,11 +51,7 @@ withProgress(message = 'Making plot', detail = 'This will take about 45 seconds 
   p <- ggpairs(data[,-1], lower = list(continuous = my_fn))
   pS <- p
   
-incProgress(1/4)
-  
   ggPS <- ggplotly(pS, width=700, height=600)
-
-incProgress(1/4)  
     
   myLength <- length(ggPS[["x"]][["data"]])
   for (i in 1:myLength){
@@ -79,7 +74,6 @@ incProgress(1/4)
     }
   }
   
-incProgress(1/4)
 ggPS2 <- ggPS %>% onRender("
     function(el, x, data) {
     
@@ -159,9 +153,8 @@ ggPS2 <- ggPS %>% onRender("
     Plotly.addTraces(el.id, Traces);
     })}
     ", data = data)
-incProgress(1/4)
+
 ggPS2
-})
     
 })
 

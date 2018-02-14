@@ -42,10 +42,10 @@ body <- shinydashboard::dashboardBody(
     
     shinydashboard::tabItem(tabName = "scatMatPlot",
       shiny::fluidRow(
-        shiny::column(width = 12, shinydashboard::box(width = 660, height = 660, plotly::plotlyOutput("scatMatPlot"), collapsible = FALSE, background = "black", title = "Binned scatterplot", status = "primary", solidHeader = TRUE))),
+        shiny::column(width = 12, shinydashboard::box(width = 660, height = 660, withSpinner(plotly::plotlyOutput("scatMatPlot")), collapsible = FALSE, background = "black", title = "Binned scatterplot", status = "primary", solidHeader = TRUE))),
       
       shiny::fluidRow(
-        shiny::column(width = 12, shinydashboard::box(width = NULL, plotly::plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Boxplot", status = "primary", solidHeader = TRUE))),
+        shiny::column(width = 12, shinydashboard::box(width = NULL, withSpinner(plotly::plotlyOutput("boxPlot")), collapsible = FALSE, background = "black", title = "Boxplot", status = "primary", solidHeader = TRUE))),
       
       shiny::fluidRow(
         shiny::column(width = 12, shinydashboard::box(width = NULL, shiny::verbatimTextOutput("selectedValues"), collapsible = TRUE, title = "Selected Gene IDs", status = "primary", solidHeader = TRUE)))),

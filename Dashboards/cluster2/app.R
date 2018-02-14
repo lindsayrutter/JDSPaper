@@ -9,6 +9,9 @@ library(data.table)
 library(RColorBrewer)
 library(Hmisc)
 library(bigPint)
+library(shinycssloaders)
+
+options(spinner.color.background="#F5F5F5")
 
 load("soybean_ir.rda")
 dat <- soybean_ir
@@ -26,8 +29,8 @@ sidebar <- dashboardSidebar(
   width = 180,
   hr(),
   sidebarMenu(id="tabs",
-    shinydashboard::menuItem("Application", tabName="hexPlot", selected=TRUE),
-    shinydashboard::menuItem("About", tabName = "about")
+    shinydashboard::menuItem("Application", tabName="hexPlot"),
+    shinydashboard::menuItem("About", tabName = "about", selected=TRUE)
   )
 )
 
@@ -44,25 +47,26 @@ body <- dashboardBody(
            numericInput("pointSize", "Point size:", value = 8, min = 1),
            actionButton("goButton", "Plot gene!"))),
         column(width = 8,
-           box(width = NULL, plotlyOutput("hexPlot"), collapsible = FALSE, background = "black", title = "Replicate point plot", status = "primary", solidHeader = TRUE))),
+           box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
     
       fluidRow(
         column(width = 12,
-         box(width = NULL, plotlyOutput("boxPlot"), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))),
+         box(width = NULL, withSpinner(plotlyOutput("boxPlot")), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))),
       
       fluidRow(
         column(width = 12,
                box(width = NULL, verbatimTextOutput("info1"), verbatimTextOutput("info2"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
   
   shinydashboard::tabItem(tabName = "about",
-    shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a replicate point plot. In the replicate point plot, each gene can be plotted once for each combination of sample pairs between treatment groups. For example, the data we use below contains two treatments (S1 and S2), each with three replicates. Hence, there are six ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, and S1.2 and S2.3).", style='padding:10px;'),
+    shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a litre plot. In the litre plot, each gene is plotted once for every combination of replicate pairs between treatment groups. The data we use for the examples shown below contains two treatments (S1 and S2), each with three replicates. Hence, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, S1.2 and S2.3, and S1.3 and S2.1, S1.3 and S2.2, and S1.3 and S2.3).", style='padding:10px;'),
     br(),
-    shiny::fluidRow("Each gene for this dataset could be plotted as six points to construct the replicate point plot. However, with 73,320 genes in this dataset, we would have 439,920 points. In interactive versions of the plot, this would reduce the speed of the funcionality as well as cause overplotting problems. As a result, we use hexagon bins to construct the background of the replicate point plot as is shown in the right side of Figure 1.", style='padding:10px;'),
+    shiny::fluidRow("As a result, each gene for this dataset can be plotted as nine points to construct the litre plot. However, with 73,320 genes in this dataset, we would have 659,880 points. In interactive versions of the plot, this would reduce the speed of the functionality as well as cause overplotting problems. As a result, we use hexagon bins to construct the background of the litre plot as is shown in the right side of Figure 1 shown below.", style='padding:10px;'),
     br(),
-    shiny::fluidRow("This application comes with several input fields as shown on the left side of Figure 1. The user must choose exactly two treatment groups in the 'Treatment Pairs' tab. They must choose an order (increasing or decreasing) in which to scroll through genes by a metric of choice. We see in Figure 1 that the user chose to superimpose the genes by increasing order of FDR values between S1 and S2.", style='padding:10px;'),
+    shiny::fluidRow("This application comes with several input fields as is shown on the left side of Figure 1. The user must choose exactly two treatment groups in the 'Treatment Pairs' tab. They must choose an order (increasing or decreasing) in which to scroll through genes by a metric of choice. We see in Figure 1 that the user chose to superimpose the genes by increasing order of FDR values between S1 and S2.", style='padding:10px;'),
     br(),
-    shiny::fluidRow("Upon making these decisions, the user can then select the 'Plot gene!' button to superimpose each gene one by one onto the replicate point plot. In Figure 1, we see this as six orange points that show high values for S2 and low values for S1. This gene is also superimposed as an orange parallel coordinate line on top of a box plot as shown in Figure 2. Moreover, the gene ID and its metric values are output as shown in Figure 3. We can determine that the gene we are viewing ranks third by our metric and order parameters. This  means the user has hit the 'Plot gene!' button three times now for this set of parameters and that this gene has the third lowest FDR value between S1 and S2 for this dataset.", style='padding:10px;'),
-    
+    shiny::fluidRow("Upon making these decisions, the user can then select the 'Plot gene!' button to superimpose each gene one by one onto the litre plot. In Figure 1, we see this as nine orange points that show high values for S2 and low values for S1. This gene is also superimposed as an orange parallel coordinate line on top of a box plot as shown in Figure 2. Moreover, the gene ID and its metric values are output as shown in Figure 3. We can determine that the gene we are viewing ranks third by our metric and order parameters. This  means the user has hit the 'Plot gene!' button three times now for this set of parameters and that this gene has the third lowest FDR value between S1 and S2 for this dataset.", style='padding:10px;'),
+    br(),
+    shiny::fluidRow("Go ahead and test this application by switching to the 'Application' tab on the left side of the screen. The data you can interactively examine in that application include the 2009 significant genes (FDR<0.05) from Cluster 2 in the iron metabolism soybean RNA-seq dataset.", style='padding:10px;'),
     br(),
     br(),
     div(p('Figure 1'), style="text-align: center;"),
@@ -271,7 +275,7 @@ server <- function(input, output, session) {
     y: drawLines,
     mode: 'lines',
     line: {
-    color: '#00BF7D',
+    color: '#A3A500',
     width: 2
     },
     opacity: 0.9,
