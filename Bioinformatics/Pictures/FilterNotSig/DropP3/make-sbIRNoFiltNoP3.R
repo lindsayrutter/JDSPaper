@@ -27,7 +27,7 @@ filterLow = which(rowSums(data[,-1])<=ncol(data[,-1])/2)
 filt1 <- data[filterLow,]
 rownames_filt1 <- filt1$ID
 filt1 <- filt1[,-1]
-filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
+filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2)/5, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
 rownames(filt1) <- rownames_filt1
 
 data <- data[-filterLow,]
@@ -40,7 +40,7 @@ cpm.data.new <- cpm(data, TRUE, TRUE)
 data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
-data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
+data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2)/5, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
 rownames(data)=data_Rownames
 data$ID <- data_Rownames
 # Remove the genes with lowest quartile of mean and standard deviation

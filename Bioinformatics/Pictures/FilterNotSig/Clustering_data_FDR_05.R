@@ -81,15 +81,28 @@ fulls <- rbind(dataqps, filts)
 boxDat <- melt(fulls, id.vars="ID")
 colnames(boxDat) <- c("ID", "Sample", "Count")
 
+# File output information
+plotName = "N_P"
+outDir = "Clustering_data_FDR_05"
+
+# Plot five streak genes onto boxplot
+streakGenes <- c("Glyma.18G057100.Wm82.a2.v1", "Glyma.18G092200.Wm82.a2.v1", "Glyma.09G164000.Wm82.a2.v1","Glyma.08G269900.Wm82.a2.v1", "Glyma.07G079300.Wm82.a2.v1")
+pcpDat <- melt(dataqps[,c(1:7)], id.vars="ID") %>% filter(ID %in% streakGenes)
+colnames(pcpDat) <- c("ID", "Sample", "Count")
+boxDat$Sample <- as.character(boxDat$Sample)
+pcpDat$Sample <- as.character(pcpDat$Sample)
+pStreak = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = "orange") + ylab("Standardized Count") + ggtitle("Streak Genes") + theme(plot.title = element_text(hjust = 0.5))
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_StreakGenes.jpg", sep="")
+jpeg(fileName)
+plot(pStreak)
+invisible(dev.off())
+
 dendo = dataqps # or dataqps? (If do fulls, then have NAs introduced by conversion)
 rownames(dendo) = NULL
 d = dist(as.matrix(dendo))
 hc = hclust(d, method="ward.D")
 
-plotName = "N_P"
-outDir = "Clustering_data_FDR_05"
-
-fileName = paste(getwd(), "/", outDir, "/dendodgram.jpg", sep="")
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_dendogram.jpg", sep="")
 jpeg(fileName)
 plot(hc, main="data Dendogram", xlab=NA, sub=NA)
 invisible(dev.off())
@@ -130,8 +143,12 @@ getPCP <- function(nC){
     scatMatMetrics[["N_P"]]$FDR = 10e-10
     scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
     
-    fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_", i, ".jpg", sep="")
-    plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+    ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+    retP <- ret[[plotName]]
+    fileName = paste(getwd(), "/", outDir, "/", plotName, "_SM_", nC, "_", i, ".jpg", sep="")
+    jpeg(fileName)
+    retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
+    invisible(dev.off())
     
     x$ID = xNames
     
@@ -140,7 +157,7 @@ getPCP <- function(nC){
     boxDat$Sample <- as.character(boxDat$Sample)
     pcpDat$Sample <- as.character(pcpDat$Sample)
     
-    p = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.2) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
+    p = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.2) + ylab("Standardized Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
     
     fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
     jpeg(fileName)
@@ -173,8 +190,7 @@ getPCP <- function(nC){
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
   
-  plot_filtered = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[1], alpha=0.2) + xlab(paste("Filtered (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
-  
+  plot_filtered = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[1], alpha=0.2) + ylab("Standardized Count") + ggtitle(paste("Filtered Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
   jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_", nC, ".jpg", sep=""), width=1000, height=700)
   # We allow up to 4 plots in each column
   p = do.call("grid.arrange", c(append(plot_clusters, list(plot_filtered)), ncol=ceiling(nC/2)))
@@ -197,18 +213,28 @@ getPCP <- function(nC){
       scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
       scatMatMetrics[["N_P"]]$FDR = 10e-10
       scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-      fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
-      plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+
+      ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+      fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_", nC, "_", i, ".jpg", sep="")
+      jpeg(fileName)
+      ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
+      invisible(dev.off())
       
       xSig$ID = xSigNames
       pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
       colnames(pcpDat) <- c("ID", "Sample", "Count")
       pcpDat$Sample <- as.character(pcpDat$Sample)
       
-      pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.2) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
-      
+      pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.2) + ylab("Standardized Count") + ggtitle(paste("Cluster ", i, " Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
     }else{
       plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+      ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+      fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_", nC, "_", i, ".jpg", sep="")
+      jpeg(fileName)
+      ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
+      invisible(dev.off())
+      
+      pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + ylab("Standardized Count") + ggtitle(paste("Cluster ", i, " Significant Genes (n=0)")) + theme(plot.title = element_text(hjust = 0.5))
     }
     fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", nC, "_", i, ".jpg", sep="")
     jpeg(fileName)

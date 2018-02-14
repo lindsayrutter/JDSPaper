@@ -15,9 +15,10 @@ library(scales)
 library(bigPint)
 
 data("soybean_ir")
-load("../soybean_ir_noFilt_metrics.rda")
+load("soybean_ir_noFiltnoP3_metrics.rda")
 data <- soybean_ir
-metrics <- soybean_ir_noFilt_metrics[["N_P"]]
+data <- data[,-7]
+metrics <- soybean_ir_noFiltnoP3_metrics[["N_P"]]
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -28,7 +29,7 @@ filterLow = which(rowSums(data[,-1])<=ncol(data[,-1])/2)
 filt1 <- data[filterLow,]
 rownames_filt1 <- filt1$ID
 filt1 <- filt1[,-1]
-filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+filt1 = mutate(filt1, mean = (N.1+N.2+N.3+P.1+P.2)/5, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
 rownames(filt1) <- rownames_filt1
 
 data <- data[-filterLow,]
@@ -41,7 +42,7 @@ cpm.data.new <- cpm(data, TRUE, TRUE)
 data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
-data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
+data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2)/5, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2)))
 rownames(data)=data_Rownames
 data$ID <- data_Rownames
 # Remove the genes with lowest quartile of mean and standard deviation
@@ -50,31 +51,31 @@ dataq = subset(data,mean>qT)
 qTs = as.numeric(summary(dataq$stdev)["1st Qu."])
 dataq = subset(dataq,stdev>qTs)
 filt = subset(data,mean<=qT|stdev<=qTs)
-filt <- rbind(filt[,-9], filt1)
+filt <- rbind(filt[,-8], filt1)
 filt$ID <- rownames(filt)
 
 # Apply Loess model and further filter low gene counts
 model = loess(mean ~ stdev, data=dataq)
 dataqp = dataq[which(sign(model$residuals) == 1),]
 dataqn = dataq[which(sign(model$residuals) == -1),]
-dataqp = dataqp[,1:6]
+dataqp = dataqp[,1:5]
 
 #Scale filter data
-filt = filt[,1:6]
-filt = rbind(filt,dataqn[,1:6])
+filt = filt[,1:5]
+filt = rbind(filt,dataqn[,1:5])
 
-dataqps <- t(apply(as.matrix(dataqp[,1:6]), 1, scale))
-filts <- t(apply(as.matrix(filt[,1:6]), 1, scale))
+dataqps <- t(apply(as.matrix(dataqp[,1:5]), 1, scale))
+filts <- t(apply(as.matrix(filt[,1:5]), 1, scale))
 dataqps <- as.data.frame(dataqps)
-colnames(dataqps) <- colnames(dataqp[,1:6])
+colnames(dataqps) <- colnames(dataqp[,1:5])
 dataqps$ID <- rownames(dataqps)
 filts <- as.data.frame(filts)
-colnames(filts) <- colnames(filt[,1:6])
+colnames(filts) <- colnames(filt[,1:5])
 filts$ID <- rownames(filts)
 # Indices of the 9760 NAN rows. They had stdev=0 in the filt data
 nID <- which(is.nan(filts$N.1))
 # Set these filtered values that have all same values for samples to 0
-filts[nID,1:6] <- 0
+filts[nID,1:5] <- 0
 
 # Comine the filtered and remaining data
 fulls <- rbind(dataqps, filts)
@@ -89,7 +90,7 @@ hc = hclust(d, method="ward.D")
 plotName = "N_P"
 outDir = "Clustering_data_FDR_05"
 
-fileName = paste(getwd(), "/", outDir, "/dendodgram.jpg", sep="")
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_dendodgram.jpg", sep="")
 jpeg(fileName)
 plot(hc, main="data Dendogram", xlab=NA, sub=NA)
 invisible(dev.off())
@@ -105,8 +106,8 @@ getPCP <- function(nC){
   colList = scales::hue_pal()(nC+1)
   k = cutree(hc, k=nC)
   
-  yMin = min(dataqps[,1:6])
-  yMax = max(dataqps[,1:6])
+  yMin = min(dataqps[,1:5])
+  yMax = max(dataqps[,1:5])
   
   ###########################
   
@@ -130,12 +131,12 @@ getPCP <- function(nC){
     scatMatMetrics[["N_P"]]$FDR = 10e-10
     scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
     
-    fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_", i, ".jpg", sep="")
+    fileName = paste(getwd(), "/", outDir, "/", plotName, "_SM_", nC, "_", i, ".jpg", sep="")
     plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
     
     x$ID = xNames
     
-    pcpDat <- melt(x[,c(1:7)], id.vars="ID")
+    pcpDat <- melt(x[,c(1:6)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")
     boxDat$Sample <- as.character(boxDat$Sample)
     pcpDat$Sample <- as.character(pcpDat$Sample)
@@ -162,14 +163,14 @@ getPCP <- function(nC){
     geom_boxplot(outlier.shape=NA, aes(fill=Cluster), alpha = 0.3) +
     geom_point(aes(fill=Cluster), shape=21, position=position_jitter(width=0.3), alpha=0.1) +
     scale_fill_manual(values=colList[c(2:length(colList), 1)])
-  jpeg(file = paste(getwd(), "/", outDir, "/boxplot_", nC, ".jpg", sep=""), width=1000, height=700)
+  jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_boxplot_", nC, ".jpg", sep=""), width=1000, height=700)
   ggBP
   invisible(dev.off())
   
   filts$ID = xNames
-  colnames(filts)[1:6] = colnames(dataqps)[1:6]
+  colnames(filts)[1:5] = colnames(dataqps)[1:5]
   
-  pcpDat <- melt(filts[,c(1:7)], id.vars="ID")
+  pcpDat <- melt(filts[,c(1:6)], id.vars="ID")
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
   
@@ -190,18 +191,18 @@ getPCP <- function(nC){
     xSig = x[which(rownames(x) %in% sigID),]
     xSigNames = rownames(xSig)
     nGenes = nrow(xSig)
-    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
+    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/",  plotName, "_Sig_", nC, "_", i, ".Rds"))
     
     if (nrow(xSig)>0){
       scatMatMetrics = list()
       scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
       scatMatMetrics[["N_P"]]$FDR = 10e-10
       scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-      fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
+      fileName = paste(getwd(), "/", outDir, "/", plotName, "_SM_Sig_", nC, "_", i, ".jpg", sep="")
       plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
       
       xSig$ID = xSigNames
-      pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
+      pcpDat <- melt(xSig[,c(1:6)], id.vars="ID")
       colnames(pcpDat) <- c("ID", "Sample", "Count")
       pcpDat$Sample <- as.character(pcpDat$Sample)
       
@@ -223,6 +224,6 @@ getPCP <- function(nC){
   invisible(dev.off())
 }
 
-for (i in 2:5){
+for (i in 3:4){
   getPCP(i)
 }
