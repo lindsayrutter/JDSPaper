@@ -1,10 +1,9 @@
 library(bigPint)
 
-ID <- readRDS("../../Bioinformatics/Pictures/Clustering_data/FocusOn/Sig_4_2.Rds")
-load("soybean_ir_metrics.rda")
+ID <- readRDS("../../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/Sig_4_2.Rds")
+load("../../Bioinformatics/Pictures/FilterNotSig/soybean_ir_noFilt_metrics.rda")
 
-allMetrics = soybean_ir_metrics[["N_P"]]
-#allMetrics$PValue = 1
+allMetrics = soybean_ir_noFilt_metrics[["N_P"]]
 
 metricsCluster <- allMetrics[which(allMetrics$ID %in% ID),]
 metricsCluster$ID <- as.character(metricsCluster$ID)

@@ -116,6 +116,7 @@ getPCP <- function(nC){
   
   set.seed(1)
   colList = scales::hue_pal()(nC+1)
+  colList = colList[c(1,3,2,5,4)]
   k = cutree(hc, k=nC)
   
   yMin = min(dataqps[,1:6])
@@ -143,12 +144,12 @@ getPCP <- function(nC){
     scatMatMetrics[["N_P"]]$FDR = 10e-10
     scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
     
-    ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
-    retP <- ret[[plotName]]
-    fileName = paste(getwd(), "/", outDir, "/", plotName, "_SM_", nC, "_", i, ".jpg", sep="")
-    jpeg(fileName)
-    retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
-    invisible(dev.off())
+    # ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+    # retP <- ret[[plotName]]
+    # fileName = paste(getwd(), "/", outDir, "/", plotName, "_SM_", nC, "_", i, ".jpg", sep="")
+    # jpeg(fileName)
+    # retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5))
+    # invisible(dev.off())
     
     x$ID = xNames
     
