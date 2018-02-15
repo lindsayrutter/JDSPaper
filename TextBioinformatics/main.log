@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  6 FEB 2018 20:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 FEB 2018 01:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,36 +514,30 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 
 [5 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png> </Users/lindz/
 JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=44, 448.5558pt x 
-412.4208pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
-pe png)
- <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.p
-ng used on input line 155.
-(pdftex.def)             Requested size: 234.0pt x 215.15228pt.
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre4LB.png, id=
+44, 782.925pt x 878.8032pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre4LB.png
+ Graphic file (type png)
 
-Underfull \hbox (badness 4429) in paragraph at lines 160--161
-\LY1/ptm/m/n/8 and the interactive replicate point plot for the cotyledon data
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre4LB.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlo
+ts/N_P/litre4LB.png used on input line 155.
+(pdftex.def)             Requested size: 234.0pt x 262.6507pt.
+
+Overfull \hbox (34.89433pt too wide) in paragraph at lines 160--161
+\LY1/ptm/m/n/8 (Figure 8[]C and D) is available at https://rnaseqvisualization.
+shinyapps.io/litrecluster3.
  []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 160--161
-\LY1/ptm/m/n/8 after the samples were swapped (Figure 8[]C and D) is available
- []
-
-
-Underfull \hbox (badness 1152) in paragraph at lines 160--161
-\LY1/ptm/m/n/8 at https://rnaseqvisualization.shinyapps.io/repPointSwitch. As c
-an be
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
+[6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre4LB.png>]
 </Users/lindz/JDSPaper/clusters.png, id=49, 525.6438pt x 785.334pt>
 File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
 
@@ -621,13 +615,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3749 strings out of 492995
- 49139 string characters out of 6132704
- 117634 words of memory out of 5000000
+ 3750 strings out of 492995
+ 49270 string characters out of 6132704
+ 118633 words of memory out of 5000000
  7192 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,11n,28p,1473b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,28p,1443b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -639,7 +633,7 @@ ist/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (8 pages, 4005636 bytes).
+Output written on main.pdf (8 pages, 4456290 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
