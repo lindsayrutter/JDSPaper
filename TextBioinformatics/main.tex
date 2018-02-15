@@ -141,11 +141,26 @@ However, one streak structure in the bottom right scatterplot stands out. A smal
 
 Discussion with the authors of the study revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have observed this interesting structure or derived this post-hoc hypothesis from any models.
 
+Interestingly, we can see a similar finding by running a hierarchical clustering analysis with a cluster size of four on the data and visualizing the results as parallel coordinate plots (see Figure~\ref{clusterPCP4}). The two largest clusters (Clusters 1 and 2) show general patterns of genes that are over-expressed in one group and underexpressed in the other group. The smallest cluster (Cluster 4) shows a messy pattern with very low signal to noise ratio. However, the third largest cluster (Cluster 3) shows a pattern with large values for the iron-deficient replicates and small values for the iron-sufficient replicates, except for the third iron-sufficient replicate being unexpectedly large. 
+
+
+\begin{figure}[!tpb]
+\centerline{\includegraphics[width=\columnwidth]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_4.jpg}}
+\caption{Caption
+\label{clusterPCP4}}
+\end{figure}
+
+\begin{figure}[!tpb]
+\centerline{\includegraphics[width=\columnwidth]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_4.jpg}}
+\caption{Caption
+\label{clusterPCP4Sig}}
+\end{figure}
+
 \section{Litre plots}
 
 We demonstrated how to view differentially expressed genes onto the Cartesian coordinates of the scatterplot matrix in Figure~\ref{scatPCP}. Unfortunately, this figure becomes limited when we investigate treatment groups that contain a large number of replicates because we then have too many small scatterplots for it to remain an effective visualization tool. Moreover, researchers could benefit from additional plotting tools that allow them to quickly verify individual differentially expressed genes returned from a model. As a result, we developed a plot that allows users to visualize \textit{one} differentially expressed gene of interest onto the Cartesian coordinates of \textit{one} scatterplot matrix.
 
-The ``replicate line plot" was developed by a group of researchers who demonstrated it could detect model scaling problems in microarray data \citep{Cook}. Unfortunately, this plot was only applicable on datasets where treatment groups contain exactly two replicates. The plot we now introduce is an extension of the ``replicate line plot" that can be applied to datasets with two or more replicates. We call this new plot a ``litre plot".
+The ``replicate line plot" was developed by a group of researchers who demonstrated it could detect model scaling problems in microarray data \citep{Cook}. Unfortunately, this plot is only applicable on datasets where treatment groups contain exactly two replicates. The plot we now introduce is an extension of the ``replicate line plot" that can be applied to datasets with two or more replicates. We call this new plot a ``litre plot".
 
 In the litre plot, each gene is plotted once for each possible combination of replicates between treatment groups. For example, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatment group in the soybean iron-metabolism dataset (N.1 and P.1, N.1 and P.2, N.1 and P.3, N.2 and P.1, N.2. and P.2, N.2 and P.3, N.3 and P.1, N.3 and P.2, and N.3 and P.3). Hence, a given gene from this dataset is plotted as nine points in the litre plot. With 56,044 genes in this dataset, we would need to plot 504,396 points. This would reduce the speed of interactive functionality as well as cause overplotting problems. As a result, we again use hexagon bins to summarize this massive information (Figure~\ref{repDot} shows four example litre plots).
 
