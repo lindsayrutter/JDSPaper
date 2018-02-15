@@ -5,6 +5,6 @@ account: rnaseqvisualization
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 226280
-bundleId: 1125153
+bundleId: 1223859
 url: https://rnaseqvisualization.shinyapps.io/scatmat/
-when: 1512855924.88095
+when: 1518662489.41106

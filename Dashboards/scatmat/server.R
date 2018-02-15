@@ -17,15 +17,9 @@ library(Hmisc)
 load("soybean_cn.rda")
 data <- soybean_cn
 data <- data[,c(1:7)]
-#data("soybean_cn_metrics")
-#metrics <- soybean_cn_metrics
 datCol <- colnames(data)[-which(colnames(data) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 rm(soybean_cn)
-#metrics[[1]] <- metrics[[1]][which(metrics[[1]]$PValue<0.01),]
-#metrics[[1]] <- metrics[[1]][which(metrics[[1]]$ID %in% data$ID),]
-#data = data[which(data$ID %in% metrics[[1]]$ID),]
-#myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
 values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 
 server <- function(input, output, session) {
@@ -163,11 +157,8 @@ ggPS2
   pcpDat <- reactive(data[which(data$ID %in% selID()), c(1:7)])
   output$selectedValues <- renderPrint({pcpDat()$ID})
   colNms <- colnames(data[, c(2:7)])
-  print(c('colNms', colNms))
-  
+
   boxDat <- data[, c(1:7)] %>% gather(Sample, Count, -c(ID))
-  print(c('boxDat', str(boxDat)))
-  #colnames(boxDat) <- c("ID", "Sample", "Count")
   BP <- ggplot(boxDat, aes(x = Sample, y = Count)) + geom_boxplot()
   ggBP <- ggplotly(BP, width=700)
   

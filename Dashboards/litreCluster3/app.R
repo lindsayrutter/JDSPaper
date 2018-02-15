@@ -8,7 +8,6 @@ library(tidyr)
 library(data.table)
 library(RColorBrewer)
 library(Hmisc)
-library(bigPint)
 library(shinycssloaders)
 
 options(spinner.color.background="#F5F5F5")
@@ -19,9 +18,7 @@ dat <- dat[,1:7]
 dat[,-1] <- log(dat[,-1]+1)
 datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
-load("cluster2_metrics.rda")
-#metrics <- soybean_cn_metrics
-#dat = dat[which(dat$ID %in% metrics[[1]]$ID),]
+load("cluster3_metrics.rda")
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
 values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 
@@ -47,7 +44,7 @@ body <- dashboardBody(
            numericInput("pointSize", "Point size:", value = 8, min = 1),
            actionButton("goButton", "Plot gene!"))),
         column(width = 8,
-           box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
+           box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Replicate point plot", status = "primary", solidHeader = TRUE))),
     
       fluidRow(
         column(width = 12,
@@ -56,17 +53,12 @@ body <- dashboardBody(
       fluidRow(
         column(width = 12,
                box(width = NULL, verbatimTextOutput("info1"), verbatimTextOutput("info2"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
-  
-  shinydashboard::tabItem(tabName = "about",
-    shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a litre plot. In the litre plot, each gene is plotted once for every combination of replicate pairs between treatment groups. The data we use for the examples shown below contains two treatments (S1 and S2), each with three replicates. Hence, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, S1.2 and S2.3, and S1.3 and S2.1, S1.3 and S2.2, and S1.3 and S2.3).", style='padding:10px;'),
-    br(),
+    shinydashboard::tabItem(tabName = "about",
+    shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a litre plot. In the litre plot, each gene is plotted once for every combination of replicate pairs between treatment groups. The data we use for the examples below are published RNA-seq data of soybean developmental stages (Brown and Hudson, 2015). They contain two treatments (S1 and S2), each with three replicates. Hence, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, S1.2 and S2.3, and S1.3 and S2.1, S1.3 and S2.2, and S1.3 and S2.3).", style='padding:10px;'),
     shiny::fluidRow("As a result, each gene for this dataset can be plotted as nine points to construct the litre plot. However, with 73,320 genes in this dataset, we would have 659,880 points. In interactive versions of the plot, this would reduce the speed of the functionality as well as cause overplotting problems. As a result, we use hexagon bins to construct the background of the litre plot as is shown in the right side of Figure 1 shown below.", style='padding:10px;'),
-    br(),
     shiny::fluidRow("This application comes with several input fields as is shown on the left side of Figure 1. The user must choose exactly two treatment groups in the 'Treatment Pairs' tab. They must choose an order (increasing or decreasing) in which to scroll through genes by a metric of choice. We see in Figure 1 that the user chose to superimpose the genes by increasing order of FDR values between S1 and S2.", style='padding:10px;'),
-    br(),
     shiny::fluidRow("Upon making these decisions, the user can then select the 'Plot gene!' button to superimpose each gene one by one onto the litre plot. In Figure 1, we see this as nine orange points that show high values for S2 and low values for S1. This gene is also superimposed as an orange parallel coordinate line on top of a box plot as shown in Figure 2. Moreover, the gene ID and its metric values are output as shown in Figure 3. We can determine that the gene we are viewing ranks third by our metric and order parameters. This  means the user has hit the 'Plot gene!' button three times now for this set of parameters and that this gene has the third lowest FDR value between S1 and S2 for this dataset.", style='padding:10px;'),
-    br(),
-    shiny::fluidRow("Go ahead and test this application by switching to the 'Application' tab on the left side of the screen. The data you can interactively examine in that application include the 2009 significant genes (FDR<0.05) from Cluster 2 in the iron metabolism soybean RNA-seq dataset.", style='padding:10px;'),
+    shiny::fluidRow("Go ahead and test this application by switching to the 'Application' tab on the left side of the screen. The data you can interactively examine in that application include the 861 significant genes (FDR<0.05) from Cluster 3 in a publicly available RNA-seq dataset related to iron metabolism in soybeans (Lauter et al., 2014).", style='padding:10px;'),
     br(),
     br(),
     div(p('Figure 1'), style="text-align: center;"),
@@ -78,15 +70,18 @@ body <- dashboardBody(
     br(),
     br(),
     div(p('Figure 3'), style="text-align: center;"),
-    div(img(src='Figure3.png', style="width: 75%; height: 75%"), style="text-align: center;")
-  )))
-  
+    div(img(src='Figure3.png', style="width: 75%; height: 75%"), style="text-align: center;"), 
+    br(),
+    shiny::fluidRow("1. Brown, A.V. and Hudson, K.A. (2015) Developmental profiling of gene expression in soybean trifoliate leaves and cotyledons.", em(" BMC Plant Biology, "), strong("15"), ", 169.", style='padding:10px;'), 
+    shiny::fluidRow("2. Moran Lauter, A.N., Peiffer, G.A., Yin, T., Whitham, S.A., Cook, D., and Shoemaker, R.C. (2014) Identification of candidate genes involved in early iron deficiency chlorosis signaling in soybean (glycine max) roots and leaves.", em(" BMC Genomics, "), strong("15"), ", 1-25.", style='padding:10px;')
+    )))
+
 ui <- shinydashboard::dashboardPage(
   shinydashboard::dashboardHeader(title = "Overlaying genes", titleWidth = 180),
   sidebar,
   body
-)
-
+)    
+    
 server <- function(input, output, session) {
   
   observeEvent(input$goButton, values$x <- values$x + 1)
@@ -195,7 +190,7 @@ server <- function(input, output, session) {
    y: drawPoints.geneY,
    mode: 'markers',
    marker: {
-   color: '#A3A500',
+   color: '#E76BF3',
    size: drawPoints.pointSize
    },
    hoverinfo: 'none',
@@ -275,7 +270,7 @@ server <- function(input, output, session) {
     y: drawLines,
     mode: 'lines',
     line: {
-    color: '#A3A500',
+    color: '#E76BF3',
     width: 2
     },
     opacity: 0.9,
