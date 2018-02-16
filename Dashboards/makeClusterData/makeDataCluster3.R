@@ -1,6 +1,6 @@
 library(bigPint)
 
-ID <- readRDS("../../Bioinformatics/Pictures/Clustering_data/FocusOn/Sig_4_3.Rds")
+ID <- readRDS("../../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/Sig_4_3.Rds")
 load("../../Bioinformatics/Pictures/FilterNotSig/soybean_ir_noFilt_metrics.rda")
 
 allMetrics = soybean_ir_noFilt_metrics[["N_P"]]
