@@ -23,17 +23,13 @@ $^{\text{\sf 3}}$Econometrics and Business Statistics, Monash University, Clayto
 
 \abstract{\textbf{Motivation:} It was initially claimed that RNA-seq produced unbiased data that did not require sophisticated normalization. However, studies have since revealed that RNA-seq data is biased and that accurate detection of differentially expressed genes is not a trivial task. In light of these findings, researchers should analyze RNA-seq data like they would any other biased multivariate data. The most effective approach to modern data analysis is to iterate between models and visuals, and to enhance the appropriateness of models based on feedback from visuals. Unfortunately, researchers do not often use models and visuals in a complimentary fashion when analyzing RNA-seq data. \\
 \textbf{Results:} We use real RNA-seq data to show that our visualization tools can detect normalization problems, DEG designation problems, and common errors in RNA-seq analysis. We also show that our tools can identify genes of interest that cannot be obtained by models. In this paper, we do not propose that users radically change their approach to RNA-seq analysis. Instead, we propose that users simply modify their approach to RNA-seq analysis by assessing the sensibility of their models with multivariate statistical graphics. \\
-\textbf{Availability:} Interactive versions of graphics are available at https://shinyapps.io, as specified in the paper.\\
+\textbf{Availability:} Interactive versions of graphics are available at https://www.shinyapps.io/, as specified in the paper.\\
 \textbf{Contact:} \href{lrutter@iastate.edu}{lrutter@iastate.edu}\\
 \textbf{Supplementary information:} Supplementary data are available at \textit{Bioinformatics} online.}
 
 \maketitle
 
 \section{Introduction}
-
-% Figure~\ref{fig:01}
-% \citep{Bag01}
-% (citealtp{ref1}; citealtp{ref2}; citealtp{ref3}) 
 
 RNA-sequencing (RNA-seq) uses next-generation sequencing (NGS) to estimate the quantity of RNA in biological samples at given timepoints. In recent years, decreasing cost and increasing throughput has rendered RNA-seq an attractive alternative to transcriptome profiling. Prior to RNA-seq, gene expression studies were performed with microarray techniques, which required prior knowledge of reference sequences. RNA-seq does not have this limitation, and has enabled a new range of applications such as transcriptome de novo assembly \citep{Robertson} and detection of alternative splicing processes \citep{Anders2012, Pan}. Coupled with its high resolution and sensitivity, RNA-seq will likely revolutionize our understanding of the intricacies of eukaryotic transcriptomes \citep{Wang, Zhao}.
 
@@ -61,18 +57,12 @@ Figure~\ref{2group} exemplifies this problem for two simulated datasets, one dis
 
 Despite this, we immediately see from the parallel coordinate plots on the bottom of the figure that the left and right datasets have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction using the side-by-side boxplots or the MDS plots because they only provide data summarization at the sample resolution, while the parallel coordinate plots show the sample connections for each of the 50 genes.
 
-We will now examine one concrete use of parallel coordinate plots using data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) versus iron-deficient (group N) soil conditions \citep{Lauter}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, and visualized the results using parallel coordinate plots (see Figure~\ref{clusterPCP4}). The two largest clusters (Clusters 1 and 2) capture genes that are highly expressed in one group and underexpressed in the other group. The smallest cluster (Cluster 4) shows a messy pattern with low signal to noise ratio. Interestingly, the genes in the remaining cluster (Cluster 3) show a pattern similar to Cluster 2, with large values for group N and small values for group P, except for unexpectedly large values for the third replicate of group P. 
+We will now examine one concrete use of parallel coordinate plots using data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) versus iron-deficient (group N) soil conditions \citep{Lauter}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, and visualized the results using parallel coordinate plots (see Supplementary Figure 1). The two largest clusters (Clusters 1 and 2) capture genes that are highly expressed in one group and underexpressed in the other group. The smallest cluster (Cluster 4) shows a messy pattern with low signal to noise ratio. Interestingly, the genes in the remaining cluster (Cluster 3) show a pattern similar to Cluster 2, with large values for group N and small values for group P, except for unexpectedly large values for the third replicate of group P. 
 
 We then only plotted the significant genes within these four clusters (Figure~\ref{clusterPCP4Sig}). The majority of significant genes were in Clusters 1 and 2, which more cleanly captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Cluster 4 showed only a handful of significant genes. However, Cluster 3 contained a fairly large number of genes (n=861) that mostly showed fairly clean differential expression profiles, except for the third replicate of group P.
 
 %%%%%%%%%%%%%%% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%
 Discussion with the authors of the study revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have likely seen this pattern and derived this post-hoc hypothesis from any models.
-
-\begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NP4.jpg}}
-\caption{Caption
-\label{clusterPCP4}}
-\end{figure}
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{/Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg}}
