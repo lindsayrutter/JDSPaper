@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -192,6 +192,17 @@ _FDR_05/N_P_Sig_SM_4_4.jpg>
 Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNo
 tSig/Clustering_data_FDR_05/N_P_Sig_SM_4_4.jpg used on input line 36.
 (pdftex.def)             Requested size: 345.0pt x 345.00758pt.
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png
+, id=6, 849.8952pt x 1164.0288pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litreCluster
+1.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litreCluster1
+.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlo
+ts/N_P/litreCluster1.png used on input line 42.
+(pdftex.def)             Requested size: 241.49895pt x 330.757pt.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 </Us
@@ -201,24 +212,24 @@ g_data_FDR_05/N_P_Sig_SM_4_1.jpg>] [4 </Users/lindz/JDSPaper/Bioinformatics/Pic
 tures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_2.jpg>] [5 </Users/lindz
 /JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_S
 M_4_3.jpg>] [6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clus
-tering_data_FDR_05/N_P_Sig_SM_4_4.jpg>]
-(./supp.aux) ) 
+tering_data_FDR_05/N_P_Sig_SM_4_4.jpg>] [7 </Users/lindz/JDSPaper/Bioinformatic
+s/Pictures/litrePlots/N_P/litreCluster1.png>] (./supp.aux) ) 
 Here is how much of TeX's memory you used:
- 1516 strings out of 492995
- 23666 string characters out of 6132704
- 79201 words of memory out of 5000000
- 5073 multiletter control sequences out of 15000+600000
+ 1524 strings out of 492995
+ 24094 string characters out of 6132704
+ 81209 words of memory out of 5000000
+ 5078 multiletter control sequences out of 15000+600000
  6675 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,25p,270b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r17.pfb>
-Output written on supp.pdf (6 pages, 762617 bytes).
+ 39i,6n,25p,795b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on supp.pdf (7 pages, 1742752 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 48 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
