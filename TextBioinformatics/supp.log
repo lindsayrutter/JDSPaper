@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -182,6 +182,10 @@ Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNo
 tSig/Clustering_data_FDR_05/N_P_Sig_SM_4_3.jpg used on input line 30.
 (pdftex.def)             Requested size: 345.0pt x 345.00758pt.
 
+
+LaTeX Warning: Float too large for page by 10.95203pt on input line 33.
+
+
 </Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR
 _05/N_P_Sig_SM_4_4.jpg, id=5, 702.625pt x 702.625pt>
 File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clustering_dat
@@ -215,21 +219,22 @@ M_4_3.jpg>] [6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clus
 tering_data_FDR_05/N_P_Sig_SM_4_4.jpg>] [7 </Users/lindz/JDSPaper/Bioinformatic
 s/Pictures/litrePlots/N_P/litreCluster1.png>] (./supp.aux) ) 
 Here is how much of TeX's memory you used:
- 1524 strings out of 492995
- 24094 string characters out of 6132704
- 81209 words of memory out of 5000000
- 5078 multiletter control sequences out of 15000+600000
- 6675 words of font info for 24 fonts, out of 8000000 for 9000
+ 1526 strings out of 492995
+ 24115 string characters out of 6132704
+ 89560 words of memory out of 5000000
+ 5079 multiletter control sequences out of 15000+600000
+ 7021 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,25p,795b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,6n,25p,1425b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on supp.pdf (7 pages, 1742752 bytes).
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on supp.pdf (7 pages, 1758801 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
