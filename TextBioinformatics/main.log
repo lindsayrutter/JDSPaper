@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 FEB 2018 22:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 FEB 2018 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,7 +564,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `LY1/ptm/b/n' tried instead on input line 201.
 
-Underfull \hbox (badness 2020) in paragraph at lines 268--269
+Underfull \hbox (badness 2020) in paragraph at lines 271--272
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
@@ -624,11 +624,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  3750 strings out of 492995
  49551 string characters out of 6132704
- 132015 words of memory out of 5000000
+ 132051 words of memory out of 5000000
  7192 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,10n,28p,1296b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,10n,28p,1281b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -640,7 +640,7 @@ ist/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on main.pdf (8 pages, 4011451 bytes).
+Output written on main.pdf (8 pages, 4011470 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream

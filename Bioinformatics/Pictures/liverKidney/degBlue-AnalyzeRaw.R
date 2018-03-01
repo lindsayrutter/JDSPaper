@@ -16,6 +16,17 @@ outDir = "DEG-raw"
 
 # Obtain R1 values
 data <- data[,c(1:4,7:9)]
+colnames(data) <- c("ID", "K.1", "K.2", "K.3", "L.1", "L.2", "L.3")
+png(filename=paste0(outDir = getwd(), "/", outDir,"/mds.jpg"))
+plotMDS(data[,-1])
+dev.off()
+data[,c(2:ncol(data))] = log(data[,c(2:ncol(data))]+1)
+plotScatterStatic(data, outDir = outDir)
+boxSel = data[,-1] %>% gather(Sample,Count)
+bPlot = ggplot(boxSel, aes(x=Sample, y=Count)) + geom_boxplot()
+png(filename=paste0(outDir = outDir,"/boxplot.jpg"))
+bPlot
+dev.off()
 
 ############# Get DEGs ############# 
 rowNames = data[,1]
@@ -42,9 +53,9 @@ rlogData2 <- cbind(ID = data$ID, rlogData)
 rlogData2$ID <- as.character(rlogData2$ID)
 
 # There are 40 points that intersect all blue points and union all red points from all 15 subplots
-redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
+redBluePoints <- plotDEG(data=logData, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
 redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Red")])
-plotDEG(rlogData2, lineList = redBluePoints, lineSize=0.5, lineColor = "red", outDir=outDir, option ="parallelCoord") # Change name to K_L_deg_pcp_0.05_RED.jpg
+plotDEG(logData, lineList = redBluePoints, lineSize=0.5, lineColor = "red", outDir=outDir, option ="parallelCoord") # Change name to K_L_deg_pcp_0.05_RED.jpg
 
 redBluePoints <- plotDEG(data=rlogData2, dataMetrics=metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250, piLevel=0.95)
 redBluePoints[["K_L"]] <- as.character(redBluePoints[["K_L"]]$ID[which(redBluePoints[["K_L"]]$Color=="Blue")])

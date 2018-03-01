@@ -13,6 +13,7 @@ outDir = "DEG-raw"
 
 # Obtain R1 values
 data <- data[,c(1:4,7:9)]
+colnames(data) <- c("ID", "K.1", "K.2", "K.3", "L.1", "L.2", "L.3")
 
 ############# Get DEGs ############# 
 rowNames = data[,1]
@@ -24,7 +25,6 @@ design <- model.matrix(~group)
 y <- estimateDisp(y, design)
 fit <- glmFit(y,design)
 lrt <- glmLRT(fit,coef=2)
-
 ret = data.frame(ID=rownames(dataSel), lrt[[14]])
 ret$ID = as.character(ret$ID)
 ret = as.data.frame(ret)
@@ -33,37 +33,14 @@ metricList[["K_L"]] = ret
 
 ############# Create DEG plots #############
 logData <- data
-rlogData <- rlog(as.matrix(logData[,2:7]))
-rlogData <- as.data.frame(rlogData)
-rlogData2 <- cbind(ID = data$ID, rlogData)
-rlogData2$ID <- as.character(rlogData2$ID)
-plotDEG(rlogData2, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
-
-
-
-# used for all except PI plots
-#logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
-
-#358 DEGs here
-plotDEG(logData, metricList, outDir=outDir, threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="volcano", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=2)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=1)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=0.5)
+logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
 plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="parallelCoord", threshVar="PValue", threshVal=1e-250)
-
-#NEW
-for (nC in c(1:6)){plotClusters(data=logData, dataMetrics = metricList, nC=nC , threshVar = "PValue", threshVal = 1e-250, outDir=outDir)}
-
-#Permutations
-plotPermutations(data, nPerm = 10, topThresh = 100, outDir = outDir)
-outDir = "DEG-raw/log"
-plotPermutations(logData, nPerm = 10, topThresh = 100, outDir = outDir)
 
 # Statistics
 length(which(lrt[[14]]$PValue<0.1/73320)) # 7040 had p-value <0.1/73320
 length(which(lrt[[14]]$PValue<0.05/73320)) # 6870 had p-value <0.05/73320
 length(which(lrt[[14]]$PValue<0.01/73320)) # 6491 had p-value <0.01/73320
 length(which(lrt[[14]]$PValue<1e-250)) # 358 had p-value <1e-250 (most of these are pretty much 0 and cannot be ordered)
+
+
+
