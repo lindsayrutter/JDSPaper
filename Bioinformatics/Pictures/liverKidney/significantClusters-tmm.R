@@ -47,6 +47,10 @@ metricList[["K_L"]] = ret
 metrics <- metricList[["K_L"]]
 
 sigMets = metrics[which(metrics$FDR<0.001),]
+sigID = sigMets$ID
+origSig = origData[which(origData$ID %in% sigID),]
+
+
 sigL <- sigMets[which(sigMets$logFC<0),]
 sigK <- sigMets[which(sigMets$logFC>0),]
 
@@ -92,9 +96,8 @@ logSoy[,-1] <- log(origData[,-1]+1)
 
 #####################################################
 
-set.seed(1)
-colList = scales::hue_pal()(4)
-colList = colList[c(4,3,2,5,1)]
+colList = c("darkmagenta", "darkgreen")
+Type = c("Liver", "Kidney")
 
 yMin = min(dataqps[,1:6])
 yMax = max(dataqps[,1:6])
@@ -119,7 +122,7 @@ plot_clustersSig = lapply(1:2, function(i){
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
   
-  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[2], alpha=0.05) + ylab("Standardized Count") + ggtitle(paste("Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
+  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.2) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
   
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", i, ".jpg", sep="")
   jpeg(fileName)
@@ -128,7 +131,7 @@ plot_clustersSig = lapply(1:2, function(i){
   pSig
 })
 
-jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_Sig.jpg", sep=""), width=1000, height=700)
+jpeg(file = paste(getwd(), "/", outDir, "/", plotName, "_Sig.jpg", sep=""), width=1300, height=700)
 # We allow up to 4 plots in each column
 p = do.call("grid.arrange", c(plot_clustersSig, ncol=2))
 invisible(dev.off())
