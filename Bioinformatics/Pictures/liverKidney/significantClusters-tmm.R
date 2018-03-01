@@ -49,10 +49,11 @@ metrics <- metricList[["K_L"]]
 sigMets = metrics[which(metrics$FDR<0.001),]
 sigID = sigMets$ID
 origSig = origData[which(origData$ID %in% sigID),]
-
-
-sigL <- sigMets[which(sigMets$logFC<0),]
-sigK <- sigMets[which(sigMets$logFC>0),]
+origSig = mutate(origSig, meanK = (K.1+K.2+K.3)/3, meanL = (L.1+L.2+L.3)/3)
+sigLID = origSig[which(origSig$meanK<origSig$meanL),]$ID
+sigKID = origSig[which(origSig$meanK>origSig$meanL),]$ID
+sigL <- sigMets[which(sigMets$ID %in% sigLID),]
+sigK <- sigMets[which(sigMets$ID %in% sigKID),]
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -122,7 +123,7 @@ plot_clustersSig = lapply(1:2, function(i){
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
   
-  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.2) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
+  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.1) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
   
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", i, ".jpg", sep="")
   jpeg(fileName)
