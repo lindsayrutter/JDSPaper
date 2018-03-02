@@ -1,6 +1,10 @@
 # This is the data from reference 6 of TMM Robinson paper
 
+library(edgeR)
+library(DESeq2)
+library(bigPint)
 library(data.table)
+
 load("LK_data.RData")
 data = as.data.frame(MA.subsetA$M)
 rownames(data) = as.character(MA.subsetA$genes$EnsemblGeneID)
@@ -25,7 +29,7 @@ design <- model.matrix(~group)
 y <- estimateDisp(y, design)
 fit <- glmFit(y,design)
 lrt <- glmLRT(fit,coef=2)
-ret = data.frame(ID=rownames(dataSel), lrt[[14]])
+ret = data.frame(ID=rownames(topTags(lrt, n = nrow(y[[1]]))[[1]]), topTags(lrt, n = nrow(y[[1]]))[[1]])
 ret$ID = as.character(ret$ID)
 ret = as.data.frame(ret)
 metricList = list()
@@ -33,14 +37,44 @@ metricList[["K_L"]] = ret
 
 ############# Create DEG plots #############
 logData <- data
+rownames(logData) <- logData$ID
 logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
-plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
+#plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="FDR", threshVal=0.0001)
+
+ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-3)
+retP <- ret[["K_L"]]
+fileName = paste(getwd(), "/", outDir, "/K_L_PI_1e-3.jpg", sep="")
+jpeg(fileName, height=700, width=700)
+retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-3)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+dev.off()
+
+ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-12)
+retP <- ret[["K_L"]]
+fileName = paste(getwd(), "/", outDir, "/K_L_PI_1e-12.jpg", sep="")
+jpeg(fileName, height=700, width=700)
+retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-12)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+dev.off()
+
+ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-21)
+retP <- ret[["K_L"]]
+fileName = paste(getwd(), "/", outDir, "/K_L_PI_1e-21.jpg", sep="")
+jpeg(fileName, height=700, width=700)
+retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-21)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+dev.off()
+
+ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-39)
+retP <- ret[["K_L"]]
+fileName = paste(getwd(), "/", outDir, "/K_L_PI_1e-39.jpg", sep="")
+jpeg(fileName, height=700, width=700)
+retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-39)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+dev.off()
+
+ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPoints", threshVar = "FDR", threshVal=1e-39, pointSize=0.001)
+retP <- ret[["K_L"]]
+fileName = paste(getwd(), "/", outDir, "/K_L_SM_1e-39_PointSize001.jpg", sep="")
+jpeg(fileName, height=700, width=700)
+retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-39)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+dev.off()
 
 # Statistics
-length(which(lrt[[14]]$PValue<0.1/73320)) # 7040 had p-value <0.1/73320
-length(which(lrt[[14]]$PValue<0.05/73320)) # 6870 had p-value <0.05/73320
-length(which(lrt[[14]]$PValue<0.01/73320)) # 6491 had p-value <0.01/73320
-length(which(lrt[[14]]$PValue<1e-250)) # 358 had p-value <1e-250 (most of these are pretty much 0 and cannot be ordered)
-
-
-
+length(which(ret$FDR<0.001))

@@ -47,13 +47,12 @@ metricList[["K_L"]] = ret
 metrics <- metricList[["K_L"]]
 
 sigMets = metrics[which(metrics$FDR<0.001),]
-sigID = sigMets$ID
-origSig = origData[which(origData$ID %in% sigID),]
-origSig = mutate(origSig, meanK = (K.1+K.2+K.3)/3, meanL = (L.1+L.2+L.3)/3)
-sigLID = origSig[which(origSig$meanK<origSig$meanL),]$ID
-sigKID = origSig[which(origSig$meanK>origSig$meanL),]$ID
-sigL <- sigMets[which(sigMets$ID %in% sigLID),]
-sigK <- sigMets[which(sigMets$ID %in% sigKID),]
+sigL <- sigMets[which(sigMets$logFC<0),]
+sigK <- sigMets[which(sigMets$logFC>0),]
+
+# Check that the number of DEGs + and - is same as sigL and sigK
+# http://seqanswers.com/forums/showthread.php?t=25632
+# summary(decideTestsDGE(lrt, p=0.001, adjust="BH"))
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -62,10 +61,11 @@ RowSD = function(x) {
 data_Rownames <- data$ID
 data = data[,-1]
 rownames(data) <- data_Rownames
-#Normalize and log
+#Normalize and log (This allow standardized medians to be closer to 0)
 cpm.data.new <- cpm(data, TRUE, TRUE)
 # Normalize for sequencing depth and other distributional differences between lanes
 data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
+#data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
 data = mutate(data, mean = (K.1+K.2+K.3+L.1+L.2+L.3)/6, stdev = RowSD(cbind(K.1,K.2,K.3,L.1,L.2,L.3)))
@@ -85,9 +85,9 @@ colnames(boxDat) <- c("ID", "Sample", "Count")
 
 # File output information
 plotName = "K_L"
-outDir = "Clustering_data_FDR_05_TMM"
+outDir = "Clustering_data_FDR_001_TMM"
 
-# Indices of the 9760 NAN rows. They had stdev=0 in the filt data
+# Indices of the 775 NAN rows. They had stdev=0 in the filt data
 nID <- which(is.nan(dataqps$K.1))
 # Set these filtered values that have all same values for samples to 0
 dataqps[nID,1:6] <- 0
@@ -98,7 +98,7 @@ logSoy[,-1] <- log(origData[,-1]+1)
 #####################################################
 
 colList = c("darkmagenta", "darkgreen")
-Type = c("Liver", "Kidney")
+Type = c("Kidney", "Liver")
 
 yMin = min(dataqps[,1:6])
 yMax = max(dataqps[,1:6])

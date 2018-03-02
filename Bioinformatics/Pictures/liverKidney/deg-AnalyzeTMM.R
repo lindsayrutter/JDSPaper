@@ -1,6 +1,10 @@
 # This is the data from reference 6 of TMM Robinson paper
 
+library(edgeR)
+library(DESeq2)
+library(bigPint)
 library(data.table)
+
 load("LK_data.RData")
 data = as.data.frame(MA.subsetA$M)
 rownames(data) = as.character(MA.subsetA$genes$EnsemblGeneID)
@@ -13,6 +17,7 @@ outDir = "DEG-tmm"
 
 # Obtain R1 values
 data <- data[,c(1:4,7:9)]
+colnames(data) <- c("ID", "K.1", "K.2", "K.3", "L.1", "L.2", "L.3")
 
 ############# Get DEGs ############# 
 rowNames = data[,1]
@@ -25,8 +30,7 @@ design <- model.matrix(~group)
 y <- estimateDisp(y, design)
 fit <- glmFit(y,design)
 lrt <- glmLRT(fit,coef=2)
-
-ret = data.frame(ID=rownames(dataSel), lrt[[14]])
+ret = data.frame(ID=rownames(topTags(lrt, n = nrow(y[[1]]))[[1]]), topTags(lrt, n = nrow(y[[1]]))[[1]])
 ret$ID = as.character(ret$ID)
 ret = as.data.frame(ret)
 metricList = list()
@@ -34,38 +38,9 @@ metricList[["K_L"]] = ret
 
 ############# Create DEG plots #############
 logData <- data
-rlogData <- rlog(as.matrix(logData[,2:7]))
-rlogData <- as.data.frame(rlogData)
-rlogData2 <- cbind(ID = data$ID, rlogData)
-rlogData2$ID <- as.character(rlogData2$ID)
-plotDEG(rlogData2, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
-
-
-
-# used for all except PI plots
-#logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
-
-plotDEG(logData, metricList, outDir=outDir, threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="volcano", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=2)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=1)
-plotDEG(logData, metricList, outDir=outDir, option="scatterOrthogonal", threshVar="PValue", threshVal=1e-250, threshOrth=0.5)
-plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="PValue", threshVal=1e-250)
-plotDEG(logData, metricList, outDir=outDir, option="parallelCoord", threshVar="PValue", threshVal=1e-250)
-
-#NEW
-for (nC in c(1:6)){plotClusters(data=logData, dataMetrics = metricList, nC=nC , threshVar = "PValue", threshVal = 1e-250, outDir=outDir)}
-
-#Permutations
-plotPermutations(data, nPerm = 10, topThresh = 100, outDir = outDir)
-outDir = "DEG-tmm/log"
-plotPermutations(logData, nPerm = 10, topThresh = 100, outDir = outDir)
+rownames(logData) <- logData$ID
+logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
+plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="FDR", threshVal=0.0001)
 
 # Statistics
-length(which(lrt[[14]]$PValue<0.1/73320)) # 5704 had p-value <0.1/73320
-length(which(lrt[[14]]$PValue<0.05/73320)) # 5546 had p-value <0.05/73320
-length(which(lrt[[14]]$PValue<0.01/73320)) # 5224 had p-value <0.01/73320
-length(which(lrt[[14]]$PValue<1e-250)) # 365 had p-value <0.01/73320
-
-
+length(which(ret$FDR<0.001))
