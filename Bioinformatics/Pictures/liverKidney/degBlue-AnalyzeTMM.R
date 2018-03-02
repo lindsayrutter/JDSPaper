@@ -70,8 +70,6 @@ jpeg(fileName, height=700, width=700)
 retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-39)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
 dev.off()
 
-
-
 ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPoints", threshVar = "FDR", threshVal=1e-39, pointSize=0.001)
 retP <- ret[["K_L"]]
 fileName = paste(getwd(), "/", outDir, "/K_L_SM_1e-39_PointSize001.jpg", sep="")

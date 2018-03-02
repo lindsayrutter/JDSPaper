@@ -97,7 +97,10 @@ logSoy[,-1] <- log(origData[,-1]+1)
 
 #####################################################
 
-colList = c("darkmagenta", "darkgreen")
+colPurple = scales::seq_gradient_pal("purple4", "purple", "Lab")(seq(0,1,length.out=9))
+colOrange = scales::seq_gradient_pal("orangered4", "darkorange2", "Lab")(seq(0,1,length.out=9))
+
+colList = c(colPurple[5], colOrange[5])
 Type = c("Kidney", "Liver")
 
 yMin = min(dataqps[,1:6])
@@ -113,7 +116,7 @@ plot_clustersSig = lapply(1:2, function(i){
   x$cluster2 = factor(x$cluster)
   xNames = rownames(x)
   metricFDR = metrics[which(as.character(metrics$ID) %in% xNames),]
-  sigID = metricFDR[metricFDR$FDR<0.05,]$ID
+  sigID = metricFDR[metricFDR$FDR<0.001,]$ID
   xSig = x[which(rownames(x) %in% sigID),]
   xSigNames = rownames(xSig)
   nGenes = nrow(xSig)
