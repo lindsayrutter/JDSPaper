@@ -14,7 +14,10 @@ library(reshape2)
 library(scales)
 library(bigPint)
 library(data.table)
+<<<<<<< HEAD
 library(dplyr)
+=======
+>>>>>>> d94b61656846a5876b283648e1a90b84ff47bfc1
 
 ############# Get data ############# 
 load("LK_data.RData")

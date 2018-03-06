@@ -76,6 +76,24 @@ length(which(!sigK_Raw$ID %in% sigK_TMM$ID)) # 3076 genes in Raw kidney but not 
 
 keepDEG <- sigK_TMM
 
+# File output information
+plotName = "K_L"
+outDir = "Clustering_data_FDR_001_TMMvRaw_Keep"
+logSoy = origData
+logSoy[,-1] <- log(origData[,-1]+1)
+totalColor = scales::seq_gradient_pal("firebrick2", "red4", "Lab")(seq(0,1,length.out=8))[4]
+
+# Make total scatterplot matrix
+scatMatMetrics = list()
+scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% removedDEG$ID),]
+scatMatMetrics[["K_L"]]$FDR = 10e-10
+scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Removed.jpg", sep="")
+ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = totalColor, fileName=fileName)
+jpeg(fileName, height=700, width=700)
+ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes Removed (n=", format(nrow(scatMatMetrics[["K_L"]]), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+invisible(dev.off())
+
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
 }
@@ -86,7 +104,6 @@ rownames(data) <- data_Rownames
 #Normalize and log (This allow standardized medians to be closer to 0)
 #cpm.data.new <- cpm(data, TRUE, TRUE)
 # Normalize for sequencing depth and other distributional differences between lanes
-#data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
 data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
@@ -100,14 +117,10 @@ dataqps <- as.data.frame(dataqps)
 colnames(dataqps) <- colnames(data[,1:6])
 dataqps$ID <- rownames(dataqps)
 
-# Combine the filtered and remaining data
+# Comine the filtered and remaining data
 fulls <- dataqps
 boxDat <- melt(fulls, id.vars="ID")
 colnames(boxDat) <- c("ID", "Sample", "Count")
-
-# File output information
-plotName = "K_L"
-outDir = "Clustering_data_FDR_001_TMMvRaw_Keep"
 
 # Indices of the 775 NAN rows. They had stdev=0 in the filt data
 nID <- which(is.nan(dataqps$K.1))
@@ -172,13 +185,13 @@ getPCP <- function(nC){
     xNames = rownames(x)
     x$ID = xNames
     xSigNames = rownames(x)
-    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
+    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", j, ".Rds"))
     
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")
     boxDat$Sample <- as.character(boxDat$Sample)
     pcpDat$Sample <- as.character(pcpDat$Sample)
-    
+  
     p = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[j], alpha=0.5) + ylab("Standardized Count") + ggtitle(paste("Cluster ", j, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=32), axis.text=element_text(size=32), axis.title=element_text(size=32))
     
     fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")

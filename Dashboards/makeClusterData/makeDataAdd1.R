@@ -1,6 +1,6 @@
 library(bigPint)
 
-ID <- readRDS("../../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/Sig_8_8.Rds")
+ID <- readRDS("../../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/Sig_8_6.Rds")
 load("../../Bioinformatics/Pictures/liverKidney/KL_TMM_Metrics.rda")
 
 allMetrics = metricList[["K_L"]]

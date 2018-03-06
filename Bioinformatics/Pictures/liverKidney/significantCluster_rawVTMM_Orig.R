@@ -74,7 +74,7 @@ length(which(sigL_TMM$ID %in% sigL_Raw$ID)) # All 1968 genes in Raw liver were i
 length(which(sigL_Raw$ID %in% sigL_TMM$ID)) # 1968 genes in Raw liver remain in TMM liver
 length(which(!sigL_TMM$ID %in% sigL_Raw$ID)) # 1578 genes that were not in Raw liver were introduced in TMM liver
 
-addDEG <- sigK_TMM[which(!sigL_TMM$ID %in% sigL_Raw$ID),]
+origDEG <- sigL_Raw
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -86,7 +86,6 @@ rownames(data) <- data_Rownames
 #Normalize and log (This allow standardized medians to be closer to 0)
 #cpm.data.new <- cpm(data, TRUE, TRUE)
 # Normalize for sequencing depth and other distributional differences between lanes
-#data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
 data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
@@ -100,14 +99,14 @@ dataqps <- as.data.frame(dataqps)
 colnames(dataqps) <- colnames(data[,1:6])
 dataqps$ID <- rownames(dataqps)
 
-# Combine the filtered and remaining data
+# Comine the filtered and remaining data
 fulls <- dataqps
 boxDat <- melt(fulls, id.vars="ID")
 colnames(boxDat) <- c("ID", "Sample", "Count")
 
 # File output information
 plotName = "K_L"
-outDir = "Clustering_data_FDR_001_TMMvRaw_Add"
+outDir = "Clustering_data_FDR_001_TMMvRaw_Orig"
 
 # Indices of the 775 NAN rows. They had stdev=0 in the filt data
 nID <- which(is.nan(dataqps$K.1))
@@ -123,7 +122,7 @@ yMax = max(dataqps[,1:6])
 
 ###########################
 
-x = as.data.frame(dataqps[which(dataqps$ID %in% addDEG$ID),])
+x = as.data.frame(dataqps[which(dataqps$ID %in% origDEG$ID),])
 x$cluster = "color"
 x$cluster2 = factor(x$cluster)
 xNames = rownames(x)
@@ -136,9 +135,9 @@ pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
 colnames(pcpDat) <- c("ID", "Sample", "Count")
 pcpDat$Sample <- as.character(pcpDat$Sample)
 
-pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = "darkmagenta", alpha=0.1) + ylab("Standardized Count") + theme(plot.title = element_text(hjust = 0.5, size=25), axis.text=element_text(size=25), axis.title=element_text(size=25)) + ggtitle(paste("Significant Kidney Genes TMM Kept (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep=""))
+pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = "darkmagenta", alpha=0.1) + ylab("Standardized Count") + theme(plot.title = element_text(hjust = 0.5, size=25), axis.text=element_text(size=25), axis.title=element_text(size=25)) + ggtitle(paste("Significant Liver Genes Raw Original (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep=""))
 
-fileName = paste(getwd(), "/", outDir, "/", plotName, "_KSigAddWithTMM.jpg", sep="")
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_KSigOrigWithTMM.jpg", sep="")
 jpeg(fileName)
 plot(pSig)
 invisible(dev.off())
@@ -172,7 +171,7 @@ getPCP <- function(nC){
     xNames = rownames(x)
     x$ID = xNames
     xSigNames = rownames(x)
-    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
+    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", j, ".Rds"))
     
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")
