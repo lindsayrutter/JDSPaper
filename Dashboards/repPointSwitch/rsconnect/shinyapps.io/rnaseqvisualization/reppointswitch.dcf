@@ -1,0 +1,10 @@
+name: reppointswitch
+title:
+username:
+account: rnaseqvisualization
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 226298
+bundleId: 1132691
+url: https://rnaseqvisualization.shinyapps.io/reppointswitch/
+when: 1513179803.32196

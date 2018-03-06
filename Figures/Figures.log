@@ -1,0 +1,649 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 OCT 2017 11:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Figures.tex
+(./Figures.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/elsarticle/elsarticle.cls
+Document Class: elsarticle 2009/09/17, 1.2.0: Elsevier Ltd
+\@bls=\dimen102
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+ (./Figures.spl)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+\splwrite=\write3
+\openout3 = `Figures.spl'.
+
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count95
+\output=\toks18
+\linenoprevgraf=\count96
+\linenumbersep=\dimen109
+\linenumberwidth=\dimen110
+\c@linenumber=\count97
+\c@pagewiselinenumber=\count98
+\c@LN@truepage=\count99
+\c@internallinenumber=\count100
+\c@internallinenumbers=\count101
+\quotelinenumbersep=\dimen111
+\bframerule=\dimen112
+\bframesep=\dimen113
+\bframebox=\box30
+LaTeX Info: Redefining \\ on input line 3056.
+) (./Figures.aux)
+\openout1 = `Figures.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count102
+\scratchdimen=\dimen114
+\scratchbox=\box31
+\nofMPsegments=\count103
+\nofMParguments=\count104
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count105
+\MPscratchDim=\dimen115
+\MPnumerator=\count106
+\makeMPintoPDFobject=\count107
+\everyMPtoPDFconversion=\toks20
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 121.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 121.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
+
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [1
+
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/1group.png, id=13, 608
+.2725pt x 482.80376pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/1group.png Graphi
+c file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/1group.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Colo
+r/1group.png used on input line 166.
+(pdftex.def)             Requested size: 390.0pt x 309.56061pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=15, 608
+.2725pt x 482.80376pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
+c file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Colo
+r/2group.png used on input line 171.
+(pdftex.def)             Requested size: 390.0pt x 309.56061pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_10hex.jpg, id=16, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_10hex.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_10hex.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_10hex.jpg used on input line 176.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_deg_sm_0.05.jpg, id=17, 1204.5pt x 1204.5pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_deg_sm_0.05.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_deg_sm_0.05.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_deg_sm_0.05.jpg used on input line 181.
+(pdftex.def)             Requested size: 390.0pt x 390.0059pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
+1_S2_10hex.jpg, id=18, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_10hex.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/S1_S2_10hex.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/Switched/S1_S2_10hex.jpg used on input line 186.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+MDS.png, id=19, 311.1625pt x 427.5975pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/MDS.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/MDS.png used on input line 193.
+(pdftex.def)             Requested size: 195.0pt x 267.972pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/M
+DS.png, id=20, 311.1625pt x 427.5975pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/MDS.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/Switched/MDS.png used on input line 198.
+(pdftex.def)             Requested size: 195.0pt x 267.972pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_deg_pcp_0.05.jpg, id=21, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_deg_pcp_0.05.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_deg_pcp_0.05.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_deg_pcp_0.05.jpg used on input line 203.
+(pdftex.def)             Requested size: 195.0pt x 194.99683pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
+1_S2_deg_pcp_0.05.jpg, id=22, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_deg_pcp_0.05.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/S1_S2_deg_pcp_0.05.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/Switched/S1_S2_deg_pcp_0.05.jpg used on input line 208.
+(pdftex.def)             Requested size: 195.0pt x 194.99683pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_deg_volcano.jpg, id=23, 1104.125pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_deg_volcano.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_deg_volcano.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_deg_volcano.jpg used on input line 213.
+(pdftex.def)             Requested size: 195.0pt x 124.08693pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
+1_S2_deg_volcano.jpg, id=24, 1104.125pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_deg_volcano.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/S1_S2_deg_volcano.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/Switched/S1_S2_deg_volcano.jpg used on input line 218.
+(pdftex.def)             Requested size: 195.0pt x 124.08693pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/K_L_10hex.jpg
+, id=25, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/K_L_10he
+x.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/K_L_10hex
+.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/raw/R1/K_L_10hex.jpg used on input line 225.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/K_L_10hex
+.jpg, id=26, 702.625pt x 702.625pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/K_L_
+10hex.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/K_L_1
+0hex.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/tmmNorm/R1/K_L_10hex.jpg used on input line 230.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/MDS.png, id=27, 
+401.5pt x 359.3425pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/MDS.png Gra
+phic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/raw/MDS.png used on input line 235.
+(pdftex.def)             Requested size: 195.0pt x 174.52763pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/MDS.png, id=
+28, 401.5pt x 359.3425pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/MDS.png
+ Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/tmmNorm/MDS.png used on input line 240.
+(pdftex.def)             Requested size: 195.0pt x 174.52763pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/boxplot.jpg, 
+id=29, 481.8pt x 481.8pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/boxplot.
+jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/raw/R1/boxplot.j
+pg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/raw/R1/boxplot.jpg used on input line 245.
+(pdftex.def)             Requested size: 195.0pt x 194.99559pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/boxplot.j
+pg, id=30, 481.8pt x 481.8pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/boxp
+lot.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/boxpl
+ot.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/liverKid
+ney/tmmNorm/R1/boxplot.jpg used on input line 250.
+(pdftex.def)             Requested size: 195.0pt x 194.99559pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg, id=31, 602.25pt x
+ 602.25pt>
+File: /Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg Graphic file 
+(type jpg)
+ <use /Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_point
+s.jpg used on input line 257.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg, id=32, 602.25
+pt x 602.25pt>
+File: /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg Graphic f
+ile (type jpg)
+
+<use /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_points.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Data/risso-Yeast/between/Y1_Y4_p
+oints.jpg used on input line 262.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/MDS.png, id=33, 348.30
+125pt x 359.3425pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/MDS.png Graphic f
+ile (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/ra
+w/MDS.png used on input line 267.
+(pdftex.def)             Requested size: 195.0pt x 201.18108pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/MDS.png, id=34, 34
+8.30125pt x 359.3425pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/MDS.png Graph
+ic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/MDS.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/be
+tween/MDS.png used on input line 272.
+(pdftex.def)             Requested size: 195.0pt x 201.18108pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/boxplot.jpg, id=35, 48
+1.8pt x 481.8pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/boxplot.jpg Graph
+ic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/raw/boxplot.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/ra
+w/boxplot.jpg used on input line 277.
+(pdftex.def)             Requested size: 195.0pt x 194.99559pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/boxplot.jpg, id=36
+, 481.8pt x 481.8pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/boxplot.jpg G
+raphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/between/boxplot.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/be
+tween/boxplot.jpg used on input line 282.
+(pdftex.def)             Requested size: 195.0pt x 194.99559pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
+=37, 602.25pt x 602.25pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
+g Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
+>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanS
+treak/N_P_points.jpg used on input line 287.
+(pdftex.def)             Requested size: 390.0pt x 390.01509pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/lindz/Desktop/findStreak1.png, id=38, 944.52875pt x 514.92375pt>
+File: /Users/lindz/Desktop/findStreak1.png Graphic file (type png)
+
+<use /Users/lindz/Desktop/findStreak1.png>
+Package pdftex.def Info: /Users/lindz/Desktop/findStreak1.png used on input lin
+e 292.
+(pdftex.def)             Requested size: 390.0pt x 212.61295pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/lindz/Desktop/findStreak2.png, id=39, 949.5475pt x 582.175pt>
+File: /Users/lindz/Desktop/findStreak2.png Graphic file (type png)
+
+<use /Users/lindz/Desktop/findStreak2.png>
+Package pdftex.def Info: /Users/lindz/Desktop/findStreak2.png used on input lin
+e 297.
+(pdftex.def)             Requested size: 390.0pt x 239.11081pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./Figures.bbl) [2] [3 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color
+/1group.png>] [4 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2grou
+p.png>] [5 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12
+/NotSwitch/S1_S2_10hex.jpg>] [6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/
+SwitchSample/Switch12/NotSwitch/S1_S2_deg_sm_0.05.jpg>] [7 </Users/lindz/JDSPap
+er/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_10hex.jpg>]
+[8 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwit
+ch/MDS.png>] [9 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Swi
+tch12/Switched/MDS.png> </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_deg_pcp_0.05.jpg>] [10 </Users/lindz/JDSPaper/Bio
+informatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_deg_pcp_0.05.jpg> </U
+sers/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_
+S2_deg_volcano.jpg> </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample
+/Switch12/Switched/S1_S2_deg_volcano.jpg>] [11 </Users/lindz/JDSPaper/Bioinform
+atics/Pictures/liverKidney/raw/R1/K_L_10hex.jpg>] [12 </Users/lindz/JDSPaper/Bi
+oinformatics/Pictures/liverKidney/tmmNorm/R1/K_L_10hex.jpg>] [13 </Users/lindz/
+JDSPaper/Bioinformatics/Pictures/liverKidney/raw/MDS.png> </Users/lindz/JDSPape
+r/Bioinformatics/Pictures/liverKidney/tmmNorm/MDS.png>] [14 </Users/lindz/JDSPa
+per/Bioinformatics/Pictures/liverKidney/raw/R1/boxplot.jpg> </Users/lindz/JDSPa
+per/Bioinformatics/Pictures/liverKidney/tmmNorm/R1/boxplot.jpg>] [15 </Users/li
+ndz/JDSPaper/Data/risso-Yeast/raw/Y1_Y4_points.jpg>] [16 </Users/lindz/JDSPaper
+/Data/risso-Yeast/between/Y1_Y4_points.jpg>] [17 </Users/lindz/JDSPaper/Bioinfo
+rmatics/Pictures/yeast/raw/MDS.png> </Users/lindz/JDSPaper/Bioinformatics/Pictu
+res/yeast/between/MDS.png>] [18 </Users/lindz/JDSPaper/Bioinformatics/Pictures/
+yeast/raw/boxplot.jpg> </Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/bet
+ween/boxplot.jpg>] [19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanSt
+reak/N_P_points.jpg>] [20 </Users/lindz/Desktop/findStreak1.png> </Users/lindz/
+Desktop/findStreak2.png>] (./Figures.aux) ) 
+Here is how much of TeX's memory you used:
+ 2737 strings out of 492995
+ 44287 string characters out of 6132704
+ 101389 words of memory out of 5000000
+ 6218 multiletter control sequences out of 15000+600000
+ 10574 words of font info for 39 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,7n,30p,723b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on Figures.pdf (20 pages, 1967665 bytes).
+PDF statistics:
+ 142 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+

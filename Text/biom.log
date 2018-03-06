@@ -1,0 +1,2258 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JAN 2018 18:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**biom.cls
+(./biom.cls
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `biom'.
+
+Package: biom 2006/12/12 v2.2 LaTeX2e Biom document class
+Document Style `Biom' v1.0, released 2006 December 12
+! Use of \@ doesn't match its definition.
+l.23 \@t
+        wosidetrue
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \@tw
+         osidetrue
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no w in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+l.24 \@t
+        wocolumntrue
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no w in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+l.25 \@m
+        parswitchtrue
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 23--29
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 \newif\if@
+               letters
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 32--34
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \newif\ifSFB@
+                  landscape
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 37--39
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \newif\ifSFB@
+                  galley
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no y in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 42--44
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \newif\if@
+               usenatbib
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no b in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 47--49
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \newif\if@
+               usedcolumn
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no n in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 52--54
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \newif\if@
+               usegraphicx
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no x in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 56--58
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \newif\ifSFB@
+                  referee
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no @ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no @ in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no S in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no e in font nullfont!
+! Use of \@ doesn't match its definition.
+\normalsize ->\@s
+                 etfontsize\normalsize \@ixpt{11}\abovedisplayskip 4pt plus ...
+l.154 \normalsize
+                 
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 36 strings out of 492995
+ 314 string characters out of 6132704
+ 54074 words of memory out of 5000000
+ 3688 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,0n,13p,92b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

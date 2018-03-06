@@ -1,0 +1,714 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 JAN 2018 21:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**rna.tex
+(./rna.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./biom.cls
+Document Class: biom 2006/12/12 v2.2 LaTeX2e Biom document class
+Document Style `Biom' v1.0, released 2006 December 12
+\math@groups=\toks14
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/cmsy/b/n on input line 234.
+\symUPM=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `UPM' in version `bold'
+(Font)                  U/eur/m/n --> U/eur/b/n on input line 271.
+\symAMSa=\mathgroup5
+\SFB@measure=\dimen102
+\realparindent=\skip41
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@discounter=\count85
+\@topalign=\dimen103
+\Verticalskip=\dimen104
+\@partialpageht=\dimen105
+\store@outputbox=\box26
+\storedboxheight=\dimen106
+\@indentskip=\skip42
+\smallindent=\skip43
+\@footindent=\skip44
+\@leftskip=\skip45
+\absbox=\box27
+\keywdbox=\box28
+\c@emailcnt=\count86
+\c@emailxcnt=\count87
+\tempcount=\count88
+\c@dummy=\count89
+\c@table=\count90
+\c@figure=\count91
+\bibhang=\skip46
+\mathindent=\dimen107
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/theorem.sty
+Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks15
+\theorem@bodyfont=\toks16
+\theorempreskipamount=\skip47
+\theorempostskipamount=\skip48
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/thp.sty
+File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
+))
+\c@theorem=\count92
+\c@theorem=\count93
+\c@corollary=\count94
+\c@fact=\count95
+\c@property=\count96
+\c@result=\count97
+\c@lemma=\count98
+\c@assumption=\count99
+\c@case=\count100
+\c@axiom=\count101
+\c@change=\count102
+\c@claim=\count103
+\c@conjecture=\count104
+\c@definition=\count105
+\c@example=\count106
+\c@formula=\count107
+\c@hypothesis=\count108
+\c@method=\count109
+\c@model=\count110
+\c@notation=\count111
+\c@note=\count112
+\c@objective=\count113
+\c@observation=\count114
+\c@principle=\count115
+\c@problem=\count116
+\c@procedure=\count117
+\c@remark=\count118
+\c@step=\count119
+\theorempreskipamount=\skip49
+\theorempostskipamount=\skip50
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/endfloat/endfloat.sty
+Package: endfloat 2011/12/25 v2.5d LaTeX2e package puts figures and tables at e
+nd (jdm)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\c@postfigure=\count120
+\efloat@postfff=\write3
+\@ef@fffopen=\count121
+\c@posttable=\count122
+\efloat@postttt=\write4
+\@ef@tttopen=\count123
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen108
+\captionmargin@=\dimen109
+\captionwidth=\dimen110
+\caption@tempdima=\dimen111
+\caption@indent=\dimen112
+\caption@parindent=\dimen113
+\caption@hangindent=\dimen114
+\abovecaptionskip=\skip51
+\belowcaptionskip=\skip52
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \FigName \@captype
+ \SFB@makefigurecaption {#1}{#2}\else \SFB@maketablecaption {#1}{#2}\fi .
+\c@ContinuedFloat=\count124
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count125
+))
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+(./rna.aux
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+
+LaTeX Warning: Label ` ' multiply defined.
+
+)
+\openout1 = `rna.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+ (./endrotfloat.sty
+Package: endrotfloat 2007/01/23 v1.0 LaTeX2e package puts sideways figures and 
+tables at end
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Incompatible package detected (regarding \caption).
+(caption)             \caption = macro:->\refstepcounter \@captype \@dblarg {\@
+caption \@captype }.
+
+
+Package caption Warning: \caption will not be redefined since it's already
+(caption)                redefined by a document class or package which is
+(caption)                unknown to the caption package.
+See the caption package documentation for explanation.
+
+Package caption Info: End \AtBeginDocument code.
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen117
+\scratchbox=\box29
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen118
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 189.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 189.
+LaTeX Font Info:    Try loading font information for U+eur on input line 189.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 189.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+Overfull \hbox (12.31535pt too wide) in paragraph at lines 189--189
+ [][] 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 189.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 189.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 189.
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 1
+ []
+
+[1
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 2
+ []
+
+[2]
+\openout3 = `rna.fff'.
+
+ (rna.fff)
+Underfull \vbox (badness 1852) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 3
+ []
+
+[3]
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 4
+ []
+
+[4]
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 5
+ []
+
+[5]
+\openout4 = `rna.ttt'.
+
+ (rna.ttt)
+Underfull \vbox (badness 2837) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 6
+ []
+
+[6]
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 7
+ []
+
+[7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 8
+ []
+
+[8]
+Overfull \hbox (4.62497pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 9
+ []
+
+[9]
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 10
+ []
+
+[10]
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 11
+ []
+
+[11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 12
+ []
+
+[12]
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 13
+ []
+
+[13]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 14
+ []
+
+[14]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 15
+ []
+
+[15]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no „ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 16
+ []
+
+[16] AED endfloat: Processing end Figures and Tables
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 17
+ []
+
+[17] (./rna.fff
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=73, 608
+.2725pt x 482.80376pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
+c file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Colo
+r/2group.png used on input line 3.
+(pdftex.def)             Requested size: 213.39566pt x 169.3743pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 18
+ []
+
+[18 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+S1_S2_points_size1.jpg, id=80, 501.875pt x 501.875pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_points_size1.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_points_size1.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/S1_S2_points_size1.jpg used on input line 12.
+(pdftex.def)             Requested size: 213.39566pt x 213.39743pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 19
+ []
+
+[19 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/S1_S2_points_size1.jpg>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
+scatPCP.png, id=84, 453.3738pt x 629.2308pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/scatPCP.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/scatPCP.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/NotSwitch/scatPCP.png used on input line 21.
+(pdftex.def)             Requested size: 213.39566pt x 296.17058pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 20
+ []
+
+[20 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
+tch/scatPCP.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=89, 507.3354pt x
+ 1009.8528pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
+ype png)
+ <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.
+png used on input line 30.
+(pdftex.def)             Requested size: 213.39566pt x 424.76706pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 21
+ []
+
+[21 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
+1_S2_points.jpg, id=94, 501.875pt x 501.875pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_points.jpg Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/S1_S2_points.jpg>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
+mple/Switch12/Switched/S1_S2_points.jpg used on input line 39.
+(pdftex.def)             Requested size: 213.39566pt x 213.39743pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 22
+ []
+
+[22 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
+ed/S1_S2_points.jpg>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=98, 627.7854pt
+ x 608.5134pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png Graphic file 
+(type png)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitc
+h.png used on input line 48.
+(pdftex.def)             Requested size: 213.39566pt x 206.84538pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 23
+ []
+
+[23 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
+=103, 602.25pt x 602.25pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
+g Graphic file (type jpg)
+
+<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
+>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanS
+treak/N_P_points.jpg used on input line 57.
+(pdftex.def)             Requested size: 213.39566pt x 213.4005pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 24
+ []
+
+[24 </Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
+>]
+</Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png, id=108, 448.5558pt x
+ 412.4208pt>
+File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png Graphic file (ty
+pe png)
+ <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.p
+ng used on input line 66.
+(pdftex.def)             Requested size: 213.39566pt x 196.20398pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 25
+ []
+
+[25 </Users/lindz/JDSPaper/Bioinformatics/Pictures/repDot.png>]
+</Users/lindz/JDSPaper/clusters.png, id=113, 525.6438pt x 785.334pt>
+File: /Users/lindz/JDSPaper/clusters.png Graphic file (type png)
+
+<use /Users/lindz/JDSPaper/clusters.png>
+Package pdftex.def Info: /Users/lindz/JDSPaper/clusters.png used on input line 
+75.
+(pdftex.def)             Requested size: 213.39566pt x 318.81348pt.
+
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 26
+ []
+
+[26 </Users/lindz/JDSPaper/clusters.png>]) (./rna.ttt
+Overfull \hbox (9.24994pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/9 27
+ []
+
+[27]) (./rna.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3348 strings out of 492995
+ 52630 string characters out of 6132704
+ 111279 words of memory out of 5000000
+ 6841 multiletter control sequences out of 15000+600000
+ 16301 words of font info for 58 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,8n,39p,1473b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
+7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib
+7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on rna.pdf (28 pages, 4079171 bytes).
+PDF statistics:
+ 167 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
