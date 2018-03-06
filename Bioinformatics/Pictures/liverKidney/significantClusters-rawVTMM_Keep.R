@@ -171,6 +171,8 @@ getPCP <- function(nC){
     x$cluster2 = factor(x$cluster)
     xNames = rownames(x)
     x$ID = xNames
+    xSigNames = rownames(x)
+    saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
     
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")
