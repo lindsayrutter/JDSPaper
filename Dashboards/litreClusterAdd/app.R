@@ -188,7 +188,7 @@ server <- function(input, output, session) {
        y: drawPoints.geneY,
        mode: 'markers',
        marker: {
-       color: '#FF8C00',
+       color: '#FF34B3',
        size: drawPoints.pointSize
        },
        hoverinfo: 'none',
@@ -268,7 +268,7 @@ server <- function(input, output, session) {
       y: drawLines,
       mode: 'lines',
       line: {
-      color: '#FF8C00',
+      color: '#FF34B3',
       width: 2
       },
       opacity: 0.9,

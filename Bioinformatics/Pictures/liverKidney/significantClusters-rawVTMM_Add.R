@@ -76,6 +76,28 @@ length(which(!sigL_TMM$ID %in% sigL_Raw$ID)) # 1578 genes that were not in Raw l
 
 addDEG <- sigL_TMM[which(!sigL_TMM$ID %in% sigL_Raw$ID),]
 
+
+
+# File output information
+plotName = "K_L"
+outDir = "Clustering_data_FDR_001_TMMvRaw_Add"
+logSoy = origData
+logSoy[,-1] <- log(origData[,-1]+1)
+totalColor = scales::seq_gradient_pal("maroon1", "maroon4", "Lab")(seq(0,1,length.out=8))[4]
+
+# Make total scatterplot matrix
+scatMatMetrics = list()
+scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% addDEG$ID),]
+scatMatMetrics[["K_L"]]$FDR = 10e-10
+scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Add.jpg", sep="")
+ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = totalColor, fileName=fileName)
+jpeg(fileName, height=700, width=700)
+ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes Added (n=", format(nrow(scatMatMetrics[["K_L"]]), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+invisible(dev.off())
+
+
+
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
 }
@@ -172,6 +194,21 @@ getPCP <- function(nC){
     x$ID = xNames
     xSigNames = rownames(x)
     saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", j, ".Rds"))
+    
+    
+    
+    scatMatMetrics = list()
+    scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% x$ID),]
+    scatMatMetrics[["K_L"]]$FDR = 10e-10
+    scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
+    
+    fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Add_", nC, "_", j, ".jpg", sep="")
+    ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j], fileName=fileName)
+    jpeg(fileName, height=700, width=700)
+    ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", j, " Significant Added Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+    invisible(dev.off())
+    
+    
     
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")

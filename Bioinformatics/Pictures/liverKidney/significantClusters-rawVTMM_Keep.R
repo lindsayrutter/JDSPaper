@@ -81,17 +81,17 @@ plotName = "K_L"
 outDir = "Clustering_data_FDR_001_TMMvRaw_Keep"
 logSoy = origData
 logSoy[,-1] <- log(origData[,-1]+1)
-totalColor = scales::seq_gradient_pal("firebrick2", "red4", "Lab")(seq(0,1,length.out=8))[4]
+totalColor = scales::seq_gradient_pal("purple", "purple4", "Lab")(seq(0,1,length.out=8))[4]
 
 # Make total scatterplot matrix
 scatMatMetrics = list()
-scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% removedDEG$ID),]
+scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% keepDEG$ID),]
 scatMatMetrics[["K_L"]]$FDR = 10e-10
 scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
-fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Removed.jpg", sep="")
+fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Keep.jpg", sep="")
 ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = totalColor, fileName=fileName)
 jpeg(fileName, height=700, width=700)
-ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes Removed (n=", format(nrow(scatMatMetrics[["K_L"]]), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes Kept (n=", format(nrow(scatMatMetrics[["K_L"]]), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
 invisible(dev.off())
 
 RowSD = function(x) {
@@ -129,8 +129,6 @@ dataqps[nID,1:6] <- 0
 
 #####################################################
 
-logSoy = origData
-logSoy[,-1] <- log(origData[,-1]+1)
 yMin = min(dataqps[,1:6])
 yMax = max(dataqps[,1:6])
 
@@ -186,6 +184,21 @@ getPCP <- function(nC){
     x$ID = xNames
     xSigNames = rownames(x)
     saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", j, ".Rds"))
+    
+    
+    
+    scatMatMetrics = list()
+    scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% x$ID),]
+    scatMatMetrics[["K_L"]]$FDR = 10e-10
+    scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
+    
+    fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Keep_", nC, "_", j, ".jpg", sep="")
+    ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j], fileName=fileName)
+    jpeg(fileName, height=700, width=700)
+    ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", j, " Significant Kept Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+    invisible(dev.off())
+    
+    
     
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")

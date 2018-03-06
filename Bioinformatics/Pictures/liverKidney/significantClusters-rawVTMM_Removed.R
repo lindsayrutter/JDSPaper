@@ -184,16 +184,16 @@ getPCP <- function(nC){
     saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", j, ".Rds"))
     
     
-    # scatMatMetrics = list()
-    # scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% x$ID),]
-    # scatMatMetrics[["K_L"]]$FDR = 10e-10
-    # scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
-    # 
-    # fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Removed_", nC, "_", j, ".jpg", sep="")
-    # ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j], fileName=fileName)
-    # jpeg(fileName, height=700, width=700)
-    # ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", j, " Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
-    # invisible(dev.off())
+    scatMatMetrics = list()
+    scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% x$ID),]
+    scatMatMetrics[["K_L"]]$FDR = 10e-10
+    scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
+
+    fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_SM_Removed_", nC, "_", j, ".jpg", sep="")
+    ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j], fileName=fileName)
+    jpeg(fileName, height=700, width=700)
+    ret[[plotName]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", j, " Significant Removed Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+    invisible(dev.off())
 
     pcpDat <- melt(x[,c(1:6,9)], id.vars="ID")
     colnames(pcpDat) <- c("ID", "Sample", "Count")
