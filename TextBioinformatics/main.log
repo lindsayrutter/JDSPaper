@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 FEB 2018 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  7 MAR 2018 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,11 +290,11 @@ File: ly1phv.fd 2001/02/01 scalable font definitions for LY1/phv using Berry na
 mes.
 )
 Package epstopdf Info: Source file: <OUP_First_SBk_Bot_8401.eps>
-(epstopdf)                    date: 2015-11-25 11:49:46
+(epstopdf)                    date: 2018-03-02 13:32:04
 (epstopdf)                    size: 407286 bytes
 (epstopdf)             Output file: <OUP_First_SBk_Bot_8401-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2015-11-25 11:49:46
+(epstopdf)                    date: 2018-03-02 13:32:04
 (epstopdf)                    size: 9259 bytes
 (epstopdf)             Command: <repstopdf --outfile=OUP_First_SBk_Bot_8401-eps
 -converted-to.pdf OUP_First_SBk_Bot_8401.eps>
@@ -391,14 +391,12 @@ Overfull \hbox (1.12001pt too wide) has occurred while \output is active
 
 
  <./OUP_First_SBk_Bot_8401-eps-converted-to.pdf>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png, id=20, 608
-.2725pt x 482.80376pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png Graphi
-c file (type png)
-
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Colo
-r/2group.png used on input line 53.
+<../Bioinformatics/Pictures/bmp/Color/2group.png, id=20, 608.2725pt x 482.80376
+pt>
+File: ../Bioinformatics/Pictures/bmp/Color/2group.png Graphic file (type png)
+ <use ../Bioinformatics/Pictures/bmp/Color/2group.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/bmp/Color/2group.png used o
+n input line 53.
 (pdftex.def)             Requested size: 234.0pt x 185.72899pt.
 LaTeX Font Info:    Try loading font information for LY1+phb on input line 55.
 LaTeX Font Info:    No file LY1phb.fd. on input line 55.
@@ -416,27 +414,26 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[2 </Users/lindz/JDSPaper/Bioinformatics/Pictures/bmp/Color/2group.png>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05
-/NPSig4.jpg, id=26, 1003.75pt x 702.625pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/Clusteringdata
-FDR05/NPSig4.jpg Graphic file (type jpg)
+[2 <../Bioinformatics/Pictures/bmp/Color/2group.png>]
+<../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg, id=26,
+ 1003.75pt x 702.625pt>
+File: ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg Gr
+aphic file (type jpg)
 
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/ClusteringdataF
-DR05/NPSig4.jpg>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNo
-tSig/ClusteringdataFDR05/NPSig4.jpg used on input line 68.
+<use ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg>
+Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clusteringdata
+FDR05/NPSig4.jpg used on input line 68.
 (pdftex.def)             Requested size: 234.0pt x 163.79819pt.
 
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-S1_S2_points_size1.jpg, id=27, 501.875pt x 501.875pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
-itch/S1_S2_points_size1.jpg Graphic file (type jpg)
+<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.
+jpg, id=27, 501.875pt x 501.875pt>
+File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_s
+ize1.jpg Graphic file (type jpg)
 
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
-tch/S1_S2_points_size1.jpg>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
-mple/Switch12/NotSwitch/S1_S2_points_size1.jpg used on input line 82.
+<use ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_si
+ze1.jpg>
+Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/S1_S2_points_size1.jpg used on input line 82.
 (pdftex.def)             Requested size: 234.0pt x 234.00507pt.
 
 
@@ -448,16 +445,14 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[3 </Users/lindz/JDSPaper/Bioinformatics/Pictures/FilterNotSig/ClusteringdataFD
-R05/NPSig4.jpg> </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Swi
-tch12/NotSwitch/S1_S2_points_size1.jpg>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png, id=31, 507.3354pt x
- 1009.8528pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png Graphic file (t
-ype png)
- <use /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.
-png used on input line 100.
+[3 <../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg> <..
+/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg
+>] <../Bioinformatics/Pictures/Figure4.png, id=31, 507.3354pt x 1009.8528pt>
+File: ../Bioinformatics/Pictures/Figure4.png Graphic file (type png)
+
+<use ../Bioinformatics/Pictures/Figure4.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/Figure4.png used on input l
+ine 100.
 (pdftex.def)             Requested size: 234.0pt x 465.77066pt.
 
 Underfull \hbox (badness 1755) in paragraph at lines 111--112
@@ -466,73 +461,66 @@ dies.
  []
 
 
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S
-1_S2_points.jpg, id=32, 501.875pt x 501.875pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switc
-hed/S1_S2_points.jpg Graphic file (type jpg)
+<../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg, id
+=32, 501.875pt x 501.875pt>
+File: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jp
+g Graphic file (type jpg)
 
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switch
-ed/S1_S2_points.jpg>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
-mple/Switch12/Switched/S1_S2_points.jpg used on input line 114.
+<use ../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg
+>
+Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switc
+hed/S1_S2_points.jpg used on input line 114.
 (pdftex.def)             Requested size: 234.0pt x 234.00507pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[4 </Users/lindz/JDSPaper/Bioinformatics/Pictures/Figure4.png> </Users/lindz/JD
-SPaper/Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg>
-]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png, id=37, 627.7854pt
- x 608.5134pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png Graphic file 
-(type png)
+[4 <../Bioinformatics/Pictures/Figure4.png> <../Bioinformatics/Pictures/SwitchS
+ample/Switch12/Switched/S1_S2_points.jpg>]
+<../Bioinformatics/Pictures/mdsSwitch.png, id=37, 627.7854pt x 608.5134pt>
+File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
 
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitc
-h.png used on input line 124.
+<use ../Bioinformatics/Pictures/mdsSwitch.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
+ line 124.
 (pdftex.def)             Requested size: 234.0pt x 226.80847pt.
-
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id
-=38, 602.25pt x 602.25pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
-g Graphic file (type jpg)
-
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg
->
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/soybeanS
-treak/N_P_points.jpg used on input line 136.
-(pdftex.def)             Requested size: 234.0pt x 234.00354pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+<../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id=38, 602.25pt x 602
+.25pt>
+File: ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg Graphic file (typ
+e jpg)
+ <use ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>
+Package pdftex.def Info: ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
+g used on input line 136.
+(pdftex.def)             Requested size: 234.0pt x 234.00354pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 </Users/lindz/JDSPaper/Bioinformatics/Pictures/mdsSwitch.png> </Users/lindz/
-JDSPaper/Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>]
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/
-scatPCP.png, id=43, 453.3738pt x 629.2308pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
-itch/scatPCP.png Graphic file (type png)
+[5 <../Bioinformatics/Pictures/mdsSwitch.png> <../Bioinformatics/Pictures/soybe
+anStreak/N_P_points.jpg>]
+<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png, id=43,
+ 453.3738pt x 629.2308pt>
+File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png Gr
+aphic file (type png)
 
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwi
-tch/scatPCP.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSa
-mple/Switch12/NotSwitch/scatPCP.png used on input line 154.
+<use ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
+itch/scatPCP.png used on input line 154.
 (pdftex.def)             Requested size: 234.0pt x 324.77278pt.
 
-</Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=
-44, 791.5974pt x 1297.4874pt>
-File: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png
- Graphic file (type png)
-
-<use /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>
-Package pdftex.def Info: /Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlo
-ts/N_P/litre6LB.png used on input line 170.
+<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=44, 791.5974pt x 12
+97.4874pt>
+File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
+ png)
+ <use ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png
+ used on input line 170.
 (pdftex.def)             Requested size: 234.0pt x 383.52759pt.
 
 Overfull \hbox (1.11118pt too wide) in paragraph at lines 179--180
@@ -551,8 +539,12 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6 </Users/lindz/JDSPaper/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwit
-ch/scatPCP.png>]
+[6 <../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png>]
+Underfull \hbox (badness 1189) in paragraph at lines 192--193
+[]\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -560,50 +552,40 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[7 </Users/lindz/JDSPaper/Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>]
+[7 <../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>]
 LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 201.
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 222.
 
-Underfull \hbox (badness 2020) in paragraph at lines 271--272
+Underfull \hbox (badness 1264) in paragraph at lines 237--239
+\LY1/ptm/m/n/7 Algorithms for Gene Expression Data. \LY1/ptm/m/it/7 Internation
+al Journal of Computer
+ []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[8]
+Underfull \hbox (badness 2020) in paragraph at lines 299--300
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
 
+Extra height:10.0pt when 136.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 366.25949pt
+Extra height:0.0pt when 137.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 367.25949pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 368.25949pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 369.25949pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 370.25949pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 371.25949pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 372.25949pt
-Extra height:0.0pt when 373.25949pt
-(2)Left:373.25949pt Right:372.519pt Output:373.25949pt
+(2)Left:137.0pt Right:137.0pt Output:137.0pt
 - LAST -
 Extra skip:0.0pt
-Left:373.25949pt
-Right:372.519pt
-Output:373.25949pt
+Left:137.0pt
+Right:137.0pt
+Output:137.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -612,7 +594,9 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[8] (./main.aux)
+[9
+
+] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
@@ -622,28 +606,29 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3750 strings out of 492995
- 49551 string characters out of 6132704
- 132051 words of memory out of 5000000
- 7192 multiletter control sequences out of 15000+600000
+ 3752 strings out of 492995
+ 48759 string characters out of 6132704
+ 119714 words of memory out of 5000000
+ 7194 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,10n,28p,1281b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,10n,28p,1281b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on main.pdf (8 pages, 4011470 bytes).
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/urw/helvetic/uhvr8ac.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
+tmri8a.pfb>
+Output written on main.pdf (9 pages, 4024589 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
