@@ -62,10 +62,10 @@ data_Rownames <- data$ID
 data = data[,-1]
 rownames(data) <- data_Rownames
 #Normalize and log (This allow standardized medians to be closer to 0)
-cpm.data.new <- cpm(data, TRUE, TRUE)
+# cpm.data.new <- cpm(data, TRUE, TRUE)
 # Normalize for sequencing depth and other distributional differences between lanes
-data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
-#data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
+#data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
+data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
 data = mutate(data, mean = (K.1+K.2+K.3+L.1+L.2+L.3)/6, stdev = RowSD(cbind(K.1,K.2,K.3,L.1,L.2,L.3)))
@@ -126,7 +126,7 @@ plot_clustersSig = lapply(1:2, function(i){
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
   
-  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.1) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
+  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.1) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=28), axis.text=element_text(size=28), axis.title=element_text(size=28))
   
   fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", i, ".jpg", sep="")
   jpeg(fileName)

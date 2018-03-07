@@ -14,10 +14,7 @@ library(reshape2)
 library(scales)
 library(bigPint)
 library(data.table)
-<<<<<<< HEAD
 library(dplyr)
-=======
->>>>>>> d94b61656846a5876b283648e1a90b84ff47bfc1
 
 ############# Get data ############# 
 load("LK_data.RData")
@@ -129,7 +126,7 @@ logSoy[,-1] <- log(origData[,-1]+1)
       colnames(pcpDat) <- c("ID", "Sample", "Count")
       pcpDat$Sample <- as.character(pcpDat$Sample)
       
-      pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.1) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
+      pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.1) + ylab("Standardized Count") + ggtitle(paste("Significant Genes for ",  Type[i] ," (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=28), axis.text=element_text(size=28), axis.title=element_text(size=28))
 
     fileName = paste(getwd(), "/", outDir, "/", plotName, "_Sig_", i, ".jpg", sep="")
     jpeg(fileName)

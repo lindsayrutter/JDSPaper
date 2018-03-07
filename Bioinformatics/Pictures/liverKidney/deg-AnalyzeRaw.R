@@ -38,7 +38,6 @@ metricList[["K_L"]] = ret
 metricList2 = metricList
 metricList2[["K_L"]]$FDR = 1
 
-
 ############# Create DEG plots #############
 logData <- data
 rownames(logData) <- logData$ID
@@ -49,7 +48,7 @@ ret <- plotDEG(data = logData, dataMetrics = metricList2, outDir=outDir, option=
 retP <- ret[["K_L"]]
 fileName = paste(getwd(), "/", outDir, "/K_L_SM.jpg", sep="")
 jpeg(fileName, height=700, width=700)
-retP + xlab("Logged Count") + ylab("Logged Count") +theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+retP + xlab("Logged Count") + ylab("Logged Count") + theme(plot.title = element_text(hjust = 0.5, size=22), axis.text=element_text(size=20), axis.title=element_text(size=21), strip.text = element_text(size = 19))
 dev.off()
 
 ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-12)
