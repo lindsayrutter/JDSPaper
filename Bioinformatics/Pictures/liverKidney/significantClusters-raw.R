@@ -71,7 +71,6 @@ data = as.data.frame(data)
 data = mutate(data, mean = (K.1+K.2+K.3+L.1+L.2+L.3)/6, stdev = RowSD(cbind(K.1,K.2,K.3,L.1,L.2,L.3)))
 rownames(data)=data_Rownames
 data$ID <- data_Rownames
-# Remove the genes with lowest quartile of mean and standard deviation
 
 dataqps <- t(apply(as.matrix(data[,1:6]), 1, scale))
 dataqps <- as.data.frame(dataqps)
