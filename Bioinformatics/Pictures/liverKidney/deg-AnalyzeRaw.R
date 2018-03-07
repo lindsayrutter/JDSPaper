@@ -35,17 +35,21 @@ ret = as.data.frame(ret)
 metricList = list()
 metricList[["K_L"]] = ret
 
+metricList2 = metricList
+metricList2[["K_L"]]$FDR = 1
+
+
 ############# Create DEG plots #############
 logData <- data
 rownames(logData) <- logData$ID
 logData[,2:ncol(logData)] <- log(data[,2:ncol(logData)]+1)
 #plotDEG(logData, metricList, outDir=outDir, option="scatterPrediction", threshVar="FDR", threshVal=0.0001)
 
-ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-3)
+ret <- plotDEG(data = logData, dataMetrics = metricList2, outDir=outDir, option="scatterPoints", threshVar = "FDR", threshVal=1e-3)
 retP <- ret[["K_L"]]
-fileName = paste(getwd(), "/", outDir, "/K_L_PI_1e-3.jpg", sep="")
+fileName = paste(getwd(), "/", outDir, "/K_L_SM.jpg", sep="")
 jpeg(fileName, height=700, width=700)
-retP + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Significant Genes (n=", format(length(which(metricList[["K_L"]]$FDR<1e-3)), big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
+retP + xlab("Logged Count") + ylab("Logged Count") +theme(plot.title = element_text(hjust = 0.5, size=15), axis.text=element_text(size=14), axis.title=element_text(size=15), strip.text = element_text(size = 13))
 dev.off()
 
 ret <- plotDEG(data = logData, dataMetrics = metricList, outDir=outDir, option="scatterPrediction", threshVar = "FDR", threshVal=1e-12)
