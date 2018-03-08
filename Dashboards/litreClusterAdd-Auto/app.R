@@ -21,7 +21,7 @@ datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 load("add1_metrics.rda")
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
-values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
+values <- reactiveValues(x=1, selPair=NULL, selMetric=NULL, selOrder=NULL)
 
 sidebar <- dashboardSidebar(
   width = 180,
@@ -43,9 +43,10 @@ body <- dashboardBody(
              selectInput("selOrder", "Metric order:", choices = c("Increasing", "Decreasing")),
              numericInput("binSize", "Hexagon size:", value = 10, min = 1),
              numericInput("pointSize", "Point size:", value = 8, min = 1),
-             actionButton("goButton", "Plot gene!"))),
+             actionButton("prevButton", "Previous gene"),
+             actionButton("nextButton", "Next gene"))),
         column(width = 8,
-               box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
+           box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
       
       fluidRow(
         column(width = 12,
@@ -84,13 +85,16 @@ ui <- shinydashboard::dashboardPage(
 
 server <- function(input, output, session) {
   
-  autoInvalidate <- reactiveTimer(2000)
+  autoInvalidate <- reactiveTimer(800)
   
-  observeEvent(autoInvalidate(), values$x <- values$x + 1)
-  observeEvent(input$selPair, values$x <- 0)
-  observeEvent(input$selMetric, values$x <- 0)
-  observeEvent(input$selOrder, values$x <- 0)
-  observeEvent(input$binSize, values$x <- 0)
+  #observeEvent(autoInvalidate(), values$x <- values$x + 1)
+  observeEvent(input$nextButton, values$x <- values$x + 1)
+  observeEvent(input$prevButton, values$x <- values$x - 1)
+  
+  observeEvent(input$selPair, values$x <- 1)
+  observeEvent(input$selMetric, values$x <- 1)
+  observeEvent(input$selOrder, values$x <- 1)
+  observeEvent(input$binSize, values$x <- 1)
   
   observeEvent(input$selPair, values$selPair <- input$selPair)
   
@@ -112,9 +116,11 @@ server <- function(input, output, session) {
     metricDF
   })
   
-  currMetric <- eventReactive(values$x, {
-    validate(need(values$x > 0, "Plot a gene."))
-    metricDF()[values$x, ]})
+  # currMetric <- eventReactive(values$x, {
+  #   validate(need(values$x > 0, "Plot a gene."))
+  #   metricDF()[values$x, ]})
+  
+  currMetric <- eventReactive(metricDF(), {metricDF()[values$x, ]})
   currID <- eventReactive(currMetric(), {as.character(currMetric()$ID)})
   currGene <- eventReactive(currID(), {unname(unlist(datSel()[which(datSel()$ID == currID()), -1]))})
   
