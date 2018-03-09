@@ -35,9 +35,9 @@ sidebar <- dashboardSidebar(
 body <- dashboardBody(
   tabItems(
     tabItem(tabName = "hexPlot",
-      fluidRow(
-        column(width = 4, 
-           box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
+        fluidRow(
+          column(width = 4, 
+             box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
              selectizeInput("selPair", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
              selectInput("selMetric", "Metric:", choices = myMetrics),
              selectInput("selOrder", "Metric order:", choices = c("Increasing", "Decreasing")),
@@ -45,16 +45,16 @@ body <- dashboardBody(
              numericInput("pointSize", "Point size:", value = 8, min = 1),
              actionButton("prevButton", "Previous gene"),
              actionButton("nextButton", "Next gene"))),
-        column(width = 8,
-           box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
-      
-      fluidRow(
-        column(width = 12,
-           box(width = NULL, withSpinner(plotlyOutput("boxPlot")), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))),
-      
-      fluidRow(
-        column(width = 12,
-           box(width = NULL, verbatimTextOutput("info1"), verbatimTextOutput("info2"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
+          column(width = 8,
+             box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
+        
+        fluidRow(
+          column(width = 12,
+             box(width = NULL, withSpinner(plotlyOutput("boxPlot")), collapsible = FALSE, background = "black", title = "Parallel coordinate plot", status = "primary", solidHeader = TRUE))),
+        
+        fluidRow(
+          column(width = 12,
+           box(width = NULL, verbatimTextOutput("info1"), verbatimTextOutput("info2"), verbatimTextOutput("selected_var"), collapsible = TRUE, title = "Gene metrics", status = "primary", solidHeader = TRUE)))),
 shinydashboard::tabItem(tabName = "about",
             shiny::fluidRow("This application allows users to superimpose a differentially expressed gene of interest onto a litre plot. In the litre plot, each gene is plotted once for every combination of replicate pairs between treatment groups. The data we use for the examples below are published RNA-seq data of soybean developmental stages (Brown and Hudson, 2015). They contain two treatments (S1 and S2), each with three replicates. Hence, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatement group (S1.1 and S2.1, S1.1 and S2.2, S1.1 and S2.3, S1.2 and S2.1, S1.2 and S2.2, S1.2 and S2.3, and S1.3 and S2.1, S1.3 and S2.2, and S1.3 and S2.3).", style='padding:10px;'),
             shiny::fluidRow("As a result, each gene for this dataset can be plotted as nine points to construct the litre plot. However, with 73,320 genes in this dataset, we would have 659,880 points. In interactive versions of the plot, this would reduce the speed of the functionality as well as cause overplotting problems. As a result, we use hexagon bins to construct the background of the litre plot as is shown in the right side of Figure 1 shown below.", style='padding:10px;'),
@@ -116,11 +116,12 @@ server <- function(input, output, session) {
     metricDF
   })
   
-  # currMetric <- eventReactive(values$x, {
-  #   validate(need(values$x > 0, "Plot a gene."))
-  #   metricDF()[values$x, ]})
+  currMetric <- eventReactive(values$x, {metricDF()[values$x, ]})
   
-  currMetric <- eventReactive(metricDF(), {metricDF()[values$x, ]})
+  # output$selected_var <- renderPrint({ 
+  #   str(currMetric())
+  # })
+  
   currID <- eventReactive(currMetric(), {as.character(currMetric()$ID)})
   currGene <- eventReactive(currID(), {unname(unlist(datSel()[which(datSel()$ID == currID()), -1]))})
   
@@ -183,27 +184,27 @@ server <- function(input, output, session) {
     
     # Use onRender() function to draw x and y values of selected row as orange point
     plotlyHex() %>% onRender("
-       function(el, x, data) {
-       noPoint = x.data.length;
-       Shiny.addCustomMessageHandler('points', function(drawPoints) {
-       if (x.data.length > noPoint){
-       Plotly.deleteTraces(el.id, x.data.length-1);
-       }
-       var Traces = [];
-       var trace = {
-       x: drawPoints.geneX,
-       y: drawPoints.geneY,
-       mode: 'markers',
-       marker: {
-       color: '#FF34B3',
-       size: drawPoints.pointSize
-       },
-       hoverinfo: 'none',
-       showlegend: false
-       };
-       Traces.push(trace);
-       Plotly.addTraces(el.id, Traces);
-       });}")
+     function(el, x, data) {
+     noPoint = x.data.length;
+     Shiny.addCustomMessageHandler('points', function(drawPoints) {
+     if (x.data.length > noPoint){
+     Plotly.deleteTraces(el.id, x.data.length-1);
+     }
+     var Traces = [];
+     var trace = {
+     x: drawPoints.geneX,
+     y: drawPoints.geneY,
+     mode: 'markers',
+     marker: {
+     color: '#FF34B3',
+     size: drawPoints.pointSize
+     },
+     hoverinfo: 'none',
+     showlegend: false
+     };
+     Traces.push(trace);
+     Plotly.addTraces(el.id, Traces);
+     });}")
   })
   
   observe({
@@ -244,47 +245,47 @@ server <- function(input, output, session) {
     })
     
     ggBP() %>% onRender("
-      function(el, x, data) {
-      
-      console.log(['x', x])
-      console.log(['x.data.length', x.data.length])
-      noPoint = x.data.length;
-      
-      function range(start, stop, step){
-      var a=[start], b=start;
-      while(b<stop){b+=step;a.push(b)}
-      return a;
-      };
-      
-      Shiny.addCustomMessageHandler('lines',
-      function(drawLines) {
-      
-      i = x.data.length
-      if (i > 1){
-      while (i > 1){
-      Plotly.deleteTraces(el.id, (i-1));
-      i--;
-      }
-      }
-      
-      var dLength = drawLines.length
-      
-      var Traces = [];
-      var traceLine = {
-      x: range(1, dLength, 1),
-      y: drawLines,
-      mode: 'lines',
-      line: {
-      color: '#FF34B3',
-      width: 2
-      },
-      opacity: 0.9,
-      hoverinfo: 'none'
-      }
-      Traces.push(traceLine);
-      Plotly.addTraces(el.id, Traces);
-      })
-      }")})
+    function(el, x, data) {
+    
+    console.log(['x', x])
+    console.log(['x.data.length', x.data.length])
+    noPoint = x.data.length;
+    
+    function range(start, stop, step){
+    var a=[start], b=start;
+    while(b<stop){b+=step;a.push(b)}
+    return a;
+    };
+    
+    Shiny.addCustomMessageHandler('lines',
+    function(drawLines) {
+    
+    i = x.data.length
+    if (i > 1){
+    while (i > 1){
+    Plotly.deleteTraces(el.id, (i-1));
+    i--;
+    }
+    }
+    
+    var dLength = drawLines.length
+    
+    var Traces = [];
+    var traceLine = {
+    x: range(1, dLength, 1),
+    y: drawLines,
+    mode: 'lines',
+    line: {
+    color: '#FF34B3',
+    width: 2
+    },
+    opacity: 0.9,
+    hoverinfo: 'none'
+    }
+    Traces.push(traceLine);
+    Plotly.addTraces(el.id, Traces);
+    })
+    }")})
 }
 
 shiny::shinyApp(ui = ui, server = server)
