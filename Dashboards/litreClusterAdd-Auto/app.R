@@ -44,7 +44,8 @@ body <- dashboardBody(
              numericInput("binSize", "Hexagon size:", value = 10, min = 1),
              numericInput("pointSize", "Point size:", value = 8, min = 1),
              actionButton("prevButton", "Previous gene"),
-             actionButton("nextButton", "Next gene"))),
+             actionButton("nextButton", "Next gene"),
+             checkboxInput("autoButton", "Cycle automatically", FALSE))),
           column(width = 8,
              box(width = NULL, withSpinner(plotlyOutput("hexPlot")), collapsible = FALSE, background = "black", title = "Litre plot", status = "primary", solidHeader = TRUE))),
         
@@ -86,10 +87,37 @@ ui <- shinydashboard::dashboardPage(
 server <- function(input, output, session) {
   
   values <- reactiveValues(x=-1, selPair=NULL, selMetric=NULL, selOrder=NULL)
-  
   autoInvalidate <- reactiveTimer(800)
   
-  #observeEvent(autoInvalidate(), values$x <- values$x + 1)
+  #observeEvent(input$autoButton, autoInvalidate <- reactiveTimer(800))
+  #if (input$autoButton == FALSE){
+  #  print("It is FALSEEEEEE !!!!!!!!!!!!")
+  #}
+  #observeEvent(c(autoInvalidate(), input$autoButton), values$x <- values$x + 1)
+  #observeEvent(input$autoButton, values$x <- values$x + 1)
+  
+  observeEvent(autoInvalidate(),
+      if(input$autoButton == TRUE){values$x <- values$x + 1})
+  
+  
+  # values$x <- eventReactive(input$autoButton == TRUE, {
+  #     print("IN LOOOOOOOOOOOOP")
+  #              validate(need(input$autoButton == TRUE, ""))
+  #               values$x + 1})
+  
+
+  output$selected_var <- renderPrint({
+    input$autoButton
+  })
+  
+  
+  datSel <- eventReactive(input$selPair, {
+    validate(need(length(input$selPair) == 2, "Select a pair of treatments."))
+    sampleIndex <- reactive(which(sapply(colnames(dat), function(x) unlist(strsplit(x,"[.]"))[1]) %in% c(input$selPair[1], input$selPair[2])))
+    dat[,c(1, sampleIndex())]
+  }, ignoreNULL = FALSE)
+  
+  
   observeEvent(input$nextButton, values$x <- values$x + 1)
   observeEvent(input$prevButton, values$x <- values$x - 1)
   
@@ -119,10 +147,6 @@ server <- function(input, output, session) {
   })
   
   currMetric <- eventReactive(values$x, {metricDF()[values$x, ]})
-  
-  # output$selected_var <- renderPrint({ 
-  #   str(currMetric())
-  # })
   
   currID <- eventReactive(currMetric(), {as.character(currMetric()$ID)})
   currGene <- eventReactive(currID(), {unname(unlist(datSel()[which(datSel()$ID == currID()), -1]))})
