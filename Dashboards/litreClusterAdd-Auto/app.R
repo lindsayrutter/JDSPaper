@@ -21,7 +21,7 @@ datCol <- colnames(dat)[-which(colnames(dat) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 load("add1_metrics.rda")
 myMetrics <- colnames(metrics[[1]])[-which(colnames(metrics[[1]]) %in% "ID")]
-values <- reactiveValues(x=1, selPair=NULL, selMetric=NULL, selOrder=NULL)
+#values <- reactiveValues(x=0, selPair=NULL, selMetric=NULL, selOrder=NULL)
 
 sidebar <- dashboardSidebar(
   width = 180,
@@ -85,16 +85,18 @@ ui <- shinydashboard::dashboardPage(
 
 server <- function(input, output, session) {
   
+  values <- reactiveValues(x=-1, selPair=NULL, selMetric=NULL, selOrder=NULL)
+  
   autoInvalidate <- reactiveTimer(800)
   
   #observeEvent(autoInvalidate(), values$x <- values$x + 1)
   observeEvent(input$nextButton, values$x <- values$x + 1)
   observeEvent(input$prevButton, values$x <- values$x - 1)
   
-  observeEvent(input$selPair, values$x <- 1)
-  observeEvent(input$selMetric, values$x <- 1)
-  observeEvent(input$selOrder, values$x <- 1)
-  observeEvent(input$binSize, values$x <- 1)
+  observeEvent(input$selPair, values$x <- 0)
+  observeEvent(input$selMetric, values$x <- 0)
+  observeEvent(input$selOrder, values$x <- 0)
+  observeEvent(input$binSize, values$x <- 0)
   
   observeEvent(input$selPair, values$selPair <- input$selPair)
   
