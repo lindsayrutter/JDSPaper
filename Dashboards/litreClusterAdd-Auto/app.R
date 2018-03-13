@@ -89,22 +89,8 @@ server <- function(input, output, session) {
   values <- reactiveValues(x=-1, selPair=NULL, selMetric=NULL, selOrder=NULL)
   autoInvalidate <- reactiveTimer(800)
   
-  #observeEvent(input$autoButton, autoInvalidate <- reactiveTimer(800))
-  #if (input$autoButton == FALSE){
-  #  print("It is FALSEEEEEE !!!!!!!!!!!!")
-  #}
-  #observeEvent(c(autoInvalidate(), input$autoButton), values$x <- values$x + 1)
-  #observeEvent(input$autoButton, values$x <- values$x + 1)
-  
   observeEvent(autoInvalidate(),
       if(input$autoButton == TRUE){values$x <- values$x + 1})
-  
-  
-  # values$x <- eventReactive(input$autoButton == TRUE, {
-  #     print("IN LOOOOOOOOOOOOP")
-  #              validate(need(input$autoButton == TRUE, ""))
-  #               values$x + 1})
-  
 
   output$selected_var <- renderPrint({
     input$autoButton
