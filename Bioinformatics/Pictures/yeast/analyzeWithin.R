@@ -4,12 +4,13 @@ library(data.table)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(GGally)
 data = readRDS("dataWithin.rds")
 setDT(data, keep.rownames = TRUE)[]
 colnames(data) = c("ID","Y1.1","Y1.2","Y2.1","Y2.2","Y7.1","Y7.2","Y4.1","Y4.2","D.1","D.2","D.7","G.1","G.2","G.3")
 data = as.data.frame(data)
 
-outDir = "/Users/lindz/JDSPaper/Bioinformatics/Pictures/yeast/within"
+outDir = "within"
 
 dataSel <- data
 dataSel[,c(2:ncol(dataSel))] = log(dataSel[,c(2:ncol(dataSel))]+1)

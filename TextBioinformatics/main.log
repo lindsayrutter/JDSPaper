@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -391,12 +391,12 @@ Overfull \hbox (1.12001pt too wide) has occurred while \output is active
 
 
  <./OUP_First_SBk_Bot_8401-eps-converted-to.pdf>]
-<../Bioinformatics/Pictures/bmp/Color/2group.png, id=20, 608.2725pt x 482.80376
-pt>
-File: ../Bioinformatics/Pictures/bmp/Color/2group.png Graphic file (type png)
- <use ../Bioinformatics/Pictures/bmp/Color/2group.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/bmp/Color/2group.png used o
-n input line 53.
+<../MakeFigures/simulatedData.jpg, id=20, 608.2725pt x 482.80376pt>
+File: ../MakeFigures/simulatedData.jpg Graphic file (type jpg)
+
+<use ../MakeFigures/simulatedData.jpg>
+Package pdftex.def Info: ../MakeFigures/simulatedData.jpg used on input line 53
+.
 (pdftex.def)             Requested size: 234.0pt x 185.72899pt.
 LaTeX Font Info:    Try loading font information for LY1+phb on input line 55.
 LaTeX Font Info:    No file LY1phb.fd. on input line 55.
@@ -424,7 +424,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[2 <../Bioinformatics/Pictures/bmp/Color/2group.png>]
+[2 <../MakeFigures/simulatedData.jpg>]
 <../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.
 jpg, id=27, 501.875pt x 501.875pt>
 File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_s
@@ -440,13 +440,13 @@ itch/S1_S2_points_size1.jpg used on input line 82.
 LaTeX Font Warning: Font shape `LY1/phb/m/it' undefined
 (Font)              using `LY1/phb/m/n' instead on input line 84.
 
-<../Bioinformatics/Pictures/Figure4.png, id=28, 507.3354pt x 1009.8528pt>
-File: ../Bioinformatics/Pictures/Figure4.png Graphic file (type png)
+<../MakeFigures/yeastWithinBetween.jpg, id=28, 301.125pt x 602.25pt>
+File: ../MakeFigures/yeastWithinBetween.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/Figure4.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/Figure4.png used on input l
-ine 100.
-(pdftex.def)             Requested size: 234.0pt x 465.77066pt.
+<use ../MakeFigures/yeastWithinBetween.jpg>
+Package pdftex.def Info: ../MakeFigures/yeastWithinBetween.jpg used on input li
+ne 100.
+(pdftex.def)             Requested size: 234.0pt x 468.01627pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
@@ -471,9 +471,9 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[4 <../Bioinformatics/Pictures/Figure4.png>]
+[4 <../MakeFigures/yeastWithinBetween.jpg>]
 <../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg, id
-=36, 501.875pt x 501.875pt>
+=35, 501.875pt x 501.875pt>
 File: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jp
 g Graphic file (type jpg)
 
@@ -482,7 +482,7 @@ g Graphic file (type jpg)
 Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switc
 hed/S1_S2_points.jpg used on input line 114.
 (pdftex.def)             Requested size: 234.0pt x 234.00507pt.
- <../Bioinformatics/Pictures/mdsSwitch.png, id=37, 627.7854pt x 608.5134pt>
+ <../Bioinformatics/Pictures/mdsSwitch.png, id=36, 627.7854pt x 608.5134pt>
 File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
 
 <use ../Bioinformatics/Pictures/mdsSwitch.png>
@@ -490,7 +490,7 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
  line 124.
 (pdftex.def)             Requested size: 234.0pt x 226.80847pt.
 
-<../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id=38, 602.25pt x 602
+<../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id=37, 602.25pt x 602
 .25pt>
 File: ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg Graphic file (typ
 e jpg)
@@ -505,7 +505,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 
 [5 <../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg>
  <../Bioinformatics/Pictures/mdsSwitch.png>]
-<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png, id=43,
+<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png, id=42,
  453.3738pt x 629.2308pt>
 File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png Gr
 aphic file (type png)
@@ -526,7 +526,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [6 <../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>]
-<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=47, 791.5974pt x 12
+<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=46, 791.5974pt x 12
 97.4874pt>
 File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
  png)
@@ -677,7 +677,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  3752 strings out of 492995
- 48759 string characters out of 6132704
+ 48706 string characters out of 6132704
  120716 words of memory out of 5000000
  7194 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
@@ -695,9 +695,9 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 4025023 bytes).
+Output written on main.pdf (10 pages, 3014451 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
