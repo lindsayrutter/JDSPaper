@@ -18,9 +18,6 @@ data("soybean_ir")
 data("soybean_ir_metrics")
 data <- soybean_ir
 metrics <- soybean_ir_metrics[["N_P"]]
-data2 = data
-data2[,-1] = log(data[,-1]+1)
-data=data2
 
 RowSD = function(x) {
   sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
@@ -40,12 +37,8 @@ data = data[,-1]
 rownames(data) <- data_Rownames
 #Normalize and log
 cpm.data.new <- cpm(data, TRUE, TRUE)
-# data2 = data
-# data2 = log(data+1)
-# data=data2
 # Normalize for sequencing depth and other distributional differences between lanes
 data <- betweenLaneNormalization(cpm.data.new, which="full", round=FALSE)
-data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
 data = as.data.frame(data)
 # Add mean and standard deviation for each row/gene
 data = mutate(data, mean = (N.1+N.2+N.3+P.1+P.2+P.3)/6, stdev = RowSD(cbind(N.1,N.2,N.3,P.1,P.2,P.3)))
@@ -95,7 +88,7 @@ d = dist(as.matrix(dendo))
 hc = hclust(d, method="ward.D")
 
 plotName = "N_P"
-outDir = "Clustering_data_FDR_05_Test"
+outDir = "Clustering_data_box3"
 
 fileName = paste(getwd(), "/", outDir, "/dendodgram.jpg", sep="")
 jpeg(fileName)
@@ -147,8 +140,8 @@ getPCP <- function(nC){
     colnames(pcpDat) <- c("ID", "Sample", "Count")
     boxDat$Sample <- as.character(boxDat$Sample)
     pcpDat$Sample <- as.character(pcpDat$Sample)
-
-    p = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.03) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
+    
+    p = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.05) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
     
     fileName = paste(getwd(), "/", outDir, "/", plotName, "_", nC, "_", i, ".jpg", sep="")
     jpeg(fileName)
@@ -175,13 +168,13 @@ getPCP <- function(nC){
   ggBP
   invisible(dev.off())
   
-  # scatMatMetrics = list()
-  # scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xNames),]
-  # scatMatMetrics[["N_P"]]$FDR = 10e-10
-  # scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-  # fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_filtered.jpg", sep="")
-  # 
-  # plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[1], fileName=fileName)
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xNames),]
+  scatMatMetrics[["N_P"]]$FDR = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+  fileName = paste(getwd(), "/", outDir, "/", "SM_", nC, "_filtered.jpg", sep="")
+  
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[1], fileName=fileName)
   
   filts$ID = xNames
   colnames(filts)[1:6] = colnames(dataqps)[1:6]
@@ -210,29 +203,29 @@ getPCP <- function(nC){
     saveRDS(xSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_", i, ".Rds"))
     
     if (nrow(xSig)>0){
-      # scatMatMetrics = list()
-      # scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
-      # scatMatMetrics[["N_P"]]$FDR = 10e-10
-      # scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-      # fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
-      # plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
-      # 
+      scatMatMetrics = list()
+      scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
+      scatMatMetrics[["N_P"]]$FDR = 10e-10
+      scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+      fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
+      plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+      
       xSig$ID = xSigNames
       pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
       colnames(pcpDat) <- c("ID", "Sample", "Count")
       pcpDat$Sample <- as.character(pcpDat$Sample)
       
       pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.2) + xlab(paste("Cluster ", i, " (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + ylab("Count")
-
+      
     }else{
-      # scatMatMetrics = list()
-      # scatMatMetrics[["N_P"]] = metrics[1,]
-      # scatMatMetrics[["N_P"]]$FDR = 1
-      # scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-      # fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
-      # plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
+      scatMatMetrics = list()
+      scatMatMetrics[["N_P"]] = metrics[1,]
+      scatMatMetrics[["N_P"]]$FDR = 1
+      scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+      fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_", i, ".jpg", sep="")
+      plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1], fileName=fileName)
       xSig = x[1,]
-
+      
       xSig$ID = c("PlaceholderID")
       pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
       colnames(pcpDat) <- c("ID", "Sample", "Count")
@@ -253,14 +246,14 @@ getPCP <- function(nC){
   filtsSig = filts[which(rownames(filts) %in% sigID),]
   nGenes = nrow(filtsSig)
   filtsSigNames = rownames(filtsSig)
-  #saveRDS(filtsSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_Filtered.Rds"))
+  saveRDS(filtsSigNames, file=paste0(getwd(), "/", outDir, "/Sig_", nC, "_Filtered.Rds"))
   
-  #scatMatMetrics = list()
-  #scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% filtsSigNames),]
-  #scatMatMetrics[["N_P"]]$FDR = 10e-10
-  #scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
-  #fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_filtered.jpg", sep="")
-  #plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[1], fileName=fileName)
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% filtsSigNames),]
+  scatMatMetrics[["N_P"]]$FDR = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+  fileName = paste(getwd(), "/", outDir, "/", "SM_Sig_", nC, "_filtered.jpg", sep="")
+  plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[1], fileName=fileName)
   
   if (nrow(filtsSig)>0){
     

@@ -13,14 +13,7 @@ library(gridExtra)
 library(cowplot)
 install_github("drisso/yeastRNASeqRisso2011")
 
-# Helper function
-formatDF <- function(df){
-  setDT(df, keep.rownames = TRUE)[]
-  colnames(df) = c("ID","Y1.1","Y1.2","Y2.1","Y2.2","Y7.1","Y7.2","Y4.1","Y4.2","D.1","D.2","D.7","G.1","G.2","G.3")
-  df = as.data.frame(df)
-  df[,c(2:ncol(df))] = log(df[,c(2:ncol(df))]+1)
-  df
-}
+source("functions.R")
 
 # Read in three .rda files
 githubURL <- "https://github.com/drisso/yeastRNASeqRisso2011/blob/master/data/"
@@ -45,9 +38,9 @@ counts <- as(dataWithin,"CountDataSet")
 dataWithin <- as.data.frame(counts@assayData$counts)
 counts <- as(dataNorm,"CountDataSet")
 dataBetween <- as.data.frame(counts@assayData$counts)
-dataWithin <- formatDF(dataWithin)
+dataWithin <- formatYeastDF(dataWithin)
 dataWithin <- select(dataWithin, ID, Y1.1, Y1.2, Y4.1, Y4.2)
-dataBetween <- formatDF(dataBetween)
+dataBetween <- formatYeastDF(dataBetween)
 dataBetween <- select(dataBetween, ID, Y1.1, Y1.2, Y4.1, Y4.2)
 
 # Use bigPint function to create scatterplot matrices showing within and between normalization
