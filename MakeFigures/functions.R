@@ -224,3 +224,30 @@ filterStandardize <- function(data){
 
 
 
+
+
+plotClusterSM <- function(i){
+  x = as.data.frame(datas[which(k==i),])
+  x$cluster = "color"
+  x$cluster2 = factor(x$cluster)
+  xNames = rownames(x)
+  metricFDR = metrics[which(as.character(metrics$ID) %in% xNames),]
+  sigID = metricFDR[metricFDR$FDR<0.05,]$ID
+  xSig = x[which(rownames(x) %in% sigID),]
+  xSigNames = rownames(xSig)
+  nGenes = nrow(xSig)
+  
+  scatMatMetrics = list()
+  scatMatMetrics[["N_P"]] = metrics[which(metrics$ID %in% xSigNames),]
+  scatMatMetrics[["N_P"]]$FDR = 10e-10
+  scatMatMetrics[["N_P"]]$ID = as.factor(as.character(scatMatMetrics[["N_P"]]$ID))
+  
+  p = plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[i+1])
+  p[["N_P"]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", i, " Significant Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep=""))
+}
+
+
+
+
+
+
