@@ -67,7 +67,7 @@ Discussion with the authors of the study revealed that a lab biologist documente
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRClustersSig.jpg}}
 \caption{Using parallel coordinate plots to visualize significant genes after hierarchical clustering. We can quickly confirm that Clusters 1 and 2 show the typical pattern for significant genes. Cluster 4 does not distinctively show the usual profile for significant genes. Cluster 3 looks similar to Cluster 2, except for unexpectedly large P.3 values. This lead to an interesting post-hoc analysis, as is described in the text.
-\label{clusterPCP4Sig}}
+\label{sbIRClustersSig}}
 \end{figure}
 
 \section{Scatterplot matrices}
@@ -79,9 +79,9 @@ A scatterplot matrix is another effective multivariate visualization tool that p
 The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{cotyIdeal} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of them to show differential expression between samples. However, a fraction of the genes should have lower variability between replicates than between treatments, and so we should expect the spread of the scatterplot points to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{cotyIdeal}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2) \citep{Brown}. We can immediately verify that the nine scatterplots between treatment pairs (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicate pairs.
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg}}
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSM.jpg}}
 \caption{Example of the expected structure of an RNA-seq dataset. Within a given scatterplot, most genes (points) should fall along the \textit{x=y} line. We should see genes deviate more strongly from the \textit{x=y} line in treatment scatterplots than in replicate scatterplots. 
-\label{cotyIdeal}}
+\label{sbCNSM}}
 \end{figure}
 
 After confirming this expected trend, users can use the scatterplot matrix to focus on subsets of genes: Outlier genes that deviate from the \textit{x=y} line in replicate scatterplots might be problematic, whereas outlier genes that deviate from the \textit{x=y} line in treatment scatterplots might be DEGs. In order to achieve this functionality, the plots must be rendered interactive.
@@ -111,9 +111,9 @@ Additionally, we can also confirm from Figure~\ref{yeastWithinBetween}B that the
 Irreproducibility is prevalent in high-throughput biological studies. A study in Nature Genetics surveyed eighteen published microarray expression analyses and reported that only two were exactly reproducible \citep{Ioannidis}. The extent of the problem has spawned a field called ``forensic bioinformatics" whereby researchers attempt to reverse-engineer reported results back into the raw datasets simply to derive the methodologies used in published studies \citep{Baggerly}.
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg}}
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSwitchedSM.jpg}}
 \caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{cotyIdeal}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
-\label{switchedScatMat}}
+\label{sbCNSwitchedSM}}
 \end{figure}
 
 Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. With regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients \citep{Baggerly}. Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors \citep{Baggerly}. They also discovered that the most common errors are simple errors, such as mixing up sample labels \citep{Baggerly}. Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
@@ -133,7 +133,7 @@ Most popular RNA-seq plotting tools display summaries about the read counts, suc
 An example of how geometric shapes in the scatterplot matrix can provide applicable information to researchers is shown in Figure~\ref{structure}, which uses the iron-metabolism soybean dataset \citep{Lauter}. After normalizing the data, we see the expected pattern of a scatterplot matrix, with more variation around the \textit{x=y} line between treatments than between replicates (Figure~\ref{structure}). 
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg}}
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRStreak.jpg}}
 \caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
 \label{structure}}
 \end{figure}

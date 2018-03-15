@@ -69,8 +69,8 @@ filts$cluster = "color"
 filts$cluster2 = factor(filts$cluster)
 nGenes = nrow(filts)
 filts$ID = rownames(filts)
-colnames(filts)[1:6] = colnames(datas)[1:6]
-pcpDat <- melt(filts[,c(1:7)], id.vars="ID")
+colnames(filts)[1:nCol] = colnames(datas)[1:nCol]
+pcpDat <- melt(filts[,c(1:(nCol+1))], id.vars="ID")
 colnames(pcpDat) <- c("ID", "Sample", "Count")
 pcpDat$Sample <- as.character(pcpDat$Sample)
 plot_filtered = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[1], alpha=0.05) + ylab("Standardized Count") + ggtitle(paste("Filtered Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
