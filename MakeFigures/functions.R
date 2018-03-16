@@ -157,7 +157,7 @@ formatYeastDF <- function(df){
 }
 
 # Filter, normalize, and standardize data for cluster analysis
-filterStandardize <- function(data){
+filterStandardizeSB <- function(data){
   # Make sure each gene has at least one count in at least half of the six samples
   filterLow = which(rowSums(data[,-1])<=ncol(data[,-1])/2)
   filt1 <- data[filterLow,]
@@ -218,10 +218,41 @@ filterStandardize <- function(data){
   d = dist(as.matrix(dendo))
   hc = hclust(d, method="ward.D")
   
+  # Return several parameters
   list(hc=hc, datas = dataqps, filts = filts)
 }
 
 
+filterStandardizeKL <- function(data){
+  
+  data_Rownames <- data$ID
+  data = data[,-1]
+  rownames(data) <- data_Rownames
+  data <- betweenLaneNormalization(as.matrix(data), which="full", round=FALSE)
+  data = as.data.frame(data)
+  # Add mean and standard deviation for each row/gene
+  data = mutate(data, mean = (K.1+K.2+K.3+L.1+L.2+L.3)/6, stdev = RowSD(cbind(K.1,K.2,K.3,L.1,L.2,L.3)))
+  rownames(data)=data_Rownames
+  data$ID <- data_Rownames
+  
+  dataqps <- t(apply(as.matrix(data[,1:6]), 1, scale))
+  dataqps <- as.data.frame(dataqps)
+  colnames(dataqps) <- colnames(data[,1:6])
+  dataqps$ID <- rownames(dataqps)
+  
+  # Combine the filtered and remaining data
+  fulls <- dataqps
+  boxDat <- melt(fulls, id.vars="ID")
+  colnames(boxDat) <- c("ID", "Sample", "Count")
+  
+  # Indices of the 775 NAN rows. They had stdev=0 in the filt data
+  nID <- which(is.nan(dataqps$K.1))
+  # Set these filtered values that have all same values for samples to 0
+  dataqps[nID,1:6] <- 0
+  
+  # Return several parameters
+  list(datas = dataqps, fulls = fulls)
+}
 
 
 

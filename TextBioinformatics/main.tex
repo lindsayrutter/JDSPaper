@@ -188,11 +188,6 @@ Although we could finish our analysis at this point and draw conclusions based o
 \label{lkSM}}
 \end{figure}
 
-
-
-
-
-
 Taking both of these observations into account, we may need to reconsider our normalization technique. Some authors have argued that the popular library scaling method is not adequate in all cases, especially when the underlying distribution of reads between samples is inconsistent. In the current data, the observed streak of outlier genes that are highly expressed in the liver samples reduces the sequencing quota available to the remaning genes in these samples, which could create an articial inflation of the kidney-specific DEG calls. These authors have recommended TMM normalization for such cases (including for this particular dataset) as this technique generates sample scaling factors that consider sample distributions \citep{RobinsonOshlack}.
 
 In light of all this, we return to square one and now apply TMM normalization to this data. This process leads to 7,520 DEGs that have a more level distribution between the kidney ($\sim$53\%) and liver ($\sim$47\%) groups. The scatterplot matrix will not appear differently from what we saw before as both of these normalization methods are scaling procedures. However, we should visualize the new DEG calls. Plotting these DEGs as parallel coordinate lines paints a much cleaner picture from what we saw earlier, with most genes following the expected pattern of significance (Supplementary Figure 9). Of the 7,050 kidney-specific DEGs we saw previously with library scaling normalization, only a cleaner-looking subset (n=3,974) of them remained as such using TMM normalization.

@@ -22,7 +22,7 @@ load("../Bioinformatics/Pictures/FilterNotSig/soybean_ir_noFilt_metrics.rda")
 metrics <- soybean_ir_noFilt_metrics[["N_P"]]
 
 # Filter, normalize, and standardize the data so each gene has mean=0 and stdev=1
-res <- filterStandardize(data)
+res <- filterStandardizeSB(data)
 # Fitered data standardized
 filts <- res[["filts"]]
 # Non-filtered data standardized
