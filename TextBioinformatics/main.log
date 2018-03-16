@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 00:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 02:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,23 +542,37 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 File: ../MakeFigures/lkSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkSM.jpg used on input line 186.
+Package pdftex.def Info: ../MakeFigures/lkSM.jpg used on input line 182.
 (pdftex.def)             Requested size: 234.0pt x 210.36371pt.
-LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 224.
+
+<../MakeFigures/lkClusters.jpg, id=57, 442.65375pt x 362.35374pt>
+File: ../MakeFigures/lkClusters.jpg Graphic file (type jpg)
+
+<use ../MakeFigures/lkClusters.jpg>
+Package pdftex.def Info: ../MakeFigures/lkClusters.jpg used on input line 188.
+(pdftex.def)             Requested size: 234.0pt x 191.55447pt.
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <6.5> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 190.
+
+
+LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 190.
+
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[8 <../MakeFigures/lkSM.jpg>]
-Underfull \hbox (badness 1264) in paragraph at lines 239--241
+[8 <../MakeFigures/lkSM.jpg> <../MakeFigures/lkClusters.jpg>]
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 221.
+
+Underfull \hbox (badness 1264) in paragraph at lines 236--238
 \LY1/ptm/m/n/7 Algorithms for Gene Expression Data. \LY1/ptm/m/it/7 Internation
 al Journal of Computer
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 301--302
+Underfull \hbox (badness 2020) in paragraph at lines 298--299
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
@@ -566,40 +580,50 @@ formation
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 338.5pt
+Extra height:28.0pt when 488.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 339.5pt
+Extra height:10.0pt when 489.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 340.5pt
+Extra height:10.0pt when 490.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 341.5pt
+Extra height:10.0pt when 491.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 342.5pt
+Extra height:10.0pt when 492.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 343.5pt
+Extra height:10.0pt when 493.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 344.5pt
+Extra height:10.0pt when 494.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:344.5pt Right:344.0pt Output:344.5pt
+Extra height:10.0pt when 495.75949pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 496.75949pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 497.75949pt
+Extra height:0.0pt when 498.75949pt
+(2)Left:498.75949pt Right:480.519pt Output:498.75949pt
 - LAST -
 Extra skip:0.0pt
-Left:344.5pt
-Right:344.0pt
-Output:344.5pt
+Left:498.75949pt
+Right:480.519pt
+Output:498.75949pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -608,9 +632,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[9
-
-]
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -626,15 +648,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 3747 strings out of 492995
- 47567 string characters out of 6132704
- 131469 words of memory out of 5000000
- 7194 multiletter control sequences out of 15000+600000
- 53496 words of font info for 94 fonts, out of 8000000 for 9000
+ 3756 strings out of 492995
+ 47769 string characters out of 6132704
+ 140794 words of memory out of 5000000
+ 7202 multiletter control sequences out of 15000+600000
+ 54627 words of font info for 95 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,10n,28p,1289b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,10n,28p,1311b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -647,10 +672,10 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 1819734 bytes).
+Output written on main.pdf (10 pages, 1914287 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

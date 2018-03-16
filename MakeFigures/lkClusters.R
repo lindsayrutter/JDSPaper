@@ -76,7 +76,7 @@ sigIDs = list(sigL$ID, sigK$ID)
 boxDat <- melt(fulls, id.vars="ID")
 colnames(boxDat) <- c("ID", "Sample", "Count")
 
-plot_clustersSig = lapply(1:2, function(i){ 
+plot_clustersSigRaw = lapply(1:2, function(i){ 
   x = as.data.frame(datas[which(datas$ID %in% sigIDs[[i]]),])
   x$cluster = "color"
   x$cluster2 = factor(x$cluster)
@@ -96,9 +96,83 @@ plot_clustersSig = lapply(1:2, function(i){
     geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.05) + 
     ylab("Standardized Count") +
     ggtitle(paste("Significant ",  Type[i] ," Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme_gray() +
-    theme(plot.title = element_text(hjust = 0.5, size=9), axis.text=element_text(size=9), axis.title=element_text(size=9))
+    theme(plot.title = element_text(hjust = 0.5, size=8.5), axis.text=element_text(size=8.5), axis.title=element_text(size=8.5))
   pSig
 })
 
-do.call("grid.arrange", c(plot_clustersSig, ncol=2))
+# Repeat for kidney
+#######################################################
 
+y <- DGEList(counts=dataSel,group=group)
+# Only difference is we know have calcNormFactors
+y <- calcNormFactors(y)
+design <- model.matrix(~group)
+y <- estimateDisp(y, design)
+fit <- glmFit(y,design)
+lrt <- glmLRT(fit,coef=2)
+ret = data.frame(ID=rownames(topTags(lrt, n = nrow(y[[1]]))[[1]]), topTags(lrt, n = nrow(y[[1]]))[[1]])
+ret$ID = as.character(ret$ID)
+ret = as.data.frame(ret)
+metricList = list()
+metricList[["K_L"]] = ret
+metrics <- metricList[["K_L"]]
+
+# Determine DEGs that are liver-specific and kidney-specific
+sigMets = metrics[which(metrics$FDR<0.001),]
+sigL <- sigMets[which(sigMets$logFC<0),]
+sigK <- sigMets[which(sigMets$logFC>0),]
+
+logSoy = data
+logSoy[,-1] <- log(data[,-1]+1)
+
+# Filter, normalize, and standardize the data so each gene has mean=0 and stdev=1
+res <- filterStandardizeKL(data)
+# Fitered data standardized
+fulls <- res[["fulls"]]
+# Non-filtered data standardized
+datas <- res[["datas"]]
+
+# Choose colors for plots
+colPurple = scales::seq_gradient_pal("purple4", "purple", "Lab")(seq(0,1,length.out=9))
+colOrange = scales::seq_gradient_pal("orangered4", "darkorange2", "Lab")(seq(0,1,length.out=9))
+colList = c(colPurple[5], colOrange[5])
+
+Type = c("Kidney", "Liver")
+yMin = min(datas[,1:6])
+yMax = max(datas[,1:6])
+sigIDs = list(sigL$ID, sigK$ID)
+
+# Create background boxplot data
+boxDat <- melt(fulls, id.vars="ID")
+colnames(boxDat) <- c("ID", "Sample", "Count")
+
+plot_clustersSigTMM = lapply(1:2, function(i){ 
+  x = as.data.frame(datas[which(datas$ID %in% sigIDs[[i]]),])
+  x$cluster = "color"
+  x$cluster2 = factor(x$cluster)
+  xNames = rownames(x)
+  metricFDR = metrics[which(as.character(metrics$ID) %in% xNames),]
+  sigID = metricFDR[metricFDR$FDR<0.001,]$ID
+  xSig = x[which(rownames(x) %in% sigID),]
+  xSigNames = rownames(xSig)
+  nGenes = nrow(xSig)
+  
+  xSig$ID = xSigNames
+  pcpDat <- melt(xSig[,c(1:7)], id.vars="ID")
+  colnames(pcpDat) <- c("ID", "Sample", "Count")
+  pcpDat$Sample <- as.character(pcpDat$Sample)
+  
+  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() +
+    geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i], alpha=0.05) + 
+    ylab("Standardized Count") +
+    ggtitle(paste("Significant ",  Type[i] ," Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme_gray() +
+    theme(plot.title = element_text(hjust = 0.5, size=8.5), axis.text=element_text(size=8.5), axis.title=element_text(size=8.5))
+  pSig
+})
+
+plot1 <- plot_clustersSigRaw[[1]]
+plot2 <- plot_clustersSigRaw[[2]]
+plot3 <- plot_clustersSigTMM[[1]]
+plot4 <- plot_clustersSigTMM[[2]]
+
+plot_grid(plot1, plot2, plot3, plot4, ncol = 2, labels = c("A", "", "B", ""), label_size = 8.5)
