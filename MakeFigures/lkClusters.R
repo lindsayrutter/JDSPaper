@@ -175,4 +175,4 @@ plot2 <- plot_clustersSigRaw[[2]]
 plot3 <- plot_clustersSigTMM[[1]]
 plot4 <- plot_clustersSigTMM[[2]]
 
-plot_grid(plot1, plot2, plot3, plot4, ncol = 2, labels = c("A", "", "B", ""), label_size = 8.5)
+plot_grid(plot1, plot2, plot3, plot4, ncol = 2, labels = c("A", "A", "B", "B"), label_size = 8.5)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 02:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -274,30 +274,30 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster
 1.png used on input line 69.
 (pdftex.def)             Requested size: 328.82707pt x 450.3638pt.
 
-<../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Keep/K_
-L_8.jpg, id=39, 1003.75pt x 1806.75pt>
-File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ke
-ep/K_L_8.jpg Graphic file (type jpg)
+<../MakeFigures/lkClustersKeep.jpg, id=39, 1003.75pt x 1806.75pt>
+File: ../MakeFigures/lkClustersKeep.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Kee
-p/K_L_8.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Keep/K_L_8.jpg used on input line 78.
+<use ../MakeFigures/lkClustersKeep.jpg>
+Package pdftex.def Info: ../MakeFigures/lkClustersKeep.jpg used on input line 7
+8.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
-<../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Removed
-/K_L_8.jpg, id=40, 1003.75pt x 1806.75pt>
-File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Re
-moved/K_L_8.jpg Graphic file (type jpg)
+<../MakeFigures/lkClustersRemove.jpg, id=40, 1003.75pt x 1806.75pt>
+File: ../MakeFigures/lkClustersRemove.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Rem
-oved/K_L_8.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Removed/K_L_8.jpg used on input line 85.
+<use ../MakeFigures/lkClustersRemove.jpg>
+Package pdftex.def Info: ../MakeFigures/lkClustersRemove.jpg used on input line
+ 85.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
+
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 87.
 
 
 LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 87.
+
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 87.
 
 
 LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 87.
@@ -305,27 +305,20 @@ LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 87.
 
 LaTeX Warning: Float too large for page by 19.12503pt on input line 88.
 
+<../MakeFigures/lkClustersOrig.jpg, id=41, 1003.75pt x 1806.75pt>
+File: ../MakeFigures/lkClustersOrig.jpg Graphic file (type jpg)
 
-<../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Orig/K_
-L_8.jpg, id=41, 1003.75pt x 1806.75pt>
-File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Or
-ig/K_L_8.jpg Graphic file (type jpg)
-
-<use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ori
-g/K_L_8.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Orig/K_L_8.jpg used on input line 92.
+<use ../MakeFigures/lkClustersOrig.jpg>
+Package pdftex.def Info: ../MakeFigures/lkClustersOrig.jpg used on input line 9
+2.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
-<../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L
-_8.jpg, id=42, 1003.75pt x 1806.75pt>
-File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ad
-d/K_L_8.jpg Graphic file (type jpg)
+<../MakeFigures/lkClustersAdd.jpg, id=42, 1003.75pt x 1806.75pt>
+File: ../MakeFigures/lkClustersAdd.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add
-/K_L_8.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Add/K_L_8.jpg used on input line 99.
+<use ../MakeFigures/lkClustersAdd.jpg>
+Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg used on input line 99
+.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Keep/K_
@@ -339,12 +332,25 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
 _FDR_001_TMMvRaw_Keep/K_L_Sig_SM_Keep_8_1.jpg used on input line 106.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 108.
+
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 108.
+
 <../Dashboards/exampleKeep.png, id=44, 550.6974pt x 807.9786pt>
 File: ../Dashboards/exampleKeep.png Graphic file (type png)
 
 <use ../Dashboards/exampleKeep.png>
 Package pdftex.def Info: ../Dashboards/exampleKeep.png used on input line 113.
 (pdftex.def)             Requested size: 328.82707pt x 482.44844pt.
+
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 115.
+
+
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 115.
+
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Removed
 /K_L_Sig_SM_Removed_8_1.jpg, id=45, 702.625pt x 702.625pt>
@@ -357,6 +363,12 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
 _FDR_001_TMMvRaw_Removed/K_L_Sig_SM_Removed_8_1.jpg used on input line 120.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
+
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 122.
+
+
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 122.
+
 <../Dashboards/exampleRemove.png, id=46, 543.4704pt x 805.5696pt>
 File: ../Dashboards/exampleRemove.png Graphic file (type png)
 
@@ -364,7 +376,14 @@ File: ../Dashboards/exampleRemove.png Graphic file (type png)
 Package pdftex.def Info: ../Dashboards/exampleRemove.png used on input line 127
 .
 (pdftex.def)             Requested size: 328.82707pt x 487.40184pt.
- [8
+
+
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 129.
+
+
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 129.
+
+[8
 
  <../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png>]
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Orig/K_
@@ -378,12 +397,25 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
 _FDR_001_TMMvRaw_Orig/K_L_Sig_SM_Orig_8_1.jpg used on input line 135.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
+
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 137.
+
+
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 137.
+
 <../Dashboards/exampleOrig.png, id=52, 544.434pt x 805.5696pt>
 File: ../Dashboards/exampleOrig.png Graphic file (type png)
 
 <use ../Dashboards/exampleOrig.png>
 Package pdftex.def Info: ../Dashboards/exampleOrig.png used on input line 142.
 (pdftex.def)             Requested size: 328.82707pt x 486.56598pt.
+
+
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 144.
+
+
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 144.
+
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L
 _Sig_SM_Add_8_1.jpg, id=53, 702.625pt x 702.625pt>
@@ -396,21 +428,31 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
 _FDR_001_TMMvRaw_Add/K_L_Sig_SM_Add_8_1.jpg used on input line 150.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
+
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 152.
+
+
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 152.
+
 <../Dashboards/exampleAdd.png, id=54, 541.0614pt x 805.5696pt>
 File: ../Dashboards/exampleAdd.png Graphic file (type png)
 
 <use ../Dashboards/exampleAdd.png>
 Package pdftex.def Info: ../Dashboards/exampleAdd.png used on input line 157.
 (pdftex.def)             Requested size: 328.82707pt x 489.60211pt.
- [9] [10 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRa
-w_Keep/K_L_8.jpg>] [11 <../Bioinformatics/Pictures/liverKidney/Clustering_data_
-FDR_001_TMMvRaw_Removed/K_L_8.jpg>] [12 <../Bioinformatics/Pictures/liverKidney
-/Clustering_data_FDR_001_TMMvRaw_Orig/K_L_8.jpg>] [13 <../Bioinformatics/Pictur
-es/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L_8.jpg>] [14 <../Bioinfor
-matics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Keep/K_L_Sig_SM_Kee
-p_8_1.jpg>] [15 <../Dashboards/exampleKeep.png>] [16 <../Bioinformatics/Picture
-s/liverKidney/Clustering_data_FDR_001_TMMvRaw_Removed/K_L_Sig_SM_Removed_8_1.jp
-g>] [17 <../Dashboards/exampleRemove.png>]
+
+
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 159.
+
+
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 159.
+
+[9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersRemo
+ve.jpg>] [12 <../MakeFigures/lkClustersOrig.jpg>] [13 <../MakeFigures/lkCluster
+sAdd.jpg>] [14 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_
+TMMvRaw_Keep/K_L_Sig_SM_Keep_8_1.jpg>] [15 <../Dashboards/exampleKeep.png>]
+[16 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Rem
+oved/K_L_Sig_SM_Removed_8_1.jpg>] [17 <../Dashboards/exampleRemove.png>]
 [18 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ori
 g/K_L_Sig_SM_Orig_8_1.jpg>] [19 <../Dashboards/exampleOrig.png>] [20 <../Bioinf
 ormatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L_Sig_SM_Ad
@@ -420,10 +462,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2088 strings out of 492995
- 34267 string characters out of 6132704
- 100987 words of memory out of 5000000
- 5614 multiletter control sequences out of 15000+600000
+ 2095 strings out of 492995
+ 33548 string characters out of 6132704
+ 101618 words of memory out of 5000000
+ 5618 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,32p,1425b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -432,7 +474,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on supp.pdf (21 pages, 6630039 bytes).
+Output written on supp.pdf (21 pages, 6630346 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

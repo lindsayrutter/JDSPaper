@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 02:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 08:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -545,12 +545,12 @@ File: ../MakeFigures/lkSM.jpg Graphic file (type jpg)
 Package pdftex.def Info: ../MakeFigures/lkSM.jpg used on input line 182.
 (pdftex.def)             Requested size: 234.0pt x 210.36371pt.
 
-<../MakeFigures/lkClusters.jpg, id=57, 442.65375pt x 362.35374pt>
+<../MakeFigures/lkClusters.jpg, id=57, 460.72125pt x 377.41pt>
 File: ../MakeFigures/lkClusters.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClusters.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClusters.jpg used on input line 188.
-(pdftex.def)             Requested size: 234.0pt x 191.55447pt.
+(pdftex.def)             Requested size: 234.0pt x 191.68182pt.
 LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <6.5> not available
 (Font)              Font shape `LY1/ptm/b/n' tried instead on input line 190.
 
@@ -655,7 +655,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  3756 strings out of 492995
  47769 string characters out of 6132704
- 140794 words of memory out of 5000000
+ 140791 words of memory out of 5000000
  7202 multiletter control sequences out of 15000+600000
  54627 words of font info for 95 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
@@ -672,7 +672,7 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 1914287 bytes).
+Output written on main.pdf (10 pages, 1923046 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
