@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 20:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 MAR 2018 20:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -407,15 +407,12 @@ LaTeX Font Warning: Font shape `LY1/phb/m/n' undefined
 
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <6.5> not available
 (Font)              Font shape `LY1/phv/b/n' tried instead on input line 55.
+<../MakeFigures/sbIRClustersSig.jpg, id=22, 1003.75pt x 702.625pt>
+File: ../MakeFigures/sbIRClustersSig.jpg Graphic file (type jpg)
 
-<../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg, id=22,
- 1003.75pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg Gr
-aphic file (type jpg)
-
-<use ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clusteringdata
-FDR05/NPSig4.jpg used on input line 68.
+<use ../MakeFigures/sbIRClustersSig.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClustersSig.jpg used on input line 
+68.
 (pdftex.def)             Requested size: 234.0pt x 163.79819pt.
 LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <8> not available
 (Font)              Font shape `LY1/phv/m/sl' tried instead on input line 71.
@@ -425,15 +422,11 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [2 <../MakeFigures/simulatedData.jpg>]
-<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.
-jpg, id=27, 501.875pt x 501.875pt>
-File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_s
-ize1.jpg Graphic file (type jpg)
+<../MakeFigures/sbCNSM.jpg, id=27, 501.875pt x 501.875pt>
+File: ../MakeFigures/sbCNSM.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_si
-ze1.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
-itch/S1_S2_points_size1.jpg used on input line 82.
+<use ../MakeFigures/sbCNSM.jpg>
+Package pdftex.def Info: ../MakeFigures/sbCNSM.jpg used on input line 82.
 (pdftex.def)             Requested size: 234.0pt x 234.00507pt.
 
 
@@ -452,9 +445,7 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[3 <../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NPSig4.jpg> <..
-/Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/S1_S2_points_size1.jpg
->]
+[3 <../MakeFigures/sbIRClustersSig.jpg> <../MakeFigures/sbCNSM.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -472,17 +463,15 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [4 <../MakeFigures/yeastWithinBetween.jpg>]
-<../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg, id
-=35, 501.875pt x 501.875pt>
-File: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jp
-g Graphic file (type jpg)
+<../MakeFigures/sbCNSwitchedSM.jpg, id=35, 501.875pt x 501.875pt>
+File: ../MakeFigures/sbCNSwitchedSM.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg
->
-Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/Switc
-hed/S1_S2_points.jpg used on input line 114.
+<use ../MakeFigures/sbCNSwitchedSM.jpg>
+Package pdftex.def Info: ../MakeFigures/sbCNSwitchedSM.jpg used on input line 1
+14.
 (pdftex.def)             Requested size: 234.0pt x 234.00507pt.
- <../Bioinformatics/Pictures/mdsSwitch.png, id=36, 627.7854pt x 608.5134pt>
+
+<../Bioinformatics/Pictures/mdsSwitch.png, id=36, 627.7854pt x 608.5134pt>
 File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
 
 <use ../Bioinformatics/Pictures/mdsSwitch.png>
@@ -490,33 +479,24 @@ Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
  line 124.
 (pdftex.def)             Requested size: 234.0pt x 226.80847pt.
 
-<../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg, id=37, 602.25pt x 602
-.25pt>
-File: ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg Graphic file (typ
-e jpg)
- <use ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/soybeanStreak/N_P_points.jp
-g used on input line 136.
-(pdftex.def)             Requested size: 234.0pt x 234.00354pt.
+<../MakeFigures/sbIRStreak.jpg, id=37, 388.45125pt x 444.66125pt>
+File: ../MakeFigures/sbIRStreak.jpg Graphic file (type jpg)
+
+<use ../MakeFigures/sbIRStreak.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRStreak.jpg used on input line 136.
+(pdftex.def)             Requested size: 234.0pt x 267.86404pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 <../Bioinformatics/Pictures/SwitchSample/Switch12/Switched/S1_S2_points.jpg>
- <../Bioinformatics/Pictures/mdsSwitch.png>]
-<../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png, id=42,
- 453.3738pt x 629.2308pt>
-File: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png Gr
-aphic file (type png)
+[5 <../MakeFigures/sbCNSwitchedSM.jpg> <../Bioinformatics/Pictures/mdsSwitch.pn
+g>] <../MakeFigures/sbIRDEG.jpg, id=42, 382.42876pt x 469.755pt>
+File: ../MakeFigures/sbIRDEG.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/SwitchSample/Switch12/NotSw
-itch/scatPCP.png used on input line 154.
-(pdftex.def)             Requested size: 234.0pt x 324.77278pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<use ../MakeFigures/sbIRDEG.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRDEG.jpg used on input line 154.
+(pdftex.def)             Requested size: 234.0pt x 287.43178pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -525,8 +505,8 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6 <../Bioinformatics/Pictures/soybeanStreak/N_P_points.jpg>]
-<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=46, 791.5974pt x 12
+[6 <../MakeFigures/sbIRStreak.jpg>]
+<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=47, 791.5974pt x 12
 97.4874pt>
 File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
  png)
@@ -557,10 +537,13 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[7 <../Bioinformatics/Pictures/SwitchSample/Switch12/NotSwitch/scatPCP.png>]
+[7 <../MakeFigures/sbIRDEG.jpg>]
 Underfull \hbox (badness 1189) in paragraph at lines 185--186
 []\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -582,83 +565,34 @@ al Journal of Computer
  []
 
 
-Overfull \hbox (252.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-[9]
 Underfull \hbox (badness 2020) in paragraph at lines 292--293
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
 
-Extra height:20.0pt when 91.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 92.0pt
+[9]
+Extra height:10.0pt when 64.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Extra height:0.0pt when 65.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:20.0pt when 93.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 94.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 95.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 96.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 97.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 98.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 99.0pt
-Extra height:0.0pt when 100.0pt
-(2)Left:100.0pt Right:83.0pt Output:100.0pt
+(2)Left:65.0pt Right:65.0pt Output:65.0pt
 - LAST -
 Extra skip:0.0pt
-Left:100.0pt
-Right:83.0pt
-Output:100.0pt
+Left:65.0pt
+Right:65.0pt
+Output:65.0pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
@@ -676,13 +610,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3752 strings out of 492995
- 48706 string characters out of 6132704
+ 3748 strings out of 492995
+ 47672 string characters out of 6132704
  120716 words of memory out of 5000000
  7194 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,11n,28p,1281b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,10n,28p,1285b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -695,9 +629,9 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 3014451 bytes).
+Output written on main.pdf (10 pages, 2009058 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -19,14 +19,9 @@ metricList = list()
 metricList[["S1_S2"]] = metrics[["S1_S2"]]
 
 p1 = plotDEG(data, metricList, option="scatterPoints", threshVar="FDR", threshVal=0.05, pointSize=0.5)
-p2 = plotDEG(data, metricList, option="parallelCoord", threshVar="FDR", threshVal=0.05, lineSize = 0.5)
-# default lineSize=0.1 in parallelCoord
-
-plot1 <- plot_grid(ggmatrix_gtable(p1[["S1_S2"]]), labels=c("A"), ncol = 1, nrow = 1, label_size=9, align = "v", rel_heights = c(3/4)) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
-plot2 <- plot_grid(p2[["S1_S2"]], labels=c("B"), ncol = 1, nrow = 1, label_size=9, align = "v", rel_heights = c(1/4)) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
-grid.arrange(plot1, plot2, nrow = 2)
-
+p2 = plotDEG(data, metricList, option="parallelCoord", threshVar="FDR", threshVal=0.05, lineSize = 0.3)
 
 plot1 <- ggmatrix_gtable(p1[["S1_S2"]])
-plot2 <- p2[["S1_S2"]]
-plot_grid(plot1, plot2, align = "v", nrow = 2, rel_heights = c(3/4, 1/4))
+plot2 <- p2[["S1_S2"]] + theme(axis.text=element_text(size=10), axis.title =element_text(size=10))
+plot_grid(plot1, plot2, align = "v", nrow = 2, rel_heights = c(3/4, 1/4), labels = c("A", "B"), label_size = 9)
+
