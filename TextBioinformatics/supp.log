@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 09:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -197,241 +197,229 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NP4.jpg, id=9, 100
-3.75pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NP4.jpg Graph
-ic file (type jpg)
+<../MakeFigures/sbIRClusters.jpg, id=9, 1003.75pt x 702.625pt>
+File: ../MakeFigures/sbIRClusters.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NP4.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clusteringdata
-FDR05/NP4.jpg used on input line 21.
+<use ../MakeFigures/sbIRClusters.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusters.jpg used on input line 21.
+
 (pdftex.def)             Requested size: 469.75502pt x 328.82932pt.
+ [2
 
-[2
+ <../MakeFigures/sbIRClusters.jpg>]
+<../MakeFigures/sbIRClusterSigSM1.jpg, id=13, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM1.jpg Graphic file (type jpg)
 
- <../Bioinformatics/Pictures/FilterNotSig/ClusteringdataFDR05/NP4.jpg>]
-<../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_1.
-jpg, id=13, 702.625pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM
-_4_1.jpg Graphic file (type jpg)
-
-<use ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_
-4_1.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clustering_dat
-a_FDR_05/N_P_Sig_SM_4_1.jpg used on input line 29.
+<use ../MakeFigures/sbIRClusterSigSM1.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM1.jpg used on input lin
+e 29.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
  [3
 
- <../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_1
-.jpg>]
-<../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_2.
-jpg, id=18, 702.625pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM
-_4_2.jpg Graphic file (type jpg)
+ <../MakeFigures/sbIRClusterSigSM1.jpg>] <../MakeFigures/sbIRClusterSigSM2.jpg,
+ id=18, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM2.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_
-4_2.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clustering_dat
-a_FDR_05/N_P_Sig_SM_4_2.jpg used on input line 37.
+<use ../MakeFigures/sbIRClusterSigSM2.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM2.jpg used on input lin
+e 37.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
-<../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_3.
-jpg, id=19, 702.625pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM
-_4_3.jpg Graphic file (type jpg)
+<../MakeFigures/sbIRClusterSigSM3.jpg, id=19, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM3.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_
-4_3.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clustering_dat
-a_FDR_05/N_P_Sig_SM_4_3.jpg used on input line 44.
+<use ../MakeFigures/sbIRClusterSigSM3.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM3.jpg used on input lin
+e 44.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
  [4
 
- <../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_2
-.jpg>] [5 <../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_S
-ig_SM_4_3.jpg>]
-<../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_4.
-jpg, id=26, 702.625pt x 702.625pt>
-File: ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM
-_4_4.jpg Graphic file (type jpg)
+ <../MakeFigures/sbIRClusterSigSM2.jpg>] [5 <../MakeFigures/sbIRClusterSigSM3.j
+pg>]
+<../MakeFigures/sbIRClusterSigSM4.jpg, id=26, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM4.jpg Graphic file (type jpg)
 
-<use ../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_
-4_4.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/FilterNotSig/Clustering_dat
-a_FDR_05/N_P_Sig_SM_4_4.jpg used on input line 52.
+<use ../MakeFigures/sbIRClusterSigSM4.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM4.jpg used on input lin
+e 52.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
- [6
 
- <../Bioinformatics/Pictures/FilterNotSig/Clustering_data_FDR_05/N_P_Sig_SM_4_4
-.jpg>]
-<../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png, id=30, 849.8952pt
+<../Bioinformatics/Pictures/mdsSwitch.png, id=27, 627.7854pt x 608.5134pt>
+File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
+
+<use ../Bioinformatics/Pictures/mdsSwitch.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
+ line 59.
+(pdftex.def)             Requested size: 469.75502pt x 455.3347pt.
+
+
+LaTeX Warning: Reference `sbCNSwitchedSM' on page 6 undefined on input line 61.
+
+
+
+LaTeX Warning: Reference `sbCNSwitchedSM' on page 6 undefined on input line 61.
+
+
+[6
+
+ <../MakeFigures/sbIRClusterSigSM4.jpg>] [7 <../Bioinformatics/Pictures/mdsSwit
+ch.png>]
+<../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png, id=38, 849.8952pt
  x 1164.0288pt>
 File: ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png Graphic file 
 (type png)
 
 <use ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png>
 Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster
-1.png used on input line 60.
+1.png used on input line 69.
 (pdftex.def)             Requested size: 328.82707pt x 450.3638pt.
- [7
+ [8
 
  <../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png>]
-<../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.jpg, id=37, 702.625pt x 
-702.625pt>
-File: ../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.jpg Graphic file (t
-ype jpg)
- <use ../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.jpg>
-Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.
-jpg used on input line 70.
-(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
-
-[8
-
- <../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.jpg>]
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_Raw/Alpha0.1/K_
-L_Sig.jpg, id=41, 1304.875pt x 702.625pt>
+L_Sig.jpg, id=43, 1304.875pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_Raw/Alpha0
 .1/K_L_Sig.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_Raw/Alpha0.
 1/K_L_Sig.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_Raw/Alpha0.1/K_L_Sig.jpg used on input line 78.
+_FDR_001_Raw/Alpha0.1/K_L_Sig.jpg used on input line 79.
 (pdftex.def)             Requested size: 469.75502pt x 252.9448pt.
  [9
 
  <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_Raw/Alpha0.1/K
 _L_Sig.jpg>]
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMM/Alpha0.1/K_
-L_Sig.jpg, id=45, 1304.875pt x 702.625pt>
+L_Sig.jpg, id=47, 1304.875pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMM/Alpha0
 .1/K_L_Sig.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMM/Alpha0.
 1/K_L_Sig.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMM/Alpha0.1/K_L_Sig.jpg used on input line 86.
+_FDR_001_TMM/Alpha0.1/K_L_Sig.jpg used on input line 87.
 (pdftex.def)             Requested size: 469.75502pt x 252.9448pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Keep/K_
-L_8.jpg, id=46, 1003.75pt x 1806.75pt>
+L_8.jpg, id=48, 1003.75pt x 1806.75pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ke
 ep/K_L_8.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Kee
 p/K_L_8.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Keep/K_L_8.jpg used on input line 93.
+_FDR_001_TMMvRaw_Keep/K_L_8.jpg used on input line 94.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Removed
-/K_L_8.jpg, id=47, 1003.75pt x 1806.75pt>
+/K_L_8.jpg, id=49, 1003.75pt x 1806.75pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Re
 moved/K_L_8.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Rem
 oved/K_L_8.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Removed/K_L_8.jpg used on input line 100.
+_FDR_001_TMMvRaw_Removed/K_L_8.jpg used on input line 101.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 
-LaTeX Warning: Float too large for page by 19.12503pt on input line 103.
+LaTeX Warning: Float too large for page by 19.12503pt on input line 104.
 
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Orig/K_
-L_8.jpg, id=48, 1003.75pt x 1806.75pt>
+L_8.jpg, id=50, 1003.75pt x 1806.75pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Or
 ig/K_L_8.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ori
 g/K_L_8.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Orig/K_L_8.jpg used on input line 107.
+_FDR_001_TMMvRaw_Orig/K_L_8.jpg used on input line 108.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L
-_8.jpg, id=49, 1003.75pt x 1806.75pt>
+_8.jpg, id=51, 1003.75pt x 1806.75pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ad
 d/K_L_8.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add
 /K_L_8.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Add/K_L_8.jpg used on input line 114.
+_FDR_001_TMMvRaw_Add/K_L_8.jpg used on input line 115.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Keep/K_
-L_Sig_SM_Keep_8_1.jpg, id=50, 702.625pt x 702.625pt>
+L_Sig_SM_Keep_8_1.jpg, id=52, 702.625pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ke
 ep/K_L_Sig_SM_Keep_8_1.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Kee
 p/K_L_Sig_SM_Keep_8_1.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Keep/K_L_Sig_SM_Keep_8_1.jpg used on input line 121.
+_FDR_001_TMMvRaw_Keep/K_L_Sig_SM_Keep_8_1.jpg used on input line 122.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
-<../Dashboards/exampleKeep.png, id=51, 550.6974pt x 807.9786pt>
+<../Dashboards/exampleKeep.png, id=53, 550.6974pt x 807.9786pt>
 File: ../Dashboards/exampleKeep.png Graphic file (type png)
 
 <use ../Dashboards/exampleKeep.png>
-Package pdftex.def Info: ../Dashboards/exampleKeep.png used on input line 128.
+Package pdftex.def Info: ../Dashboards/exampleKeep.png used on input line 129.
 (pdftex.def)             Requested size: 328.82707pt x 482.44844pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Removed
-/K_L_Sig_SM_Removed_8_1.jpg, id=52, 702.625pt x 702.625pt>
+/K_L_Sig_SM_Removed_8_1.jpg, id=54, 702.625pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Re
 moved/K_L_Sig_SM_Removed_8_1.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Rem
 oved/K_L_Sig_SM_Removed_8_1.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Removed/K_L_Sig_SM_Removed_8_1.jpg used on input line 135.
+_FDR_001_TMMvRaw_Removed/K_L_Sig_SM_Removed_8_1.jpg used on input line 136.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
-<../Dashboards/exampleRemove.png, id=53, 543.4704pt x 805.5696pt>
+<../Dashboards/exampleRemove.png, id=55, 543.4704pt x 805.5696pt>
 File: ../Dashboards/exampleRemove.png Graphic file (type png)
 
 <use ../Dashboards/exampleRemove.png>
-Package pdftex.def Info: ../Dashboards/exampleRemove.png used on input line 142
+Package pdftex.def Info: ../Dashboards/exampleRemove.png used on input line 143
 .
 (pdftex.def)             Requested size: 328.82707pt x 487.40184pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Orig/K_
-L_Sig_SM_Orig_8_1.jpg, id=54, 702.625pt x 702.625pt>
+L_Sig_SM_Orig_8_1.jpg, id=56, 702.625pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Or
 ig/K_L_Sig_SM_Orig_8_1.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ori
 g/K_L_Sig_SM_Orig_8_1.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Orig/K_L_Sig_SM_Orig_8_1.jpg used on input line 150.
+_FDR_001_TMMvRaw_Orig/K_L_Sig_SM_Orig_8_1.jpg used on input line 151.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
-<../Dashboards/exampleOrig.png, id=55, 544.434pt x 805.5696pt>
+<../Dashboards/exampleOrig.png, id=57, 544.434pt x 805.5696pt>
 File: ../Dashboards/exampleOrig.png Graphic file (type png)
 
 <use ../Dashboards/exampleOrig.png>
-Package pdftex.def Info: ../Dashboards/exampleOrig.png used on input line 157.
+Package pdftex.def Info: ../Dashboards/exampleOrig.png used on input line 158.
 (pdftex.def)             Requested size: 328.82707pt x 486.56598pt.
 
 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add/K_L
-_Sig_SM_Add_8_1.jpg, id=56, 702.625pt x 702.625pt>
+_Sig_SM_Add_8_1.jpg, id=58, 702.625pt x 702.625pt>
 File: ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Ad
 d/K_L_Sig_SM_Add_8_1.jpg Graphic file (type jpg)
 
 <use ../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add
 /K_L_Sig_SM_Add_8_1.jpg>
 Package pdftex.def Info: ../Bioinformatics/Pictures/liverKidney/Clustering_data
-_FDR_001_TMMvRaw_Add/K_L_Sig_SM_Add_8_1.jpg used on input line 165.
+_FDR_001_TMMvRaw_Add/K_L_Sig_SM_Add_8_1.jpg used on input line 166.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
-<../Dashboards/exampleAdd.png, id=57, 541.0614pt x 805.5696pt>
+<../Dashboards/exampleAdd.png, id=59, 541.0614pt x 805.5696pt>
 File: ../Dashboards/exampleAdd.png Graphic file (type png)
 
 <use ../Dashboards/exampleAdd.png>
-Package pdftex.def Info: ../Dashboards/exampleAdd.png used on input line 172.
+Package pdftex.def Info: ../Dashboards/exampleAdd.png used on input line 173.
 (pdftex.def)             Requested size: 328.82707pt x 489.60211pt.
  [10
 
@@ -448,24 +436,27 @@ d_8_1.jpg>] [18 <../Dashboards/exampleRemove.png>] [19 <../Bioinformatics/Pictu
 res/liverKidney/Clustering_data_FDR_001_TMMvRaw_Orig/K_L_Sig_SM_Orig_8_1.jpg>] 
 [20 <../Dashboards/exampleOrig.png>]
 [21 <../Bioinformatics/Pictures/liverKidney/Clustering_data_FDR_001_TMMvRaw_Add
-/K_L_Sig_SM_Add_8_1.jpg>] [22 <../Dashboards/exampleAdd.png>] (./supp.aux) ) 
+/K_L_Sig_SM_Add_8_1.jpg>] [22 <../Dashboards/exampleAdd.png>] (./supp.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
  2100 strings out of 492995
- 36186 string characters out of 6132704
- 102739 words of memory out of 5000000
- 5622 multiletter control sequences out of 15000+600000
+ 35178 string characters out of 6132704
+ 102777 words of memory out of 5000000
+ 5623 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,32p,1425b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
-</u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on supp.pdf (22 pages, 7017968 bytes).
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on supp.pdf (22 pages, 7019152 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -17,9 +17,7 @@ library(bigPint)
 source("functions.R")
 
 data("soybean_ir")
-#data("soybean_ir_metrics")
 data <- soybean_ir
-#metrics <- soybean_ir_metrics[["N_P"]]
 load("../Bioinformatics/Pictures/FilterNotSig/soybean_ir_noFilt_metrics.rda")
 metrics <- soybean_ir_noFilt_metrics[["N_P"]]
 
@@ -66,7 +64,7 @@ plot_clustersSig = lapply(1:nC, function(i){
   colnames(pcpDat) <- c("ID", "Sample", "Count")
   pcpDat$Sample <- as.character(pcpDat$Sample)
     
-  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.5) + ylab("Standardized Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=18), axis.text=element_text(size=18), axis.title=element_text(size=18))
+  pSig = ggplot(boxDat, aes_string(x = 'Sample', y = 'Count')) + geom_boxplot() + geom_line(data=pcpDat, aes_string(x = 'Sample', y = 'Count', group = 'ID'), colour = colList[i+1], alpha=0.3) + ylab("Standardized Count") + ggtitle(paste("Cluster ", i, " Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=11, face="plain"), axis.text=element_text(size=11), axis.title=element_text(size=11))
   pSig
 })
 # We allow up to 4 plots in each column

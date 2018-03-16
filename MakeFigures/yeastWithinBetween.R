@@ -1,5 +1,4 @@
 library(devtools)
-library(yeastRNASeqRisso2011)
 library(EDASeq)
 library(DESeq)
 library(RCurl)
@@ -12,6 +11,7 @@ library(bigPint)
 library(gridExtra)
 library(cowplot)
 install_github("drisso/yeastRNASeqRisso2011")
+library(yeastRNASeqRisso2011)
 
 source("functions.R")
 
@@ -45,14 +45,11 @@ dataBetween <- select(dataBetween, ID, Y1.1, Y1.2, Y4.1, Y4.2)
 
 # Use bigPint function to create scatterplot matrices showing within and between normalization
 retWithin <- plotScatterStatic(dataWithin, option="point", pointSize = 0.1, saveFile = FALSE)
+retWithin2 <- retWithin[["Y1_Y4"]] + theme(axis.text=element_text(size=6), strip.text = element_text(size = 5, lineheight=0.5))
 retBetween <- plotScatterStatic(dataBetween, option="point", pointSize = 0.1, saveFile = FALSE)
+retBetween2 <- retBetween[["Y1_Y4"]] + theme(axis.text=element_text(size=6), strip.text = element_text(size = 5, lineheight=1))
 
 # Arrange two scatterplot matrices into grid
-plot1 <- plot_grid(ggmatrix_gtable(retWithin[["Y1_Y4"]]), labels=c("A"), ncol = 1, nrow = 1, label_size=9) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
-plot2 <- plot_grid(ggmatrix_gtable(retBetween[["Y1_Y4"]]), labels=c("B"), ncol = 1, nrow = 1, label_size=9) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
+plot1 <- plot_grid(ggmatrix_gtable(retWithin2), labels=c("A"), ncol = 1, nrow = 1, label_size=7) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
+plot2 <- plot_grid(ggmatrix_gtable(retBetween2), labels=c("B"), ncol = 1, nrow = 1, label_size=7) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
 grid.arrange(plot1, plot2, ncol=1)
-
-# Save figure (Optional)
-# jpeg(filename=paste0(getwd(), "/", "yeastWithinBetween.jpg"), height=600, width=300)
-# grid.arrange(plot1, plot2, ncol=1)
-# dev.off()

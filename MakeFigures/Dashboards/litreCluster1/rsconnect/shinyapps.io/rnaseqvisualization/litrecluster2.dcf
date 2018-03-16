@@ -1,0 +1,10 @@
+name: litrecluster2
+title:
+username:
+account: rnaseqvisualization
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 281766
+bundleId: 1227189
+url: https://rnaseqvisualization.shinyapps.io/litrecluster2/
+when: 1518838310.90257

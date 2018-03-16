@@ -53,7 +53,16 @@
 \caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four. These significant genes are overlaid in coral over the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We found a similar finding of somewhat messy looking DEG calls in Cluster 4 from Figure 2 in the paper. 
 \label{sbIRClusterSigSM4}}
 \end{figure}  
- 
+
+
+\begin{figure}[!tpb]
+\centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using plots that provide gene-level resolution like with the scatterplot matrix (Figure~\ref{sbCNSwitchedSM}).
+\label{mdsSwitch}}
+\end{figure}
+
+
+
 \clearpage
 \null 
 \begin{figure}[t!]
@@ -63,14 +72,6 @@
 \end{figure}   
 
 %%%%%%%%%%%%%%%%%%%% Check percent signs in captions! %%%%%%%%%%%%%%%%%%%% 
-
-\clearpage
-\null
-\begin{figure}[t!]
-\centerline{\includegraphics[width=1\columnwidth]{../Bioinformatics/Pictures/liverKidney/DEG-raw/K_L_SM.jpg}}
-\caption{Scatterplot matrix of liver and kidney technical replicates. The technical replicate scatterplots look as precise as expected, with little variability around the \textit{x=y} line. The treatment group scatterplots have much more variability around the \textit{x=y} line, as we would expect. However, each treatment group scatterplot contains a pronounced streak of highly-expressed liver-specific genes, which deviates from the expected distribution. Some researchers have suggested that differences in the distribution of reads between groups may require more stringent normalization than library scaling, such as TMM normalization.
-\label{KLSM}}
-\end{figure}
 
 \clearpage
 \null

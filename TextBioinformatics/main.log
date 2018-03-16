@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 MAR 2018 20:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -407,13 +407,13 @@ LaTeX Font Warning: Font shape `LY1/phb/m/n' undefined
 
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <6.5> not available
 (Font)              Font shape `LY1/phv/b/n' tried instead on input line 55.
-<../MakeFigures/sbIRClustersSig.jpg, id=22, 1003.75pt x 702.625pt>
+<../MakeFigures/sbIRClustersSig.jpg, id=22, 631.35875pt x 468.75125pt>
 File: ../MakeFigures/sbIRClustersSig.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/sbIRClustersSig.jpg>
 Package pdftex.def Info: ../MakeFigures/sbIRClustersSig.jpg used on input line 
 68.
-(pdftex.def)             Requested size: 234.0pt x 163.79819pt.
+(pdftex.def)             Requested size: 234.0pt x 173.73564pt.
 LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <8> not available
 (Font)              Font shape `LY1/phv/m/sl' tried instead on input line 71.
 
@@ -422,33 +422,30 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [2 <../MakeFigures/simulatedData.jpg>]
-<../MakeFigures/sbCNSM.jpg, id=27, 501.875pt x 501.875pt>
+<../MakeFigures/sbCNSM.jpg, id=27, 538.01pt x 487.8225pt>
 File: ../MakeFigures/sbCNSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/sbCNSM.jpg>
 Package pdftex.def Info: ../MakeFigures/sbCNSM.jpg used on input line 82.
-(pdftex.def)             Requested size: 234.0pt x 234.00507pt.
+(pdftex.def)             Requested size: 234.0pt x 212.1713pt.
 
 
 LaTeX Font Warning: Font shape `LY1/phb/m/it' undefined
 (Font)              using `LY1/phb/m/n' instead on input line 84.
 
-<../MakeFigures/yeastWithinBetween.jpg, id=28, 301.125pt x 602.25pt>
+<../MakeFigures/yeastWithinBetween.jpg, id=28, 290.08376pt x 487.8225pt>
 File: ../MakeFigures/yeastWithinBetween.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/yeastWithinBetween.jpg>
 Package pdftex.def Info: ../MakeFigures/yeastWithinBetween.jpg used on input li
 ne 100.
-(pdftex.def)             Requested size: 234.0pt x 468.01627pt.
+(pdftex.def)             Requested size: 234.0pt x 393.51137pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
 [3 <../MakeFigures/sbIRClustersSig.jpg> <../MakeFigures/sbCNSM.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1755) in paragraph at lines 111--112
 \LY1/ptm/m/n/8 Irreproducibility is prevalent in high-throughput biological stu
 dies.
@@ -458,45 +455,52 @@ dies.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (252.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-[4 <../MakeFigures/yeastWithinBetween.jpg>]
-<../MakeFigures/sbCNSwitchedSM.jpg, id=35, 501.875pt x 501.875pt>
+<../MakeFigures/sbCNSwitchedSM.jpg, id=34, 538.01pt x 487.8225pt>
 File: ../MakeFigures/sbCNSwitchedSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/sbCNSwitchedSM.jpg>
 Package pdftex.def Info: ../MakeFigures/sbCNSwitchedSM.jpg used on input line 1
 14.
-(pdftex.def)             Requested size: 234.0pt x 234.00507pt.
+(pdftex.def)             Requested size: 234.0pt x 212.1713pt.
 
-<../Bioinformatics/Pictures/mdsSwitch.png, id=36, 627.7854pt x 608.5134pt>
-File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use ../Bioinformatics/Pictures/mdsSwitch.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
- line 124.
-(pdftex.def)             Requested size: 234.0pt x 226.80847pt.
-
-<../MakeFigures/sbIRStreak.jpg, id=37, 388.45125pt x 444.66125pt>
-File: ../MakeFigures/sbIRStreak.jpg Graphic file (type jpg)
-
-<use ../MakeFigures/sbIRStreak.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRStreak.jpg used on input line 136.
-(pdftex.def)             Requested size: 234.0pt x 267.86404pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 <../MakeFigures/sbCNSwitchedSM.jpg> <../Bioinformatics/Pictures/mdsSwitch.pn
-g>] <../MakeFigures/sbIRDEG.jpg, id=42, 382.42876pt x 469.755pt>
+[4 <../MakeFigures/yeastWithinBetween.jpg>]
+<../MakeFigures/sbIRStreak.jpg, id=39, 388.45125pt x 444.66125pt>
+File: ../MakeFigures/sbIRStreak.jpg Graphic file (type jpg)
+
+<use ../MakeFigures/sbIRStreak.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRStreak.jpg used on input line 130.
+(pdftex.def)             Requested size: 234.0pt x 267.86404pt.
+
+<../MakeFigures/sbIRDEG.jpg, id=40, 387.4475pt x 487.8225pt>
 File: ../MakeFigures/sbIRDEG.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/sbIRDEG.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRDEG.jpg used on input line 154.
-(pdftex.def)             Requested size: 234.0pt x 287.43178pt.
+Package pdftex.def Info: ../MakeFigures/sbIRDEG.jpg used on input line 148.
+(pdftex.def)             Requested size: 234.0pt x 294.62364pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[5 <../MakeFigures/sbCNSwitchedSM.jpg>]
+<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=45, 791.5974pt x 12
+97.4874pt>
+File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
+ png)
+ <use ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>
+Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png
+ used on input line 164.
+(pdftex.def)             Requested size: 234.0pt x 383.52759pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -506,27 +510,23 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [6 <../MakeFigures/sbIRStreak.jpg>]
-<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=47, 791.5974pt x 12
-97.4874pt>
-File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
- png)
- <use ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png
- used on input line 170.
-(pdftex.def)             Requested size: 234.0pt x 383.52759pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (1.11118pt too wide) in paragraph at lines 179--180
+Overfull \hbox (1.11118pt too wide) in paragraph at lines 173--174
 \LY1/ptm/m/n/8 and B) is available at https://rnaseqvisualization.shinyapps.io/
 litreCluster2,
  []
 
 
-Overfull \hbox (0.22318pt too wide) in paragraph at lines 179--180
+Overfull \hbox (0.22318pt too wide) in paragraph at lines 173--174
 \LY1/ptm/m/n/8 and F) is available at https://rnaseqvisualization.shinyapps.io/
 litreCluster4.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 179--180
+[]\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
  []
 
 
@@ -538,58 +538,68 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [7 <../MakeFigures/sbIRDEG.jpg>]
-Underfull \hbox (badness 1189) in paragraph at lines 185--186
-[]\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
- []
+<../MakeFigures/lkSM.jpg, id=56, 496.85625pt x 446.66875pt>
+File: ../MakeFigures/lkSM.jpg Graphic file (type jpg)
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<use ../MakeFigures/lkSM.jpg>
+Package pdftex.def Info: ../MakeFigures/lkSM.jpg used on input line 186.
+(pdftex.def)             Requested size: 234.0pt x 210.36371pt.
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 224.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[8 <../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 215.
-
-Underfull \hbox (badness 1264) in paragraph at lines 230--232
+[8 <../MakeFigures/lkSM.jpg>]
+Underfull \hbox (badness 1264) in paragraph at lines 239--241
 \LY1/ptm/m/n/7 Algorithms for Gene Expression Data. \LY1/ptm/m/it/7 Internation
 al Journal of Computer
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 292--293
+Underfull \hbox (badness 2020) in paragraph at lines 301--302
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
 
 
-Overfull \hbox (252.0pt too wide) has occurred while \output is active
-[][] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[9]
-Extra height:10.0pt when 64.0pt
+Extra height:10.0pt when 338.5pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 65.0pt
+Extra height:10.0pt when 339.5pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:65.0pt Right:65.0pt Output:65.0pt
+Extra height:10.0pt when 340.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 341.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 342.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 343.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 344.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:344.5pt Right:344.0pt Output:344.5pt
 - LAST -
 Extra skip:0.0pt
-Left:65.0pt
-Right:65.0pt
-Output:65.0pt
+Left:344.5pt
+Right:344.0pt
+Output:344.5pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -598,9 +608,17 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[10
+[9
 
-] (./main.aux)
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[10 <../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
@@ -610,13 +628,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3748 strings out of 492995
- 47672 string characters out of 6132704
- 120716 words of memory out of 5000000
+ 3747 strings out of 492995
+ 47567 string characters out of 6132704
+ 131469 words of memory out of 5000000
  7194 multiletter control sequences out of 15000+600000
  53496 words of font info for 94 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 39i,10n,28p,1285b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,10n,28p,1289b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -629,9 +647,9 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 2009058 bytes).
+Output written on main.pdf (10 pages, 1819734 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
