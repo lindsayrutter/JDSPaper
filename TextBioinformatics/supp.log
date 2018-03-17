@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 MAR 2018 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,14 +264,13 @@ LaTeX Warning: Reference `sbCNSwitchedSM' on page 6 undefined on input line 61.
 
  <../MakeFigures/sbIRClusterSigSM4.jpg>] [7 <../Bioinformatics/Pictures/mdsSwit
 ch.png>]
-<../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png, id=38, 849.8952pt
- x 1164.0288pt>
-File: ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png Graphic file 
-(type png)
-
-<use ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litreCluster
-1.png used on input line 69.
+<../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg, id=38, 849.8952pt x
+ 1164.0288pt>
+File: ../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg Graphic file (t
+ype jpg)
+ <use ../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreCluster1/litreCluster1.
+jpg used on input line 67.
 (pdftex.def)             Requested size: 328.82707pt x 450.3638pt.
 
 <../MakeFigures/lkClustersKeep.jpg, id=39, 1003.75pt x 1806.75pt>
@@ -279,7 +278,7 @@ File: ../MakeFigures/lkClustersKeep.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersKeep.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersKeep.jpg used on input line 7
-8.
+6.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../MakeFigures/lkClustersRemove.jpg, id=40, 1003.75pt x 1806.75pt>
@@ -287,37 +286,37 @@ File: ../MakeFigures/lkClustersRemove.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersRemove.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersRemove.jpg used on input line
- 85.
+ 83.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 87.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 85.
 
 
-LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 87.
+LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 85.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 87.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 85.
 
 
-LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 87.
+LaTeX Warning: Reference `RawKLSig' on page 8 undefined on input line 85.
 
 
-LaTeX Warning: Float too large for page by 19.12503pt on input line 88.
+LaTeX Warning: Float too large for page by 19.12503pt on input line 86.
 
 <../MakeFigures/lkClustersOrig.jpg, id=41, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersOrig.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersOrig.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersOrig.jpg used on input line 9
-2.
+0.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 <../MakeFigures/lkClustersAdd.jpg, id=42, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersAdd.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersAdd.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg used on input line 99
+Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg used on input line 97
 .
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
@@ -326,128 +325,145 @@ File: ../MakeFigures/lkClustersKeepSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersKeepSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM.jpg used on input line
- 106.
+ 104.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 108.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 106.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 108.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 106.
 
-<../Dashboards/exampleKeep.png, id=44, 550.6974pt x 807.9786pt>
-File: ../Dashboards/exampleKeep.png Graphic file (type png)
 
-<use ../Dashboards/exampleKeep.png>
-Package pdftex.def Info: ../Dashboards/exampleKeep.png used on input line 113.
+<../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=44, 550.69
+74pt x 807.9786pt>
+File: ../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg Graphic f
+ile (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterKeep/litreCluste
+rKeep.jpg used on input line 111.
 (pdftex.def)             Requested size: 328.82707pt x 482.44844pt.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 115.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 113.
 
 
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 115.
+LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 113.
 
 <../MakeFigures/lkClustersRemoveSM.jpg, id=45, 702.625pt x 702.625pt>
 File: ../MakeFigures/lkClustersRemoveSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersRemoveSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM.jpg used on input li
-ne 120.
+ne 118.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
 
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 122.
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 120.
 
 
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 122.
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 120.
 
-<../Dashboards/exampleRemove.png, id=46, 543.4704pt x 805.5696pt>
-File: ../Dashboards/exampleRemove.png Graphic file (type png)
 
-<use ../Dashboards/exampleRemove.png>
-Package pdftex.def Info: ../Dashboards/exampleRemove.png used on input line 127
-.
+<../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=46, 54
+3.4704pt x 805.5696pt>
+File: ../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg Graph
+ic file (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove/litreClus
+terRemove.jpg used on input line 125.
 (pdftex.def)             Requested size: 328.82707pt x 487.40184pt.
 
 
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 129.
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 127.
 
 
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 129.
+LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 127.
 
 [8
 
- <../Bioinformatics/Pictures/litrePlots/N_P/litreCluster1.png>]
+ <../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>]
 <../MakeFigures/lkClustersOrigSM.jpg, id=51, 702.625pt x 702.625pt>
 File: ../MakeFigures/lkClustersOrigSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersOrigSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM.jpg used on input line
- 135.
+ 133.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
 
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 137.
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 135.
 
 
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 137.
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 135.
 
-<../Dashboards/exampleOrig.png, id=52, 544.434pt x 805.5696pt>
-File: ../Dashboards/exampleOrig.png Graphic file (type png)
 
-<use ../Dashboards/exampleOrig.png>
-Package pdftex.def Info: ../Dashboards/exampleOrig.png used on input line 142.
+<../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=52, 544.43
+4pt x 805.5696pt>
+File: ../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg Graphic f
+ile (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterOrig/litreCluste
+rOrig.jpg used on input line 140.
 (pdftex.def)             Requested size: 328.82707pt x 486.56598pt.
 
 
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 144.
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 142.
 
 
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 144.
+LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 142.
 
 <../MakeFigures/lkClustersAddSM.jpg, id=53, 702.625pt x 702.625pt>
 File: ../MakeFigures/lkClustersAddSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersAddSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersAddSM.jpg used on input line 
-150.
+148.
 (pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
 
 
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 152.
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 150.
 
 
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 152.
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 150.
 
-<../Dashboards/exampleAdd.png, id=54, 541.0614pt x 805.5696pt>
-File: ../Dashboards/exampleAdd.png Graphic file (type png)
 
-<use ../Dashboards/exampleAdd.png>
-Package pdftex.def Info: ../Dashboards/exampleAdd.png used on input line 157.
+<../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=54, 541.0614
+pt x 805.5696pt>
+File: ../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg Graphic fil
+e (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterAdd/litreCluster
+Add.jpg used on input line 155.
 (pdftex.def)             Requested size: 328.82707pt x 489.60211pt.
 
 
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 159.
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 157.
 
 
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 159.
+LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 157.
 
 [9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersRemo
 ve.jpg>] [12 <../MakeFigures/lkClustersOrig.jpg>] [13 <../MakeFigures/lkCluster
-sAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../Dashboards/exampl
-eKeep.png>] [16 <../MakeFigures/lkClustersRemoveSM.jpg>] [17 <../Dashboards/exa
-mpleRemove.png>] [18 <../MakeFigures/lkClustersOrigSM.jpg>] [19 <../Dashboards/
-exampleOrig.png>] [20 <../MakeFigures/lkClustersAddSM.jpg>] [21 <../Dashboards/
-exampleAdd.png>] (./supp.aux)
+sAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../MakeFigures/Dashb
+oards/litreClusterKeep/litreClusterKeep.jpg>] [16 <../MakeFigures/lkClustersRem
+oveSM.jpg>] [17 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemov
+e.jpg>] [18 <../MakeFigures/lkClustersOrigSM.jpg>] [19 <../MakeFigures/Dashboar
+ds/litreClusterOrig/litreClusterOrig.jpg>] [20 <../MakeFigures/lkClustersAddSM.
+jpg>] [21 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>]
+(./supp.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2091 strings out of 492995
- 32232 string characters out of 6132704
- 101653 words of memory out of 5000000
+ 2094 strings out of 492995
+ 32976 string characters out of 6132704
+ 101729 words of memory out of 5000000
  5618 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
