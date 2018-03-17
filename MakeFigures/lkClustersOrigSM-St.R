@@ -130,5 +130,5 @@ scatMatMetrics = list()
 scatMatMetrics[["K_L"]] = metrics[which(metrics$ID %in% x$ID),]
 scatMatMetrics[["K_L"]]$FDR = 10e-10
 scatMatMetrics[["K_L"]]$ID = as.factor(as.character(scatMatMetrics[["K_L"]]$ID))
-ret <- plotDEG(data = logSoy, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j])
-ret[["K_L"]] + xlab("Logged Count") + ylab("Logged Count") + ggtitle(paste("Cluster ", j, " Significant Added Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=14), axis.text=element_text(size=14), axis.title=element_text(size=18), strip.text = element_text(size = 14))
+ret <- plotDEG(data = fulls, dataMetrics = scatMatMetrics, option="scatterPoints", threshVar = "FDR", threshVal = 0.05, degPointColor = colList[j])
+ret[["K_L"]] + xlab("Standardized Count") + ylab("Standardized Count") + ggtitle(paste("Cluster ", j, " Significant Original Genes (n=", format(nGenes, big.mark=",", scientific=FALSE), ")",sep="")) + theme(plot.title = element_text(hjust = 0.5, size=11), axis.text=element_text(size=11), axis.title=element_text(size=12), strip.text = element_text(size = 10))

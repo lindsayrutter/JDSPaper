@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 MAR 2018 17:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 MAR 2018 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -320,63 +320,38 @@ Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg used on input line 94
 .
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
-<../MakeFigures/lkClustersKeepSM.jpg, id=43, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersKeepSM.jpg, id=43, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersKeepSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersKeepSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM.jpg used on input line
  101.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 103.
-
-
-LaTeX Warning: Reference `KeepPCP' on page 8 undefined on input line 103.
-
-<../MakeFigures/lkClustersOrigSM.jpg, id=44, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersOrigSM.jpg, id=44, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersOrigSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersOrigSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM.jpg used on input line
  108.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `OrigPCP' on page 8 undefined on input line 110.
-
-
-LaTeX Warning: Reference `OrigPCP' on page 8 undefined on input line 110.
-
-<../MakeFigures/lkClustersRemoveSM.jpg, id=45, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersRemoveSM.jpg, id=45, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersRemoveSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersRemoveSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM.jpg used on input li
 ne 115.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 117.
-
-
-LaTeX Warning: Reference `RemovePCP' on page 8 undefined on input line 117.
-
-<../MakeFigures/lkClustersAddSM.jpg, id=46, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersAddSM.jpg, id=46, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersAddSM.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersAddSM.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersAddSM.jpg used on input line 
 122.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
-
-
-LaTeX Warning: Reference `AddPCP' on page 8 undefined on input line 124.
-
-
-LaTeX Warning: Reference `AddPCP' on page 8 undefined on input line 124.
-
-[8
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
+ [8
 
  <../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>]
 <../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=51, 550.69
@@ -386,15 +361,8 @@ ile (type jpg)
 
 <use ../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterKeep/litreCluste
-rKeep.jpg used on input line 139.
+rKeep.jpg used on input line 130.
 (pdftex.def)             Requested size: 328.82707pt x 482.44844pt.
-
-
-LaTeX Warning: Reference `KeepPCP' on page 9 undefined on input line 141.
-
-
-LaTeX Warning: Reference `KeepPCP' on page 9 undefined on input line 141.
-
 
 <../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=52, 544.43
 4pt x 805.5696pt>
@@ -403,15 +371,8 @@ ile (type jpg)
 
 <use ../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterOrig/litreCluste
-rOrig.jpg used on input line 146.
+rOrig.jpg used on input line 137.
 (pdftex.def)             Requested size: 328.82707pt x 486.56598pt.
-
-
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 148.
-
-
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 148.
-
 
 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=53, 54
 3.4704pt x 805.5696pt>
@@ -420,15 +381,8 @@ ic file (type jpg)
 
 <use ../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove/litreClus
-terRemove.jpg used on input line 153.
+terRemove.jpg used on input line 144.
 (pdftex.def)             Requested size: 328.82707pt x 487.40184pt.
-
-
-LaTeX Warning: Reference `RemovePCP' on page 9 undefined on input line 155.
-
-
-LaTeX Warning: Reference `RemovePCP' on page 9 undefined on input line 155.
-
 
 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=54, 541.0614
 pt x 805.5696pt>
@@ -437,91 +391,60 @@ e (type jpg)
 
 <use ../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterAdd/litreCluster
-Add.jpg used on input line 160.
+Add.jpg used on input line 151.
 (pdftex.def)             Requested size: 328.82707pt x 489.60211pt.
 
-
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 162.
-
-
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 162.
-
-<../MakeFigures/lkClustersKeepSM-St.jpg, id=55, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersKeepSM-St.jpg, id=55, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersKeepSM-St.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersKeepSM-St.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM-St.jpg used on input l
-ine 170.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+ine 161.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `KeepPCP' on page 9 undefined on input line 172.
-
-
-LaTeX Warning: Reference `KeepPCP' on page 9 undefined on input line 172.
-
-<../MakeFigures/lkClustersOrigSM-St.jpg, id=56, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersOrigSM-St.jpg, id=56, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersOrigSM-St.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersOrigSM-St.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM-St.jpg used on input l
-ine 177.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+ine 168.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 179.
-
-
-LaTeX Warning: Reference `OrigPCP' on page 9 undefined on input line 179.
-
-<../MakeFigures/lkClustersRemoveSM-St.jpg, id=57, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersRemoveSM-St.jpg, id=57, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersRemoveSM-St.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersRemoveSM-St.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM-St.jpg used on input
- line 184.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
+ line 175.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
 
-
-LaTeX Warning: Reference `RemovePCP' on page 9 undefined on input line 186.
-
-
-LaTeX Warning: Reference `RemovePCP' on page 9 undefined on input line 186.
-
-<../MakeFigures/lkClustersAddSM-St.jpg, id=58, 605.26125pt x 557.08125pt>
+<../MakeFigures/lkClustersAddSM-St.jpg, id=58, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersAddSM-St.jpg Graphic file (type jpg)
 
 <use ../MakeFigures/lkClustersAddSM-St.jpg>
 Package pdftex.def Info: ../MakeFigures/lkClustersAddSM-St.jpg used on input li
-ne 191.
-(pdftex.def)             Requested size: 469.75502pt x 432.36253pt.
-
-
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 193.
-
-
-LaTeX Warning: Reference `AddPCP' on page 9 undefined on input line 193.
-
-[9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersOrig
-.jpg>] [12 <../MakeFigures/lkClustersRemove.jpg>] [13 <../MakeFigures/lkCluster
-sAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../MakeFigures/lkClu
-stersOrigSM.jpg>] [16 <../MakeFigures/lkClustersRemoveSM.jpg>] [17 <../MakeFigu
-res/lkClustersAddSM.jpg>] [18 <../MakeFigures/Dashboards/litreClusterKeep/litre
-ClusterKeep.jpg>] [19 <../MakeFigures/Dashboards/litreClusterOrig/litreClusterO
-rig.jpg>] [20 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.
-jpg>] [21 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>]
-[22 <../MakeFigures/lkClustersKeepSM-St.jpg>] [23 <../MakeFigures/lkClustersOri
-gSM-St.jpg>] [24 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [25 <../MakeFigure
-s/lkClustersAddSM-St.jpg>] (./supp.aux)
+ne 182.
+(pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
+ [9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersOri
+g.jpg>] [12 <../MakeFigures/lkClustersRemove.jpg>] [13 <../MakeFigures/lkCluste
+rsAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../MakeFigures/lkCl
+ustersOrigSM.jpg>] [16 <../MakeFigures/lkClustersRemoveSM.jpg>] [17 <../MakeFig
+ures/lkClustersAddSM.jpg>] [18 <../MakeFigures/Dashboards/litreClusterKeep/litr
+eClusterKeep.jpg>] [19 <../MakeFigures/Dashboards/litreClusterOrig/litreCluster
+Orig.jpg>] [20 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove
+.jpg>] [21 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>] [22
+ <../MakeFigures/lkClustersKeepSM-St.jpg>] [23 <../MakeFigures/lkClustersOrigSM
+-St.jpg>] [24 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [25 <../MakeFigures/l
+kClustersAddSM-St.jpg>] (./supp.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2118 strings out of 492995
- 33842 string characters out of 6132704
- 109104 words of memory out of 5000000
- 5638 multiletter control sequences out of 15000+600000
+ 2115 strings out of 492995
+ 33814 string characters out of 6132704
+ 109232 words of memory out of 5000000
+ 5635 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,32p,1425b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -530,7 +453,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on supp.pdf (25 pages, 6735968 bytes).
+Output written on supp.pdf (25 pages, 6814949 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream
