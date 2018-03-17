@@ -54,7 +54,6 @@
 \label{sbIRClusterSigSM4}}
 \end{figure}  
 
-
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
 \caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using plots that provide gene-level resolution like with the scatterplot matrix (Figure~\ref{sbCNSwitchedSM}).
@@ -78,16 +77,16 @@
 
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=0.65\columnwidth]{../MakeFigures/lkClustersRemove.jpg}}
-\caption{Parallel coordinate plots showing hiearchical clustering analysis results of size eight for the 3,076 genes that were removed from the kidney-specific DEGs after TMM normalization. Unlike in Figure~\ref{KeepPCP}, the patterns in almost all clusters do not resemble the expected DEG format; instead, they show large variability between replicates and small variability between groups. In some clusters, it is difficult to even determine which group would be the overexpressed one if its genes were in fact DEGs. Taken together, this plot provides additional statistical evidence that the application of TMM normalization successfully removed genes that were previously mislabeled as kidney-specific DEGs (in Figure~\ref{RawKLSig}) with library scaling normalization. We used hierarchical clustering to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
-\label{lkClustersRemove}}
+\centerline{\includegraphics[width=0.65\columnwidth]{../MakeFigures/lkClustersOrig.jpg}}
+\caption{Parallel coordinate plots showing hiearchical clustering analysis results of size eight for the 1,968 genes that were initially designated liver-specific DEGs after library scale normalization. We see that, for the most part, the parallel coordinate patterns follow the expected patterns across the clusters. The ideal pattern of DEGs is especially captured in the first cluster (the largest one with 933 genes). We used hierarchical clustering to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
+\label{lkClustersOrig}}
 \end{figure}
 
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=0.65\columnwidth]{../MakeFigures/lkClustersOrig.jpg}}
-\caption{Parallel coordinate plots showing hiearchical clustering analysis results of size eight for the 1,968 genes that were initially designated liver-specific DEGs after library scale normalization. We see that, for the most part, the parallel coordinate patterns follow the expected patterns across the clusters. The ideal pattern of DEGs is especially captured in the first cluster (the largest one with 933 genes). We used hierarchical clustering to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
-\label{lkClustersOrig}}
+\centerline{\includegraphics[width=0.65\columnwidth]{../MakeFigures/lkClustersRemove.jpg}}
+\caption{Parallel coordinate plots showing hiearchical clustering analysis results of size eight for the 3,076 genes that were removed from the kidney-specific DEGs after TMM normalization. Unlike in Figure~\ref{KeepPCP}, the patterns in almost all clusters do not resemble the expected DEG format; instead, they show large variability between replicates and small variability between groups. In some clusters, it is difficult to even determine which group would be the overexpressed one if its genes were in fact DEGs. Taken together, this plot provides additional statistical evidence that the application of TMM normalization successfully removed genes that were previously mislabeled as kidney-specific DEGs (in Figure~\ref{RawKLSig}) with library scaling normalization. We used hierarchical clustering to mitigate additional overplotting that would occur if we were to plot all genes onto only one parallel coordinate plot.
+\label{lkClustersRemove}}
 \end{figure}
 
 \null
@@ -106,9 +105,9 @@
 
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg}}
-\caption{Example litre plots from the 1,136 genes that were in the first cluster (of Figure~\ref{KeepPCP}) of genes that remained kidney-specific DEGs even after TMM normalization. With these litre plots, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
-\label{litreClusterKeep}}
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersOrigSM.jpg}}
+\caption{Scatterplot matrix of the 933 genes that were in the first cluster (of Figure~\ref{OrigPCP}) from genes that were initially designated as liver-specific DEGs after library scale normalization. With this scatterplot matrix, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
+\label{lkClustersOrigSM}}
 \end{figure}
 
 \null
@@ -120,17 +119,26 @@
 
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg}}
-\caption{Example litre plots from the 529 genes that were in the first cluster (of Figure~\ref{RemovePCP}) of genes that no longer remained as kidney-specific DEGs after TMM normalization. With these litre plots, we verify from an additional perspective that these genes do not demonstrate the expected patterns of DEGs. This provides additional evidence that TMM normalization removing these genes from DEG status may be valid.
-\label{litreClusterRemove}}
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersAddSM.jpg}}
+\caption{Scatterplot matrix of the 317 genes that were in the first cluster (of Figure~\ref{AddPCP}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With this scatterplot matrix, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
+\label{lkClustersAddSM}}
 \end{figure}
+
+
+
+
+
+
+
+
+
 
 
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersOrigSM.jpg}}
-\caption{Scatterplot matrix of the 933 genes that were in the first cluster (of Figure~\ref{OrigPCP}) from genes that were initially designated as liver-specific DEGs after library scale normalization. With this scatterplot matrix, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
-\label{lkClustersOrigSM}}
+\centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg}}
+\caption{Example litre plots from the 1,136 genes that were in the first cluster (of Figure~\ref{KeepPCP}) of genes that remained kidney-specific DEGs even after TMM normalization. With these litre plots, we verify from an additional perspective that these genes demonstrate the expected patterns of DEGs.
+\label{litreClusterKeep}}
 \end{figure}
 
 \null
@@ -140,12 +148,11 @@
 \label{litreClusterOrig}}
 \end{figure}
 
-
 \null
 \begin{figure}[t!]
-\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersAddSM.jpg}}
-\caption{Scatterplot matrix of the 317 genes that were in the first cluster (of Figure~\ref{AddPCP}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With this scatterplot matrix, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
-\label{lkClustersAddSM}}
+\centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg}}
+\caption{Example litre plots from the 529 genes that were in the first cluster (of Figure~\ref{RemovePCP}) of genes that no longer remained as kidney-specific DEGs after TMM normalization. With these litre plots, we verify from an additional perspective that these genes do not demonstrate the expected patterns of DEGs. This provides additional evidence that TMM normalization removing these genes from DEG status may be valid.
+\label{litreClusterRemove}}
 \end{figure}
 
 \null
@@ -154,5 +161,42 @@
 \caption{Example litre plots from the 1,578 genes that were in the first cluster (of Figure~\ref{AddPCP}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
 \label{litreClusterAdd}}
 \end{figure}
+
+
+
+
+\null
+\begin{figure}[t!]
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersKeepSM-St.jpg}}
+\caption{Scatterplot matrix of the \textit{standardized} 1,136 genes that were in the first cluster (of Figure~\ref{KeepPCP}) from genes that remained as kidney-specific DEGs even after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersKeepSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a more exaggerated fashion.
+\label{lkClustersKeepSM-St}}
+\end{figure}
+
+\null
+\begin{figure}[t!]
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersOrigSM-St.jpg}}
+\caption{Scatterplot matrix of the 933 genes that were in the first cluster (of Figure~\ref{OrigPCP}) from genes that were initially designated as liver-specific DEGs after library scale normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersKeepSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a more exaggerated fashion.
+\label{lkClustersOrigSM-St}}
+\end{figure}
+
+\null
+\begin{figure}[t!]
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersRemoveSM-St.jpg}}
+\caption{Scatterplot matrix of the 529 genes that were in the first cluster (of Figure~\ref{RemovePCP}) from genes that no longer remained as kidney-specific DEGs after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersKeepSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a more exaggerated fashion.
+\label{lkClustersRemoveSM-St}}
+\end{figure}
+
+\null
+\begin{figure}[t!]
+\centerline{\includegraphics[width=1\columnwidth]{../MakeFigures/lkClustersAddSM-St.jpg}}
+\caption{Scatterplot matrix of the 317 genes that were in the first cluster (of Figure~\ref{AddPCP}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. Even though the standardization process removes the interesting geometrical features we saw back in Figure~\ref{lkClustersKeepSM} regarding the streak of overexpressed liver genes, it allows us to view the DEG patterns in a more exaggerated fashion.
+\label{lkClustersAddSM-St}}
+\end{figure}
+
+
+
+
+
+
 
 \end{document}
