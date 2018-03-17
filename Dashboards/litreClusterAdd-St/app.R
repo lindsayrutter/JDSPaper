@@ -18,7 +18,6 @@ pointColor = colList = scales::seq_gradient_pal("maroon1", "maroon4", "Lab")(seq
 load("kidneyLiver.rda")
 dat <- data
 dat <- dat[,1:7]
-#dat[,-1] <- log(dat[,-1]+1)
 
 # Standardize in this application
 RowSD = function(x) {
@@ -181,7 +180,7 @@ server <- function(input, output, session) {
     clrs <- brewer.pal(length(my_breaks)+3, "Blues")
     clrs <- clrs[3:length(clrs)]
     
-    p <- reactive(ggplot(hexdf, aes(x=x, y=y, hexID=hexID, counts=counts, fill=countColor2)) + geom_hex(stat="identity") + scale_fill_manual(labels = as.character(my_breaks), values = rev(clrs), name = "Gene count") + geom_abline(intercept = 0, color = "red", size = 0.25) + labs(x = paste0("Read count ", "(", input$selPair[1], ")"), y = paste0("Read count ", "(", input$selPair[2], ")")) + theme(axis.text=element_text(size=15), axis.title=element_text(size=15), legend.title=element_text(size=15), legend.text=element_text(size=15)) + coord_fixed(ratio=1))
+    p <- reactive(ggplot(hexdf, aes(x=x, y=y, hexID=hexID, counts=counts, fill=countColor2)) + geom_hex(stat="identity") + scale_fill_manual(labels = as.character(my_breaks), values = rev(clrs), name = "Gene count") + geom_abline(intercept = 0, color = "red", size = 0.25) + labs(x = paste0("Read count ", "(", input$selPair[1], ")"), y = paste0("Read count ", "(", input$selPair[2], ")")) + theme_gray() + theme(axis.text=element_text(size=15), axis.title=element_text(size=15), legend.title=element_text(size=15), legend.text=element_text(size=15)) + coord_fixed(ratio=1))
     
     gP <- eventReactive(p(), {
       gP <- ggplotly(p(), height = 400) #  height = 400
