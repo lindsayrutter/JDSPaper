@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 MAR 2018 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 MAR 2018 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -425,26 +425,71 @@ File: ../MakeFigures/lkClustersAddSM-St.jpg Graphic file (type jpg)
 Package pdftex.def Info: ../MakeFigures/lkClustersAddSM-St.jpg used on input li
 ne 182.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
- [9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersOri
-g.jpg>] [12 <../MakeFigures/lkClustersRemove.jpg>] [13 <../MakeFigures/lkCluste
-rsAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../MakeFigures/lkCl
-ustersOrigSM.jpg>] [16 <../MakeFigures/lkClustersRemoveSM.jpg>] [17 <../MakeFig
-ures/lkClustersAddSM.jpg>] [18 <../MakeFigures/Dashboards/litreClusterKeep/litr
-eClusterKeep.jpg>] [19 <../MakeFigures/Dashboards/litreClusterOrig/litreCluster
-Orig.jpg>] [20 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove
-.jpg>] [21 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>] [22
- <../MakeFigures/lkClustersKeepSM-St.jpg>] [23 <../MakeFigures/lkClustersOrigSM
--St.jpg>] [24 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [25 <../MakeFigures/l
-kClustersAddSM-St.jpg>] (./supp.aux)
+
+<../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg, id=59, 
+566.115pt x 800.7516pt>
+File: ../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg Gra
+phic file (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterKeep-St/litreClu
+sterKeep-St.jpg used on input line 192.
+(pdftex.def)             Requested size: 328.82707pt x 465.12048pt.
+
+<../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg, id=60, 
+569.4876pt x 800.7516pt>
+File: ../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg Gra
+phic file (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterOrig-St/litreClu
+sterOrig-St.jpg used on input line 199.
+(pdftex.def)             Requested size: 328.82707pt x 462.37134pt.
+
+<../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg, id=
+61, 873.5034pt x 1009.371pt>
+File: ../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg
+ Graphic file (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove-St/litreC
+lusterRemove-St.jpg used on input line 206.
+(pdftex.def)             Requested size: 469.75502pt x 542.81898pt.
+
+<../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg, id=62, 86
+7.24pt x 980.463pt>
+File: ../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg Graph
+ic file (type jpg)
+
+<use ../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg>
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterAdd-St/litreClus
+terAdd-St.jpg used on input line 213.
+(pdftex.def)             Requested size: 469.75502pt x 531.0878pt.
+
+[9] [10 <../MakeFigures/lkClustersKeep.jpg>] [11 <../MakeFigures/lkClustersOrig
+.jpg>] [12 <../MakeFigures/lkClustersRemove.jpg>] [13 <../MakeFigures/lkCluster
+sAdd.jpg>] [14 <../MakeFigures/lkClustersKeepSM.jpg>] [15 <../MakeFigures/lkClu
+stersOrigSM.jpg>] [16 <../MakeFigures/lkClustersRemoveSM.jpg>] [17 <../MakeFigu
+res/lkClustersAddSM.jpg>] [18 <../MakeFigures/Dashboards/litreClusterKeep/litre
+ClusterKeep.jpg>] [19 <../MakeFigures/Dashboards/litreClusterOrig/litreClusterO
+rig.jpg>] [20 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.
+jpg>] [21 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>]
+[22 <../MakeFigures/lkClustersKeepSM-St.jpg>] [23 <../MakeFigures/lkClustersOri
+gSM-St.jpg>] [24 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [25 <../MakeFigure
+s/lkClustersAddSM-St.jpg>] [26 <../MakeFigures/Dashboards/litreClusterKeep-St/l
+itreClusterKeep-St.jpg>] [27 <../MakeFigures/Dashboards/litreClusterOrig-St/lit
+reClusterOrig-St.jpg>] [28 <../MakeFigures/Dashboards/litreClusterRemove-St/lit
+reClusterRemove-St.jpg>] [29 <../MakeFigures/Dashboards/litreClusterAdd-St/litr
+eClusterAdd-St.jpg>] (./supp.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2115 strings out of 492995
- 33814 string characters out of 6132704
- 109232 words of memory out of 5000000
- 5635 multiletter control sequences out of 15000+600000
+ 2143 strings out of 492995
+ 35365 string characters out of 6132704
+ 114160 words of memory out of 5000000
+ 5655 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,32p,1425b,215s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -453,10 +498,10 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on supp.pdf (25 pages, 6814949 bytes).
+Output written on supp.pdf (29 pages, 10106499 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 73 compressed objects within 1 object stream
+ 163 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
