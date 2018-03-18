@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
+\usepackage[usenames, dvipsnames]{color}
 
 % %
 % \makeatletter
@@ -29,21 +30,6 @@ This file contains supplementary analyses that the reader might find useful, and
 
 \end{itemize}
 
-All the remaining figures in this supplementary file (Figure~\ref{lkClustersKeep} through Figure~\ref{litreClusterAdd-St}) provide additional examples for the closing case study discussed in Section 5 of the main paper. 
-
-\begin{itemize}
-
-\item Figure~\ref{lkClustersKeep} through Figure~\ref{lkClustersAdd} 
-
-\item Figure~\ref{lkClustersKeepSM} through Figure~\ref{lkClustersAddSM} 
-
-\item Figure~\ref{litreClusterKeep} through Figure~\ref{litreClusterAdd} 
-
-\item Figure~\ref{lkClustersKeepSM-St} through Figure~\ref{lkClustersAddSM-St} 
-
-\item Figure~\ref{litreClusterKeep-St} through Figure~\ref{litreClusterAdd-St} 
-
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,6 +89,42 @@ All the remaining figures in this supplementary file (Figure~\ref{lkClustersKeep
 \caption{Litre plots for significant genes inside Cluster 1 from Figure 2 of the paper. Subplots A and B each overlay a significant gene from Cluster 1 as nine green points. The genes show a pattern expected of a differentially-expressed one, by clumping together and deviating from the \textit{x=y} line. Moreover, the genes appear over-expressed in the P group. This is consistent with what we saw in Figure 2 of the paper. To interactively view the litre plot for all significant genes within Cluster 1, please visit https://rnaseqvisualization.shinyapps.io/litreCluster1.
 \label{litreCluster1}}
 \end{figure}   
+
+
+\clearpage
+The rest of the figures in this supplementary file (Figure~\ref{lkClustersKeep} through Figure~\ref{litreClusterAdd-St}) provide additional examples for the closing case study discussed in Section 5 of the main paper. In this case study, technical replicates of kidney and liver RNA-seq data was initially analyzed using library scale normalization. This process lead to 7,050 kidney DEGs and 1,968 liver DEGs, and visualization verification suggested that a subset of the kidney DEGs may be unreliable (Figure 10A from the main paper). Upon reviewing the geometrical structure of the data in the form of a scatterplot matrix, a subset of overexpressed liver genes was discovered, implicating the need for a more rigorous form of normalization (Figure 9 from the main paper). As a result, TMM normalization was then applied to the data, which lead to 3,974 kidney DEGs and 3,546 liver DEGs. These DEGs now appeared much more reliable (Figure 10B from the main paper). \\
+
+In the remaining figures of this supplementary file, we thoroughly explore four subsets of genes from this case study in the form of parallel coordinate plots, scatterplot matrices, and litre plots. We also use variants of some of the techniques introduced in the main paper. Namely, we demonstrate the use of data standardization for scatterplot matrices and litre plots as a means to magnify the certain patterns at the expense of losing geometrical structure. In the below figures, we plot example genes from each of the four gene subsets using consistent color-coding. The four genes subsets and their color-codes are as follows:
+
+\begin{itemize}
+
+\item The 3,974 kidney DEGs from library scale normalization that remained as DEGs even after TMM normalization. These DEGs are plotted in \textbf{\textcolor{Fuchsia}{purple}}. As these genes were declared significant with both library scale normalization and TMM normalization, we expect them to follow the expected patterns of DEGs.
+
+\item The 1,968 liver DEGs from library scale normalization that remained as DEGs even after TMM normalization. These DEGs are plotted in \textbf{\textcolor{Bittersweet}{orange}}. As these genes were declared significant with both library scale normalization and TMM normalization, we expect them to follow the expected patterns of DEGs.
+
+\item The 3,076 kidney-specific DEGs from library scale normalization that were \textit{removed} as DEGs using TMM normalization. These DEGs are plotted in \textbf{\textcolor{Red}{red}}. As these genes were declared significant with library scale normalization but then removed as such with TMM normalization, we expect them to \textit{not} convincingly follow the expected patterns of DEGs.
+
+\item The 1,578 liver-specific genes that were not detected as DEGs with library scale normalization but were then \textit{added} as such using TMM normalization. These DEGs are plotted in \textbf{\textcolor{RubineRed}{pink}}. As these genes were not declared significant with library scale normalization but were then declared as significant using the more-appropriate TMM normalization, we expect them to \textit{somewhat} convincingly follow the expected patterns of DEGs.
+
+\end{itemize}
+
+\noindent
+The below figures are organized into five main groups as briefly explained below:
+
+\begin{itemize}
+
+\item Figure~\ref{lkClustersKeep} through Figure~\ref{lkClustersAdd} each shows the four gene subsets in the form of parallel coordinate plots after application of hierarchical clustering analysis. Each subset is grouped into eight clusters, not only to separate the genes into any subtle pattern differences, but also to reduce any overplotting that would occur should they all be viewed together as one large cluster. Overall, we see that the genes that were called DEGs in both forms of normalization (purple and orange) have very clean-looking parallel coordinate plots (especially in their largest cluster); the genes that were removed with TMM normalization (red) have messy-looking parallel coordinate plots; and the genes that were added with TMM normalization (pink) have decent-looking parallel coordinate plots.
+
+\item Figure~\ref{lkClustersKeepSM} through Figure~\ref{lkClustersAddSM} each overlays the genes from the largest cluster of these four gene subsets in the form of scatterplot matrices. In general, we see that the genes that were called DEGs in both forms of normalization (purple and orange) have the expected profiles in the scatterplot matrices, deviating from the \textit{x=y} line in the treatment scatterplots in the anticipated direction. We also see that the genes that were removed with TMM normalization (red) do not show DEG patterns in the scatterplot matrices, as they barely deviate from the \textit{x=y} line in the treatment scatterplots. All three of these groups appear as predicted. However, perhaps surprisingly, the genes that were added with TMM normalization (pink) appear similarly to the genes that were removed with TMM normalization (red). We would expect the pink genes to deviate more from the \textit{x=y} line than the red genes, but this is not observed.
+
+\item Figure~\ref{litreClusterKeep} through Figure~\ref{litreClusterAdd} 
+
+\item Figure~\ref{lkClustersKeepSM-St} through Figure~\ref{lkClustersAddSM-St} 
+
+\item Figure~\ref{litreClusterKeep-St} through Figure~\ref{litreClusterAdd-St} 
+
+\end{itemize}
+
 
 \clearpage
 \null
