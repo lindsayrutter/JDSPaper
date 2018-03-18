@@ -15,6 +15,40 @@
 
 \maketitle
 
+This file contains supplementary analyses that the reader might find useful, and that extend upon several of the main concepts discussed in the paper. This supplementary document provides additional examples of parallel coordinate plots, scatterplots matrices, and litre plots, and how these plotting tools can be used to assess normalization and DEG calls. Also included are examples of the effect of standardizing data before viewing them in scatterplot matrices and litre plots.
+
+\begin{itemize}
+
+\item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure 2 in the main paper. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure 2 in the main paper that only showed significant genes, Figure~\ref{sbIRClusters} in this supplementary file shows all genes.
+
+\item Figure~\ref{sbIRClusterSigSM1} through Figure~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
+
+\item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure 5 from the main paper).
+
+\item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure 8 from the main paper, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
+
+\end{itemize}
+
+All the remaining figures in this supplementary file (Figure~\ref{lkClustersKeep} through Figure~\ref{litreClusterAdd-St}) provide additional examples for the closing case study discussed in Section 5 of the main paper. 
+
+\begin{itemize}
+
+\item Figure~\ref{lkClustersKeep} through Figure~\ref{lkClustersAdd} 
+
+\item Figure~\ref{lkClustersKeepSM} through Figure~\ref{lkClustersAddSM} 
+
+\item Figure~\ref{litreClusterKeep} through Figure~\ref{litreClusterAdd} 
+
+\item Figure~\ref{lkClustersKeepSM-St} through Figure~\ref{lkClustersAddSM-St} 
+
+\item Figure~\ref{litreClusterKeep-St} through Figure~\ref{litreClusterAdd-St} 
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Begin Figures %%%%%%% 
+
 \clearpage
 \null
 \begin{figure}[t!]
@@ -54,9 +88,11 @@
 \label{sbIRClusterSigSM4}}
 \end{figure}  
 
-\begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
-\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using plots that provide gene-level resolution like with the scatterplot matrix (Figure~\ref{sbCNSwitchedSM}).
+\clearpage
+\null
+\begin{figure}[!t]
+\centerline{\includegraphics[width=0.7\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional plots applied to the cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using plots that provide gene-level resolution like with the scatterplot matrix from Figure 6 in the main paper.
 \label{mdsSwitch}}
 \end{figure}
 
@@ -68,6 +104,7 @@
 \label{litreCluster1}}
 \end{figure}   
 
+\clearpage
 \null
 \begin{figure}[t!]
 \centerline{\includegraphics[width=0.65\columnwidth]{../MakeFigures/lkClustersKeep.jpg}}
@@ -149,7 +186,7 @@
 \null
 \begin{figure}[t!]
 \centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg}}
-\caption{Example litre plots from the 1,578 genes that were in the first cluster (of Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
+\caption{Example litre plots from the 317 genes that were in the first cluster (of Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
 \label{litreClusterAdd}}
 \end{figure}
 
@@ -211,7 +248,7 @@
 \null
 \begin{figure}[t!]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg}}
-\caption{Example litre plots from the 1,578 genes that were in the first cluster (of Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
+\caption{Example litre plots from the 317 genes that were in the first cluster (of Figure~\ref{lkClustersAdd}) from genes that were \textit{added} as liver-specific DEGs after TMM normalization. With these litre plots, we are \textbf{unable} to verify from an additional perspective that these genes demonstrate the expected patterns of DEGs. (Need to find an explanation for this).
 \label{litreClusterAdd-St}}
 \end{figure}
 
