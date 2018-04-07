@@ -10,10 +10,11 @@
 \subtitle{Subject Section}
 
 \title[RNA-sequencing visualization]{Visualization methods for RNA-sequencing data analysis}
-\author[Sample \textit{et~al}.]{Lindsay Rutter\,$^{\text{\sfb 1,}*}$, Michelle Graham\,$^{\text{\sfb 2}}$ and Dianne Cook\,$^{\text{\sfb 3,}*}$}
+\author[Sample \textit{et~al}.]{Lindsay Rutter\,$^{\text{\sfb 1,}*}$, Adrienne N. Moran Lauter\,$^{\text{\sfb 2}}$, Michelle Graham\,$^{\text{\sfb 2,3}}$ and Dianne Cook\,$^{\text{\sfb 4,}*}$}
 \address{$^{\text{\sf 1}}$Bioinformatics and Computational Biology Program, Iowa State University, Ames, IA 50011, USA, \\
-$^{\text{\sf 2}}$Department of Agronomy, Iowa State University, Ames, IA 50011, USA and \\
-$^{\text{\sf 3}}$Econometrics and Business Statistics, Monash University, Clayton VIC 3800, Australia.}
+$^{\text{\sf 2}}$USDA-ARS, Corn Insects and Crop Genetics Research Unit \\
+$^{\text{\sf 3}}$Dept. of Agronomy, Iowa State University, Ames, IA 50010 \\
+$^{\text{\sf 4}}$Econometrics and Business Statistics, Monash University, Clayton VIC 3800, Australia.}
 
 \corresp{$^\ast$To whom correspondence should be addressed.}
 
@@ -21,8 +22,8 @@ $^{\text{\sf 3}}$Econometrics and Business Statistics, Monash University, Clayto
 
 \editor{Associate Editor: XXXXXXX}
 
-\abstract{\textbf{Motivation:} RNA-seq data is biased and accurate detection of differentially expressed genes is not a trivial task. In light of this, researchers should use effective and modern data analysis techniques, and verify and enhance the appropriateness of their models with visual feedback. As it stands, there is a need to make it easier for researchers to use models and visuals in a complimentary fashion during RNA-seq data analysis. \\
-\textbf{Results:} We use real RNA-seq data to show that our visualization tools can detect normalization issues, DEG designation problems, and common analysis errors. We also show that our tools can identify genes of interest in ways undetectable with models. In this paper, we propose that users slightly modify their approach to RNA-seq analysis by incorporating statistical graphics into their usual analysis pipelines. \\
+\abstract{\textbf{Motivation:} Despite the availability of many ready-made testing software, reliable detection of differentially expressed genes in RNA-seq data is not a trivial task.  While the data collection might be considered high-throughput, data analysis has intricacies that require careful human attention. In light of this, researchers should use effective and modern data analysis techniques, and verify and enhance the appropriateness of their models with visual feedback. There is a need to make it easier for researchers to use models and visuals in a complimentary fashion during RNA-seq data analysis. \\
+\textbf{Results:} We use several public RNA-seq data sets to show that our visualization tools can detect normalization issues, DEG designation problems, and common analysis errors. We also show that our visual tools can identify genes of interest in ways undetectable with models. In this paper, we propose that users slightly modify their approach to RNA-seq analysis by incorporating statistical graphics into their usual analysis pipelines. \\
 \textbf{Availability:} Interactive versions of graphics are available at shinyapps.io, as specified in the paper.\\
 \textbf{Contact:} \href{lrutter@iastate.edu}{lrutter@iastate.edu}\\
 \textbf{Supplementary information:} Supplementary data are available at \textit{Bioinformatics} online.}
@@ -57,16 +58,16 @@ Figure~\ref{simulatedData} exemplifies this problem for two simulated datasets, 
 
 Despite this, we immediately see from the parallel coordinate plots (subplots C) that the left and right datasets have an important difference. The left dataset has consistent (level) lines between replicates and inconsistent (crossed) lines between treatment groups. This suggests that some of the genes (lines) have consistently low values for treatment group A and consistently high values for treatment group B, while some genes have the opposite phenomenon. As a result, these plotted genes are likely candidates for differential expression. In contrast, the right dataset does not possess this ideal structure and suggests that the genes may not be candidates for differential expression. We could not see this important distinction using the side-by-side boxplots or the MDS plots because they only provide data summarization at the sample resolution, while the parallel coordinate plots show the sample connections for each of the 50 genes.
 
-We will now examine one potential application of parallel coordinate plots using data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) and iron-deficient (group N) soil conditions \citep{Lauter}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, retained only significant genes, and visualized the results using parallel coordinate lines (Figure~\ref{sbIRClustersSig}). To view the results before the non-significant genes were removed, see Supplementary Figure 1. For these visualizations, we standardized each gene to have a mean of zero and standard deviation of unity \citep{Chandrasekhar, de Souto}.
+We will now examine the application of parallel coordinate plots to data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) and iron-deficient (group N) soil conditions \citep{Lauter16}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, retained only significant genes, and visualized the results using parallel coordinate lines (Figure~\ref{sbIRClustersSig}). To view the results before the non-significant genes were removed, see Supplementary Figure 1. For these visualizations, we standardized each gene to have a mean of zero and standard deviation of unity \citep{Chandrasekhar, de Souto}.
 
-The majority of significant genes were in Clusters 1 and 2, which for the most part captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Only 17 significant genes belonged to Cluster 4 and they mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 had a fairly large number of significant genes (n=861). These genes mostly showed clean differential expression profiles similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P. 
+The majority of significant genes were in Clusters 1 and 2, which for the most part captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Only 17 significant genes belonged to Cluster 4 and they mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 had a fairly large number of significant genes (n=861). These genes mostly showed clean differential expression profiles similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P.  The reasons for a different response by these genes on this replicate is unclear, but warrants further study. 
 
 %%%%%%%%%%%%%%% Ask Michelle for her thoughts on this statement %%%%%%%%%%%%%%%%%
-Discussion with the authors of the study revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these Cluster 3 transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have likely seen this pattern and derived this post-hoc hypothesis from any models.
+%Discussion with the authors of the study revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these Cluster 3 transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have likely seen this pattern and derived this post-hoc hypothesis from any models.
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRClustersSig.jpg}}
-\caption{Using parallel coordinate plots to visualize significant genes after hierarchical clustering. We can quickly confirm that Clusters 1 and 2 show the typical pattern for significant genes. Cluster 4 does not distinctively show the usual profile for significant genes. Cluster 3 looks similar to Cluster 2, except for unexpectedly large P.3 values. This lead to an interesting post-hoc analysis, as is described in the text.
+\caption{Using parallel coordinate plots to visualize significant genes after hierarchical clustering. We can quickly confirm that Clusters 1 and 2 show the typical pattern for significant genes. Cluster 4 does not distinctively show the usual profile for significant genes. Cluster 3 looks similar to Cluster 2, except for unexpectedly large P.3 values.
 \label{sbIRClustersSig}}
 \end{figure}
 
@@ -76,11 +77,11 @@ Discussion with the authors of the study revealed that a lab biologist documente
 
 A scatterplot matrix is another effective multivariate visualization tool that plots the mapped read count distributions across all genes and samples. Specifically, it represents each row (gene) as a point in each scatterplot. With this method, users can quickly discover unexpected patterns, recognize geometric shapes, and assess the structure and association between multiple variables in a manner that is different from most common practices. 
 
-The ideal dataset will have larger variability between treatment groups than between replicates. As Figure~\ref{sbIRClustersSig} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of them to show differential expression between samples. However, a fraction of the genes should have lower variability between replicates than between treatments, and so we should expect the spread of the scatterplot points to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{sbIRClustersSig}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2) \citep{Brown}. We can immediately verify that the nine scatterplots between treatment pairs (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicate pairs.
+Clean data would be expected to have larger variability between treatment groups than between replicates. As Figure~\ref{sbIRClustersSig} shows, researchers can quickly confirm this with a scatterplot matrix. Within each scatterplot, most genes should fall along the \textit{x=y} line (in red) as we expect only a small proportion of them to show differential expression between samples. However, a fraction of the genes should have lower variability between replicates than between treatments, and so we should expect the spread of the scatterplot points to fall more closely along the \textit{x=y} relationship between replicates than between treatments. Indeed, in Figure~\ref{sbIRClustersSig}, we created a scatterplot matrix for a public RNA-seq dataset that contains three replicates for two developmental stages of soybean cotyledon (S1 and S2) \citep{Brown}. We can immediately verify that the nine scatterplots between treatment pairs (in the bottom-left corner of the matrix) have more spread around the \textit{x=y} line than the six scatterplots between replicate pairs.
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSM.jpg}}
-\caption{Example of the expected structure of an RNA-seq dataset. Within a given scatterplot, most genes (points) should fall along the \textit{x=y} line. We should see genes deviate more strongly from the \textit{x=y} line in treatment scatterplots than in replicate scatterplots. 
+\caption{Example of the expected structure of an RNA-seq dataset, using soybean cotyledon data from \cite{Brown}. Within a given scatterplot, most genes (points) should fall along the \textit{x=y} line. We should see genes deviate more strongly from the \textit{x=y} line in treatment scatterplots than in replicate scatterplots. 
 \label{sbCNSM}}
 \end{figure}
 
@@ -96,12 +97,6 @@ There is still substantial discussion about the normalization of RNA-seq data, a
 
 The four cultures (Y1, Y2, Y4, and Y7) were treated as biological replicates for which differential expression was not expected. Hence, the authors could establish a false positive rate in relation to the number of DEGs called between these groups. They then demonstrated that within-lane regression alone was insufficient in effectively removing biases. Instead, aggressive corrections for both within-lane (GC-content and gene length) and between-lane (count distribution and sequencing depth) biases were needed to effectively reduce the false-positive rate of differential expression calls.
 
-\begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/yeastWithinBetween.jpg}}
-\caption{The collective deviation of genes from the \textit{x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
-\label{yeastWithinBetween}}
-\end{figure}
-
 Figure~\ref{yeastWithinBetween}A shows the scatterplot matrix of the read counts from the Y1 and Y4 treatments after within-lane normalization. As we stated earlier, we expect most genes to show similar expression between samples, except for the handful that are differentially expressed. However, it is immediately clear that the data still was not sufficiently normalized as the distribution of genes is not centered around the \textit{x=y} lines. In contrast, Figure~\ref{yeastWithinBetween}B shows the scatterplot matrix of the read counts from the Y1 and Y4 treatments after \textit{both} within-lane and between-lane normalization, as was recommended by the authors due to its reduced false-positive rate. Indeed, the scatterplot matrix now follows the expected structure with most genes falling along the \textit{x=y} line with thicker deviations from it between treatment groups than between replicate groups.
 
 Additionally, we can also confirm from Figure~\ref{yeastWithinBetween}B that the read counts fall closer to the \textit{x=y} line between the Y4 replicates (bottom-right scatterplot) than between the Y1 replicates (top-left scatterplot). This is expected because the Y1 replicates had additional technical variability as they used two different flow cells, whereas the Y4 replicates were from the same flow cell. As such, the scatterplot matrix can also be used to quickly inspect patterns of biological and technical variability in the dataset.
@@ -111,41 +106,43 @@ Additionally, we can also confirm from Figure~\ref{yeastWithinBetween}B that the
 Irreproducibility is prevalent in high-throughput biological studies. A study in Nature Genetics surveyed eighteen published microarray expression analyses and reported that only two were exactly reproducible \citep{Ioannidis}. The extent of the problem has spawned a field called ``forensic bioinformatics" whereby researchers attempt to reverse-engineer reported results back into the raw datasets simply to derive the methodologies used in published studies \citep{Baggerly}.
 
 \begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSwitchedSM.jpg}}
-\caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{sbCNSM}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
-\label{sbCNSwitchedSM}}
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/yeastWithinBetween.jpg}}
+\caption{Illustrating normalization checks with data from  \cite{Risso}. The collective deviation of genes from the \textit{x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset.
+\label{yeastWithinBetween}}
 \end{figure}
 
 Even though irreproducibility is merely cumbersome when it masks methods, it is unquestionably hazardous when it masks errors. With regards to personalized medicine, for example, obscured errors may cause well-intentioned researchers to present evidence for drugs that are ineffective or even harmful to patients \citep{Baggerly}. Forensic bioinformaticians who have actively investigated common errors in high-throughput biological studies have concluded that the largeness of the data itself may hinder our ability to detect errors \citep{Baggerly}. They also discovered that the most common errors are simple errors, such as mixing up sample labels \citep{Baggerly}. Collectively, these findings suggest that simple errors can be difficult to detect using common practices in high-throughput studies.
 
 Fortunately, scatterplot matrices are a simple tool to check for common errors like sample mislabeling. Figure~\ref{sbCNSwitchedSM} shows the resulting scatterplot matrix after we deliberately swapped the labels of the third replicate of the first treatment group (S1.3) with the first replicate of the second treatment group (S2.1) in the previously-mentioned cotyledon dataset. We can immediately see that, as expected, there are nine scatterplots with thicker distributions around the \textit{x=y} line and six scatterplots with thinner distributions around the \textit{x=y} line. However, we notice that a subset of these thick and thin scatterplots appear outside of their expected locations given the expected variability between treatments versus replicates. Rearranging the columns of the two samples that appear suspicious in Figure~\ref{sbCNSwitchedSM} would indeed lead us back to the clean-looking scatterplot matrix we saw in Figure~\ref{sbIRClustersSig}. We cannot detect this mislabeling problem as convincingly with traditional plots, as can be verified with this dataset by comparing the boxplots and MDS plots before sample switching (left side of Supplementary Figure 6) and after sample switching (right side of Supplementary Figure 6). 
 
+
 \subsection{Finding unexpected patterns in scatterplot matrices}
 
 Most popular RNA-seq plotting tools display summaries about the read counts, such as fold change summaries, principal component summaries, five number summaries, and dispersion summaries. In contrast to this trend, scatterplot matrices display the non-summarized read counts for all genes. This trait allows for geometric shapes and patterns relevant to the read count distribution to be readily visible in the scatterplot matrix.
 
-An example of how geometric shapes in the scatterplot matrix can provide applicable information to researchers is shown in Figure~\ref{structure}, which uses the iron-metabolism soybean dataset \citep{Lauter}. After normalizing the data, we see the expected pattern of a scatterplot matrix, with more variation around the \textit{x=y} line between treatments than between replicates (Figure~\ref{structure}). 
+An example of how geometric shapes in the scatterplot matrix can provide applicable information to researchers is shown in Figure~\ref{structure}, which uses the iron-metabolism soybean dataset \citep{Lauter16}. After normalizing the data, we see the expected pattern of a scatterplot matrix, with more variation around the \textit{x=y} line between treatments than between replicates (Figure~\ref{structure}). 
+
+%%%%%%%%%%%%%% Ask Michelle for thoughts below %%%%%%%%%%%%%%%%%%%
+However, one streak structure in the bottom right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections. This is the same group of genes discussed in Figure~\ref{sbIRClustersSig}. It should be noted that these five transcripts did not reach significance unless the third replicate of the P group was removed. In any case, we would not have observed this interesting structure from any models.
+
+\begin{figure}[!tpb]
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSwitchedSM.jpg}}
+\caption{As expected, this scatterplot matrix contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, two samples appear to cause a subset of scatterplots to unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of these two suspicious samples (S1.3 and S2.1), the scatterplot matrix then displays the anticipated structure we saw in Figure~\ref{sbCNSM}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis.
+\label{sbCNSwitchedSM}}
+\end{figure}
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRStreak.jpg}}
-\caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
+\caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions~\citep{Lauter16}. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
 \label{structure}}
 \end{figure}
 
-%%%%%%%%%%%%%% Ask Michelle for thoughts below %%%%%%%%%%%%%%%%%%%
-However, one streak structure in the bottom right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections. As was mentioned previously, this dataset did inadvertently include a leaf-tearing incident, and further investigation of these genes could determine whether or not there is a connection between that accident and these gene expression patterns. It should be noted that these five transcripts did not reach significance unless the third replicate of the P group was removed. In any case, we would not have observed this interesting structure from any models.
 
 \subsection{Assessing differential expression calls in scatterplot matrices}
 
 The scatterplot matrix can also be used to quickly examine the DEGs returned from a given model. Figure~\ref{sbIRDEG} shows the DEGs from the soybean cotyledon dataset superimposed as orange points onto the scatterplot matrix. We expect for DEGs to fall along the \textit{x=y} line for scatterplots between replicates and deviate from the \textit{x=y} line for scatterplots between treatment groups, as is confirmed in Figure~\ref{sbIRDEG}. As a side note, we can also link these DEGs as parallel coordinate lines on a side-by-side boxplot like in Figure~\ref{sbIRDEG} to confirm the expected pattern of differential expression from a second viewpoint. If we do not observe what should be expected of DEGs, then the DEG calls from the model may need to be scrutinized further.
 
 As an additional example, we overlaid the significant genes from the four clusters of the iron-metabolism soybean dataset (originally shown in Figure~\ref{sbIRClustersSig}) onto the scatterplot matrix. The results are shown and briefly discussed in Supplementary Figures 2-5. 
-
-\begin{figure}[!tpb]
-\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRDEG.jpg}}
-\caption{Example of the expected structure of DEG calls (in orange) from an RNA-seq dataset. In the scatterplot matrix (subplot A), DEGs should fall along the \textit{x=y} line for replicates and deviate from it for treatments. In the parallel coordinate plot (subplot B), DEGs should show levelness between replicates and crosses between treatments. These two plotting types can be linked to quickly provide users multiple perspectives of their DEG calls.
-\label{sbIRDEG}}
-\end{figure}
 
 \section{Litre plots}
 
@@ -156,6 +153,12 @@ The ``replicate line plot" was developed by a group of researchers who demonstra
 In the litre plot, each gene is plotted once for each possible combination of replicates between treatment groups. For example, there are nine ways to pair a replicate from one treatment group with a replicate from the other treatment group in the soybean iron-metabolism dataset (N.1 and P.1, N.1 and P.2, N.1 and P.3, N.2 and P.1, N.2. and P.2, N.2 and P.3, N.3 and P.1, N.3 and P.2, and N.3 and P.3). Hence, a given gene from this dataset is plotted as nine points in the litre plot. With 56,044 genes in this dataset, we would need to plot 504,396 points. This would reduce the speed of interactive functionality as well as cause overplotting problems. As a result, we again use hexagon bins to summarize this massive information (Figure~\ref{repDot} shows four example litre plots).
 
 Once the background of hexagons has been drawn to give us a sense of the distribution of all treatment pair combinations for all genes, the user can superimpose the nine points of one gene of interest. We can examine and compare litre plots using the clusters we created in Figure~\ref{sbIRClustersSig}. Subplots A and B of Figure~\ref{repDot} each show a significant gene from Cluster 2 plotted as nine mustard points, subplots C and D each show a significant gene from Cluster 3 plotted as nine pink points, and subplots E and F each show a significant genes from Cluster 4 plotted as nine coral points. Note that, in the examples in Figure~\ref{repDot}, the read counts of treatment pair combinations sometimes overlap, resulting in the appearance of less than nine points being overlaid. Example litre plots from Cluster 1 are shown in Supplementary Figure 7.
+
+\begin{figure}[!tpb]
+\centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRDEG.jpg}}
+\caption{Example of the expected structure of DEG calls (in orange) from an RNA-seq dataset. In the scatterplot matrix (subplot A), DEGs should fall along the \textit{x=y} line for replicates and deviate from it for treatments. In the parallel coordinate plot (subplot B), DEGs should show levelness between replicates and crosses between treatments. These two plotting types can be linked to quickly provide users multiple perspectives of their DEG calls.
+\label{sbIRDEG}}
+\end{figure}
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png}}
@@ -199,15 +202,15 @@ In this paper, we strived to convince readers that effective visualization shoul
 
 In general, scientists might uncover surprising patterns lurking in their data with plots in ways that cannot be achieved with any formulas or models. Researchers from all statistical backgrounds can use graphical tools to better understand (if not demystify) how the application of various normalization techniques and/or models affect their results. All in all, scientists can gain more confidence in the data analysis pipelines they choose and in the results they draw at the mere cost of briefly creating and exploring graphical outputs during their analyses.
 
-Modern data analysis is most reliable when models and visuals are used congruently. Unfortunately, the current culture around RNA-seq analysis deemphasizes the importance of graphical tools, which, as we have shown, calls into question the soundness of results that come from RNA-seq studies. Solving this problem is simple and does not require scientists to drastically change their approach to RNA-seq analysis. Instead, scientists simply need to incorporate effective plotting tools during their usual analysis pipelines. We plan to serve a role in this solution by publishing a new \textsf{R} software package that includes the useful plotting techniques we introduced in this paper. To encourage scientists to use this resource, we aim to include a straight-forward vignette that demonstrates how to painlessly apply these graphical tools to RNA-seq data. It is our hope that such work will serve a small part in upgrading the RNA-seq analysis world into one that more wholistically extracts meaningful biological information using both models and visuals.
+Modern data analysis is most reliable when models and visuals are used congruently. Unfortunately, the current culture around RNA-seq analysis de-emphasizes the importance of graphical tools, which, as we have shown, calls into question the soundness of results that come from RNA-seq studies. Solving this problem is simple and does not require scientists to drastically change their approach to RNA-seq analysis. Instead, scientists simply need to incorporate effective plotting tools during their usual analysis pipelines. We plan to serve a role in this solution by publishing a new \textsf{R} software package that includes the useful plotting techniques we introduced in this paper. To encourage scientists to use this resource, we aim to include a straight-forward vignette that demonstrates how to painlessly apply these graphical tools to RNA-seq data. It is our hope that such work will serve a small part in upgrading the RNA-seq analysis world into one that more wholistically extracts meaningful biological information using both models and visuals.
 
 \section*{Acknowledgements}
 
-We would like to acknowledge 
+R\citep{R}  was used to conduct analyses in this paper, and particularly packages ggplot2\citep{ggplot2}, shiny\citep{shiny},  and plotly\citep{plotly} were used to build the graphics. 
 
 \section*{Funding}
 
-This work has been supported by
+Research of Graham and Moran Lauter was financed by the United States Department of Agriculture, Agricultural Research Service (USDA-ARS) CRIS Project 5030-21220-005-00D and the Iowa Soybean Association.
 
 \begin{thebibliography}{}
 
@@ -232,6 +235,9 @@ Bullard, J. H., Purdom, E., Hansen, K. D., and Dudoit, S. (2010) Evaluation of s
 \bibitem[Chandrasekhar {\it et~al}., 2011]{Chandrasekhar}
 Chandrasekhar, T., Thangavel, K., and Elayaraja, E. (2011) Effective Clustering Algorithms for
 Gene Expression Data. {\it International Journal of Computer Applications}, {\bf 32}, 4.
+
+\bibitem[Chang  {\it et~al}.,  (2017)]{shiny}  
+Chang, W., Cheng, J., Allaire, JJ, Xie, Y. and McPherson, J. (2017). {\it shiny: Web Application Framework for R}, R package version 1.0.5. https://CRAN.R-project.org/package=shiny
 
 \bibitem[Cook {\it et~al}., 2007]{Cook}
 Cook, D., Hofmann, H., Lee, E.-K., Yang, H., Nikolau, B., and Wurtele, E. (2007) Exploring gene expression data, using plots. {\it Journal of Data Science}, {\bf 5}, 151--182.
@@ -259,6 +265,9 @@ Marioni, J.C., Mason, C.E., Mane, S.M., Stephens, M., and Gilad, Y. (2008) RNA-s
 
 \bibitem[McIntyre {\it et~al}., 2011]{McIntyre}
 McIntyre, L.M., Lopiano, K.K., Morse, A.M., Amin, V., Oberg, A.L., Young, L.J., et al. (2011) RNAseq: Technical variability and sampling. {\it BMC Genomics}, {\bf 12}, 293.
+
+\bibitem[Lauter {\it et~al}., 2016]{Lauter16}
+Moran Lauter, A.N.  and Graham, M.A. (2016) NCBI SRA bioproject accession :PRJNA318409, https://www.ncbi.nlm.nih.gov/bioproject/PRJNA318409/.
 
 \bibitem[Lauter {\it et~al}., 2014]{Lauter}
 Moran Lauter, A.N., Peiffer, G.A., Yin, T., Whitham, S.A., Cook, D., Shoemaker, R.C., and Graham, M.A. (2014) Identification of candidate genes involved in early iron deficiency chlorosis signaling in soybean (glycine max) roots and leaves. {\it BMC Genomics}, {\bf 15}, 1--25.
@@ -288,8 +297,15 @@ Robinson, M.D. and Oshlack, A. (2010) A scaling normalization method for differe
 \bibitem[Robinson {\it et~al}., 2010]{Robinson}
 Robinson, M.D., McCarthy, D.J., and Smyth, G.K. (2010) edgeR: A Bioconductor package for differential expression analysis of digital gene expression data. {\it Bioinformatics}, {\bf 26}, 139--140.
 
+\bibitem[R Core Team (2017)]{R}
+R Core Team (2017) R: A Language and Environment for Statistical Computing, https://www.R-project.org/.
+
 \bibitem[Schurch {\it et~al}., 2016]{Schurch}
 Schurch, N.J., Schofield, P., Gierliński, M., Cole, C., Sherstnev, A., Singh, V., et al. (2016) How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use? {\it RNA}, {\bf 22}, 839--851.
+
+\bibitem[Sievert {\it et~al}.. (2017)]{plotly}
+Sievert, C., Parmer, C., Hocking, T., Chamberlain, S., Ram, K., Corvellec, M. and Despouy, P. (2017). {\it plotly: Create
+  Interactive Web Graphics via 'plotly.js'}, https://plot.ly/r.
 
 \bibitem[Shneiderman, 2002]{Shneiderman}
 Shneiderman, B. (2002) Inventing discovery tools: Combining information visualization with data mining. {\it Information Visualization}, {\bf 1}, 5--12.
@@ -302,6 +318,9 @@ Trapnell, C., Roberts, A., Goff, L., Pertea, G., Kim, D., and Kelley D.R. (2012)
 
 \bibitem[Wang {\it et~al}., 2009]{Wang}
 Wang, Z., Gerstein, M., and Snyder, M. (2009) RNA-Seq: A revolutionary tool for transcriptomics. {\it Nature Reviews Genetics}, {\bf 10}, 57--63.
+
+\bibitem[Wickham (2016)]{ggplot2}
+Wickham, H. (2016) {\it ggplot2: Elegant Graphics for Data Analysis}. Springer-Verlag New York.
 
 \bibitem[Zhao {\it et~al}., 2014]{Zhao}
 Zhao, S., Fung-Leung, W.-P., Bittner, A., Ngo, K., and Liu, X. (2014) Comparison of RNA-Seq and microarray in transcriptome profiling of activated T cells. {\it PLoS ONE}, {\bf 9}, e78644.
