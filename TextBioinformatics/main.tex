@@ -60,10 +60,7 @@ Despite this, we immediately see from the parallel coordinate plots (subplots C)
 
 We will now examine the application of parallel coordinate plots to data from an RNA-seq study that compared soybean leaves in iron-sufficient (group P) and iron-deficient (group N) soil conditions \citep{Lauter16}. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, retained only significant genes, and visualized the results using parallel coordinate lines (Figure~\ref{sbIRClustersSig}). To view the results before the non-significant genes were removed, see Supplementary Figure 1. For these visualizations, we standardized each gene to have a mean of zero and standard deviation of unity \citep{Chandrasekhar, de Souto}.
 
-The majority of significant genes were in Clusters 1 and 2, which for the most part captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Only 17 significant genes belonged to Cluster 4 and they mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 had a fairly large number of significant genes (n=861). These genes mostly showed clean differential expression profiles similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P.  The reasons for a different response by these genes on this replicate is unclear, but warrants further study. 
-
-%%%%%%%%%%%%%%% Ask Michelle for her thoughts on this statement %%%%%%%%%%%%%%%%%
-%Discussion with the authors of the study revealed that a lab biologist documented accidentally tearing a leaf on one of these replicates. Hence, these Cluster 3 transcripts that markedly deviate from the expected pattern in an otherwise well-controlled experiment might represent those that changed expression in relation to this incident. Even though the main motivation of the study had been to investigate the molecular underpinnings of iron metabolism, through our exploratory data analysis, we can derive a post-hoc hypothesis about what genes tentatively respond to leaf cutting. Of course, this would only serve as a hypothesis generator; conventional genetic studies and additional evidence would be needed to confirm any possible role these genes have on this biological activity. Regardless, we would not have likely seen this pattern and derived this post-hoc hypothesis from any models.
+The majority of significant genes were in Clusters 1 and 2, which for the most part captured the expected patterns of differential expression (consistent replicates and inconsistent treatments) in mirroring ways. Only 17 significant genes belonged to Cluster 4 and they mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 had a fairly large number of significant genes (n=861). These genes mostly showed clean differential expression profiles similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P. The reasons for a different response by these genes on this replicate is unclear, but warrants further study. 
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRClustersSig.jpg}}
@@ -123,7 +120,21 @@ Most popular RNA-seq plotting tools display summaries about the read counts, suc
 An example of how geometric shapes in the scatterplot matrix can provide applicable information to researchers is shown in Figure~\ref{structure}, which uses the iron-metabolism soybean dataset \citep{Lauter16}. After normalizing the data, we see the expected pattern of a scatterplot matrix, with more variation around the \textit{x=y} line between treatments than between replicates (Figure~\ref{structure}). 
 
 %%%%%%%%%%%%%% Ask Michelle for thoughts below %%%%%%%%%%%%%%%%%%%
-However, one streak structure in the bottom right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections. This is the same group of genes discussed in Figure~\ref{sbIRClustersSig}. It should be noted that these five transcripts did not reach significance unless the third replicate of the P group was removed. In any case, we would not have observed this interesting structure from any models.
+However, one streak structure in the bottom right scatterplot stands out. A small subset of transcripts between replicates of the iron-sufficient group sharply deviates from the \textit{x=y} line. By interacting with the plot, we determined the identification of the five transcripts that deviated the most from the expected pattern, and searched for their putative functions. We discovered that these transcripts are reportedly involved in biotic and abiotic stress responses as well as the production of superoxides to combat microbial infections. It should be noted that these five transcripts did not reach significance unless the third replicate of the P group was removed.
+
+
+%This is the same group of genes discussed in Figure~\ref{sbIRClustersSig}. 
+
+%%%%%%%%%%%%%%% Ask Michelle for her thoughts on this statement %%%%%%%%%%%%%%%%%
+
+Discussion with the authors of the study revealed that a lab biologist documented a clean data collection process. In the study, the authors aimed to determine the DEGs across three times points (30 minutes, 60 minutes, and 120 minutes) after exposure to the two iron condition levels. In order to reduce variability caused by plant handling by different researchers, the same researcher collected the samples in succession. One major finding from their study was a vaste change in gene expression responses between these three time points (Supplementary figure @@@@@). In light of these discoveries, the authors tentatively suggest that the streak of genes shown in Figure~\ref{structure} may be due to the timing differences between replicate handling. 
+
+
+
+
+
+
+
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbCNSwitchedSM.jpg}}
@@ -133,7 +144,7 @@ However, one streak structure in the bottom right scatterplot stands out. A smal
 
 \begin{figure}[!tpb]
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRStreak.jpg}}
-\caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions~\citep{Lauter16}. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. Through contacting the authors of this dataset, we discovered that a leaf on one of these samples was inadvertently torn and then documented as such during the experiment. Hence, the genes within this streak structure might represent those that responded to this leaf-tearing event, an observation discovered through the scatterplot matrix that could solidify into a post-hoc hypothesis.
+\caption{Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) soil conditions~\citep{Lauter16}. We observe the expected structure of treatment pairs showing larger variability around the \textit{x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit{x=y} line. The authors of this dataset cannot provide definitive answers at this time, but postulate that the genes within this streak structure might represent biological variability or expression changes resulting from the successive collection of the replicates.
 \label{structure}}
 \end{figure}
 
@@ -206,7 +217,7 @@ Modern data analysis is most reliable when models and visuals are used congruent
 
 \section*{Acknowledgements}
 
-R\citep{R}  was used to conduct analyses in this paper, and particularly packages ggplot2\citep{ggplot2}, shiny\citep{shiny},  and plotly\citep{plotly} were used to build the graphics. 
+R\citep{R} was used to conduct analyses in this paper. Packages ggplot2\citep{ggplot2}, shiny\citep{shiny}, plotly\citep{plotly}, and htmlwidgets were used to build the graphics. 
 
 \section*{Funding}
 
@@ -216,6 +227,7 @@ Research of Graham and Moran Lauter was financed by the United States Department
 
 % Shu reference --> Glimma
 % Marini reference --> pcaExplorer
+% htmlwidgets --> htmlwidgets
 
 \bibitem[Anders and Huber, 2010]{Anders2010}
 Anders, S. and Huber, W. (2010) Differential expression analysis for sequence count data, {\it Genome Biology}, {\bf 11}, R106.
