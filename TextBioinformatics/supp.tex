@@ -17,9 +17,11 @@ This file contains supplementary analyses that the reader might find useful, and
 
 \item Figure~\ref{sbIRClusters} shows parallel coordinate plots of hierarchical clusters in a similar manner as Figure 2 in the main paper. The data comes from the iron-metabolism soybean study, and has been filtered and standardized. However, unlike Figure 2 in the main paper only showing significant genes, Figure~\ref{sbIRClusters} in this supplementary file shows all genes.
 
-\item Figures~\ref{sbIRClusterSigSM1} through~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
-
 \item Figure~\ref{mdsSwitch} shows that some of the most popular RNA-seq visualization tools cannot always detect common errors, such as sample switching. Side-by-side boxplots and MDS plots are shown for the soybean cotyledon dataset after deliberately switching samples between treatment groups. For the most part, they are unable to detect the error. In contrast, the less-popular method of scatterplot matrices can quickly detect the possibility of the error (see Figure 5 from the main paper).
+
+\item Figure~\ref{soybeanDEG} shows that the number of DEGs drastically changes across three time points when comparing iron sufficient versus iron deficient conditions in soybean leaves (Lauter \textit{et al}., 2016). As a result, the authors of this study postulate that the streak of genes observed in the scatterplot matrix containing the subset of data at the 120 minute time point (Figure 6 in the main paper) may be due to the timing differences between replicate handling.
+
+\item Figures~\ref{sbIRClusterSigSM1} through~\ref{sbIRClusterSigSM4} show scatterplot matrices of the significant genes in the iron-metabolism soybean dataset for each of the four clusters that resulted from hiearchical clustering analysis. They provide an additional and complementary perspective on these DEG calls from what we saw with the parallel coordinate plots in Figure~\ref{sbIRClusters}. 
 
 \item Figure~\ref{litreCluster1} shows example litre plots for two significant genes from Cluster 1. The reader may wish to view it alongside Figure 8 from the main paper, which contains example litre plots for significant genes from Clusters 2, 3, and 4.
 
@@ -37,6 +39,22 @@ The last twenty figures in the supplementary file are all related to the applica
 \centerline{\includegraphics[width=\columnwidth]{../MakeFigures/sbIRClusters.jpg}}
 \caption{Example application of parallel coordinate plots using the iron-metabolism soybean dataset. We filtered genes with low means and/or variance, performed a hierarchical clustering analysis with a cluster size of four, and visualized the results using parallel coordinate lines. Most non-filtered genes were in Clusters 1 and 2, which both showed overexpression in one treatment and underexpression in the other treatment. The genes in Cluster 4 mostly showed messy patterns with low signal to noise ratios. Interestingly, Cluster 3 looked similar to Cluster 2 (large values for group N and small values for group P), except for unexpectedly large values for the third replicate of group P.
 \label{sbIRClusters}}
+\end{figure}
+
+\clearpage
+\null
+\begin{figure}[!t]
+\centerline{\includegraphics[width=0.7\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
+\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure 6 in the main paper.
+\label{mdsSwitch}}
+\end{figure}
+
+\clearpage
+\null
+\begin{figure}[!t]
+\centerline{\includegraphics[width=0.7\columnwidth]{../MakeFigures/soybeanDEG.png}}
+\caption{The authors of the soybean iron metabolism study (Lauter \textit{et al}., 2016) determined the DEGs across three times points (30 minutes, 60 minutes, and 120 minutes) in the leaves after onset of iron sufficient and deficient hydroponic conditions. They used the same researcher to collect the samples in succession. One major finding from their study was a vaste change in gene expression responses between these three time points. As a result, the streak observed in the scatterplot matrix containing the subset of data at the 120 minute time point (Figure 6 in the main paper) may be due to the timing differences between replicate handling.
+\label{soybeanDEG}}
 \end{figure}
 
 \clearpage
@@ -68,14 +86,6 @@ The last twenty figures in the supplementary file are all related to the applica
 \caption{Example of using a scatterplot matrix to assess DEG calls from a model in the iron-metabolism soybean dataset. There were 17 significant genes in Cluster 4 after performing a hierarchical clustering analysis with a cluster size of four (Figure 2 in the main paper). These significant genes are overlaid in coral on the scatterplot matrix. For the most part, they do not seem to follow the expected patterns of differential expression: In many of the scatterplots between treatments, the coral points do not seem to deviate much from the \textit{x=y} line. Moreover, in the scatterplots between P.1 and P.2 as well as P.1 and P.3, the coral points seems to indicate an underexpression of the P.1 replicate. We similarly saw somewhat messy looking DEG calls in Cluster 4 in the form of parallel coordinate plots (Figure 2 of the main paper) and litre plots (Figure 8 E and F of the main paper).
 \label{sbIRClusterSigSM4}}
 \end{figure}  
-
-\clearpage
-\null
-\begin{figure}[!t]
-\centerline{\includegraphics[width=0.7\columnwidth]{../Bioinformatics/Pictures/mdsSwitch.png}}
-\caption{Boxplots and MDS plots are popular plotting tools for RNA-seq analysis. This figure shows these traditional visualization methods applied to the soybean cotyledon data before sample switching (left half) and after sample switching (right half). We cannot suspect from the right boxplot that samples S1.3 and S2.1 have been swapped (subplots A). This is because all six samples have similar five number summaries. For the MDS plots, we do see a cleaner separation of the two treatment groups across the first dimension in the left plot than in the right plot (subplots B). However, taking into account the second dimension, both MDS plots contain three clusters, with sample S1.1 appearing in its own cluster. Without seeing one distinct cluster for each of the two treatment groups, it is difficult to suspect that samples S1.3 and S2.1 have been swapped in the right MDS plot (subplots B). We can only derive clear suspicion that the samples may have been switched by using less-popular plots that provide gene-level resolution like with the scatterplot matrix from Figure 6 in the main paper.
-\label{mdsSwitch}}
-\end{figure}
 
 \clearpage
 \null 

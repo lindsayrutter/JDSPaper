@@ -1,69 +1,61 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 MAR 2018 02:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  9 MAY 2018 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **supp.tex
 (./supp.tex
-LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 ) (./graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count87
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -82,12 +74,12 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (./color.sty
 Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 125.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
 (./supp.aux)
@@ -106,7 +98,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen113
@@ -119,49 +111,55 @@ LaTeX Font Info:    ... okay on input line 7.
 \MPnumerator=\count95
 \makeMPintoPDFobject=\count96
 \everyMPtoPDFconversion=\toks17
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
-)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -206,315 +204,278 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 12.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
  [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../MakeFigures/sbIRClusters.jpg, id=10, 1003.75pt x 702.625pt>
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<../MakeFigures/sbIRClusters.jpg, id=11, 1003.75pt x 702.625pt>
 File: ../MakeFigures/sbIRClusters.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/sbIRClusters.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRClusters.jpg used on input line 37.
-
+Package pdftex.def Info: ../MakeFigures/sbIRClusters.jpg  used on input line 39
+.
 (pdftex.def)             Requested size: 469.75502pt x 328.82932pt.
  [2
 
  <../MakeFigures/sbIRClusters.jpg>]
-<../MakeFigures/sbIRClusterSigSM1.jpg, id=14, 702.625pt x 702.625pt>
-File: ../MakeFigures/sbIRClusterSigSM1.jpg Graphic file (type jpg)
-
-<use ../MakeFigures/sbIRClusterSigSM1.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM1.jpg used on input lin
-e 45.
-(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
-
-
-LaTeX Warning: Text page 3 contains only floats.
-
-[3
-
- <../MakeFigures/sbIRClusterSigSM1.jpg>]
-<../MakeFigures/sbIRClusterSigSM2.jpg, id=19, 702.625pt x 702.625pt>
-File: ../MakeFigures/sbIRClusterSigSM2.jpg Graphic file (type jpg)
-
-<use ../MakeFigures/sbIRClusterSigSM2.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM2.jpg used on input lin
-e 52.
-(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
-
-<../MakeFigures/sbIRClusterSigSM3.jpg, id=20, 702.625pt x 702.625pt>
-File: ../MakeFigures/sbIRClusterSigSM3.jpg Graphic file (type jpg)
-
-<use ../MakeFigures/sbIRClusterSigSM3.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM3.jpg used on input lin
-e 59.
-(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
- [4 <../MakeFigures/sbIRClusterSigSM2.jpg>] [5 <../MakeFigures/sbIRClusterSigSM
-3.jpg>]
-<../MakeFigures/sbIRClusterSigSM4.jpg, id=27, 702.625pt x 702.625pt>
-File: ../MakeFigures/sbIRClusterSigSM4.jpg Graphic file (type jpg)
-
-<use ../MakeFigures/sbIRClusterSigSM4.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM4.jpg used on input lin
-e 67.
-(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
- [6
-
- <../MakeFigures/sbIRClusterSigSM4.jpg>]
-<../Bioinformatics/Pictures/mdsSwitch.png, id=31, 627.7854pt x 608.5134pt>
+<../Bioinformatics/Pictures/mdsSwitch.png, id=15, 627.7854pt x 608.5134pt>
 File: ../Bioinformatics/Pictures/mdsSwitch.png Graphic file (type png)
-
 <use ../Bioinformatics/Pictures/mdsSwitch.png>
-Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png used on input
- line 75.
+Package pdftex.def Info: ../Bioinformatics/Pictures/mdsSwitch.png  used on inpu
+t line 47.
 (pdftex.def)             Requested size: 328.82707pt x 318.7315pt.
- [7
+ [3
 
  <../Bioinformatics/Pictures/mdsSwitch.png>]
-<../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg, id=38, 849.8952pt x
+<../MakeFigures/soybeanDEG.png, id=21, 438.63875pt x 439.6425pt>
+File: ../MakeFigures/soybeanDEG.png Graphic file (type png)
+<use ../MakeFigures/soybeanDEG.png>
+Package pdftex.def Info: ../MakeFigures/soybeanDEG.png  used on input line 55.
+(pdftex.def)             Requested size: 328.82707pt x 329.58347pt.
+ [4
+
+ <../MakeFigures/soybeanDEG.png>]
+<../MakeFigures/sbIRClusterSigSM1.jpg, id=26, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM1.jpg Graphic file (type jpg)
+<use ../MakeFigures/sbIRClusterSigSM1.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM1.jpg  used on input li
+ne 63.
+(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
+
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5
+
+ <../MakeFigures/sbIRClusterSigSM1.jpg>]
+<../MakeFigures/sbIRClusterSigSM2.jpg, id=30, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM2.jpg Graphic file (type jpg)
+<use ../MakeFigures/sbIRClusterSigSM2.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM2.jpg  used on input li
+ne 70.
+(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
+<../MakeFigures/sbIRClusterSigSM3.jpg, id=31, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM3.jpg Graphic file (type jpg)
+<use ../MakeFigures/sbIRClusterSigSM3.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM3.jpg  used on input li
+ne 77.
+(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
+ [6 <../MakeFigures/sbIRClusterSigSM2.jpg>] [7 <../MakeFigures/sbIRClusterSigSM
+3.jpg>]
+<../MakeFigures/sbIRClusterSigSM4.jpg, id=39, 702.625pt x 702.625pt>
+File: ../MakeFigures/sbIRClusterSigSM4.jpg Graphic file (type jpg)
+<use ../MakeFigures/sbIRClusterSigSM4.jpg>
+Package pdftex.def Info: ../MakeFigures/sbIRClusterSigSM4.jpg  used on input li
+ne 85.
+(pdftex.def)             Requested size: 469.75502pt x 469.76996pt.
+ [8
+
+ <../MakeFigures/sbIRClusterSigSM4.jpg>]
+<../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg, id=43, 849.8952pt x
  1164.0288pt>
 File: ../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg Graphic file (t
 ype jpg)
- <use ../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>
+<use ../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreCluster1/litreCluster1.
-jpg used on input line 83.
+jpg  used on input line 93.
 (pdftex.def)             Requested size: 328.82707pt x 450.3638pt.
-
-[8
+ [9
 
  <../MakeFigures/Dashboards/litreCluster1/litreCluster1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 96.
+(Font)              <7> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 96.
-[9
+(Font)              <5> on input line 106.
+[10
 
-] [10] <../MakeFigures/lkClustersKeep.jpg, id=50, 1003.75pt x 1806.75pt>
+] [11]
+<../MakeFigures/lkClustersKeep.jpg, id=55, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersKeep.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersKeep.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersKeep.jpg used on input line 1
-33.
+Package pdftex.def Info: ../MakeFigures/lkClustersKeep.jpg  used on input line 
+143.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
-
-<../MakeFigures/lkClustersOrig.jpg, id=51, 1003.75pt x 1806.75pt>
+<../MakeFigures/lkClustersOrig.jpg, id=56, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersOrig.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersOrig.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersOrig.jpg used on input line 1
-40.
+Package pdftex.def Info: ../MakeFigures/lkClustersOrig.jpg  used on input line 
+150.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
-
-<../MakeFigures/lkClustersRemove.jpg, id=52, 1003.75pt x 1806.75pt>
+<../MakeFigures/lkClustersRemove.jpg, id=57, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersRemove.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersRemove.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersRemove.jpg used on input line
- 147.
+Package pdftex.def Info: ../MakeFigures/lkClustersRemove.jpg  used on input lin
+e 157.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
 
 
-LaTeX Warning: Float too large for page by 19.12503pt on input line 150.
+LaTeX Warning: Float too large for page by 19.12503pt on input line 160.
 
-<../MakeFigures/lkClustersAdd.jpg, id=53, 1003.75pt x 1806.75pt>
+<../MakeFigures/lkClustersAdd.jpg, id=58, 1003.75pt x 1806.75pt>
 File: ../MakeFigures/lkClustersAdd.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersAdd.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg used on input line 15
-4.
+Package pdftex.def Info: ../MakeFigures/lkClustersAdd.jpg  used on input line 1
+64.
 (pdftex.def)             Requested size: 305.33789pt x 549.6106pt.
-
-<../MakeFigures/lkClustersKeepSM.jpg, id=54, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersKeepSM.jpg, id=59, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersKeepSM.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersKeepSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM.jpg used on input line
- 161.
+Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM.jpg  used on input lin
+e 171.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersOrigSM.jpg, id=55, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersOrigSM.jpg, id=60, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersOrigSM.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersOrigSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM.jpg used on input line
- 168.
+Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM.jpg  used on input lin
+e 178.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersRemoveSM.jpg, id=56, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersRemoveSM.jpg, id=61, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersRemoveSM.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersRemoveSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM.jpg used on input li
-ne 175.
+Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM.jpg  used on input l
+ine 185.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersAddSM.jpg, id=57, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersAddSM.jpg, id=62, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersAddSM.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersAddSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersAddSM.jpg used on input line 
-182.
+Package pdftex.def Info: ../MakeFigures/lkClustersAddSM.jpg  used on input line
+ 192.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=58, 550.69
+<../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg, id=63, 550.69
 74pt x 807.9786pt>
 File: ../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg Graphic f
 ile (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterKeep/litreClusterKeep.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterKeep/litreCluste
-rKeep.jpg used on input line 190.
+rKeep.jpg  used on input line 200.
 (pdftex.def)             Requested size: 328.82707pt x 482.44844pt.
-
-<../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=59, 544.43
+<../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg, id=64, 544.43
 4pt x 805.5696pt>
 File: ../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg Graphic f
 ile (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterOrig/litreClusterOrig.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterOrig/litreCluste
-rOrig.jpg used on input line 197.
+rOrig.jpg  used on input line 207.
 (pdftex.def)             Requested size: 328.82707pt x 486.56598pt.
-
-<../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=60, 54
+<../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg, id=65, 54
 3.4704pt x 805.5696pt>
 File: ../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg Graph
 ic file (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove/litreClus
-terRemove.jpg used on input line 204.
+terRemove.jpg  used on input line 214.
 (pdftex.def)             Requested size: 328.82707pt x 487.40184pt.
-
-<../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=61, 541.0614
+<../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg, id=66, 541.0614
 pt x 805.5696pt>
 File: ../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg Graphic fil
 e (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterAdd/litreCluster
-Add.jpg used on input line 211.
+Add.jpg  used on input line 221.
 (pdftex.def)             Requested size: 328.82707pt x 489.60211pt.
-
-<../MakeFigures/lkClustersKeepSM-St.jpg, id=62, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersKeepSM-St.jpg, id=67, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersKeepSM-St.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersKeepSM-St.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM-St.jpg used on input l
-ine 218.
+Package pdftex.def Info: ../MakeFigures/lkClustersKeepSM-St.jpg  used on input 
+line 228.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersOrigSM-St.jpg, id=63, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersOrigSM-St.jpg, id=68, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersOrigSM-St.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersOrigSM-St.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM-St.jpg used on input l
-ine 225.
+Package pdftex.def Info: ../MakeFigures/lkClustersOrigSM-St.jpg  used on input 
+line 235.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersRemoveSM-St.jpg, id=64, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersRemoveSM-St.jpg, id=69, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersRemoveSM-St.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersRemoveSM-St.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM-St.jpg used on input
- line 232.
+Package pdftex.def Info: ../MakeFigures/lkClustersRemoveSM-St.jpg  used on inpu
+t line 242.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/lkClustersAddSM-St.jpg, id=65, 633.36626pt x 557.08125pt>
+<../MakeFigures/lkClustersAddSM-St.jpg, id=70, 633.36626pt x 557.08125pt>
 File: ../MakeFigures/lkClustersAddSM-St.jpg Graphic file (type jpg)
-
 <use ../MakeFigures/lkClustersAddSM-St.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClustersAddSM-St.jpg used on input li
-ne 239.
+Package pdftex.def Info: ../MakeFigures/lkClustersAddSM-St.jpg  used on input l
+ine 249.
 (pdftex.def)             Requested size: 469.75502pt x 413.18571pt.
-
-<../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg, id=66, 
+<../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg, id=71, 
 566.115pt x 800.7516pt>
 File: ../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg Gra
 phic file (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterKeep-St/litreClusterKeep-St.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterKeep-St/litreClu
-sterKeep-St.jpg used on input line 246.
+sterKeep-St.jpg  used on input line 256.
 (pdftex.def)             Requested size: 328.82707pt x 465.12048pt.
-
-<../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg, id=67, 
+<../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg, id=72, 
 569.4876pt x 800.7516pt>
 File: ../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg Gra
 phic file (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterOrig-St/litreClusterOrig-St.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterOrig-St/litreClu
-sterOrig-St.jpg used on input line 253.
+sterOrig-St.jpg  used on input line 263.
 (pdftex.def)             Requested size: 328.82707pt x 462.37134pt.
-
 <../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg, id=
-68, 873.5034pt x 1009.371pt>
+73, 873.5034pt x 1009.371pt>
 File: ../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg
  Graphic file (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterRemove-St/litreClusterRemove-St.jpg>
-Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove-St/litreC
-lusterRemove-St.jpg used on input line 260.
-(pdftex.def)             Requested size: 469.75502pt x 542.81898pt.
 
-<../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg, id=69, 86
+Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterRemove-St/litreC
+lusterRemove-St.jpg  used on input line 270.
+(pdftex.def)             Requested size: 469.75502pt x 542.81898pt.
+<../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg, id=74, 86
 7.24pt x 980.463pt>
 File: ../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg Graph
 ic file (type jpg)
-
 <use ../MakeFigures/Dashboards/litreClusterAdd-St/litreClusterAdd-St.jpg>
 Package pdftex.def Info: ../MakeFigures/Dashboards/litreClusterAdd-St/litreClus
-terAdd-St.jpg used on input line 267.
+terAdd-St.jpg  used on input line 277.
 (pdftex.def)             Requested size: 469.75502pt x 531.0878pt.
 
+LaTeX Warning: Float too large for page by 24.60223pt on input line 280.
 
-LaTeX Warning: Float too large for page by 24.60223pt on input line 270.
+[12
 
-[11
-
-] [12 <../MakeFigures/lkClustersKeep.jpg>] [13 <../MakeFigures/lkClustersOrig.j
-pg>] [14 <../MakeFigures/lkClustersRemove.jpg>] [15 <../MakeFigures/lkClustersA
-dd.jpg>] [16 <../MakeFigures/lkClustersKeepSM.jpg>] [17 <../MakeFigures/lkClust
-ersOrigSM.jpg>] [18 <../MakeFigures/lkClustersRemoveSM.jpg>] [19 <../MakeFigure
-s/lkClustersAddSM.jpg>] [20 <../MakeFigures/Dashboards/litreClusterKeep/litreCl
-usterKeep.jpg>] [21 <../MakeFigures/Dashboards/litreClusterOrig/litreClusterOri
-g.jpg>] [22 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jp
-g>] [23 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>]
-[24 <../MakeFigures/lkClustersKeepSM-St.jpg>] [25 <../MakeFigures/lkClustersOri
-gSM-St.jpg>] [26 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [27 <../MakeFigure
-s/lkClustersAddSM-St.jpg>] [28 <../MakeFigures/Dashboards/litreClusterKeep-St/l
-itreClusterKeep-St.jpg>] [29 <../MakeFigures/Dashboards/litreClusterOrig-St/lit
-reClusterOrig-St.jpg>] [30 <../MakeFigures/Dashboards/litreClusterRemove-St/lit
-reClusterRemove-St.jpg>] [31 <../MakeFigures/Dashboards/litreClusterAdd-St/litr
+] [13 <../MakeFigures/lkClustersKeep.jpg>] [14 <../MakeFigures/lkClustersOrig.j
+pg>] [15 <../MakeFigures/lkClustersRemove.jpg>] [16 <../MakeFigures/lkClustersA
+dd.jpg>] [17 <../MakeFigures/lkClustersKeepSM.jpg>] [18 <../MakeFigures/lkClust
+ersOrigSM.jpg>] [19 <../MakeFigures/lkClustersRemoveSM.jpg>] [20 <../MakeFigure
+s/lkClustersAddSM.jpg>] [21 <../MakeFigures/Dashboards/litreClusterKeep/litreCl
+usterKeep.jpg>] [22 <../MakeFigures/Dashboards/litreClusterOrig/litreClusterOri
+g.jpg>] [23 <../MakeFigures/Dashboards/litreClusterRemove/litreClusterRemove.jp
+g>] [24 <../MakeFigures/Dashboards/litreClusterAdd/litreClusterAdd.jpg>]
+[25 <../MakeFigures/lkClustersKeepSM-St.jpg>] [26 <../MakeFigures/lkClustersOri
+gSM-St.jpg>] [27 <../MakeFigures/lkClustersRemoveSM-St.jpg>] [28 <../MakeFigure
+s/lkClustersAddSM-St.jpg>] [29 <../MakeFigures/Dashboards/litreClusterKeep-St/l
+itreClusterKeep-St.jpg>] [30 <../MakeFigures/Dashboards/litreClusterOrig-St/lit
+reClusterOrig-St.jpg>] [31 <../MakeFigures/Dashboards/litreClusterRemove-St/lit
+reClusterRemove-St.jpg>] [32 <../MakeFigures/Dashboards/litreClusterAdd-St/litr
 eClusterAdd-St.jpg>] (./supp.aux) ) 
 Here is how much of TeX's memory you used:
- 2412 strings out of 492995
- 39661 string characters out of 6132704
- 140729 words of memory out of 5000000
- 5913 multiletter control sequences out of 15000+600000
+ 2292 strings out of 492649
+ 37598 string characters out of 6129622
+ 142871 words of memory out of 5000000
+ 6122 multiletter control sequences out of 15000+600000
  7329 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,32p,2354b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
+ 41i,6n,32p,2354b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb>
-Output written on supp.pdf (31 pages, 10131639 bytes).
+Output written on supp.pdf (32 pages, 10146486 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
