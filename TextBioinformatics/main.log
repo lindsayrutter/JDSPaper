@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 MAY 2018 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAY 2018 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,15 +569,12 @@ Underfull \hbox (badness 1755) in paragraph at lines 103--104
 dies.
  []
 
-<../MakeFigures/yeastWithinBetween.png, id=33, 224.33812pt x 439.6425pt>
+<../MakeFigures/yeastWithinBetween.png, id=33, 277.035pt x 547.04375pt>
 File: ../MakeFigures/yeastWithinBetween.png Graphic file (type png)
 <use ../MakeFigures/yeastWithinBetween.png>
 Package pdftex.def Info: ../MakeFigures/yeastWithinBetween.png  used on input l
 ine 106.
-(pdftex.def)             Requested size: 234.0pt x 458.59264pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 234.0pt x 462.06786pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -593,18 +590,18 @@ File: ../MakeFigures/sbCNSwitchedSM.jpg Graphic file (type jpg)
 Package pdftex.def Info: ../MakeFigures/sbCNSwitchedSM.jpg  used on input line 
 135.
 (pdftex.def)             Requested size: 234.0pt x 212.1713pt.
-<../MakeFigures/sbIRStreak.jpg, id=39, 602.25pt x 557.08125pt>
-File: ../MakeFigures/sbIRStreak.jpg Graphic file (type jpg)
-<use ../MakeFigures/sbIRStreak.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRStreak.jpg  used on input line 141.
-
-(pdftex.def)             Requested size: 229.319pt x 212.11809pt.
+<../MakeFigures/sbIRStreak2.png, id=39, 585.8688pt x 542.025pt>
+File: ../MakeFigures/sbIRStreak2.png Graphic file (type png)
+<use ../MakeFigures/sbIRStreak2.png>
+Package pdftex.def Info: ../MakeFigures/sbIRStreak2.png  used on input line 141
+.
+(pdftex.def)             Requested size: 229.319pt x 212.15807pt.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 <../MakeFigures/sbCNSwitchedSM.jpg> <../MakeFigures/sbIRStreak.jpg>]
+[5 <../MakeFigures/sbCNSwitchedSM.jpg> <../MakeFigures/sbIRStreak2.png>]
 <../MakeFigures/sbIRDEG.jpg, id=45, 387.4475pt x 487.8225pt>
 File: ../MakeFigures/sbIRDEG.jpg Graphic file (type jpg)
 <use ../MakeFigures/sbIRDEG.jpg>
@@ -777,12 +774,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  3701 strings out of 492649
- 46983 string characters out of 6129622
- 121386 words of memory out of 5000000
+ 46988 string characters out of 6129622
+ 121385 words of memory out of 5000000
  7475 multiletter control sequences out of 15000+600000
  54587 words of font info for 95 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 41i,10n,29p,1298b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,29p,1299b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -795,7 +792,7 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 2032954 bytes).
+Output written on main.pdf (10 pages, 2415514 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
