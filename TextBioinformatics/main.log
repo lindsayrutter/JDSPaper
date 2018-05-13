@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAY 2018 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 MAY 2018 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -138,10 +138,6 @@ Package: flushend 1997/10/01
 \atColsBreak=\toks23
 \@extra@skip=\dimen117
 \@nd@page@rule=\dimen118
-) (./stfloats.sty
-Package: stfloats 1999/10/22
-\@dblbotnum=\count94
-\c@dblbotnumber=\count95
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
@@ -157,8 +153,8 @@ Package: amsthm 2017/10/31 v2.20.4
 )
 (./chngpage.sty
 Package: chngpage 2001/01/31 v1.1b change page layout
-\c@cp@cnt=\count96
-\c@cp@tempcnt=\count97
+\c@cp@cnt=\count94
+\c@cp@tempcnt=\count95
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
@@ -295,13 +291,13 @@ LaTeX Font Info:    Try loading font information for LY1+ptm on input line 105.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 ))
-\c@section=\count98
-\c@subsection=\count99
-\c@subsubsection=\count100
-\c@paragraph=\count101
-\c@subparagraph=\count102
-\c@figure=\count103
-\c@table=\count104
+\c@section=\count96
+\c@subsection=\count97
+\c@subsubsection=\count98
+\c@paragraph=\count99
+\c@subparagraph=\count100
+\c@figure=\count101
+\c@table=\count102
 \dropfromtop=\skip49
 \extraspace=\skip50
 \aboveskipchk=\skip51
@@ -315,38 +311,48 @@ Package: natbib 2000/07/24 7.0a (PWD)
 \bibhang=\skip54
 \bibsep=\skip55
 LaTeX Info: Redefining \cite on input line 508.
-\c@NAT@ctr=\count105
+\c@NAT@ctr=\count103
 ))
-(./main.aux)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
+\scratchcounter=\count104
 \scratchdimen=\dimen121
 \scratchbox=\box33
-\nofMPsegments=\count107
-\nofMParguments=\count108
+\nofMPsegments=\count105
+\nofMParguments=\count106
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count109
+\MPscratchCnt=\count107
 \MPscratchDim=\dimen122
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -404,7 +410,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for LY1+phv on input line 31.
+LaTeX Font Info:    Try loading font information for LY1+phv on input line 32.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ly1/ly1phv.fd
 File: ly1phv.fd 2001/02/01 scalable font definitions for LY1/phv using Berry na
@@ -419,83 +425,98 @@ f>
 (epstopdf)                    size: 9259 bytes
 (epstopdf)             Command: <repstopdf --outfile=OUP_First_SBk_Bot_8401-eps
 -converted-to.pdf OUP_First_SBk_Bot_8401.eps>
-(epstopdf)             \includegraphics on input line 31.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 <OUP_First_SBk_Bot_8401-eps-converted-to.pdf, id=1, 54.2025pt x 54.2025pt>
 File: OUP_First_SBk_Bot_8401-eps-converted-to.pdf Graphic file (type pdf)
 <use OUP_First_SBk_Bot_8401-eps-converted-to.pdf>
 Package pdftex.def Info: OUP_First_SBk_Bot_8401-eps-converted-to.pdf  used on i
-nput line 31.
+nput line 32.
 (pdftex.def)             Requested size: 54.20236pt x 54.20236pt.
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <8> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <18> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <12> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <9> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <7> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 31.
+(Font)              size <6> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 31.
+(Font)              size <6> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 31.
+(Font)              size <6> substituted on input line 32.
 
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 31.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 32.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 31.
+(Font)              size <8> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 31.
+(Font)              size <5> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
-(Font)              size <8> substituted on input line 31.
+(Font)              size <8> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
-(Font)              size <5> substituted on input line 31.
+(Font)              size <5> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 31.
+(Font)              size <8> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 31.
+(Font)              size <5> substituted on input line 32.
 
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <10> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <9> not available
-(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 31.
+(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 32.
 
-Underfull \hbox (badness 10000) detected at line 31
+Underfull \hbox (badness 10000) detected at line 32
 []
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -510,30 +531,65 @@ Overfull \hbox (1.12001pt too wide) has occurred while \output is active
 
 
  <./OUP_First_SBk_Bot_8401-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
 <../MakeFigures/simulatedData.jpg, id=20, 608.2725pt x 482.80376pt>
 File: ../MakeFigures/simulatedData.jpg Graphic file (type jpg)
 <use ../MakeFigures/simulatedData.jpg>
 Package pdftex.def Info: ../MakeFigures/simulatedData.jpg  used on input line 5
-4.
+5.
 (pdftex.def)             Requested size: 234.0pt x 185.72899pt.
-LaTeX Font Info:    Try loading font information for LY1+phb on input line 56.
-LaTeX Font Info:    No file LY1phb.fd. on input line 56.
-
+LaTeX Font Info:    Try loading font information for LY1+phb on input line 57.
+LaTeX Font Info:    No file LY1phb.fd. on input line 57.
 
 LaTeX Font Warning: Font shape `LY1/phb/m/n' undefined
-(Font)              using `LY1/ptm/m/n' instead on input line 56.
+(Font)              using `LY1/ptm/m/n' instead on input line 57.
 
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <6.5> not available
-(Font)              Font shape `LY1/phv/b/n' tried instead on input line 56.
+(Font)              Font shape `LY1/phv/b/n' tried instead on input line 57.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
 
 <../MakeFigures/sbIRClustersSig.jpg, id=22, 631.35875pt x 468.75125pt>
 File: ../MakeFigures/sbIRClustersSig.jpg Graphic file (type jpg)
 <use ../MakeFigures/sbIRClustersSig.jpg>
 Package pdftex.def Info: ../MakeFigures/sbIRClustersSig.jpg  used on input line
- 62.
+ 63.
 (pdftex.def)             Requested size: 234.0pt x 173.73564pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -545,18 +601,43 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [2 <../MakeFigures/simulatedData.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
 <../MakeFigures/sbCNSM.jpg, id=27, 538.01pt x 487.8225pt>
 File: ../MakeFigures/sbCNSM.jpg Graphic file (type jpg)
 <use ../MakeFigures/sbCNSM.jpg>
-Package pdftex.def Info: ../MakeFigures/sbCNSM.jpg  used on input line 78.
+Package pdftex.def Info: ../MakeFigures/sbCNSM.jpg  used on input line 79.
 (pdftex.def)             Requested size: 234.0pt x 212.1713pt.
 
-
 LaTeX Font Warning: Font shape `LY1/phb/m/it' undefined
-(Font)              using `LY1/phb/m/n' instead on input line 80.
+(Font)              using `LY1/phb/m/n' instead on input line 81.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
 
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
@@ -564,19 +645,46 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [3 <../MakeFigures/sbIRClustersSig.jpg> <../MakeFigures/sbCNSM.jpg>]
-Underfull \hbox (badness 1755) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 104--105
 \LY1/ptm/m/n/8 Irreproducibility is prevalent in high-throughput biological stu
 dies.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
  []
 
 <../MakeFigures/yeastWithinBetween.png, id=33, 277.035pt x 547.04375pt>
 File: ../MakeFigures/yeastWithinBetween.png Graphic file (type png)
 <use ../MakeFigures/yeastWithinBetween.png>
 Package pdftex.def Info: ../MakeFigures/yeastWithinBetween.png  used on input l
-ine 106.
+ine 107.
 (pdftex.def)             Requested size: 234.0pt x 462.06786pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
 
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
@@ -584,50 +692,118 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
  []
 
 [4 <../MakeFigures/yeastWithinBetween.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
 <../MakeFigures/sbCNSwitchedSM.jpg, id=38, 538.01pt x 487.8225pt>
 File: ../MakeFigures/sbCNSwitchedSM.jpg Graphic file (type jpg)
 <use ../MakeFigures/sbCNSwitchedSM.jpg>
 Package pdftex.def Info: ../MakeFigures/sbCNSwitchedSM.jpg  used on input line 
-135.
+129.
 (pdftex.def)             Requested size: 234.0pt x 212.1713pt.
 <../MakeFigures/sbIRStreak2.png, id=39, 585.8688pt x 542.025pt>
 File: ../MakeFigures/sbIRStreak2.png Graphic file (type png)
 <use ../MakeFigures/sbIRStreak2.png>
-Package pdftex.def Info: ../MakeFigures/sbIRStreak2.png  used on input line 141
+Package pdftex.def Info: ../MakeFigures/sbIRStreak2.png  used on input line 135
 .
 (pdftex.def)             Requested size: 229.319pt x 212.15807pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 <../MakeFigures/sbCNSwitchedSM.jpg> <../MakeFigures/sbIRStreak2.png>]
-<../MakeFigures/sbIRDEG.jpg, id=45, 387.4475pt x 487.8225pt>
+[5 <../MakeFigures/sbCNSwitchedSM.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+<../MakeFigures/sbIRDEG.jpg, id=44, 387.4475pt x 487.8225pt>
 File: ../MakeFigures/sbIRDEG.jpg Graphic file (type jpg)
 <use ../MakeFigures/sbIRDEG.jpg>
-Package pdftex.def Info: ../MakeFigures/sbIRDEG.jpg  used on input line 164.
+Package pdftex.def Info: ../MakeFigures/sbIRDEG.jpg  used on input line 157.
 (pdftex.def)             Requested size: 234.0pt x 294.62364pt.
-<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=46, 791.5974pt x 12
+<../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png, id=45, 791.5974pt x 12
 97.4874pt>
 File: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png Graphic file (type
  png)
 <use ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>
 Package pdftex.def Info: ../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png
-  used on input line 170.
+  used on input line 163.
 (pdftex.def)             Requested size: 234.0pt x 383.52759pt.
 
-Overfull \hbox (1.11118pt too wide) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+
+Overfull \hbox (1.11118pt too wide) in paragraph at lines 172--173
 \LY1/ptm/m/n/8 and B) is available at https://rnaseqvisualization.shinyapps.io/
 litreCluster2,
  []
 
 
-Overfull \hbox (0.22318pt too wide) in paragraph at lines 179--180
+Overfull \hbox (0.22318pt too wide) in paragraph at lines 172--173
 \LY1/ptm/m/n/8 and F) is available at https://rnaseqvisualization.shinyapps.io/
 litreCluster4.
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -635,45 +811,72 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6 <../MakeFigures/sbIRDEG.jpg>]
-Underfull \hbox (badness 1189) in paragraph at lines 185--186
+[6 <../MakeFigures/sbIRStreak2.png> <../MakeFigures/sbIRDEG.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 178--179
 []\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+
  []
 
 <../MakeFigures/lkSM.jpg, id=51, 496.85625pt x 446.66875pt>
 File: ../MakeFigures/lkSM.jpg Graphic file (type jpg)
 <use ../MakeFigures/lkSM.jpg>
-Package pdftex.def Info: ../MakeFigures/lkSM.jpg  used on input line 188.
+Package pdftex.def Info: ../MakeFigures/lkSM.jpg  used on input line 181.
 (pdftex.def)             Requested size: 234.0pt x 210.36371pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 <../MakeFigures/lkClusters.jpg, id=52, 460.72125pt x 377.41pt>
 File: ../MakeFigures/lkClusters.jpg Graphic file (type jpg)
 <use ../MakeFigures/lkClusters.jpg>
-Package pdftex.def Info: ../MakeFigures/lkClusters.jpg  used on input line 194.
+Package pdftex.def Info: ../MakeFigures/lkClusters.jpg  used on input line 187.
 
 (pdftex.def)             Requested size: 234.0pt x 191.68182pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
 
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[7 <../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png>]
-Overfull \hbox (252.0pt too wide) has occurred while \output is active
-[][] 
+[7 <../Bioinformatics/Pictures/litrePlots/N_P/litre6LB.png> <../MakeFigures/lkS
+M.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
  []
 
-[8 <../MakeFigures/lkSM.jpg> <../MakeFigures/lkClusters.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
 
 LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 228.
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 221.
 
-Underfull \hbox (badness 2790) in paragraph at lines 243--245
+Underfull \hbox (badness 2790) in paragraph at lines 236--238
 \LY1/ptm/m/n/7 algorithms for gene expression data. \LY1/ptm/m/it/7 Internation
 al Journal of Computer
  []
@@ -683,85 +886,35 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[9]
-Underfull \hbox (badness 2020) in paragraph at lines 314--315
+[8 <../MakeFigures/lkClusters.jpg>]
+Underfull \hbox (badness 2020) in paragraph at lines 307--308
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
 
+Extra height:10.0pt when 298.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:20.0pt when 109.0pt
+Extra height:0.0pt when 299.0pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 110.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 111.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 112.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 113.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 114.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 115.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 116.0pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.0pt when 117.0pt
-Extra height:0.0pt when 118.0pt
-(2)Left:118.0pt Right:101.0pt Output:118.0pt
+(2)Left:299.0pt Right:299.0pt Output:299.0pt
 - LAST -
 Extra skip:0.0pt
-Left:118.0pt
-Right:101.0pt
-Output:118.0pt
+Left:299.0pt
+Right:299.0pt
+Output:299.0pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[10
+[9
 
 ] (./main.aux)
 
@@ -773,13 +926,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3701 strings out of 492649
- 46988 string characters out of 6129622
- 121385 words of memory out of 5000000
- 7475 multiletter control sequences out of 15000+600000
+ 3690 strings out of 492649
+ 46955 string characters out of 6129622
+ 128104 words of memory out of 5000000
+ 7464 multiletter control sequences out of 15000+600000
  54587 words of font info for 95 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 41i,10n,29p,1299b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,29p,1301b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -792,10 +945,10 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (10 pages, 2415514 bytes).
+Output written on main.pdf (9 pages, 2415243 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

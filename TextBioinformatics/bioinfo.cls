@@ -27,7 +27,7 @@
 \ProcessOptions
 
 % Load all necessary packages
-\RequirePackage{inputenc,crop,graphicx,amsmath,array,color,amssymb,flushend,stfloats,amsthm,chngpage,times}
+\RequirePackage{inputenc,crop,graphicx,amsmath,array,color,amssymb,flushend,amsthm,chngpage,times} %stfloats
 \RequirePackage[LY1]{fontenc}
 
 \renewcommand{\rmdefault}{ptm}
