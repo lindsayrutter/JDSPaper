@@ -17,6 +17,36 @@ library(Hmisc)
 load("soybean_cn.rda")
 data <- soybean_cn
 data <- data[,c(1:7)]
+
+# normalization
+# nData <- betweenLaneNormalization(as.matrix(data[-1]))
+# nData2 <- as.data.frame(nData)
+# nData2$ID <- data$ID
+# nData2 <- nData2[,c(7,1:6)]
+# data <- nData2
+
+#standardization
+dat <- data
+RowSD = function(x) {
+  sqrt(rowSums((x - rowMeans(x))^2)/(dim(x)[2] - 1))
+}
+dat_Rownames <- dat$ID
+dat = dat[,-1]
+rownames(dat) <- dat_Rownames
+dat <- betweenLaneNormalization(as.matrix(dat), which="full", round=FALSE)
+dat = as.data.frame(dat)
+dat = mutate(dat, mean = (S1.1+S1.2+S1.3+S2.1+S2.2+S2.3)/6, stdev = RowSD(cbind(S1.1,S1.2,S1.3,S2.1,S2.2,S2.3)))
+rownames(dat)=dat_Rownames
+dat$ID <- dat_Rownames
+datqps <- t(apply(as.matrix(dat[,1:6]), 1, scale))
+datqps <- as.data.frame(datqps)
+colnames(datqps) <- colnames(dat[,1:6])
+datqps$ID <- rownames(datqps)
+nID <- which(is.nan(datqps$S1.1))
+datqps[nID,1:6] <- 0
+data <- datqps[,c(7,1:6)]
+
+
 datCol <- colnames(data)[-which(colnames(data) %in% "ID")]
 myPairs <- unique(sapply(datCol, function(x) unlist(strsplit(x,"[.]"))[1]))
 rm(soybean_cn)

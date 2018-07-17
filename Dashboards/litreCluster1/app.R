@@ -38,7 +38,7 @@ body <- dashboardBody(
         column(width = 4, 
          box(width = NULL, status = "primary", title = "Plot metrics", solidHeader = TRUE,
            selectizeInput("selPair", "Treatment pairs:", choices = myPairs, multiple = TRUE, options = list(maxItems = 2)),
-           selectInput("selMetric", "Metric:", choices = myMetrics),
+           selectInput("selMetric", "Metric:", choices = myMetrics, selected = "FDR"),
            selectInput("selOrder", "Metric order:", choices = c("Increasing", "Decreasing")),
            numericInput("binSize", "Hexagon size:", value = 10, min = 1),
            numericInput("pointSize", "Point size:", value = 8, min = 1),
