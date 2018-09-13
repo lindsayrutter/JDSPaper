@@ -1,0 +1,125 @@
+\relax 
+\citation{Robertson}
+\citation{Anders2012}
+\citation{Pan}
+\citation{Wang}
+\citation{Zhao}
+\citation{Anders2010}
+\citation{Trapnell2012}
+\citation{Trapnell2013}
+\citation{Robinson}
+\citation{Law}
+\citation{Wang}
+\citation{Morin}
+\citation{Marioni}
+\citation{Hansen}
+\citation{Oshlack}
+\citation{RobinsonOshlack}
+\citation{McIntyre}
+\citation{Schurch}
+\citation{Trapnell2013}
+\citation{Bullard}
+\newlabel{^_1}{{}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{Shneiderman}
+\citation{Huber}
+\citation{Love}
+\citation{Risso}
+\citation{Robinson}
+\citation{Ritchie}
+\citation{Lauter16}
+\citation{Lauter16}
+\citation{Chandrasekhar}
+\citation{deSouto}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Parallel Coordinate Plots}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces One simulated dataset is shown on the left half and another simulated dataset is shown on the right half of the figure. The parallel coordinate plots (subplots C) show a critical difference at the gene-level between the datasets. Namely, the left dataset is composed of genes with small replicate variation and large treatment group variation (suggesting DEGs), while the right dataset is composed of genes with similar variation between replicates and treatment groups (not suggesting DEGs). We cannot see this gene-level difference with the boxplots and MDS plots. }}{2}}
+\newlabel{simulatedData}{{1}{2}}
+\citation{Brown}
+\citation{Brown}
+\citation{Risso}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Parallel coordinate plots of significant genes after hierarchical clustering of the soybean iron metabolism data \citep  {Lauter16}. We can quickly confirm that Clusters 1 and 2 show the typical pattern for significant genes. Cluster 4 does not distinctively show the usual profile for significant genes. Cluster 3 looks similar to Cluster 2, except for unexpectedly large P.3 values. }}{3}}
+\newlabel{sbIRClustersSig}{{2}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Scatterplot matrices}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.1}}Overview of scatterplot matrices}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example of the expected structure of an RNA-seq dataset, using soybean cotyledon data from \cite  {Brown}. Within a given scatterplot, most genes (points) should fall along the \textit  {x=y} line. We should see genes deviate more strongly from the \textit  {x=y} line in treatment scatterplots than in replicate scatterplots. }}{3}}
+\newlabel{sbCNSM}{{3}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.2}}Assessing normalization with scatterplot matrices}{3}}
+\citation{Ioannidis}
+\citation{Baggerly}
+\citation{Risso}
+\citation{Baggerly}
+\citation{Baggerly}
+\citation{Baggerly}
+\citation{Brown}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.3}}Checking for common errors with scatterplot matrices}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Illustrating normalization checks with data from \cite  {Risso}. The collective deviation of genes from the \textit  {x=y} line instantly reveals that the RNA-seq dataset was not thoroughly normalized using within-lane normalization (subplot A). However, within-lane normalization followed by between-lane normalization sufficiently normalized the data (subplot B). The authors who developed these normalization methods showed that the later approach generated a lower false-positive DEG call rate in this dataset. }}{4}}
+\newlabel{yeastWithinBetween}{{4}{4}}
+\citation{Lauter16}
+\citation{Brown}
+\citation{Lauter16}
+\citation{Brown}
+\citation{Lauter16}
+\citation{Cook}
+\citation{Lauter16}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.4}}Finding unexpected patterns in scatterplot matrices}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {{3.5}}Assessing DEG calls in scatterplot matrices}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces As expected, the scatterplot matrix of the coytledon data \citep  {Brown} contains nine scatterplots with thicker distributions (should be treatment pairs) and six scatterplots with thinner distributions (should be replicate pairs). However, a subset of scatterplots unexpectedly show thicker distributions between replicate pairs and thinner distributions between treatment pairs. If we switch the labels of two suspicious samples (S1.3 and S2.1), the scatterplot matrix displays the anticipated structure we saw in Figure\nobreakspace  {}3\hbox {}. At this point, we have evidence that these two samples may have been mislabeled, and we may wish to confirm this suspicion and correct it before continuing with the analysis. }}{5}}
+\newlabel{sbCNSwitchedSM}{{5}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Litre plots}{5}}
+\citation{Brown}
+\citation{Lauter16}
+\citation{Marioni}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Scatterplot matrix of RNA-seq read counts from soybean leaves after exposure to iron-sufficient (treatment group P) and iron-deficient (treatment group N) hydroponic conditions\nobreakspace  {}\citep  {Lauter16}. We observe the expected structure of treatment pairs showing larger variability around the \textit  {x=y} line than replicate pairs. However, we notice a pronounced streak structure in the bottom-right scatterplot (green arrow) that compares two replicate samples from the iron-sufficient group. The genes in the streak structure have large read counts that deviate in a parallel fashion from the \textit  {x=y} line. }}{6}}
+\newlabel{structure}{{6}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Example of the expected structure of DEG calls (in orange) from the soybean cotyledon dataset \cite  {Brown}. In the scatterplot matrix (subplot A), DEGs should fall along the \textit  {x=y} line for replicates and deviate from it for treatments. In the parallel coordinate plot (subplot B), DEGs should show levelness between replicates and crosses between treatments. These two plotting types can be linked to quickly provide users multiple perspectives of their DEG calls. }}{6}}
+\newlabel{sbIRDEG}{{7}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Closing case study}{6}}
+\citation{Marioni}
+\citation{RobinsonOshlack}
+\citation{Marioni}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Litre plots for representative genes from clusters created in Figure\nobreakspace  {}2\hbox {} \citep  {Lauter16}. Subplots A and B each show a gene from Cluster 2 overlaid as nine dark yellow points. Subplots C and D each show a gene from Cluster 3 overlaid as nine pink points. Subplots E and F each show a gene from Cluster 4 overlaid as nine orange points. Litre plots allow us to quickly flip through genes and search for (possibly odd) patterns that may not be detected numerically. }}{7}}
+\newlabel{repDot}{{8}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Scatterplot matrix of liver and kidney technical replicates \citep  {Marioni}. The technical replicate scatterplots look precise as is expected, with little variability around the \textit  {x=y} line. The treatment group scatterplots have much more variability around the \textit  {x=y} line, as we would expect. However, each treatment group scatterplot contains a pronounced streak of highly-expressed liver-specific genes, which deviates from the expected distribution. Some researchers have suggested that differences in the distribution of reads between groups may require particularly stringent normalization. }}{7}}
+\newlabel{lkSM}{{9}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{7}}
+\citation{R}
+\citation{ggplot2}
+\citation{shiny}
+\citation{plotly}
+\bibcite{Anders2010}{{1}{2010}{{Anders and Huber}}{{}}}
+\bibcite{Anders2012}{{2}{2012}{{Anders {\it  et~al}.}}{{}}}
+\bibcite{Baggerly}{{3}{2009}{{Baggerly and Coombes}}{{}}}
+\bibcite{Brown}{{4}{2015}{{Brown and Hudson}}{{}}}
+\bibcite{Bullard}{{5}{2010}{{Bullard {\it  et~al}.}}{{}}}
+\bibcite{Chandrasekhar}{{6}{2011}{{Chandrasekhar {\it  et~al}.}}{{}}}
+\bibcite{shiny}{{7}{2017}{{Chang {\it  et~al}.}}{{}}}
+\bibcite{Cook}{{8}{2007}{{Cook {\it  et~al}.}}{{}}}
+\bibcite{de Souto}{{9}{2008}{{de Souto {\it  et~al}.}}{{}}}
+\bibcite{Hansen}{{10}{2010}{{Hansen {\it  et~al}.}}{{}}}
+\bibcite{Huber}{{11}{2015}{{Huber {\it  et~al}.}}{{}}}
+\bibcite{Ioannidis}{{12}{2009}{{Ioannidis {\it  et~al}.}}{{}}}
+\bibcite{Law}{{13}{2014}{{Law {\it  et~al}.}}{{}}}
+\bibcite{Love}{{14}{2014}{{Love {\it  et~al}.}}{{}}}
+\bibcite{Marioni}{{15}{2008}{{Marioni {\it  et~al}.}}{{}}}
+\bibcite{McIntyre}{{16}{2011}{{McIntyre {\it  et~al}.}}{{}}}
+\bibcite{Lauter16}{{17}{2016}{{Moran Lauter {\it  et~al}.}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Subplot A shows parallel coordinate plots of the DEGs from liver and kidney technical replicates \citep  {Marioni} after library scale normalization. The division of DEGs between the two groups was rather disparate, with \nobreakspace  {}78\% of the DEGs being kidney-specific and only \nobreakspace  {}22\% of the DEGs being liver-specific. Also of note, while the parallel coordinate patterns of the liver-specific DEGs appear as expected, the patterns of the kidney-specific DEGs seem to show comparatively larger variability between the replicates. Subplot B shows parallel coordinate plots of the DEGs from liver and kidney technical replicates after TMM normalization. The division of DEGs between the two groups is more balanced than in Subplot A, with \nobreakspace  {}53\% of the DEGs being kidney-specific and \nobreakspace  {}47\% of the DEGs being liver-specific. Additionally, the parallel coordinate patterns of both the liver-specific and kidney-specific DEGs appear as expected and more consistent with each other. }}{8}}
+\newlabel{lkClusters}{{10}{8}}
+\bibcite{Morin}{{18}{2008}{{Morin {\it  et~al}.}}{{}}}
+\bibcite{Oshlack}{{19}{2010}{{Oshlack {\it  et~al}.}}{{}}}
+\bibcite{Pan}{{20}{2008}{{Pan {\it  et~al}.}}{{}}}
+\bibcite{Risso}{{21}{2011}{{Risso {\it  et~al}.}}{{}}}
+\bibcite{Ritchie}{{22}{2015}{{Ritchie {\it  et~al}.}}{{}}}
+\bibcite{Robertson}{{23}{2010}{{Robertson {\it  et~al}.}}{{}}}
+\bibcite{RobinsonOshlack}{{24}{2010}{{Robinson and Oshlack}}{{}}}
+\bibcite{Robinson}{{25}{2010}{{Robinson {\it  et~al}.}}{{}}}
+\bibcite{R}{{26}{2017}{{R Core Team}}{{}}}
+\bibcite{Schurch}{{27}{2016}{{Schurch {\it  et~al}.}}{{}}}
+\bibcite{plotly}{{28}{2017}{{Sievert {\it  et~al}.}}{{}}}
+\bibcite{Shneiderman}{{29}{2002}{{Shneiderman}}{{}}}
+\bibcite{Trapnell2013}{{30}{2013}{{Trapnell {\it  et~al}.}}{{}}}
+\bibcite{Trapnell2012}{{31}{2012}{{Trapnell {\it  et~al}.}}{{}}}
+\bibcite{Wang}{{32}{2009}{{Wang {\it  et~al}.}}{{}}}
+\bibcite{ggplot2}{{33}{2016}{{Wickham}}{{}}}
+\bibcite{Zhao}{{34}{2014}{{Zhao {\it  et~al}.}}{{}}}
+\global\@namedef{@lastpage@}{9}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 JUL 2018 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 SEP 2018 01:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,11 +417,11 @@ File: ly1phv.fd 2001/02/01 scalable font definitions for LY1/phv using Berry na
 mes.
 )
 Package epstopdf Info: Source file: <OUP_First_SBk_Bot_8401.eps>
-(epstopdf)                    date: 2018-05-13 10:52:57
+(epstopdf)                    date: 2018-05-13 13:52:57
 (epstopdf)                    size: 407286 bytes
 (epstopdf)             Output file: <OUP_First_SBk_Bot_8401-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-07-16 23:08:11
+(epstopdf)                    date: 2018-07-17 02:08:11
 (epstopdf)                    size: 9128 bytes
 (epstopdf)             Command: <repstopdf --outfile=OUP_First_SBk_Bot_8401-eps
 -converted-to.pdf OUP_First_SBk_Bot_8401.eps>
@@ -516,22 +516,11 @@ Overfull \hbox (1.12001pt too wide) has occurred while \output is active
 
 
  <./OUP_First_SBk_Bot_8401-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <simulatedData.eps>
-(epstopdf)                    date: 2018-05-13 10:34:45
-(epstopdf)                    size: 1777035 bytes
-(epstopdf)             Output file: <simulatedData-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:12
-(epstopdf)                    size: 76417 bytes
-(epstopdf)             Command: <repstopdf --outfile=simulatedData-eps-converte
-d-to.pdf simulatedData.eps>
-(epstopdf)             \includegraphics on input line 55.
-Package epstopdf Info: Output file is already uptodate.
-<simulatedData-eps-converted-to.pdf, id=20, 608.2725pt x 482.80376pt>
-File: simulatedData-eps-converted-to.pdf Graphic file (type pdf)
-<use simulatedData-eps-converted-to.pdf>
-Package pdftex.def Info: simulatedData-eps-converted-to.pdf  used on input line
- 55.
-(pdftex.def)             Requested size: 234.0pt x 185.72899pt.
+<updatedFigure1.png, id=20, 523.9575pt x 540.0175pt>
+File: updatedFigure1.png Graphic file (type png)
+<use updatedFigure1.png>
+Package pdftex.def Info: updatedFigure1.png  used on input line 55.
+(pdftex.def)             Requested size: 234.0pt x 241.1681pt.
 LaTeX Font Info:    Try loading font information for LY1+phb on input line 57.
 LaTeX Font Info:    No file LY1phb.fd. on input line 57.
 
@@ -541,51 +530,47 @@ LaTeX Font Warning: Font shape `LY1/phb/m/n' undefined
 
 LaTeX Font Info:    Font shape `LY1/phv/bx/n' in size <6.5> not available
 (Font)              Font shape `LY1/phv/b/n' tried instead on input line 57.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package epstopdf Info: Source file: <sbIRClustersSig.eps>
-(epstopdf)                    date: 2018-05-13 10:34:25
+(epstopdf)                    date: 2018-05-13 13:34:25
 (epstopdf)                    size: 1790753 bytes
 (epstopdf)             Output file: <sbIRClustersSig-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:13
+(epstopdf)                    date: 2018-07-17 02:08:13
 (epstopdf)                    size: 91809 bytes
 (epstopdf)             Command: <repstopdf --outfile=sbIRClustersSig-eps-conver
 ted-to.pdf sbIRClustersSig.eps>
 (epstopdf)             \includegraphics on input line 63.
 Package epstopdf Info: Output file is already uptodate.
-<sbIRClustersSig-eps-converted-to.pdf, id=21, 631.35875pt x 468.75125pt>
+<sbIRClustersSig-eps-converted-to.pdf, id=22, 631.35875pt x 468.75125pt>
 File: sbIRClustersSig-eps-converted-to.pdf Graphic file (type pdf)
 <use sbIRClustersSig-eps-converted-to.pdf>
 Package pdftex.def Info: sbIRClustersSig-eps-converted-to.pdf  used on input li
 ne 63.
 (pdftex.def)             Requested size: 234.0pt x 173.73564pt.
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 68.
+
+LaTeX Warning: Reference `sbIRClusters' on page 2 undefined on input line 68.
+
+
+Package natbib Warning: Citation `deSouto' on page 2 undefined on input line 68
+.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    Font shape `LY1/phv/m/it' in size <8> not available
-(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 77.
+(Font)              Font shape `LY1/phv/m/sl' tried instead on input line 71.
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[2 <./simulatedData-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <sbCNSM.eps>
-(epstopdf)                    date: 2018-05-13 10:33:29
-(epstopdf)                    size: 1588705 bytes
-(epstopdf)             Output file: <sbCNSM-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:13
-(epstopdf)                    size: 114338 bytes
-(epstopdf)             Command: <repstopdf --outfile=sbCNSM-eps-converted-to.pd
-f sbCNSM.eps>
-(epstopdf)             \includegraphics on input line 79.
-Package epstopdf Info: Output file is already uptodate.
-<sbCNSM-eps-converted-to.pdf, id=28, 538.01pt x 487.8225pt>
-File: sbCNSM-eps-converted-to.pdf Graphic file (type pdf)
-<use sbCNSM-eps-converted-to.pdf>
-Package pdftex.def Info: sbCNSM-eps-converted-to.pdf  used on input line 79.
-(pdftex.def)             Requested size: 234.0pt x 212.1713pt.
+[2 <./updatedFigure1.png>]
+<sbCNSM.png, id=28, 537.00626pt x 486.81876pt>
+File: sbCNSM.png Graphic file (type png)
+<use sbCNSM.png>
+Package pdftex.def Info: sbCNSM.png  used on input line 79.
+(pdftex.def)             Requested size: 234.0pt x 212.12843pt.
 
 
 LaTeX Font Warning: Font shape `LY1/phb/m/it' undefined
@@ -596,28 +581,31 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[3 <./sbIRClustersSig-eps-converted-to.pdf> <./sbCNSM-eps-converted-to.pdf>]
+[3 <./sbIRClustersSig-eps-converted-to.pdf> <./sbCNSM.png>]
 Underfull \hbox (badness 1755) in paragraph at lines 104--105
 \LY1/ptm/m/n/8 Irreproducibility is prevalent in high-throughput biological stu
 dies.
  []
 
 Package epstopdf Info: Source file: <yeastWithinBetween.eps>
-(epstopdf)                    date: 2018-05-13 10:36:41
+(epstopdf)                    date: 2018-05-13 13:36:41
 (epstopdf)                    size: 3662079 bytes
 (epstopdf)             Output file: <yeastWithinBetween-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:14
+(epstopdf)                    date: 2018-07-17 02:08:14
 (epstopdf)                    size: 171124 bytes
 (epstopdf)             Command: <repstopdf --outfile=yeastWithinBetween-eps-con
 verted-to.pdf yeastWithinBetween.eps>
 (epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
-<yeastWithinBetween-eps-converted-to.pdf, id=38, 277.035pt x 547.04375pt>
+<yeastWithinBetween-eps-converted-to.pdf, id=36, 277.035pt x 547.04375pt>
 File: yeastWithinBetween-eps-converted-to.pdf Graphic file (type pdf)
 <use yeastWithinBetween-eps-converted-to.pdf>
 Package pdftex.def Info: yeastWithinBetween-eps-converted-to.pdf  used on input
  line 107.
 (pdftex.def)             Requested size: 234.0pt x 462.06786pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
@@ -625,32 +613,32 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 
 [4 <./yeastWithinBetween-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <sbCNSwitchedSM.eps>
-(epstopdf)                    date: 2018-05-13 10:33:35
+(epstopdf)                    date: 2018-05-13 13:33:35
 (epstopdf)                    size: 1588713 bytes
 (epstopdf)             Output file: <sbCNSwitchedSM-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:15
+(epstopdf)                    date: 2018-07-17 02:08:15
 (epstopdf)                    size: 114511 bytes
 (epstopdf)             Command: <repstopdf --outfile=sbCNSwitchedSM-eps-convert
 ed-to.pdf sbCNSwitchedSM.eps>
 (epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
-<sbCNSwitchedSM-eps-converted-to.pdf, id=45, 538.01pt x 487.8225pt>
+<sbCNSwitchedSM-eps-converted-to.pdf, id=43, 538.01pt x 487.8225pt>
 File: sbCNSwitchedSM-eps-converted-to.pdf Graphic file (type pdf)
 <use sbCNSwitchedSM-eps-converted-to.pdf>
 Package pdftex.def Info: sbCNSwitchedSM-eps-converted-to.pdf  used on input lin
 e 129.
 (pdftex.def)             Requested size: 234.0pt x 212.1713pt.
 Package epstopdf Info: Source file: <sbIRStreak2.eps>
-(epstopdf)                    date: 2018-05-13 10:36:25
+(epstopdf)                    date: 2018-05-13 13:36:25
 (epstopdf)                    size: 8318940 bytes
 (epstopdf)             Output file: <sbIRStreak2-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:16
+(epstopdf)                    date: 2018-07-17 02:08:16
 (epstopdf)                    size: 296669 bytes
 (epstopdf)             Command: <repstopdf --outfile=sbIRStreak2-eps-converted-
 to.pdf sbIRStreak2.eps>
 (epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
-<sbIRStreak2-eps-converted-to.pdf, id=46, 586.19pt x 542.025pt>
+<sbIRStreak2-eps-converted-to.pdf, id=44, 586.19pt x 542.025pt>
 File: sbIRStreak2-eps-converted-to.pdf Graphic file (type pdf)
 <use sbIRStreak2-eps-converted-to.pdf>
 Package pdftex.def Info: sbIRStreak2-eps-converted-to.pdf  used on input line 1
@@ -661,81 +649,89 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[5 <./sbCNSwitchedSM-eps-converted-to.pdf> <./sbIRStreak2-eps-converted-to.pdf>
-]
+[5 <./sbCNSwitchedSM-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <sbIRDEG.eps>
-(epstopdf)                    date: 2018-05-13 10:34:32
+(epstopdf)                    date: 2018-05-13 13:34:32
 (epstopdf)                    size: 1145698 bytes
 (epstopdf)             Output file: <sbIRDEG-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:16
+(epstopdf)                    date: 2018-07-17 02:08:16
 (epstopdf)                    size: 97596 bytes
 (epstopdf)             Command: <repstopdf --outfile=sbIRDEG-eps-converted-to.p
 df sbIRDEG.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
-<sbIRDEG-eps-converted-to.pdf, id=56, 387.4475pt x 487.8225pt>
+<sbIRDEG-eps-converted-to.pdf, id=51, 387.4475pt x 487.8225pt>
 File: sbIRDEG-eps-converted-to.pdf Graphic file (type pdf)
 <use sbIRDEG-eps-converted-to.pdf>
 Package pdftex.def Info: sbIRDEG-eps-converted-to.pdf  used on input line 157.
 (pdftex.def)             Requested size: 234.0pt x 294.62364pt.
 Package epstopdf Info: Source file: <litre6LB.eps>
-(epstopdf)                    date: 2018-05-13 10:46:10
+(epstopdf)                    date: 2018-05-13 13:46:10
 (epstopdf)                    size: 26893657 bytes
 (epstopdf)             Output file: <litre6LB-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:19
+(epstopdf)                    date: 2018-07-17 02:08:19
 (epstopdf)                    size: 800407 bytes
 (epstopdf)             Command: <repstopdf --outfile=litre6LB-eps-converted-to.
 pdf litre6LB.eps>
 (epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
-<litre6LB-eps-converted-to.pdf, id=57, 791.95876pt x 1297.84875pt>
+<litre6LB-eps-converted-to.pdf, id=52, 791.95876pt x 1297.84875pt>
 File: litre6LB-eps-converted-to.pdf Graphic file (type pdf)
 <use litre6LB-eps-converted-to.pdf>
 Package pdftex.def Info: litre6LB-eps-converted-to.pdf  used on input line 163.
 
 (pdftex.def)             Requested size: 234.0pt x 383.47598pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (1.11118pt too wide) in paragraph at lines 172--173
+\LY1/ptm/m/n/8 and B) is available at https://rnaseqvisualization.shinyapps.io/
+litreCluster2,
+ []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (0.22318pt too wide) in paragraph at lines 172--173
+\LY1/ptm/m/n/8 and F) is available at https://rnaseqvisualization.shinyapps.io/
+litreCluster4.
+ []
 
 
 Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6 <./sbIRDEG-eps-converted-to.pdf> <./litre6LB-eps-converted-to.pdf>]
+[6 <./sbIRStreak2-eps-converted-to.pdf> <./sbIRDEG-eps-converted-to.pdf>]
 Underfull \hbox (badness 1189) in paragraph at lines 178--179
 []\LY1/ptm/m/n/8 Although we could finish our analysis at this point and draw
  []
 
 Package epstopdf Info: Source file: <lkSM.eps>
-(epstopdf)                    date: 2018-05-13 10:33:22
+(epstopdf)                    date: 2018-05-13 13:33:22
 (epstopdf)                    size: 1344283 bytes
 (epstopdf)             Output file: <lkSM-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:19
+(epstopdf)                    date: 2018-07-17 02:08:19
 (epstopdf)                    size: 95434 bytes
 (epstopdf)             Command: <repstopdf --outfile=lkSM-eps-converted-to.pdf 
 lkSM.eps>
 (epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
-<lkSM-eps-converted-to.pdf, id=67, 496.85625pt x 446.66875pt>
+<lkSM-eps-converted-to.pdf, id=62, 496.85625pt x 446.66875pt>
 File: lkSM-eps-converted-to.pdf Graphic file (type pdf)
 <use lkSM-eps-converted-to.pdf>
 Package pdftex.def Info: lkSM-eps-converted-to.pdf  used on input line 181.
 (pdftex.def)             Requested size: 234.0pt x 210.36371pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <lkClusters.eps>
-(epstopdf)                    date: 2018-05-13 10:28:54
+(epstopdf)                    date: 2018-05-13 13:28:54
 (epstopdf)                    size: 1054474 bytes
 (epstopdf)             Output file: <lkClusters-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-07-16 23:08:20
+(epstopdf)                    date: 2018-07-17 02:08:20
 (epstopdf)                    size: 69401 bytes
 (epstopdf)             Command: <repstopdf --outfile=lkClusters-eps-converted-t
 o.pdf lkClusters.eps>
 (epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
-<lkClusters-eps-converted-to.pdf, id=68, 460.72125pt x 377.41pt>
+<lkClusters-eps-converted-to.pdf, id=63, 460.72125pt x 377.41pt>
 File: lkClusters-eps-converted-to.pdf Graphic file (type pdf)
 <use lkClusters-eps-converted-to.pdf>
 Package pdftex.def Info: lkClusters-eps-converted-to.pdf  used on input line 19
@@ -746,28 +742,65 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[7 <./lkSM-eps-converted-to.pdf> <./lkClusters-eps-converted-to.pdf>]
-LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 221.
+[7 <./litre6LB-eps-converted-to.pdf> <./lkSM-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 2790) in paragraph at lines 236--238
+LaTeX Font Info:    Font shape `LY1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `LY1/ptm/b/n' tried instead on input line 223.
+
+Underfull \hbox (badness 2790) in paragraph at lines 238--240
 \LY1/ptm/m/n/7 algorithms for gene expression data. \LY1/ptm/m/it/7 Internation
 al Journal of Computer
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 307--308
+Overfull \hbox (252.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[8 <./lkClusters-eps-converted-to.pdf>]
+Underfull \hbox (badness 2020) in paragraph at lines 309--310
 []\LY1/ptm/m/n/7 Shneiderman, B. (2002) Inventing discovery tools: Combining in
 formation
  []
 
-Extra height:0.0pt when 667.7175pt
-(2)Left:667.7175pt Right:667.0pt Output:667.7175pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 212.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 213.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 214.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 215.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 216.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 217.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 218.5pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:218.5pt Right:218.0pt Output:218.5pt
 - LAST -
 Extra skip:0.0pt
-Left:667.7175pt
-Right:667.0pt
-Output:667.7175pt
+Left:218.5pt
+Right:218.0pt
+Output:218.5pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -776,7 +809,13 @@ Overfull \hbox (252.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[8] (./mainDocument.aux)
+[9
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+(./mainDocument.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.75pt have occurred.
@@ -784,15 +823,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 3686 strings out of 492649
- 47174 string characters out of 6129622
- 155102 words of memory out of 5000000
- 7464 multiletter control sequences out of 15000+600000
- 54587 words of font info for 95 fonts, out of 8000000 for 9000
+ 3690 strings out of 492649
+ 47040 string characters out of 6129622
+ 122103 words of memory out of 5000000
+ 7467 multiletter control sequences out of 15000+600000
+ 55718 words of font info for 96 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 41i,10n,29p,1307b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,29p,1748b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
@@ -805,10 +847,10 @@ t/fonts/type1/urw/helvetic/uhvro8ac.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on mainDocument.pdf (8 pages, 2060731 bytes).
+Output written on mainDocument.pdf (9 pages, 2071358 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

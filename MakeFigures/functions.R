@@ -124,7 +124,7 @@ makePlots = function(A.1, A.2, A.3, B.1, B.2, B.3, i){
   datM$group = c(rep("A",150), rep("B", 150))
   colnames(datM) <- c("ID", "Sample", "Count", "group")
   
-  boxPlots[[i]] <<- ggplot(datM, aes(Sample, Count, fill=group)) + geom_boxplot() + scale_fill_manual(values=c("royalblue","darkorange2")) + theme(text = element_text(size=12), legend.position="none")
+  boxPlots[[i]] <<- ggplot(datM, aes(Sample, Count, fill=group)) + geom_boxplot() + scale_fill_manual(values=c("royalblue","darkorange2")) + theme(text = element_text(size=12), legend.position="none") + ylim(2.5,12.5)
   
   # Convert DF from scatterplot to PCP
   datt <- data.frame(t(dat))
@@ -135,7 +135,7 @@ makePlots = function(A.1, A.2, A.3, B.1, B.2, B.3, i){
   dat_long <- melt(datt, id.vars ="rn" )
   colnames(dat_long) <- c("Sample", "ID", "Count")
   
-  pcpPlots[[i]] <<- ggplot(dat_long) + geom_line(aes(x = Sample, y = Count, group = ID)) + theme(legend.position="none", text = element_text(size=12))
+  pcpPlots[[i]] <<- ggplot(dat_long) + geom_line(aes(x = Sample, y = Count, group = ID)) + theme(legend.position="none", text = element_text(size=12)) + ylim(2.5,12.5)
   
   tDat <- t(dat[,2:7]) #orig 2:6
   datD <- as.matrix(dist(tDat))
@@ -144,7 +144,7 @@ makePlots = function(A.1, A.2, A.3, B.1, B.2, B.3, i){
   y <- fit$points[, 2]
   myDat = data.frame(x=x,y=y)
   myDat$group = c(rep("A",3), rep("B", 3))
-  mdsPlots[[i]] <<- ggplot(myDat, aes(x,y)) + geom_text(data = myDat[c(1:3),], label = rownames(myDat[c(1:3),]), nudge_y = 0.35, fontface="bold", color = "royalblue") + geom_text(data = myDat[c(4:6),], label = rownames(myDat[c(4:6),]), nudge_y = 0.35, fontface="bold", color = "darkorange2") + labs(x = "Dim 1", y = "Dim 2") + theme(text = element_text(size=12))
+  mdsPlots[[i]] <<- ggplot(myDat, aes(x,y)) + geom_text(data = myDat[c(1:3),], label = rownames(myDat[c(1:3),]), nudge_y = 0.35, fontface="bold", color = "royalblue") + geom_text(data = myDat[c(4:6),], label = rownames(myDat[c(4:6),]), nudge_y = 0.35, fontface="bold", color = "darkorange2") + labs(x = "Dim 1", y = "Dim 2") + theme(text = element_text(size=12)) + coord_fixed() + xlim(-17, 17) + ylim(-15,15)
 }
 
 # This function is used to restructure a data frame for the yeast datset analysis

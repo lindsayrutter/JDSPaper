@@ -32,3 +32,4 @@ makePlots(A.1, A.2, A.3, B.1, B.2, B.3, 2)
 plot1 <- plot_grid(boxPlots[[1]], mdsPlots[[1]], pcpPlots[[1]], labels=c("A", "B", "C"), ncol = 1, nrow = 3, label_size=12) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
 plot2 <- plot_grid(boxPlots[[2]], mdsPlots[[2]], pcpPlots[[2]], labels=c("A", "B", "C"), ncol = 1, nrow = 3, label_size=12) + theme(plot.background = element_rect(size=0.1,linetype="solid",color="black"))
 grid.arrange(plot1, plot2, ncol=2)
+
